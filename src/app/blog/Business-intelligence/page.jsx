@@ -40,7 +40,7 @@ const cards = [
     link: "/blog/",
   },
   {
-    title: "Project Closure Checklist: Overview, Examples & Template",
+    title: " The Project Closure Checklist: Overview, Examples & Template",
     description:
       "A project closure checklist can help keep your team aligned and ensure no task gets missed. Here’s how to...",
     author: "Amy Rose Smith",
