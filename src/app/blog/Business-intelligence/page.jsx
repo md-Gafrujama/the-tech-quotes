@@ -93,15 +93,15 @@ const cards = [
     image: "/images/hr-10.jpg",
     link: "/blog/",
   },
-  {
-    title: "Project Management Basics",
-    description:
-      "Key takeaways: Project management is a structured way of managing tasks that may include goals, timelines...",
-    author: "Kara Shear",
-    date: "August 18, 2024",
-    image: "/images/hr-11.jpg",
-    link: "/blog/",
-  },
+  // {
+  //   title: "Project Management Basics",
+  //   description:
+  //     "Key takeaways: Project management is a structured way of managing tasks that may include goals, timelines...",
+  //   author: "Kara Shear",
+  //   date: "August 18, 2024",
+  //   image: "/images/hr-11.jpg",
+  //   link: "/blog/",
+  // },
   // {
   //   title: "8 Common Project Risks & How to Manage Them",
   //   description:
