@@ -290,7 +290,7 @@ const Navbar = () => {
                 onMouseLeave={handleDropdownLeave}
               >
                 <Link href="/software-reviews" className="flex items-center space-x-1 text-white hover:text-[#ffd800] transition-colors duration-200">
-                  <span>Software </span>
+                  <span>Software Reviews </span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'software' ? 'rotate-180' : ''}`} />
                 </Link>
                 
