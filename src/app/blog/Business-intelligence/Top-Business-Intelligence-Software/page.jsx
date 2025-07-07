@@ -60,7 +60,7 @@ export default function Employeedisciplinary() {
     },
      {
       id: "methodology",
-      title: "Methodology",
+      title: " the Methodology",
       active: false,
     },
      {
