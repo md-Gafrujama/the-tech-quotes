@@ -130,7 +130,7 @@ export default function ProjectManagementPage() {
   const toolsContent = {
     HubSpot: {
       title: "HubSpot Sales Hub- Best for integrations",
-      logo: "/images/monday.png",
+      logo: "/images/hubspotsales.png",
       button: {
         text: "Visit Website",
         link: "#",
@@ -317,7 +317,7 @@ export default function ProjectManagementPage() {
     },
     Zoho: {
       title: "Zoho CRM – Best for decentralized teams",
-      logo: "/images/monday.png",
+      logo: "/images/zoho.jpg",
       button: {
         text: "Visit Website",
         link: "#",
@@ -518,7 +518,7 @@ export default function ProjectManagementPage() {
     },
     Shapecrm: {
       title: "Shape CRM – Best for flexibility",
-      logo: "/images/monday.png",
+      logo: "/images/shapecrm.png",
       button: {
         text: "Visit Website",
         link: "#",
@@ -621,7 +621,7 @@ export default function ProjectManagementPage() {
     },
     Pipedrive: {
       title: "Pipedrive – Best for pipeline management and optimization",
-      logo: "/images/monday.png",
+      logo: "/images/pipedrive.jpg",
       button: {
         text: "Visit Website",
         link: "#",
@@ -838,7 +838,7 @@ Pipedrive’s visual sales pipeline breathes life into deal progression, streaml
     },
     Salesforce: {
       title: "Salesforce Sales Cloud – Best for enterprises",
-      logo: "/images/monday.png",
+      logo: "/images/salesforce.png",
       button: {
         text: "Visit Website",
         link: "#",
@@ -1012,7 +1012,7 @@ Pipedrive’s visual sales pipeline breathes life into deal progression, streaml
     },
     Oracle: {
       title: "Oracle NetSuite CRM – Best all-in-one solution",
-      logo: "/images/monday.png",
+      logo: "/images/oracle.png",
       button: {
         text: "Visit Website",
         link: "#",
@@ -1035,9 +1035,9 @@ Pipedrive’s visual sales pipeline breathes life into deal progression, streaml
       ],
       cons: ["Higher-end pricing", "No standalone CRM option"],
       why: {
-        intro: `HOracle NetSuite CRM is as comprehensive as it gets. It’s a remarkably versatile tool, particularly for businesses seeking an all-in-one cloud solution that integrates CRM with financials, e-commerce, and more..`,
-        body: `This powerhouse, cloud-based solution provides a 360-degree customer view, enabling businesses to see a full spectrum of customer interactions in real-time. Its advanced features, particularly in AI analytics and collaboration tools, make the platform stand out and clinch a spot in the 4 star range.`,
-        content: `One of the key advantages of NetSuite over competitors like Salesforce and Pipedrive is its comprehensive nature. While Salesforce excels in its CRM-specific functionalities, offering features like customizable dashboards, opportunity scoring, and a wide range of integrations, NetSuite provides a more holistic approach by integrating CRM with enterprise resource planning (ERP), accounting, and e-commerce capabilities. This makes NetSuite particularly well-suited for businesses that require extensive operational management alongside customer relationship management​.`,
+        intro: `Oracle NetSuite CRM is as comprehensive as it gets. It’s a remarkably versatile tool, particularly for businesses seeking an all-in-one cloud solution that integrates CRM with financials, e-commerce, and more..`,
+        outro: `This powerhouse, cloud-based solution provides a 360-degree customer view, enabling businesses to see a full spectrum of customer interactions in real-time. Its advanced features, particularly in AI analytics and collaboration tools, make the platform stand out and clinch a spot in the 4 star range.`,
+        outro: `One of the key advantages of NetSuite over competitors like Salesforce and Pipedrive is its comprehensive nature. While Salesforce excels in its CRM-specific functionalities, offering features like customizable dashboards, opportunity scoring, and a wide range of integrations, NetSuite provides a more holistic approach by integrating CRM with enterprise resource planning (ERP), accounting, and e-commerce capabilities. This makes NetSuite particularly well-suited for businesses that require extensive operational management alongside customer relationship management​.`,
         outro: `Compared with Pipedrive, NetSuite offers far better functionality. Pipedrive is favored for its ease of use and value for money, particularly for small to medium-sized businesses focusing on sales pipeline management. However, it lacks the depth of features offered by NetSuite, particularly in areas like inventory management and financials, which are crucial for larger or more complex businesses​ ​.`,
         extras: {
           "About ": (
@@ -1135,6 +1135,576 @@ Pipedrive’s visual sales pipeline breathes life into deal progression, streaml
         },
       },
     },
+    //Insightly CRM – Best for easy-to-read analytics and reporting
+    Insightly: {
+      title: "Insightly CRM – Best for easy-to-read analytics and reporting",
+      logo: "/images/insightly.png",
+      button: {
+        text: "Visit Website",
+        link: "#",
+      },
+      scores: [
+        { label: "Overall Score", score: "3.9/5" },
+
+        { label: "Pricing", score: "4.2/5" },
+        { label: "General features and Interface", score: "3.6/5" },
+        { label: "Core features", score: "4.3/5" },
+        { label: "Advanced features", score: "2.3/5" },
+        { label: "Inegration and compatibility", score: "4.2/5" },
+        { label: "UX", score: "3.8/5" },
+      ],
+      pros: [
+        "Vast analytics and visualization options",
+        "Robust automation tools",
+        "Project management functionality",
+        ,
+      ],
+      cons: ["Not as intuitive or easy to deploy as some tools"],
+      why: {
+        intro: `Insightly’s design philosophy in its reporting and analytics features emphasizes simplicity and clarity. The platform allows users to easily create and customize reports, offering an experience that reduces the complexity often associated with data analysis.`,
+        details: `Insightly pairs an easy-to-use interface with customizable reporting tools, making it ideal for businesses that need detailed insights without the complexity of more advanced systems. This makes Insightly particularly suitable for small to medium-sized businesses or those with limited resources for data analysis.
+
+Despite the lower price tag compared to other software offering similar tools, it still boasts advanced reporting, allowing users to generate custom, in-depth reports revealing key business performance indicators.
+
+Its dashboard visualization serves up crucial metrics at a glance, aiding quick, informed decisions. Coupled with precise sales forecasting, Insightly paints an accurate picture of future sales revenue. Plus, with smooth integration with platforms like Power BI and Excel, Insightly’s analytics game is seriously amplified.
+
+For businesses that prioritize ease of use and straightforward data visualization, Insightly is a more suitable choice than Salesforce, which, while powerful, can be overwhelming for users new to CRM analytics. HubSpot also offers similar user-friendliness but may not match Insightly’s depth in customization options for reports.
+
+Insightly might be a brand name you’re unfamiliar with, but rest assured, it has a quiver of features that’s just as full as some of the bigger names on this list. Automation options, project management, and plentiful integration options are just the beginning. What’s not a common bragging right is their robust analytics and reporting capabilities.
+
+In many ways, Insightly doubles as business intelligence, providing extensive flexibility and functionality regarding data discovery and scrubbing; organizing and visualization; powerful analytics insights; and intuitive reporting options.
+
+Insightly has even enhanced its reporting and analytics features recently, focusing on providing more customizable reporting options and integrating AI-driven insights.`,
+
+        outro: `However, compared to competitors like Salesforce or Oracle NetSuite, Insightly’s advanced features like AI analytics and VOIP capabilities could be further developed. While it offers a solid foundation in CRM functionalities, expanding these advanced features could enhance its appeal to larger businesses or those with more complex CRM needs.`,
+        extras: {
+          "About ": (
+            <>
+              <p className="text-black mb-4">
+                
+              </p>
+              <p className="text-black">
+                
+              </p>
+              <p className="text-black mb-4">
+                  </p>
+              <p className="text-black mb-4">
+                
+              </p>
+              <p className="text-black mb-4">
+                
+              </p>
+            </>
+          ),
+          "Key Features": (
+  <>
+    <h4 className="text-lg font-bold mb-2">Advanced reporting:</h4>
+    <p className="text-black mb-4">
+      Insightly’s advanced reporting allows users to create customized, detailed reports, offering valuable insights into business performance.
+    </p>
+
+    <h4 className="text-lg font-bold mb-2">Dashboard visualization:</h4>
+    <p className="text-black mb-4">
+      Insightly provides dashboards for a quick visual representation of business health and metrics, aiding in swift decision-making.
+    </p>
+
+    <h4 className="text-lg font-bold mb-2">Sales forecasting:</h4>
+    <p className="text-black mb-4">
+      Insightly’s CRM includes sales forecasting features, enabling businesses to predict sales revenue using historical and real-time data.
+    </p>
+
+    <h4 className="text-lg font-bold mb-2">Integrations:</h4>
+    <p className="text-black mb-4">
+      Insightly integrates with popular software like Power BI and Excel, enhancing its reporting and analytics capabilities.
+    </p>
+
+    <h4 className="text-lg font-bold mb-2">Workflow automation:</h4>
+    <p className="text-black mb-4">
+      Insightly allows users to automate repetitive tasks and business processes through custom workflows.
+    </p>
+
+    <h4 className="text-lg font-bold mb-2">Project management:</h4>
+    <p className="text-black">
+      Insightly combines CRM and project management features, enabling users to manage projects, track milestones, and collaborate with team members directly within the CRM platform.
+    </p>
+  </>
+
+),
+Pricing: (
+  <>
+    <p className="text-black mb-4 font-semibold">Free trial available</p>
+
+    <h4 className="text-lg font-bold mb-1">Plus Plan:</h4>
+    <p className="text-black mb-1">
+      Price: $35/user/month billed monthly or $29/user/month billed annually
+    </p>
+    <p className="text-black mb-4">
+      <span className="font-semibold">Features:</span><br />
+      • Lead and contact management<br />
+      • Project management<br />
+      • Advanced reports<br />
+      • Business dashboards
+    </p>
+
+    <h4 className="text-lg font-bold mb-1">Professional Plan:</h4>
+    <p className="text-black mb-1">
+      Price: $59/user/month billed monthly or $49/user/month billed annually
+    </p>
+    <p className="text-black mb-4">
+      <span className="font-semibold">Features:</span><br />
+      • All Plus Plan features, plus:<br />
+      • Lead assignment and routing<br />
+      • Workflow automation<br />
+      • Custom page layouts
+    </p>
+
+    <h4 className="text-lg font-bold mb-1">Enterprise Plan:</h4>
+    <p className="text-black mb-1">
+      Price: $129/user/month billed monthly or $99/user/month billed annually
+    </p>
+    <p className="text-black mb-4">
+      <span className="font-semibold">Features:</span><br />
+      • All Professional Plan features, plus:<br />
+      • Sandboxes<br />
+      • Products and pricebooks<br />
+      • Quotes<br />
+      • Comprehensive audit logging
+    </p>
+
+    <p className="text-black">
+      For more detailed information on pricing and features, visit the Insightly CRM page.
+    </p>
+  </>
+),
+
+        },
+      },
+    },
+
+    //Keap CRM – Best for sales-marketing synergy
+    Keap: {
+      title: "Keap CRM – Best for sales-marketing synergyn",
+      logo: "/images/keap.png",
+      button: {
+        text: "Visit Website",
+        link: "#",
+      },
+      scores: [
+        { label: "Overall Score", score: "3.8/5" },
+
+        { label: "Pricing", score: "2.5/5" },
+        { label: "General features and Interface", score: "4/5" },
+        { label: "Core features", score: "4.5/5" },
+        { label: "Advanced features", score: "2.5/5" },
+        { label: "Inegration and compatibility", score: "4.6/5" },
+        { label: "UX", score: "4.3/5" },
+      ],
+      pros: [
+        "Sales and marketing automation",
+        "Helps small teams accomplish more",
+        "Easy to use",
+        
+      ],
+      cons: ["May not be the right fit for larger, more complex workflows"],
+      why: {
+        intro: `HubSpot has certainly made a name for itself in the CRM world, particularly when it comes to marketing automation. However, Keap steps up the game by offering a deeper integration between sales and marketing functions.`,
+
+
+      outro:`The unified nature of Keap’s platform is a big plus. It allows for easier navigation and quicker setup, which can be a real time-saver. For businesses looking to bring their sales and marketing operations into harmony, Keap offers a straightforward path to achieving that goal.`,
+
+extras: {
+          "About": (
+  <>
+    <p className="text-black mb-4">
+      Keap CRM is a bit of an oddity in this list. While it’s fully capable of providing top-tier service to larger brands the way Salesforce or HubSpot might, its positioning tends to focus more heavily on solopreneurs and other small businesses.
+    </p>
+
+    <p className="text-black mb-4">
+      To be fair, these are often the professionals who need the most support to keep their sales pipelines flowing. Certain “hats” have to be worn in every business—accounts receivable, sales, marketing, operations, logistics, project management, etc.—even when that business is a business of one. The fewer the heads there are in the crew, the more hats on a single head.
+    </p>
+
+    <p className="text-black mb-4">
+      Keap aims to help these professionals by giving them somewhere else to put some of those hats, so to speak. Via robust sales, marketing, and financial automation tools, Keap streamlines some of the most difficult, tedious, and repetitious parts of the sales lifecycle.
+    </p>
+
+    <p className="text-black mb-4">
+      Solopreneurs especially tend to be specialists in their product, with non-billable tasks being secondary skills at best. Keap gives these individuals and teams a way to get back to the work they do best, and rest easy about the duties that stress them out the most.
+    </p>
+
+    <p className="text-black mb-4">
+      While Keap excels in many areas, it could further strengthen its position against competitors by enhancing its AI analytics and AI chatbot functionalities. These improvements would provide even more sophisticated tools for businesses to analyze data and engage with customers, keeping pace with the trends of competitors.
+    </p>
+  </>
+),
+
+         "Key Features": (
+  <>
+    <h4 className="text-lg font-bold mb-2">Smart client management:</h4>
+    <p className="text-black mb-4">
+      Keap’s CRM excels in organizing and updating client information, along with capturing new leads, all in one centralized, searchable database.
+    </p>
+
+    <h4 className="text-lg font-bold mb-2">Advanced email automation:</h4>
+    <p className="text-black mb-4">
+      Keap’s CRM not only offers email marketing but also delivers personalized, automated follow-ups that nurture client relationships and keep businesses top-of-mind.
+    </p>
+
+    <h4 className="text-lg font-bold mb-2">Integrated appointments:</h4>
+    <p className="text-black mb-4">
+      Keap seamlessly syncs calendars and sets up reminders, turning the scheduling of appointments with clients into a hassle-free process.
+    </p>
+
+    <h4 className="text-lg font-bold mb-2">Billing and payment solutions:</h4>
+    <p className="text-black mb-4">
+      Keap stands out with its invoicing features, which provide the ability to create, send, and track invoices, accept credit cards online, and automate payment reminders.
+    </p>
+
+    <h4 className="text-lg font-bold mb-2">Lead capture and management:</h4>
+    <p className="text-black mb-4">
+      Provides advanced lead capture tools, including customizable forms and landing pages, to efficiently gather and manage leads from multiple sources.
+    </p>
+
+    <h4 className="text-lg font-bold mb-2">Sales pipeline automation:</h4>
+    <p className="text-black">
+      Offers automated sales pipeline management, enabling users to track leads, set tasks, and automate follow-ups to ensure no opportunities are missed.
+    </p>
+  </>
+),
+
+        Pricing: (
+  <>
+    <p className="text-black mb-4 font-semibold">Free trial available</p>
+
+    <p className="text-black mb-2">
+      <span className="font-semibold">Access to all Keap Services:</span><br />
+      Price: Starts at $299/month billed monthly for 2 users and 1,500 contacts, or $249/month billed annually for 2 users and 1,500 contacts
+    </p>
+
+    <p className="text-black mb-2">
+      <span className="font-semibold">Features:</span><br />
+      You get all Keap services in one subscription, including their CRM.
+    </p>
+
+    <p className="text-black mb-4">
+      <span className="font-semibold">CRM features include:</span><br />
+      • Contact management and segmentation<br />
+      • Custom fields<br />
+      • Company records storage<br />
+      • Lead scoring<br />
+      • Customizable dashboards
+    </p>
+
+    <p className="text-black">
+      For more detailed information on pricing and features, visit the Keap Pricing page.
+    </p>
+  </>
+),
+
+        },
+      },
+    },
+//Copper CRM – Best for security
+ Copper: {
+      title: "Copper CRM – Best for security",
+      logo: "/images/copper.png",
+      button: {
+        text: "Visit Website",
+        link: "#",
+      },
+      scores: [
+        { label: "Overall Score", score: "3.8/5" },
+
+        { label: "Pricing", score: "3.3/5" },
+        { label: "General features and Interface", score: "4/5" },
+        { label: "Core features", score: "4.6/5" },
+        { label: "Advanced features", score: "2.3/5" },
+        { label: "Inegration and compatibility", score: "4.2/5" },
+        { label: "UX", score: "4.5/5" },
+      ],
+      pros: [
+        "Unparalleled Google Workspace compatibility",
+        "End-user simplicity",
+        "Security safeguards",
+       
+      ],
+      cons: ["Fewer non-Google integrations","Not optimal for organizations built on Office 365",],
+      why: {
+        intro: `Larger, more established organizations often rely on Microsoft’s suite of apps and platforms to ensure secure collaboration. But Google Workspace is often a much more familiar space for newer brands with younger staff (many of whom used Gmail and Gsuite for their personal accounts). And Copper CRM is unmatched when it comes to Google Workspace interoperability.`,
+        outro: `Depending on your use case, your current workflow, and the level of tech literacy in your organization, Copper CRM could very well be the fastest time-to-value option available.`,
+        extras: {
+          "About": (
+  <>
+    <p className="text-black mb-4">
+      Copper CRM offers a specialized solution for businesses deeply integrated with Google Workspace. Its primary strength lies in its seamless integration with Google’s suite of productivity tools, including Gmail, Google Calendar, and Google Drive. This integration provides a significant advantage for organizations already utilizing Google’s ecosystem.
+    </p>
+
+    <p className="text-black mb-4">
+      The platform’s user interface closely resembles that of Google products, which reduces the learning curve for users familiar with Google Workspace. This design choice enhances user adoption and efficiency, as team members can navigate the CRM with minimal additional training.
+    </p>
+
+    <p className="text-black mb-4">
+      One of Copper’s key features is its ability to automatically capture emails and calendar events. This automation significantly reduces the need for manual data entry, a common pain point in CRM usage. By streamlining this process, Copper allows sales teams to focus more on relationship-building and less on administrative tasks.
+    </p>
+
+    <p className="text-black mb-4">
+      Copper CRM is particularly well-suited for small to mid-sized businesses looking to enhance their sales processes, contact management, and team collaboration. Its feature set, while comprehensive, is designed to be accessible and practical rather than overwhelming.
+    </p>
+
+    <p className="text-black mb-4">
+      The platform offers workflow automation capabilities, enabling businesses to create more efficient sales and customer service processes. Real-time integration ensures that data is consistently up-to-date across all connected Google applications, providing a unified view of customer interactions and business activities.
+    </p>
+
+    <p className="text-black mb-4">
+      While Copper excels in its Google Workspace integration, it’s important to note that this specialization may limit its appeal for businesses not heavily invested in the Google ecosystem. Organizations using alternative productivity suites or requiring extensive customization might find Copper’s offerings less suitable for their needs.
+    </p>
+
+    <p className="text-black mb-4">
+      For businesses leveraging Google Workspace and seeking a CRM solution that aligns seamlessly with their existing tools, Copper presents a compelling option. Its focus on simplicity, coupled with robust functionality, positions it as an effective tool for enhancing customer relationship management within the Google-centric work environment.
+    </p>
+
+    <p className="text-black mb-4">
+      To place higher on the list, it could further enhance its competitive edge by improving its AI analytics and AI chatbot functionalities. These advancements would provide businesses with more sophisticated tools for data analysis and customer engagement.
+    </p>
+  </>
+),
+
+          "Key Features": (
+  <>
+    <h4 className="text-lg font-bold mb-2">Google Workspace integration:</h4>
+    <p className="text-black mb-4">
+      Integrates seamlessly with Google Workspace, allowing users to manage contacts, deals, and tasks directly from Gmail or other Workspace apps.
+    </p>
+
+    <h4 className="text-lg font-bold mb-2">Robust security measures:</h4>
+    <p className="text-black mb-4">
+      Includes role-based access controls, two-factor authentication, and regular user access reviews. Copper provides security training for employees and enforces a strict Employee Code of Conduct. Data is encrypted both in transit and at rest, with technical controls to guard against malware and unauthorized software.
+    </p>
+
+    <h4 className="text-lg font-bold mb-2">Sales pipeline management:</h4>
+    <p className="text-black mb-4">
+      Provides a visual sales pipeline that makes it easy to manage opportunities and track progress towards sales goals.
+    </p>
+
+    <h4 className="text-lg font-bold mb-2">Automated data entry:</h4>
+    <p className="text-black mb-4">
+      Uses automation to reduce the burden of manual data entry, automatically populating contact and company details.
+    </p>
+
+    <h4 className="text-lg font-bold mb-2">Task automation:</h4>
+    <p className="text-black mb-4">
+      Enables users to automate repetitive tasks, set reminders, and ensure timely follow-ups.
+    </p>
+
+    <h4 className="text-lg font-bold mb-2">Reporting and insights:</h4>
+    <p className="text-black">
+      Provides advanced reporting and analytics capabilities, allowing users to generate detailed reports and gain actionable insights into sales performance and business metrics.
+    </p>
+  </>
+),
+
+         Pricing: (
+  <>
+    <p className="text-black mb-4 font-semibold">Free trial available</p>
+
+    <h4 className="text-lg font-bold mb-1">Starter:</h4>
+    <p className="text-black mb-4">$9/user/month</p>
+
+    <h4 className="text-lg font-bold mb-1">Basic:</h4>
+    <p className="text-black mb-4">$23/user/month</p>
+
+    <h4 className="text-lg font-bold mb-1">Professional:</h4>
+    <p className="text-black mb-4">$59/user/month</p>
+
+    <h4 className="text-lg font-bold mb-1">Business:</h4>
+    <p className="text-black">$99/user/month</p>
+  </>
+),
+
+        },
+      },
+    },
+//ClickUp – Best for project management
+ClickUp: {
+      title: "ClickUp – Best for project management",
+      logo: "/images/clickup.png",
+      button: {
+        text: "Visit Website",
+        link: "#",
+      },
+      scores: [
+        { label: "Overall Score", score: "3.8/5" },
+
+        { label: "Pricing", score: "4/5" },
+        { label: "General features and Interface", score: "4.1/5" },
+        { label: "Core features", score: "4.1/5" },
+        { label: "Advanced features", score: "2/5" },
+        { label: "Inegration and compatibility", score: "3.5/5" },
+        { label: "UX", score: "4.3/5" },
+      ],
+      pros: [
+        "First-rate CRM tool with first-rate PM functionality",
+        "Competitive pricing",
+        "Bonus features include real-time reporting, companion mobile app, and more",
+        
+      ],
+      cons: ["Requires a bit more training and onboarding to implement"],
+      why: {
+        intro: `ClickUp stands out for its integration of project management tools with CRM functionalities. This combination offers a unique value proposition for businesses seeking to unify their project workflows and customer relationship management within a single platform.`,
+        
+        outro: `ClickUp’s approach differs significantly from specialized CRM tools like Salesforce and HubSpot. Salesforce, a leader in the CRM sector, provides comprehensive features for sales, marketing, and customer service. It excels in customization, data analytics, and third-party integrations through its AppExchange ecosystem. Salesforce is particularly well-suited for large enterprises with complex requirements and substantial budgets. However, its extensive feature set comes with higher costs and a steeper learning curve, often requiring dedicated resources for effective implementation.`,
+        extras: {
+          "About": (
+  <>
+    <p className="text-black mb-4">
+      ClickUp’s Task and Project Management tools bring a fresh perspective to CRM, prioritizing organization and tracking. The Collaboration Detection feature ensures that no work is duplicated—vital in customer relationship management. Goal Tracking aligns teams with overarching objectives, and Custom Views offer flexibility in visualizing client interactions. ClickUp is breaking down the silos, showing that project management and CRM can coexist and flourish in one platform, making it an unexpectedly fitting CRM choice.
+    </p>
+
+    <p className="text-black mb-4">
+      This vendor may come as a bit of a surprise, as ClickUp is primarily known as a project management platform. That reputation is well earned (and why it takes the title it does in this list). ClickUp also has a CRM platform—one that fills many of the needs discussed here.
+    </p>
+
+    <p className="text-black mb-4">
+      ClickUp’s foray into CRM features is a recent development, evolving from its core strength in task and project management.
+    </p>
+
+    <p className="text-black mb-4">
+      ClickUp already has a noteworthy share of the PM market, and picking up the CRM module can amplify the amount of benefit those teams get out of the vendor. Seeing as most other major brands in the PM space cost significantly more, it’s an excellent way to get powerful software tools without paying enterprise-level subscription fees.
+    </p>
+
+    <p className="text-black mb-4">
+      While ClickUp offers excellent task management and customization, its CRM features could benefit from more advanced sales tracking and marketing automation tools. Enhancing these aspects would make ClickUp a more comprehensive solution for businesses looking for an all-in-one platform for project management and customer relationship management.
+    </p>
+
+    <p className="text-black mb-4">
+      <em>Also read: Best CRM and Project Management Integrated Solutions</em>
+    </p>
+  </>
+),
+
+         "Key Features": (
+  <>
+    <h4 className="text-lg font-bold mb-2">Task and project management:</h4>
+    <p className="text-black mb-4">
+      ClickUp excels in organizing tasks, allowing you to create, assign, prioritize, and track tasks all within a single platform.
+    </p>
+
+    <h4 className="text-lg font-bold mb-2">Collaboration detection:</h4>
+    <p className="text-black mb-4">
+      ClickUp’s unique feature helps avoid duplicate work by showing who’s working on what in real-time.
+    </p>
+
+    <h4 className="text-lg font-bold mb-2">Goal tracking:</h4>
+    <p className="text-black mb-4">
+      With ClickUp, you can set, track, and achieve goals across different teams and projects, ensuring everyone is aligned and focused.
+    </p>
+
+    <h4 className="text-lg font-bold mb-2">Custom views:</h4>
+    <p className="text-black mb-4">
+      ClickUp allows you to customize how you view your tasks and projects, whether that’s in a list, board, box, calendar, or Gantt chart view.
+    </p>
+
+    <h4 className="text-lg font-bold mb-2">Automation and integrations:</h4>
+    <p className="text-black">
+      Offers advanced automation capabilities that allow you to create custom workflows, automate routine tasks, and integrate seamlessly with over 1,000 other tools and applications, enhancing productivity and efficiency.
+    </p>
+  </>
+),
+
+         Pricing: (
+  <>
+    <p className="text-black mb-2 font-semibold">Free trial available</p>
+    <p className="text-black mb-4 font-semibold">Free plan available</p>
+
+    <h4 className="text-lg font-bold mb-1">Unlimited:</h4>
+    <p className="text-black mb-4">$5/user/month</p>
+
+    <h4 className="text-lg font-bold mb-1">Business:</h4>
+    <p className="text-black mb-4">$12/user/month</p>
+
+    <h4 className="text-lg font-bold mb-1">Business Plus:</h4>
+    <p className="text-black mb-4">$19/user/month</p>
+
+    <h4 className="text-lg font-bold mb-1">Enterprise:</h4>
+    <p className="text-black">Contact ClickUp for a customized quote</p>
+  </>
+),
+
+        },
+      },
+    },
+//Less Annoying CRM – Best for companies on a budget
+ Annoying: {
+      title: "Less Annoying CRM – Best for companies on a budget",
+      logo: "/images/less-annoying.png",
+      button: {
+        text: "Visit Website",
+        link: "#",
+      },
+      scores: [
+        { label: "Overall Score", score: "3.5/5" },
+
+        { label: "Pricing", score: "3.3/5" },
+        { label: "General features and Interface", score: "3.3/5" },
+        { label: "Core features", score: "3.9/5" },
+        { label: "Advanced features", score: "1.5/5" },
+        { label: "Inegration and compatibility", score: "3.3/5" },
+        { label: "UX", score: "4.25/5" },
+      ],
+      pros: [
+        "Easy to deploy",
+        "Easy to use",
+        "Lower-end cost",
+      
+      ],
+      cons: ["Limited pre-built functionality","Smaller integration library compared to competitors",],
+      why: {
+        intro: `In the grand scheme of CRM software, Less Annoying CRM might seem overshadowed by giants like Salesforce and NetSuite, but it excels in its simplicity and affordability, particularly for small businesses. While Salesforce and NetSuite offer extensive features, they also come with higher complexity and costs that can be prohibitive for smaller enterprises. Less Annoying CRM focuses on delivering an intuitive, easy-to-use platform without the unnecessary frills, making it a strong contender for businesses looking for straightforward solutions.`,
+         outro: `For those who find Salesforce’s vast array of features and customization options daunting or NetSuite’s ERP integration excessive, Less Annoying CRM presents a simpler, more manageable alternative. It provides the necessary tools to maintain customer relationships effectively, without the hassle and expense of more extensive systems. This focus on simplicity and affordability makes Less Annoying CRM a refreshing choice in the crowded CRM space.`,
+        extras: {
+          "About ": (
+            <>
+              <p className="text-black mb-4">
+                With a low per-user cost, and intuitive functionality, it’s a perfect choice for teams that don’t have complex criteria for a CRM or sales software vendor to meet. 
+              </p>
+              <p className="text-black">
+                If you’re looking to deploy quickly, onboard staff with minimal training, and want to limit your cloud software overhead, Less Annoying CRM fits the bill. And while the list of available customizations and pre-built integrations is smaller than other CRMs in this list, there are no contracts or limitations, making this CRM a strong choice for up-and-coming brands.
+              </p>
+             
+            </>
+          ),
+         "Key Features": (
+  <>
+    <h4 className="text-lg font-bold mb-2">Simplicity:</h4>
+    <p className="text-black mb-4">
+      Less Annoying CRM prides itself on its user-friendly design that makes it easy for small businesses to manage contacts and track leads without unnecessary complexity.
+    </p>
+
+    <h4 className="text-lg font-bold mb-2">Customizability:</h4>
+    <p className="text-black mb-4">
+      The platform allows businesses to tailor the CRM to their specific needs, with customizable fields, layouts, and reports.
+    </p>
+
+    <h4 className="text-lg font-bold mb-2">Collaboration features:</h4>
+    <p className="text-black mb-4">
+      The system is designed for team collaboration, allowing multiple users to share contacts, calendars, and notes.
+    </p>
+
+    <h4 className="text-lg font-bold mb-2">Affordability:</h4>
+    <p className="text-black">
+      The CRM offers straightforward and low-cost pricing, making it an accessible solution for small businesses.
+    </p>
+  </>
+),
+
+          Pricing: (
+            <>
+              <p className="text-black"> $15/user/year</p>
+            </>
+          ),
+        },
+      },
+    },
+
   };
 
   // Convert toolsContent object to array for mapping
@@ -1252,7 +1822,7 @@ Pipedrive’s visual sales pipeline breathes life into deal progression, streaml
     {
       id: 4,
       name: "Pipedrive",
-      image: "/images/shapecrm.png",
+      image: "/images/Pipedrive.jpg",
       alt: "Pipedrive",
       expertScore: 4.2,
       bestFor: "Best for pipeline management and optimization",
@@ -1268,7 +1838,7 @@ Pipedrive’s visual sales pipeline breathes life into deal progression, streaml
     {
       id: 5,
       name: "Salesforce Sales Cloud",
-      image: "/images/shapecrm.png",
+      image: "/images/salesforce.png",
       alt: "Salesforce Sales Cloud",
       expertScore: 4.0,
       bestFor: "Best CRM for enterprises",
@@ -1281,6 +1851,111 @@ Pipedrive’s visual sales pipeline breathes life into deal progression, streaml
       freeTrial: true,
       freeVersion: false,
     },
+
+    {
+      id: 6,
+      name: "Oracle Netsuite CRM",
+      image: "/images/oracle.png",
+      alt: "Oracle Netsuite CRM",
+      expertScore: 4.0,
+      bestFor: "Best all-in-one solutions",
+      visitUrl: "shape",
+      keyFeatures: [
+        "Marketing automation",
+        "Customer service management",
+        "Advanced order management",
+      ],
+      freeTrial: true,
+      freeVersion: false,
+    },
+
+    {
+      id: 7,
+      name: "Insightly",
+      image: "/images/insightly.png",
+      alt: "Insightly",
+      expertScore: 3.9,
+      bestFor: "Best for easy-to-read analytics and reporting",
+      visitUrl: "shape",
+      keyFeatures: [
+        "Advanced reporting",
+        "Dashboard visualization",
+        "Comprehensive forecasting",
+      ],
+      freeTrial: true,
+      freeVersion: false,
+    },
+
+    {
+      id: 8,
+      name: "Keap",
+      image: "/images/keap.png",
+      alt: "Keap",
+      expertScore: 3.8,
+      bestFor: "Best for sales and marketing synergy",
+      visitUrl: "shape",
+      keyFeatures: [
+        "Smart client management",
+        "Integrated appointments",
+        "Pipeline automation",
+      ],
+      freeTrial: true,
+      freeVersion: false,
+    },
+
+    {
+      id: 9,
+      name: "Copper CRM",
+      image: "/images/copper.png",
+      alt: "Copper CRM",
+      expertScore: 4.0,
+      bestFor: "Best for security",
+      visitUrl: "shape",
+      keyFeatures: [
+        "Google Workspace integration",
+        "Robust security platform",
+        "Automated data entry",
+      ],
+      freeTrial: true,
+      freeVersion: false,
+    },
+
+    {
+      id: 10,
+      name: "ClickUp",
+      image: "/images/clickup.png",
+      alt: "ClickUp",
+      expertScore: 3.8,
+      bestFor: "Best for project management",
+      visitUrl: "shape",
+      keyFeatures: [
+        "Task and project management",
+        "Collaboration detection",
+        "Goal tracking",
+      ],
+      freeTrial: true,
+      freeVersion: false,
+    },
+
+    {
+      id: 11,
+      name: "Less Annoying CRM",
+      image: "/images/salesforce.png",
+      alt: "Less Annoying CRM",
+      expertScore: 3.5,
+      bestFor: "Best for simplicity",
+      visitUrl: "shape",
+      keyFeatures: [
+        "Simple user interface",
+        "Customizability",
+        "Quite affordable",
+      ],
+      freeTrial: true,
+      freeVersion: false,
+    },
+
+   
+    
   ];
 
   const renderStars = (score) => {
@@ -1614,7 +2289,7 @@ Pipedrive’s visual sales pipeline breathes life into deal progression, streaml
                     </p>
 
                     <p className="text-gray-700 leading-relaxed mb-8">
-                      The processes and systems that help .
+                      The processes and systems that help  improve a business’s relationships with their contacts may also be called customer relationship management..
                     </p>
 
                     <p className="text-gray-700 leading-relaxed mb-6">
@@ -3308,67 +3983,166 @@ Pipedrive’s visual sales pipeline breathes life into deal progression, streaml
 
                   {/* Contact management Section */}
                   <div>
-                    {/* Contact management Heading */}
-                    <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
-                      Contact management
-                    </h2>
+  {/* Contact management Heading */}
+  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+    Contact management
+  </h2>
 
-                    {/*Contact management Paragraph */}
-                    <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
-                      For CRM tools, the most foundational functionality is that
-                      of collecting and organizing contact information. At the
-                      very least, it needs to be a step up from simply dumping
-                      leads into a spreadsheet only to immediately be forgotten.
-                      Spreadsheets have their place, but they aren’t optimized
-                      for automation or to serve as living records. If a CRM
-                      can’t improve on manual data entry, manual data scrubbing,
-                      and manual retrieval, then it’s just Excel with extra
-                      steps.
-                    </p>
-                  </div>
+  {/* Contact management Paragraph */}
+  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed mb-6">
+    For CRM tools, the most foundational functionality is that of collecting and organizing contact information. At the very least, it needs to be a step up from simply dumping leads into a spreadsheet only to immediately be forgotten. Spreadsheets have their place, but they aren’t optimized for automation or to serve as living records. If a CRM can’t improve on manual data entry, manual data scrubbing, and manual retrieval, then it’s just Excel with extra steps.
+  </p>
+
+  {/* Additional Contact Management Info */}
+  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed mb-4">
+    Contact management features in CRM and sales software, it should be noted, vary widely from system to system. But the common upgrades to functionality will likely look familiar to anyone who’s been using digital devices in the past two decades:
+  </p>
+
+  <ul className="list-disc list-inside text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed space-y-2">
+    <li>Automated data importing</li>
+    <li>Data export flexibility (via EDI, CSV, or other formats)</li>
+    <li>Integrations with other platforms, apps, and databases</li>
+    <li>Filters and search functions</li>
+    <li>Analytics and reporting functions</li>
+  </ul>
+</div>
+
                 </div>
                 {/*Communication recordsSection */}
-                <div>
-                  {/*Communication records Heading */}
-                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
-                    Scheduling
-                  </h2>
+               <div>
+  {/* Communication records Heading */}
+  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+    Communication records
+  </h2>
 
-                  {/*Communication records Paragraph */}
-                  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
-                    By now, nearly everyone is familiar with the “This call may
-                    be recorded for quality assurance purposes” line spoken to
-                    customers calling in to a business for support. Having a
-                    record of customer/client/lead interactions can be
-                    indispensable. And not just for maintaining excellent
-                    service, either.
-                  </p>
-                </div>
+  {/* Communication records Paragraph */}
+  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed mb-6">
+    By now, nearly everyone is familiar with the “This call may be recorded for quality assurance purposes” line spoken to customers calling in to a business for support. Having a record of customer/client/lead interactions can be indispensable. And not just for maintaining excellent service, either.
+  </p>
+
+  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed mb-6">
+    Using recorded calls, chats, and other communication, businesses can achieve a multitude of important objectives, including:
+  </p>
+
+  <ul className="list-disc list-inside text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed space-y-2 mb-6">
+    <li>Improving effectiveness of staff training, onboarding, company policies, and more</li>
+    <li>Compiling data for analytics (which can help identify patterns, predict trends, and even recommend strategies)</li>
+    <li>Providing evidence to help navigate legal concerns and protect against loss</li>
+  </ul>
+
+  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed">
+    If benefits like these factor into your CRM and sales software choices, then be aware that some software includes functionality to support it, while some does not.
+  </p>
+</div>
+
                 {/* Integrations Section */}
-                <div>
-                  {/*Integrations Heading */}
-                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
-                    Integrations
-                  </h2>
+               <div>
+  {/* Integrations Heading */}
+  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+    Integrations
+  </h2>
 
-                  {/* Resource mangement Paragraph */}
-                  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
-                    Implementing new software systems can be difficult, and
-                    onboarding users only becomes more problematic when the
-                    system doesn’t play well with existing solutions in the
-                    workflow. Some CRMs are built as part of a larger platform
-                    of business solutions, and are intended to be used as a
-                    holistic unit. This is a bit of a trade-off, and some
-                    cost-benefit evaluations will be needed to determine if a
-                    complete workflow overhaul will net positive or negative
-                    returns for the trouble. However, if maintaining the
-                    stability and functionality of other systems is of equal
-                    importance, then finding a CRM software that can integrate
-                    with them successfully. Depending on what integrations are
-                    needed, there may be plug-ins or add-ons available already
-                    to users of the tool.
-                  </p>
-                </div>
+  {/* Integrations Paragraphs */}
+  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed mb-4">
+    Implementing new software systems can be difficult, and onboarding users only becomes more problematic when the system doesn’t play well with existing solutions in the workflow.
+  </p>
+
+  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed mb-4">
+    Some CRMs are built as part of a larger platform of business solutions, and are intended to be used as a holistic unit. This is a bit of a trade-off, and some cost-benefit evaluations will be needed to determine if a complete workflow overhaul will net positive or negative returns for the trouble.
+  </p>
+
+  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed mb-4">
+    However, if maintaining the stability and functionality of other systems is of equal importance, then finding a CRM software that can integrate with them successfully is critical. Depending on what integrations are needed, there may be plug-ins or add-ons available already to users of the tool.
+  </p>
+
+  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed mb-4">
+    For less common integrations, some more code-heavy API customization may be necessary. In these cases, it’s a good idea to ask which side of the client-vendor partnership will be building the integration.
+  </p>
+
+  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed">
+    What should be avoided is the addition of a CRM that only further complicates workflows and requires additional manual processes to hold the system together.
+  </p>
+</div>
+<div>
+  {/* Marketing Automation Heading */}
+  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+    Marketing automation
+  </h2>
+
+  {/* Marketing Automation Paragraphs */}
+  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed mb-4">
+    Marketing automation is a specific example of the integration concerns above, but it merits its own spot on this list due to the amount of overlap between marketing and sales efforts. Like other sales-adjacent functions, there are a lot of advantages to having the CRM trigger automatic tasks such as sending confirmation emails, email nurture campaigns, and more.
+  </p>
+
+  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed mb-4">
+    Worst-case scenario, similar to what’s mentioned above, is that the new CRM complicates already existing processes, rather than integrating or replacing them. If your CRM or sales software adds another step in the process of, for example, sending outreach emails because staff members have to manually dig for contact info in the database, that’s a net loss.
+  </p>
+
+  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed mb-4">
+    At the very least, the CRM should leave any existing processes intact and unhindered. Most likely, however, your organization will benefit from some form of integration, or a CRM that includes marketing automation features natively.
+  </p>
+</div>
+
+<div>
+  {/* Quotes and Invoicing Heading */}
+  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+    Quotes and invoicing
+  </h2>
+
+  {/* Quotes and Invoicing Paragraphs */}
+  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed mb-4">
+    Next in line for important functions in the sales process that may or may not be handled by sales team members are financials, such as quotes, invoices, and other AP/AR responsibilities. The same philosophy applies here as above. If an all-in-one solution upgrades your workflow, prioritize that aspect in your research.
+  </p>
+
+  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed">
+    If integration will suffice, then double-check with vendors for the specific platforms you need to be interoperable. Even if your current process is efficient enough currently, be sure that the CRM software doesn’t create additional headaches for anyone in the workflow.
+  </p>
+</div>
+
+<div>
+  {/* Data Privacy Heading */}
+  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+    Data privacy
+  </h2>
+
+  {/* Data Privacy Paragraphs */}
+  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed mb-4">
+    Cybersecurity is, arguably, a priority for every organization (or, at least it should be). Some verticals deal with higher risk than others, however, and may need additional security protocols for their CRM to protect themselves or even to comply with industry mandates.
+  </p>
+
+  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed mb-4">
+    This is one that may require consulting with IT, InfoSec, or other I&O staff in the organization. Many of the technical details that factor into whether or not a CRM software is sufficiently secure may be outside the expertise of anyone without a background in computer systems, and it’s not one to leave to chance.
+  </p>
+
+  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed">
+    Check with internal SMEs, and leverage their experience to further vet your shortlist of CRMs. It may even be worthwhile to have a 3rd-party vendor risk assessment done for any that meet all other criteria, just to cover your bases.
+  </p>
+</div>
+
+<div>
+  {/* Project Management Heading */}
+  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+    Project management
+  </h2>
+
+  {/* Project Management Paragraphs */}
+  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed mb-4">
+    This list of supplemental functions that might be relevant would be pretty long if it were comprehensive. All-in-one systems, analytics and reporting, ease of use, pipeline management, and many more might fit here. Many of these have been touched on above, and others are likely known quantities already.
+  </p>
+
+  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed mb-4">
+    So instead, this part of the list will finish with one final consideration: project management.
+  </p>
+
+  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed mb-4">
+    Organizations that have, until now, used less formalized workflow processes may not realize how much of an upgrade a well-designed project management strategy can be. As teams grow, workloads become heavier, and processes become more intricate and complex, tracking things on paper proves a substantial challenge.
+  </p>
+
+  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed">
+    With effective implementation, project management tools can provide visibility and accountability across the board. Better still, it can help staff achieve greater levels of autonomy by giving them the tools needed to stay organized and on top of their responsibilities. Some CRM and sales software tools include project management (PM) features in their toolset, while others can integrate with popular platforms via APIs. Either way, for any team larger than a handful of employees, it’s worth discussing the potential value a CRM with PM enablement might bring to the table.
+  </p>
+</div>
+
               </section>
               {/* How-to-choose */}
               <section id="how-to-choose" className="mt-8 max-w-7xl mx-auto">
