@@ -8,6 +8,9 @@ export default function Footer() {
     <footer className="bg-[#0E1F1C] text-white py-12 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 text-sm border-b border-gray-700 pb-8">
         {/* Column 1 */}
+
+
+        
         <div>
           <h3 className="font-bold mb-3">Company</h3>
           <ul className="space-y-2">
