@@ -936,7 +936,7 @@ When contrasting LevelEleven with other gamification choices like Pointagram, Am
               <p className="text-black">
                 Information on employee roles and advanced search
                 functionalities that are particularly useful in SMB and
-                mid-market segments​​
+                mid-market segments​​.
               </p>
             </>
           ),
