@@ -1,4 +1,4 @@
- "use client";
+"use client";
 
 import React, { useState, useEffect } from "react";
 import {
@@ -32,6 +32,7 @@ export default function ProjectManagementPage() {
   const [activeSection, setActiveSection] = useState(null);
   const [openSections, setOpenSections] = useState({});
   const [openItems, setOpenItems] = useState({});
+ 
   const [tableOfContents, setTableOfContents] = useState([
     {
       id: "what-is-pm-software",
@@ -125,7 +126,8 @@ export default function ProjectManagementPage() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toolsContent = {
+ 
+const toolsContent = {
     monday: {
       title: "monday.com: Best overall project management software",
       logo: "/images/monday.png",
@@ -169,15 +171,20 @@ export default function ProjectManagementPage() {
           "About monday.com": (
             <>
               <p className="text-black mb-4">
-                monday.com is a cloud-based work operating system that helps
-                teams manage tasks, projects, and workflows. It provides visual
-                tools to plan, track, and collaborate, making it easier to stay
-                organized and on schedule.
-              </p>
-              <p className="text-black">
-                The platform is known for its flexibility, allowing users to
-                customize their boards and processes for various use cases —
-                from software development to HR and marketing.
+                <Link
+                  href="https://monday.com"
+                  className="text-green-600 hover:text-green-700 font-medium underline"
+                >
+                  monday.com{" "}
+                </Link>
+                can help you streamline tasks, deadlines, and deliverables. It
+                was initially created as a collaboration tool and eventually
+                evolved into a comprehensive platform that can perform various
+                project management functions. Nowadays, it is a leading tool for
+                managing workflows, monitoring project progress, and improving
+                communication. monday.com also offers other products including a
+                CRM, making it one of the best CRM and project management
+                software on the market today.
               </p>
             </>
           ),
@@ -346,20 +353,26 @@ export default function ProjectManagementPage() {
         "Limited exporting and importing functionality for reporting and analysis.",
       ],
       why: {
-        intro: `I chose Asana for its straightforward yet feature-rich interface that is easy to navigate, even for beginners. With fewer clicks than monday.com and Jira, you can quickly change views from list to board or timeline. Despite some limitations on assigning tasks and exporting functionality, Asana’s organized software navigation makes it the go-to choice for businesses seeking to simplify workflow and manage tasks with less fuss and a gentle learning curve.`,
+        intro: `I chose Asana for its straightforward yet feature-rich interface that is easy to navigate, even for beginners. With fewer clicks than monday.com and Jira, you can quickly change views from list to board or timeline. Despite some limitations on assigning tasks and exporting functionality, Asana's organized software navigation makes it the go-to choice for businesses seeking to simplify workflow and manage tasks with less fuss and a gentle learning curve.`,
 
         extras: {
           "About Asana": (
             <>
               <p className="text-black mb-4">
-                Asana was initially designed as a tool to improve team
-                collaboration and productivity. After years of development,
-                Asana has become one of the best project management software
-                solutions on the market for small businesses. Asana’s key focus
-                is to offer a clean and straightforward interface so that users
-                with varying levels of technical expertise can use it. On top of
-                its neat, user-friendly interface, Asana also provides robust
-                task management capabilities, multiple project views, and
+                <Link
+                  href="https://asana.com"
+                  className="text-green-600 hover:text-green-700 font-medium underline"
+                >
+                  Asana{" "}
+                </Link>
+                was initially designed as a tool to improve team collaboration
+                and productivity. After years of development, Asana has become
+                one of the best project management software solutions on the
+                market for small businesses. Asana's key focus is to offer a
+                clean and straightforward interface so that users with varying
+                levels of technical expertise can use it. On top of its neat,
+                user-friendly interface, Asana also provides robust task
+                management capabilities, multiple project views, and
                 collaboration features.
               </p>
             </>
@@ -374,7 +387,7 @@ export default function ProjectManagementPage() {
                 to multiple sections within a project, a feature called
                 multi-homing. This feature ensures that all relevant
                 stakeholders have access and visibility to the task and can
-                collaborate on it. It’s particularly useful for work with
+                collaborate on it. It's particularly useful for work with
                 overlapping responsibilities or within integrated workflows.
               </p>
               <h4 className="text-lg font-bold mb-2">Task covers</h4>
@@ -382,18 +395,18 @@ export default function ProjectManagementPage() {
                 Asana now offers task covers, a.k.a. thumbnail images for tasks,
                 to make project management more intuitive and visually
                 appealing. This picture provides a quick visual preview of what
-                each assignment involves. With task covers, you’ll get instant
+                each assignment involves. With task covers, you'll get instant
                 graphic context to recognize tasks more efficiently. This
                 feature sets Asana apart by blending functionality with a
                 personalized touch.
               </p>
               <h4 className="text-lg font-bold mb-2">Workload view</h4>
               <p className="text-black mb-4">
-                Asana’s workload reporting feature visually represents the
-                team’s capacity and helps a project manager ensure no one is
-                overwhelmed or underutilized. Unlike ClickUp’s workload view,
+                Asana's workload reporting feature visually represents the
+                team's capacity and helps a project manager ensure no one is
+                overwhelmed or underutilized. Unlike ClickUp's workload view,
                 which displays data in color-coded bars, Asana presents the data
-                in a neat graph to better understand the team’s workload. This
+                in a neat graph to better understand the team's workload. This
                 feature in Asana is available for Advanced and Enterprise
                 customers.
               </p>
@@ -402,8 +415,8 @@ export default function ProjectManagementPage() {
           Pricing: (
             <>
               <p className="text-black mb-4">
-                Asana’s pricing structure is quite competitive, but if you
-                require advanced features, you’ll find them paywalled behind
+                Asana's pricing structure is quite competitive, but if you
+                require advanced features, you'll find them paywalled behind
                 higher-tier plans. For mid-tier companies, Asana provides
                 excellent value for money through its mid-tier plans, as they
                 offer competent functionalities for their price.
@@ -425,7 +438,12 @@ export default function ProjectManagementPage() {
               </ul>
               <ul className="list-disc pl-5 text-black mb-4">
                 <li>Up to 500 teammates.</li>
-                <li>sana Intelligence (AI for work and project management).</li>
+                <li>
+                  <Link href="https://asana.com/ai" className="text-green-600 hover:text-green-700 font-medium underline">
+                    Asana Intelligence{" "}
+                  </Link>
+                  (AI for work and project management).
+                </li>
                 <li>Gantt view.</li>
                 <li>Custom project templates and forms.</li>
                 <li>250 automations per month.</li>
@@ -467,7 +485,7 @@ export default function ProjectManagementPage() {
                   </ul>
                 </li>
               </ul>
-              <h4 className="text-lg font-bold mb-2">Enterprise plan</h4>
+              <h4 className="text-lg font-bold mb-2">Enterprise + plan</h4>
               <ul className="list-disc pl-5 text-black">
                 <li>Requires custom pricing.</li>
                 <li>
@@ -522,7 +540,23 @@ export default function ProjectManagementPage() {
         "Some users report slow load times.",
       ],
       why: {
-        intro: `I chose Wrike because of its ability to adapt to different business models and project management strategies. This versatility makes it a perfect choice for project managers handling multiple projects simultaneously. Even though some users think the platform’s aesthetic is a bit lackluster, Wrike contains features essential for keeping track of tasks, deliverables, and progress.`,
+        intro: (
+          <>
+            I chose Wrike because of its ability to adapt to different business
+            models and{" "}
+            <Link
+              href="https://wrike.com/project-management-guide/"
+              className="text-green-600 hover:text-green-700 font-medium underline"
+            >
+              project management strategies
+            </Link>
+            . This versatility makes it a perfect choice for project managers
+            handling multiple projects simultaneously. Even though some users
+            think the platform's aesthetic is a bit lackluster, Wrike contains
+            features essential for keeping track of tasks, deliverables, and
+            progress.
+          </>
+        ),
 
         outro: `While Asana offers a streamlined, high-level interface for work management, Wrike provides a granular and detailed way of resource allocation.`,
 
@@ -530,13 +564,19 @@ export default function ProjectManagementPage() {
           "About Wrike": (
             <>
               <p className="text-black mb-4">
-                Wrike provides robust task management features, real-time
-                analytics, and reports within a simple, neat-looking platform.
-                You can also rename the fields within a project or duplicate an
-                existing project’s format as a template. Its flexibility makes
-                it a versatile tool catering to various business needs. It can
-                also support the waterfall PM framework and Agile methodologies
-                such as Scrum and Kanban.
+                <Link
+                  href="https://wrike.com"
+                  className="text-green-600 hover:text-green-700 font-medium underline"
+                >
+                  Wrike
+                </Link>{" "}
+                provides robust task management features, real-time analytics,
+                and reports within a simple, neat-looking platform. You can also
+                rename the fields within a project or duplicate an existing
+                project's format as a template. Its flexibility makes it a
+                versatile tool catering to various business needs. It can also
+                support the waterfall PM framework and Agile methodologies such
+                as Scrum and Kanban.
               </p>
             </>
           ),
@@ -546,13 +586,20 @@ export default function ProjectManagementPage() {
                 Interactive Gantt charts
               </h4>
               <p className="text-black mb-4">
-                Wrike’s Gantt chart feature is highly interactive and allows
+                Wrike's Gantt chart feature is highly interactive and allows
                 users to create, adjust, and link tasks directly within the
-                chart. Wrike’s interactive Gantt charts can easily identify task
+                chart. Wrike's interactive Gantt charts can easily identify task
                 durations, dependencies, and milestones through intuitive
-                drag-and-drop actions. Additionally, Wrike’s Gantt chart can
-                also perform a critical path analysis and highlight the sequence
-                of tasks that directly impact the project’s completion date.
+                drag-and-drop actions. Additionally, Wrike's Gantt chart can
+                also perform a{" "}
+                <Link
+                  href="https://wrike.com/project-management-guide/faq/what-is-critical-path-method/"
+                  className="text-green-600 hover:text-green-700 font-medium underline"
+                >
+                  critical path analysis
+                </Link>{" "}
+                and highlight the sequence of tasks that directly impact the
+                project's completion date.
               </p>
               <h4 className="text-lg font-bold mb-2">
                 Highly customizable workflows
@@ -580,10 +627,10 @@ export default function ProjectManagementPage() {
           Pricing: (
             <>
               <p className="text-black mb-4">
-                Overall, Wrike’s pricing and plans can accommodate a wide range
+                Overall, Wrike's pricing and plans can accommodate a wide range
                 of users, from individuals to large organizations. Furthermore,
-                Wrike’s Business plan offers a robust set of tools. However, its
-                value for money might be less compelling than ClickUp’s
+                Wrike's Business plan offers a robust set of tools. However, its
+                value for money might be less compelling than ClickUp's
                 offerings at similar or lower price points.
               </p>
 
@@ -712,15 +759,34 @@ export default function ProjectManagementPage() {
         "Complex initial setup.",
       ],
       why: {
-        intro: `I chose Jira for its Agile-specific tools and templates. Its features, such as customizable boards, backlogs, sprints, and reports, make it ideal for organizations that follow the Scrum or Kanban framework.`,
+        intro: (
+          <>
+            I chose Jira for its Agile-specific tools and templates. Its
+            features, such as customizable boards, backlogs, sprints, and
+            reports, make it ideal for organizations that follow the{" "}
+            <Link
+              href="https://www.atlassian.com/agile"
+              className="text-green-600 hover:text-green-700 font-medium underline"
+            >
+              Scrum or Kanban
+            </Link>{" "}
+            framework.
+          </>
+        ),
 
-        outro: `Furthermore, Jira’s capacity to integrate into the Atlassian ecosystem and other productivity tools helps teams centralize project details and collaborate across different platforms. Its ability to tailor-fit workflows can help you modify Jira’s functionalities to align with your project needs.`,
+        outro: `Furthermore, Jira's capacity to integrate into the Atlassian ecosystem and other productivity tools helps teams centralize project details and collaborate across different platforms. Its ability to tailor-fit workflows can help you modify Jira's functionalities to align with your project needs.`,
 
         extras: {
           "About Jira": (
             <>
               <p className="text-black mb-4">
-                Jira was primarily designed for software development and issue
+                <Link
+                  href="https://www.atlassian.com/software/jira"
+                  className="text-green-600 hover:text-green-700 font-medium underline"
+                >
+                  Jira
+                </Link>{" "}
+                was primarily designed for software development and issue
                 tracking. It has since evolved and developed its capabilities.
                 Nowadays, even non-IT organizations use Jira for progress
                 tracking and project management.
@@ -729,9 +795,15 @@ export default function ProjectManagementPage() {
                 Since Jira is part of the Atlassian ecosystem, it also offers a
                 unified user experience for users who work with multiple
                 Atlassian tools. Jira also has advanced capabilities for
-                supporting Agile project management methodologies through better
-                integration with CI/CD and Agile planning tools within the
-                Atlassian suite.
+                supporting Agile{" "}
+                <Link
+                  href="https://www.atlassian.com/agile/project-management"
+                  className="text-green-600 hover:text-green-700 font-medium underline"
+                >
+                  project management methodologies
+                </Link>{" "}
+                through better integration with CI/CD and Agile planning tools
+                within the Atlassian suite.
               </p>
             </>
           ),
@@ -849,7 +921,7 @@ export default function ProjectManagementPage() {
         },
       },
     },
-    ClickUp: {
+   ClickUp: {
       title:
         "ClickUp: Best project management software for resource management",
       logo: "/images/clickup.png",
@@ -889,8 +961,14 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
           "About ClickUp": (
             <>
               <p className="text-black mb-4">
-                ClickUp is a cloud-based project management software initially
-                developed as a team management platform. After further software
+                <Link
+                  href="#"
+                  className="text-green-600 hover:text-green-700 font-medium underline"
+                >
+                  ClickUp
+                </Link>{" "}
+                is a cloud-based project management software initially developed
+                as a team management platform. After further software
                 development, ClickUp now offers features that enhance work and
                 task management, making it a sound choice for streamlining
                 workflows. With its highly customizable user interface (UI),
@@ -903,10 +981,10 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
             <>
               <h4 className="text-lg font-bold mb-2">Native time tracking</h4>
               <p className="text-black mb-4">
-                ClickUp’s native time tracking, which is available on all paid
+                ClickUp's native time tracking, which is available on all paid
                 plans, helps teams monitor time spent on specific tasks. While
                 monday.com offers native time tracking with basic
-                functionalities, ClickUp’s time tracking is configurable and
+                functionalities, ClickUp's time tracking is configurable and
                 offers advanced capabilities. It allows users to manually input
                 time entries and create custom statuses, workflows, and
                 time-tracking settings specific to their project needs.
@@ -939,7 +1017,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
               <p className="text-black mb-4">
                 Considering the comprehensive features this PM tool offers (even
                 in its free plan), ClickUp stands out for its affordability.
-                Additionally, ClickUp’s Enterprise plan is worth considering for
+                Additionally, ClickUp's Enterprise plan is worth considering for
                 its flexibility and comprehensive feature set at potentially
                 lower costs than its competitors.
               </p>
@@ -965,9 +1043,9 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
               </ul>
               <ul className="list-disc pl-5 text-black mb-4">
                 <li>Unlimited storage and integrations.</li>
-                <li>Gantt charts..</li>
-                <li>Unlimited custom fields.</li>
                 <li>Gantt charts.</li>
+                <li>Unlimited custom fields.</li>
+
                 <li>
                   Email in ClickUp (send and receive emails directly within a
                   task).
@@ -976,7 +1054,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                 <li>Agile reporting.</li>
                 <li>Compatible with AI add-on ($7 per user per month).</li>
               </ul>
-              <h4 className="text-lg font-bold mb-2">Business plan</h4>
+              <h4 className="text-lg font-bold mb-2">Business </h4>
               <ul className="list-disc pl-5 text-black">
                 <li>$12 per user per month (billed annually).</li>
                 <li>14-day free trial; no credit card required.</li>
@@ -993,7 +1071,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                   </ul>
                 </li>
               </ul>
-              <h4 className="text-lg font-bold mb-2">Enterprise plan</h4>
+              <h4 className="text-lg font-bold mb-2">Enterprise </h4>
               <ul className="list-disc pl-5 text-black">
                 <li>Requires custom pricing.</li>
 
@@ -1123,6 +1201,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
     { criteria: "User security and permissions", weight: "4%" },
     { criteria: "TOTAL", weight: "100%" },
   ];
+ 
 
   return (
     <>
@@ -1616,23 +1695,27 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                         {expandedSections["update-notes"] && (
                           <div className="px-4 pb-4 border-t border-gray-200">
                             <div className="pt-4">
-                              <p className="text-gray-700 mb-4">
-                                Last updated: June 2025 - Updated with the
-                                latest features and pricing information for all
-                                recommended project management tools.
-                              </p>
                               <ul className="space-y-2 text-gray-700">
                                 <li>
-                                  • Added new integration capabilities for
-                                  Monday.com
-                                </li>
-                                <li>• Updated Asana's pricing structure</li>
-                                <li>
-                                  • Included latest Jira automation features
+                                  • October 25, 2024: Kara Sherrer revised the
+                                  copy for clarity and accuracy, in addition to
+                                  adding more screenshots of each software.
                                 </li>
                                 <li>
-                                  • Enhanced comparison criteria based on user
-                                  feedback
+                                  • February 23, 2024:{" "}
+                                  <a
+                                    href="#"
+                                    className="text-green-600 hover:text-green-700 font-medium underline"
+                                  >
+                                    Irene Casucian​{" "}
+                                  </a>
+                                  ​ reviewed and revised the copy for clarity,
+                                  accuracy, and depth. She added our expert
+                                  recommendations to help project managers make
+                                  informed decisions in selecting the right
+                                  project management software for their needs.
+                                  She also added dynamic design elements to
+                                  improve the visual flow of information.
                                 </li>
                               </ul>
                             </div>
@@ -1809,18 +1892,23 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                 <div className="bg-gray-50 rounded-lg p-6">
                   <div className="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
                     <div className="flex items-center space-x-4">
-                      <div className="flex  space-x-2">
-                        <div className="w-8 h-8 bg-gradient-to-r from-red-500 to-orange-500 rounded flex items-center justify-center">
-                          <span className="text-white font-bold text-sm">
-                            Z
-                          </span>
-                        </div>
-                        <div className="text-xl font-bold text-gray-900">
-                          Zoho
-                          <br />
-                          <span className="text-lg">Projects</span>
-                        </div>
-                      </div>
+                      <div className="flex items-center space-x-4">
+      <div className="w-16 h-16 flex-shrink-0">
+        <Image
+          src="/images/project3.jpg"
+          alt="Zoho Logo"
+          width={64}
+          height={64}
+          className="w-full h-full object-contain"
+          priority={false}
+        />
+      </div>
+      <div className="text-xl font-bold text-gray-900">
+        Zoho
+        <br />
+        <span className="text-lg">Projects</span>
+      </div>
+    </div>
                     </div>
                     <div className="w-full sm:w-auto">
                       <button className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
@@ -1860,10 +1948,6 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                 <h1 className="text-3xl font-bold mt-4 text-black mb-2">
                   What is the best project management software?
                 </h1>
-                <p className="text-gray-700 mt-2">
-                  Here are our top recommendations for project management
-                  software in 2025.
-                </p>
 
                 {/* Map through the tools array */}
                 {toolsArray.map((tool) => (
@@ -2338,7 +2422,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                 </div>
               </div>
 
-              {/* 24SevenOffice  products details */}
+          {/* 24SevenOffice  products details */}
               <div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg mt-4 sm:p-8 transition-shadow duration-300 overflow-hidden">
                 <div className="p-6  md:p-8 lg:p-10">
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 sm:gap-6 mb-6 sm:mb-8">
@@ -2355,17 +2439,18 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                         />
                       </div>
 
-                      {/* Title and Review Link */}
+                      {/* Title and Review */}
                       <div className="min-w-0 flex-1">
                         <h1 className="text-xl sm:text-xl md:text-2xl lg:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
                           24SevenOffice
                         </h1>
-                        <Link
-                          href="/reviews/zoho-projects"
-                          className="text-sm sm:text-base md:text-lg text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
-                        >
-                          Leave a Review
-                        </Link>
+                        <div className="flex items-center gap-2">
+                          <div className="flex items-center">
+                            <span className="text-green-600 text-lg">★★★★★</span>
+                          </div>
+                          <span className="text-sm sm:text-base font-medium text-gray-700">5</span>
+                          <span className="text-sm text-gray-500">( 1 review )</span>
+                        </div>
                       </div>
                     </div>
 
@@ -2448,17 +2533,19 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                         />
                       </div>
 
-                      {/* Title and Review Link */}
+                      {/* Title and Review */}
                       <div className="min-w-0 flex-1">
                         <h1 className="text-xl sm:text-xl md:text-2xl lg:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
                           4castplus
                         </h1>
-                        <Link
-                          href="/reviews/zoho-projects"
-                          className="text-sm sm:text-base md:text-lg text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
-                        >
-                          Leave a Review
-                        </Link>
+                        <div className="flex items-center gap-2">
+                          <div className="flex items-center">
+                            <span className="text-green-600 text-lg">★★★★</span>
+                            <span className="text-gray-300 text-lg">★</span>
+                          </div>
+                          <span className="text-sm sm:text-base font-medium text-gray-700">4.8</span>
+                          <span className="text-sm text-gray-500">( 7 reviews )</span>
+                        </div>
                       </div>
                     </div>
 
@@ -2611,6 +2698,44 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                   </div>
                 </div>
               </div>
+              {/* Section 1: Product Listing */}
+              <div className="relative overflow-hidden rounded-2xl bg-[#0E1F1C] mt-4 px-8 py-12">
+                <div className="absolute top-0 left-0 w-32 h-32 border rounded-full opacity-20 -translate-x-16 -translate-y-16"></div>
+                <div className="text-center">
+                  <h2 className="text-white text-2xl font-medium mb-8">
+                    Interested in seeing your product here?
+                  </h2>
+                  <Link
+                    href="/list-product"
+                    className="inline-flex items-center bg-[#ffd800] text-black font-medium px-8 py-4 rounded-full transition-colors duration-200"
+                  >
+                    List Your Product
+                    <svg
+                      className="ml-2 w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+
+
+
+
+
+<p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
+  <Link href="#" className=" hover:underline">
+    Why is TechnologyAdvice Free?
+  </Link>
+</p>
 
               {/* 5PM-Disarea products details */}
               <div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg mt-4 sm:p-8 transition-shadow duration-300 overflow-hidden">
@@ -3140,7 +3265,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                 <div>
                   {/* Forecasting Heading */}
                   <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
-                    Scheduling
+                    Forecasting
                   </h2>
 
                   {/* Forecasting Paragraph */}
@@ -3153,9 +3278,15 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                     have been invested. Forecasting takes into account the time
                     spent on each task and the resources required to complete
                     each task relative to the organization’s budget constraints
-                    and revenue goals. A forecasting tool can also predict
-                    project risks and limitations that might potentially pose
-                    issues down the line.
+                    and revenue goals. A forecasting tool can also
+                    <Link
+                      href="/enterprise-project-management"
+                      className="text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-medium"
+                    >
+                      predict project risks
+                    </Link>{" "}
+                    and limitations that might potentially pose issues down the
+                    line.
                   </p>
                 </div>
                 {/* Resource management Section */}
@@ -3175,6 +3306,283 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                     up a detailed inventory of company and human resources, but
                     doing so allows project managers to anticipate bottlenecks
                     and allocate resources.
+                  </p>
+                </div>
+                {/* Budgeting and expense tracking Section */}
+                <div>
+                  {/* Budgeting and expense tracking Heading */}
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+                    Budgeting and expense tracking
+                  </h2>
+
+                  {/* Budgeting and expense tracking Paragraph */}
+                  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
+                    Although software that budgets for projects and businesses
+                    comes in standalone versions, certain PM software vendors
+                    include budgeting functions and expense tracking. These help
+                    companies run multiple projects at the same time while
+                    staying within budget. While budgeting software is somewhat
+                    self-explanatory, expense and project tracking software can
+                    provide PMs with the added benefit of knowing how team
+                    members accrue expenses throughout the lifespan of the
+                    project. Similar to time tracking, expense tracking provides
+                    valuable data that can be used to forecast future project
+                    costs and build budgets into upcoming project plans.
+                  </p>
+                </div>
+                {/* Project, task, and contractor time management Section */}
+                <div>
+                  {/*Project, task, and contractor time management Heading */}
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+                    Project, task, and contractor time management
+                  </h2>
+
+                  {/* Project, task, and contractor time management Paragraph */}
+                  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
+                    As the name implies,{" "}
+                    <Link
+                      href="/enterprise-project-management"
+                      className="text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-medium"
+                    >
+                      time-tracking software
+                    </Link>{" "}
+                    tracks the amount of time each project contributor spends on
+                    their assigned tasks. Besides simply measuring productivity,
+                    time-tracking software also builds an archive of valuable
+                    data that can help businesses forecast completion dates for
+                    similar tasks or projects in the future. Time tracking is
+                    especially helpful when managing a remote team, contract
+                    workers, or part-time employees. In combination with
+                    collaboration features like messaging and alerts that
+                    enhance the project planning and execution experience, time
+                    tracking can keep the entire team on schedule.
+                  </p>
+                </div>
+                {/* Task management Section */}
+                <div>
+                  {/*Task management Heading */}
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+                    Task management
+                  </h2>
+
+                  {/* Task management Paragraph */}
+                  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
+                    Task management refers to the assignment of different
+                    responsibilities to various members of the project team.
+                    Being able to quickly determine who’s contributed to what
+                    part of the project lets managers better identify
+                    bottlenecks and stay on top of the project’s progress.
+                    <Link
+                      href="/enterprise-project-management"
+                      className="text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-medium"
+                    >
+                      Task management software
+                    </Link>{" "}
+                    is often used by solopreneurs and small teams, while project
+                    management software can manage hundreds of tasks that roll
+                    up to a larger project or set of projects.
+                  </p>
+                  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
+                    Also Read:
+                    <Link
+                      href="/enterprise-project-management"
+                      className="text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-medium"
+                    >
+                      Choose the Right Task Management Software: Types and
+                      Considerations
+                    </Link>{" "}
+                  </p>
+                  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
+                    While the concept of task management is simple, the software
+                    can be fairly robust. In the case of large, complex projects
+                    or multiple projects that span different departments, tasks
+                    are often interconnected or interdependent. Certain project
+                    management programs geared towards these types of
+                    undertakings feature the ability to assign tasks and
+                    dependencies to tasks, helping managers determine where a
+                    breakdown in productivity is occurring and assign the
+                    necessary resources to fix the problem. These features have
+                    increasingly added automation to speed the transition of
+                    tasks among team members and across the project workflow.
+                  </p>
+                </div>
+                {/*Kanban charts for task management Section */}
+                <div>
+                  {/* Kanban charts for task management Heading */}
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+                    Kanban charts for task management
+                  </h2>
+
+                  {/* Kanban charts for task management Paragraph */}
+                  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
+                    Some PM tools rely on the
+                    <Link
+                      href="/enterprise-project-management"
+                      className="text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-medium"
+                    >
+                      Kanban
+                    </Link>{" "}
+                    or project board method to visualize the working state of
+                    projects that require separate concurrent tasks. In a Kanban
+                    board project timeline, you organize each task on a digital
+                    card and move those cards across vertical lanes that
+                    represent work states.
+                  </p>
+                </div>
+                {/* Gantt charts for task management Section */}
+                <div>
+                  {/*Gantt charts for task management Heading */}
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+                    Gantt charts for task management
+                  </h2>
+
+                  {/* Gantt charts for task management Paragraph */}
+                  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
+                    Task dependencies are often represented through
+                    <Link
+                      href="/enterprise-project-management"
+                      className="text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-medium"
+                    >
+                      Gantt charts
+                    </Link>{" "}
+                    that show the estimated amount of time a task will take to
+                    complete. These project planning software charts also show
+                    the next tasks the team should perform, document which team
+                    member is in charge of which task, and facilitate work
+                    hand-offs or approvals. Gantt charts are a useful visual
+                    representation of the entire project plan in a compact
+                    space, and they can often be expanded or condensed to show
+                    more or less context where needed.
+                  </p>
+                </div>
+                {/* Notes, tags, and linking for task management Section */}
+                <div>
+                  {/* Notes, tags, and linking for task management Heading */}
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+                    Notes, tags, and linking for task management
+                  </h2>
+
+                  {/* Notes, tags, and linking for task management Paragraph */}
+                  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
+                    Other common features of task management include notes,
+                    tags, and linking between tasks to show dependencies. Adding
+                    notes to a task helps keep track of individual changes to
+                    the project or provide references for the strategy
+                    associated with each task. Adding tags to tasks makes them
+                    easier to filter and find through unlimited projects in the
+                    management tool’s native search functionality. Linking tasks
+                    reminds stakeholders of other dependent tasks, gives further
+                    context to a single task, or provides context to
+                    interdependent tasks in multiple projects.
+                  </p>
+                </div>
+                {/* Permission settings Section */}
+                <div>
+                  {/*Permission settings Heading */}
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+                    Permission settings
+                  </h2>
+
+                  {/* Permission settings Paragraph */}
+                  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
+                    Permission settings allow a project manager to decide who
+                    can view, edit, or change tasks and functions within the
+                    project. To manage a project effectively, a PM must
+                    judiciously mete out permissions and access across the
+                    software. Granular software permission settings help project
+                    managers avoid having to track down the sources of
+                    unauthorized changes to tasks or entire phases of the
+                    project. Permission settings are especially important for
+                    teams that administrate multiple projects across many
+                    departments using the same software for project management.
+                    Look for pre-set or role-based permission settings to manage
+                    unlimited users efficiently from a single dashboard.
+                  </p>
+                </div>
+                {/*Automation Section */}
+                <div>
+                  {/* Automation Heading */}
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+                    Automation
+                  </h2>
+
+                  {/* Automation Paragraph */}
+                  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
+                    Task and workflow automation helps speed projects to
+                    completion. The software is programmed to respond to a
+                    defined event with an immediate response, saving time across
+                    many areas. For example, project assets may be sent for
+                    approval upon completion or alert notifications will be sent
+                    if budgets exceed a pre-set threshold. Automation features
+                    may also automatically schedule recurring tasks for
+                    completion, which reduces the amount of manual work the
+                    project manager is required to do on any given day.
+                  </p>
+                </div>
+                {/* Analysis and report dashboards Section */}
+                <div>
+                  {/* Analysis and report dashboards Heading */}
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+                    Analysis and report dashboards
+                  </h2>
+
+                  {/* Analysis and report dashboards Paragraph */}
+                  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
+                    Analysis and reporting functions let project managers
+                    visualize project data in ways that uncover time, resource,
+                    and work inefficiencies. This type of data can be critical
+                    to making mid-project pivots, especially if it’s presented
+                    in a dashboard that can provide a quick visual reference. If
+                    a task needs additional resources or a department is moving
+                    slower than others, in-depth analysis features will help PMs
+                    rectify or leverage the situation.
+                  </p>
+                </div>
+                {/* Document sharing Section */}
+                <div>
+                  {/* Document sharing Heading */}
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+                    Document sharing
+                  </h2>
+
+                  {/* Document sharing Paragraph */}
+                  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
+                    While email remains a mainstay of the collaboration-focused
+                    work environment, project management and cloud computing
+                    software has enabled teams to share documents in ways that
+                    boost productivity and maximize time efficiency. Many
+                    project management software will allow users to upload
+                    documents and attach them to projects or tasks, making it
+                    easy to locate that project’s resources.
+                  </p>
+                  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
+                    The depth of such functionality varies from the simplicity
+                    of a collaboration system such as Google Drive to
+                    full-fledged wikis that house all of a project’s relevant
+                    materials. Comprehensive sharing solutions often feature
+                    audit trails and version control that record the history of
+                    each task and project. Audit trails let project managers
+                    view task progress and investigate challenges that team
+                    members may be experiencing.
+                  </p>
+                </div>
+                {/* Internal messaging Section */}
+                <div>
+                  {/* Internal messaging Heading */}
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+                    Internal messaging
+                  </h2>
+
+                  {/* Internal messaging Paragraph */}
+                  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
+                    Messaging and meeting functions that are built into the tool
+                    or integrated with the system strengthen communications
+                    between team members. These features come in standalone
+                    versions such as Slack but can also be found in
+                    comprehensive or all-in-one project management solutions.
+                    In-platform messaging feature lets teammates comment on
+                    documents, send messages directly to one another, and
+                    provide context in full-group documents.
                   </p>
                 </div>
               </section>
@@ -3215,7 +3623,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                       tool that aligns with the project’s goals and challenges.
                     </p>
                   </div>
-                  
+
                   {/* Identify must-have features*/}
                   <div>
                     <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
@@ -3224,32 +3632,131 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
 
                     {/* Identify must-have features */}
                     <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
-                      Determine the essential features your project cannot do without. These may include task management, time tracking, or reporting capabilities, depending on the nature of your project.
+                      Determine the essential features your project cannot do
+                      without. These may include task management, time tracking,
+                      or reporting capabilities, depending on the nature of your
+                      project.
                     </p>
                   </div>
-                  
+
                   {/* Evaluate team size and collaboration needs */}
                   <div>
                     <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
-                     Evaluate team size and collaboration needs
+                      Evaluate team size and collaboration needs
                     </h2>
 
                     {/* Evaluate team size and collaboration needs Paragraph */}
                     <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
-                      Consider how your team communicates and collaborates. Look for tools that support these needs through integrated chat functions, file sharing, or collaborative workspaces.
+                      Consider how your team communicates and collaborates. Look
+                      for tools that support these needs through integrated chat
+                      functions, file sharing, or collaborative workspaces.
                     </p>
                   </div>
-                  
-                  {/* Understand project requirements */}
+
+                  {/* Consider integration capabilities */}
                   <div>
                     <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
-                     Consider integration capabilities
+                      Consider integration capabilities
                     </h2>
 
                     {/* Consider integration capabilities paragraph */}
                     <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
-                      Assess the need for the PM tool to integrate with other software your team uses. Seamless integration can significantly improve workflow efficiency.
+                      Assess the need for the PM tool to integrate with other
+                      software your team uses. Seamless integration can
+                      significantly improve workflow efficiency.
                     </p>
+                  </div>
+                  {/* Assess user experience */}
+                  <div>
+                    <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+                      Assess user experience
+                    </h2>
+
+                    {/* Assess user experience paragraph */}
+                    <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
+                      Check if the tool is user-friendly and has a gentle
+                      learning curve. A good user experience increases adoption
+                      rates and overall productivity.
+                    </p>
+                  </div>
+                  {/* Determine budget and ROI */}
+                  <div>
+                    <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+                      Determine budget and ROI
+                    </h2>
+
+                    {/* Determine budget and ROI paragraph */}
+                    <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
+                      Consider the cost of the tool and weigh it against the
+                      expected return on investment. The tool should be
+                      cost-effective and contribute to the overall financial
+                      health of the project.
+                    </p>
+                    <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
+                      If you’re looking for specific types of project management
+                      tools, visit our other project management categories for
+                      product overviews, reviews, and to get recommendations:
+                    </p>
+                    <div className="mb-8">
+                      <ul className="space-y-3 list-disc pl-5">
+                        <li>
+                          <Link
+                            href="#"
+                            className="text-green-600 hover:text-green-700 font-medium underline"
+                          >
+                            Agile Project Management Software
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="#"
+                            className="text-green-600 hover:text-green-700 font-medium underline"
+                          >
+                            Bug Tracking Software
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="#"
+                            className="text-green-600 hover:text-green-700 font-medium underline"
+                          >
+                            Enterprise Project Management Software
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="#"
+                            className="text-green-600 hover:text-green-700 font-medium underline"
+                          >
+                            Marketing Project Management Software
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="#"
+                            className="text-green-600 hover:text-green-700 font-medium underline"
+                          >
+                            Project Portfolio Management Software
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="#"
+                            className="text-green-600 hover:text-green-700 font-medium underline"
+                          >
+                            Time Tracking Software
+                          </Link>
+                        </li>
+                        <li>
+                          <Link
+                            href="#"
+                            className="text-green-600 hover:text-green-700 font-medium underline"
+                          >
+                            Visual Project Management Software
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </section>
@@ -3306,7 +3813,35 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
               </section>
             </div>
           </div>
+          <div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg mt-4 sm:p-8 transition-shadow duration-300 overflow-hidden">
+            <div className="flex items-start space-x-6">
+              <div className="flex-shrink-0">
+                <Image
+                  src="/images/project1.png"
+                  alt="Kara Sherrer"
+                  width={120}
+                  height={120}
+                  className="rounded-full"
+                />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-blue-600 text-xl font-medium mb-4">
+                  <Link href="/author/kara-sherrer" className="hover:underline">
+                    Kara Sherrer
+                  </Link>
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Kara Sherrer is a writer and marketer who has worked with both
+                  B2C and B2B clients across many different industries,
+                  including technology. She is passionate about helping clients
+                  to create and promote informative content according to SEO
+                  best practices. Discover more of her work at karasherrer.com .
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+
       </div>
     </>
   );

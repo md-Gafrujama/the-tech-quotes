@@ -23,7 +23,7 @@ const cards = [
     link: "/blog/Sales-Crm/Credit-card",
   },
   {
-    title: "Sales & Marketing Alignment Done Right: Key Tactics",
+    title: "  Sales & Marketing Alignment Done Right: Key Tactics",
     description:
       "Unlock solid alignment between sales and marketing departments to maximize performance, improve conversions, and...",
     author: "Bianca Caballero",
