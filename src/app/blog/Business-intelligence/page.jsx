@@ -102,15 +102,15 @@ const cards = [
     image: "/images/hr-11.jpg",
     link: "/blog/",
   },
-  {
-    title: "8 Common Project Risks & How to Manage Them",
-    description:
-      "What are the top common project risks? Learn the best practices and strategies for minimizing them in...",
-    author: "Amy Rose Smith",
-    date: "August 10, 2024",
-    image: "/images/hr-12.png",
-    link: "/blog/",
-  },
+  // {
+  //   title: "8 Common Project Risks & How to Manage Them",
+  //   description:
+  //     "What are the top common project risks? Learn the best practices and strategies for minimizing them in...",
+  //   author: "Amy Rose Smith",
+  //   date: "August 10, 2024",
+  //   image: "/images/hr-12.png",
+  //   link: "/blog/",
+  // },
 ];
 
 export default function ProjectManagement() {
