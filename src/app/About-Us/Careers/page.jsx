@@ -5,19 +5,38 @@ import React, { useState } from "react";
 
 export default function CareersPage() {
   const [openIndex, setOpenIndex] = useState(null);
+  const [showOpportunities, setShowOpportunities] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedLocation, setSelectedLocation] = useState('');
+  const [selectedDepartment, setSelectedDepartment] = useState('');
+  const [showFAQs, setShowFAQs] = useState(false);
 
   const toggleSection = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const scrollToCulture = () => {
+    const element = document.getElementById("culture-compass");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  // Define global colors
+  const GLOBAL_BG_COLOR = 'white';
+  const TEXT_COLOR = '#0E1F1C';
+  const BUTTON_COLOR = '#ffd800';
+  const BENEFITS_BACKGROUND_COLOR = '#0e1f1c';
+  const BENEFITS_ITEM_BG_COLOR = '#1A2A28';
+
   const sections = [
     {
-      title: "What are TA’s core values?",
+      title: "What are TA's core values?",
       content: `These are not just words on our website. Our core values are foundational to who we are as a company and the success of our team. We strive to achieve our highest potential and are dedicated to making a consistent effort to grow in these areas.
 
 Be transparent
-Being transparent is being honest and sharing the reality of a situation, even when it’s hard to hear. Examples include:
-- Asking for help and taking ownership when something isn’t going as planned.
+Being transparent is being honest and sharing the reality of a situation, even when it's hard to hear. Examples include:
+- Asking for help and taking ownership when something isn't going as planned.
 - Giving honest, constructive feedback to help each other learn and grow
 - Proactively sharing information.
 This results in every team member empowering one another and aligning within and across departments to do their best work.
@@ -25,14 +44,14 @@ This results in every team member empowering one another and aligning within and
 Challenge mediocrity
 Challenging mediocrity is bringing ideas to the table. Improving an imperfect process. Examples include:
 - Thinking outside the box.
-- Questioning “why?” with the intent to improve.
+- Questioning "why?" with the intent to improve.
 - Working harder, smarter, and more efficiently than the status quo.
 The result is that our team, company, and clients improve every day.
 
 Crave knowledge
 Craving knowledge is asking questions and digging to find the best possible solutions. Examples include:
 - Learning a new skill, language, talent, or hobby and not stopping there.
-- Shadowing a team member who does something you’re interested in learning more about.
+- Shadowing a team member who does something you're interested in learning more about.
 - Identifying knowledge gaps within yourself and following your curiosity, because the more you know the more our business grows.
 This results in our team continuously learning, growing, developing, and producing experts in our field.
 
@@ -44,7 +63,7 @@ Making calculated decisions is analyzing trends and diving deeper into your know
 This results in our team using facts, data, and intelligence to guide our business, making us well-rounded and prepared for contingencies.
 
 Value each other
-Valuing each other is doing something to make someone else’s day more productive or fulfilling because when one of us wins, we all win. Examples include:
+Valuing each other is doing something to make someone else's day more productive or fulfilling because when one of us wins, we all win. Examples include:
 - Pitching in with administrative or project tasks.
 - Giving back to our community through both financial contributions and volunteering our time.
 - Recognizing and speaking kindly about one another.
@@ -60,27 +79,27 @@ Adaptability
 We are always ready to embrace new information and pivot our focus. We are a fast-growing, privately held company and base our decisions on constant feedback and data. Our plans and goals will change so we welcome opportunities for our roles and responsibilities to adapt with us.
 
 A team-first mentality
-We help each other out and organize our days with the big picture in mind. We all work toward a common goal, prioritizing collaboration and open communication. We don’t let titles, location, gender, background, etc. define who gets invited to the table. Your voice and authentic individual ideas are valued and taken seriously.
+We help each other out and organize our days with the big picture in mind. We all work toward a common goal, prioritizing collaboration and open communication. We don't let titles, location, gender, background, etc. define who gets invited to the table. Your voice and authentic individual ideas are valued and taken seriously.
 
 Intrinsic motivation
 We are self-starters and find motivation naturally. We are driven, hold ourselves accountable, and require minimal oversight to remain productive and committed. Due to this, we provide flexibility and autonomy day to day while trusting team members to communicate accordingly. We know what is needed to get the job done.
 
 Resiliency
-We navigate ambiguous situations and find innovative ways to overcome challenges regardless of our limitations. Instead of limiting ourselves with “I can’t”, “I don’t know how”, or “Is it possible?”, we ask ourselves ” What would it take?”
+We navigate ambiguous situations and find innovative ways to overcome challenges regardless of our limitations. Instead of limiting ourselves with "I can't", "I don't know how", or "Is it possible?", we ask ourselves "What would it take?"
 
 Proactivity
 We go beyond the immediate tasks at hand to push our goals forward. We expect everyone to be proactive, take initiative to make the most of their work week, spot opportunities for improvement, and take it upon themselves to enact change or make something better.`,
     },
     {
-      title: "What is TA’s work environment like?",
+      title: "What is TA's work environment like?",
       content: `Engaging
-We believe work is more fun when you know and are known by the people you work with. This can look like being a mentor, directly messaging a colleague to tell them they did a good job, sharing in a meeting, or helping someone out when they need it most. With events like an annual company talent show and virtual happy hours, we don’t take ourselves too seriously and encourage one another through life’s ups and downs.
+We believe work is more fun when you know and are known by the people you work with. This can look like being a mentor, directly messaging a colleague to tell them they did a good job, sharing in a meeting, or helping someone out when they need it most. With events like an annual company talent show and virtual happy hours, we don't take ourselves too seriously and encourage one another through life's ups and downs.
 
 Fast-paced
-We move fast! We have a bias toward taking action and value progress over perfection. Projects and tasks move quickly providing you a way to make an increased impact. We pivot often based on business needs and thrive where we embrace the unknown. We’re all about getting out of our comfort zones, introducing new ideas, and questioning the status quo. There will be learning opportunities when we’re innovating and moving fast!
+We move fast! We have a bias toward taking action and value progress over perfection. Projects and tasks move quickly providing you a way to make an increased impact. We pivot often based on business needs and thrive where we embrace the unknown. We're all about getting out of our comfort zones, introducing new ideas, and questioning the status quo. There will be learning opportunities when we're innovating and moving fast!
 
 Supportive
-Growth varies for everyone, and we’re here to support you, whether you’re an individual contributor or a leader. You will have opportunities to develop new skills, carve your own niche in the business, participate in one of our Employee Resource Groups, ascend to a leadership role, or explore new paths within the organization. We’re invested in your career journey however that looks.
+Growth varies for everyone, and we're here to support you, whether you're an individual contributor or a leader. You will have opportunities to develop new skills, carve your own niche in the business, participate in one of our Employee Resource Groups, ascend to a leadership role, or explore new paths within the organization. We're invested in your career journey however that looks.
 
 Global
 Our workforce spans the globe across four continents, representing a rich tapestry of cultures, backgrounds, and perspectives. We enjoy the benefits of cross-cultural collaboration, an array of global perspectives, language diversity, and the commitment to cultural sensitivity. We are continuously adapting the way we work, communicate, collaborate, give back, and have fun, to align with being a remote-first organization.
@@ -93,27 +112,31 @@ We recognize that diversity extends beyond the color of our skin to include ethn
       content: `We have big goals ahead and need an extraordinary team to achieve them, so if you read this and get just as excited as we are, the opportunities are endless!`,
     },
   ];
+
   const testimonials = [
     {
-      text: `There are endless opportunities to explore and advance your career at TechnologyAdvice. The company invests a lot of training and time into it’s team members and it’s apparent that you get what you put in. If you want growth, opportunity, and an exciting fast-paced environment, TA is the right place for you.`,
+      text: `There are endless opportunities to explore and advance your career at TechnologyAdvice. The company invests a lot of training and time into it's team members and it's apparent that you get what you put in. If you want growth, opportunity, and an exciting fast-paced environment, TA is the right place for you.`,
     },
     {
       text: `You will grow really fast at TA and learn a lot quickly. You will learn how to challenge yourself and stretch your capabilities. The organization is goal driven and focused. The team is fun and my colleagues are great to work with and people are friendly.`,
     },
     {
-      text: `I have never been a part of a company that is as positive as TechnologyAdvice. TA’s management lives by the 5 core values, and this trickles down throughout the entire organization.`,
+      text: `I have never been a part of a company that is as positive as TechnologyAdvice. TA's management lives by the 5 core values, and this trickles down throughout the entire organization.`,
     },
   ];
+
   const awards = [
     { src: 'https://assets.technologyadvice.com/uploads/2024/06/award-inc-5000.png', alt: 'Inc. 5000 6-Time Award Winner' },
     { src: 'https://assets.technologyadvice.com/uploads/2024/06/award-next.png', alt: '2019 Winner Next Awards' },
     { src: 'https://assets.technologyadvice.com/uploads/2024/06/award-500.png', alt: 'Deloitte Technology Fast 500' },
-    { src: 'https://assets.technologyadvice.com/uploads/2024/06/award-forbes.png', alt: 'Forbes America\'s Best Startup Employers 2021' },
+    { src: 'https://assets.technologyadvice.com/uploads/2024/06/award-forbes.png', alt: "Forbes America's Best Startup Employers 2021" },
     { src: 'https://assets.technologyadvice.com/uploads/2024/06/award-nbj.png', alt: 'NBA Small Business Award Recipient' },
     { src: 'https://assets.technologyadvice.com/uploads/2024/06/award-best-workplaces.png', alt: 'Inc. Best Workplaces 2021' },
+    { src: 'https://assets.technologyadvice.com/uploads/2024/06/award-best-business.png', alt: 'Best Business Award' },
     { src: 'https://assets.technologyadvice.com/uploads/2024/06/Built-In-2-1.png', alt: 'Top Workplaces Tennessee' },
     { src: 'https://assets.technologyadvice.com/uploads/2024/06/Built-In-2.png', alt: 'Top Workplaces USA' },
   ];
+
   const benefits = [
     {
       icon: (
@@ -133,8 +156,7 @@ We recognize that diversity extends beyond the color of our skin to include ethn
         </svg>
       ),
       title: 'Career development',
-      description:
-        'Explore virtually endless career opportunities with development meetings, DE&I events, book clubs, Emerging Leaders and Leadership Academy, and more!',
+      description: 'Explore virtually endless career opportunities with development meetings, DE&I events, book clubs, Emerging Leaders and Leadership Academy, and more!',
     },
     {
       icon: (
@@ -154,8 +176,7 @@ We recognize that diversity extends beyond the color of our skin to include ethn
         </svg>
       ),
       title: 'Health and wellness',
-      description:
-        'Enjoy comprehensive health, dental, and vision benefits, plus other great additionals like Headspace and fitness reimbursements.',
+      description: 'Enjoy comprehensive health, dental, and vision benefits, plus other great additionals like Headspace and fitness reimbursements.',
     },
     {
       icon: (
@@ -175,8 +196,7 @@ We recognize that diversity extends beyond the color of our skin to include ethn
         </svg>
       ),
       title: 'Learning and development',
-      description:
-        'Company-wide access to on-demand learning management systems and training.',
+      description: 'Company-wide access to on-demand learning management systems and training.',
     },
     {
       icon: (
@@ -196,8 +216,7 @@ We recognize that diversity extends beyond the color of our skin to include ethn
         </svg>
       ),
       title: 'Mentorship',
-      description:
-        'Gain a mentee or mentor (or both!) as part of a formalized mentorship program.',
+      description: 'Gain a mentee or mentor (or both!) as part of a formalized mentorship program.',
     },
     {
       icon: (
@@ -215,10 +234,9 @@ We recognize that diversity extends beyond the color of our skin to include ethn
             d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"
           />
         </svg>
-      ), // Using a generic user icon here as the original looks like two linked people, which might be a custom icon. Replace with actual icon if available.
+      ),
       title: 'Team activities',
-      description:
-        'Company-wide hackathons, in-person, and virtual events.',
+      description: 'Company-wide hackathons, in-person, and virtual events.',
     },
     {
       icon: (
@@ -238,10 +256,10 @@ We recognize that diversity extends beyond the color of our skin to include ethn
         </svg>
       ),
       title: 'Paid time off',
-      description:
-        'Enjoy work-life balance with generous paid time off.',
+      description: 'Enjoy work-life balance with generous paid time off.',
     },
   ];
+
   const coreValues = [
     {
       icon: (
@@ -250,8 +268,7 @@ We recognize that diversity extends beyond the color of our skin to include ethn
         </svg>
       ),
       title: 'Be transparent',
-      description:
-        'As stakeholders of TA, we deserve to have honest, open, & consistent information about our business. Every employee, no matter the level on the org chart, practices transparency about their work.',
+      description: 'As stakeholders of TA, we deserve to have honest, open, & consistent information about our business. Every employee, no matter the level on the org chart, practices transparency about their work.',
     },
     {
       icon: (
@@ -260,8 +277,7 @@ We recognize that diversity extends beyond the color of our skin to include ethn
         </svg>
       ),
       title: 'Challenge mediocrity',
-      description:
-        'We attack our goals with passion & a sense of urgency. We hold each other accountable & produce results above & beyond expectations.',
+      description: 'We attack our goals with passion & a sense of urgency. We hold each other accountable & produce results above & beyond expectations.',
     },
     {
       icon: (
@@ -270,8 +286,7 @@ We recognize that diversity extends beyond the color of our skin to include ethn
         </svg>
       ),
       title: 'Crave knowledge',
-      description:
-        'At TechnologyAdvice we continually increase our knowledge, deepen our understanding, & invest in our personal and professional growth.',
+      description: 'At TechnologyAdvice we continually increase our knowledge, deepen our understanding, & invest in our personal and professional growth.',
     },
     {
       icon: (
@@ -280,87 +295,158 @@ We recognize that diversity extends beyond the color of our skin to include ethn
         </svg>
       ),
       title: 'Make calculated decisions',
-      description:
-        'We combine data with cross-team collaboration & balance diligence with speed to ensure prudent & tactical decisions that grow our business.',
+      description: 'We combine data with cross-team collaboration & balance diligence with speed to ensure prudent & tactical decisions that grow our business.',
     },
   ];
 
+  const jobCategories = [
+    {
+      category: "Agency",
+      jobs: [
+        { title: "President, Agency", department: "Agency", location: "United States" },
+      ],
+    },
+    {
+      category: "Audience Development",
+      jobs: [
+        { title: "Cybersecurity Newsletter Writer", department: "Audience Development", location: "United States" },
+        { title: "Social Media Specialist", department: "Audience Development", location: "Philippines" },
+        { title: "Technology Content Strategist", department: "Audience Development", location: "Philippines" },
+      ],
+    },
+    {
+      category: "Content",
+      jobs: [
+        { title: "Staff Writer, Channel", department: "Content", location: "Philippines" },
+      ],
+    },
+    {
+      category: "Finance",
+      jobs: [
+        { title: "Bookkeeper", department: "Finance", location: "United States" },
+        { title: "Staff Accountant", department: "Finance", location: "United States" },
+      ],
+    },
+    {
+      category: "People Operations",
+      jobs: [
+        { title: "Learning and Development Specialist", department: "Human Resources", location: "United States" },
+      ],
+    },
+    {
+      category: "Product",
+      jobs: [
+        { title: "Commercial Content Editor and Strategist", department: "Client Delivery", location: "United States" },
+      ],
+    },
+    {
+      category: "Revenue",
+      jobs: [
+        { title: "Affiliate Growth Specialist", department: "Revenue", location: "United States" },
+      ],
+    },
+    {
+      category: "Client Success",
+      jobs: [
+        { title: "Client Success Coordinator", department: "Client Success", location: "United States" },
+        { title: "Client Success Manager", department: "Client Success", location: "United Kingdom" },
+        { title: "Client Success Manager, Boston Area", department: "Client Success", location: "United States" },
+        { title: "Client Success Operations Coordinator", department: "Client Success", location: "Philippines" },
+        { title: "Client Success Coordinator", department: "Client Success", location: "Philippines" },
+      ],
+    },
+    {
+      category: "Sales",
+      jobs: [
+        { title: "Account Director", department: "Sales", location: "United Kingdom" },
+        { title: "Account Manager", department: "Sales", location: "Australia" },
+        { title: "Newsletter Sales Account Executive", department: "Sales", location: "United States" },
+      ],
+    },
+  ];
+
+  const allLocations = [...new Set(jobCategories.flatMap(cat => cat.jobs.map(job => job.location)))].sort();
+  const allDepartments = [...new Set(jobCategories.flatMap(cat => cat.jobs.map(job => job.department)))].sort();
+
+  const filteredJobCategories = jobCategories.map(category => ({
+    ...category,
+    jobs: category.jobs.filter(job => {
+      const matchesSearch = job.title.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesLocation = selectedLocation ? job.location === selectedLocation : true;
+      const matchesDepartment = selectedDepartment ? job.department === selectedDepartment : true;
+      return matchesSearch && matchesLocation && matchesDepartment;
+    })
+  })).filter(category => category.jobs.length > 0);
+
   return (
-    <>
+    <div className="bg-white">
+      {/* Hero Section */}
       <div className="bg-[#0E1F1C] min-h-screen text-white px-8 md:px-16 py-12">
-        <nav className="text-sm mb-8">
-          <span className="text-gray-400">🏠 Home &gt; </span>
-          <span className="font-semibold">Careers</span>
-        </nav>
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="md:w-1/2 mb-8 md:mb-0">
+            <nav className="text-sm mb-8">
+              <span className="text-gray-400">🏠 Home &gt; </span>
+              <span className="font-semibold">Careers</span>
+            </nav>
 
-        <h1 className="text-4xl md:text-5xl font-bold mb-6">
-          Let’s grow together
-        </h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Let's grow together
+            </h1>
 
-        <p className="text-lg md:w-3/4 mb-4">
-          We’re TechnologyAdvice – the team behind a portfolio of leading B2B tech publications.
-          If you’re here, it’s because all of our brands share a common mission – and a single team driving them forward.
-        </p>
+            <p className="text-lg mb-4">
+              We're TechnologyAdvice – the team behind a portfolio of leading B2B tech publications.
+              If you're here, it's because all of our brands share a common mission – and a single team driving them forward.
+            </p>
 
-        <p className="text-lg md:w-3/4 mb-8">
-          At TechnologyAdvice, you’ll work alongside a diverse group of passionate individuals who love growing as professionals and learning new things.
-          No two days are exactly the same here, and you’ll face opportunities to expand your skill set, step outside of your comfort zone,
-          and contribute to the best group you’ll ever work with.
-        </p>
+            <p className="text-lg mb-8">
+              At TechnologyAdvice, you'll work alongside a diverse group of passionate individuals who love growing as professionals and learning new things.
+              No two days are exactly the same here, and you'll face opportunities to expand your skill set, step outside of your comfort zone,
+              and contribute to the best group you'll ever work with.
+            </p>
 
-        <div className="mb-8">
-          <a href="#" className="font-semibold hover:text-[#ffd800]">
-            Subscribe to our Talent Community →
-          </a>
-        </div>
+            <div className="mb-8">
+              <a href="#" className="font-semibold hover:text-[#ffd800]">
+                Subscribe to our Talent Community →
+              </a>
+            </div>
 
-        <button
-          className="bg-[#ffd800] text-black px-8 py-3 rounded-full font-semibold mb-12 hover:opacity-90 transition"
-        >
-          Apply Now
-        </button>
-
-        <div className="flex flex-col md:flex-row gap-8 mb-12">
-          <div className="rounded-xl overflow-hidden w-full md:w-1/2">
-            <Image
-              src="https://assets.technologyadvice.com/uploads/2024/06/ta-careers.png"
-              alt="Team working together"
-              width={500}
-              height={500}
-              className="w-full h-auto"
-            />
+            <button
+              className="bg-[#ffd800] text-black px-8 py-3 rounded-full font-semibold hover:opacity-90 transition"
+            >
+              Apply Now
+            </button>
           </div>
-          {/* Assuming you want another image here, if not, remove this div and adjust styling */}
-          <div className="rounded-xl overflow-hidden w-full md:w-1/2">
-            <Image
-              // You can use a different image for the second slot here
-              src="https://assets.technologyadvice.com/uploads/2024/06/another-career-image.png" // Placeholder, replace with actual image if needed
-              alt="Another team photo"
-              width={500}
-              height={500}
-              className="w-full h-auto"
-            />
+
+          <div className="md:w-1/2 flex justify-center">
+            <div className="rounded-xl overflow-hidden w-full max-w-md">
+              <Image
+                src="https://assets.technologyadvice.com/uploads/2024/06/ta-careers.png"
+                alt="Team working together"
+                width={500}
+                height={500}
+                className="w-full h-auto"
+              />
+            </div>
           </div>
         </div>
 
-        {/* Removed the empty div className="mt-8"></div> as it appeared redundant */}
-
-        <div className="flex flex-wrap gap-8 mt-4 text-[#ffd800] font-semibold">
-          <a href="/culture" className="hover:underline">Culture</a>
-          <a href="/opportunities" className="hover:underline">Opportunities</a>
-          <a href="/faqs" className="hover:underline">FAQs</a>
+        <div className="flex flex-wrap gap-8 mt-12 text-[#ffd800] font-semibold">
+          <button onClick={scrollToCulture} className="hover:underline">Culture</button>
+          <button onClick={() => setShowOpportunities(true)} className="hover:underline">Opportunities</button>
+          <button onClick={() => setShowFAQs(true)} className="hover:underline">FAQs</button>
         </div>
       </div>
 
-      <div className="bg-white min-h-screen text-black px-8 md:px-16 py-12">
+      {/* Culture Compass Section */}
+      <div id="culture-compass" className="bg-white min-h-screen text-black px-8 md:px-16 py-12">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Culture Compass</h2>
 
         <p className="text-lg md:w-3/4 mb-4">
-          At TechnologyAdvice we believe our success starts with attracting, hiring, and developing amazing people for our team. In sharing who we are and how we work, we’re giving you insight into our culture so you can make sure it’s a match for you. Our Culture Compass was created to be remarkably explicit and transparent about our unique culture to give you the best opportunity to thrive in our environment and reach your full potential.
+          At TechnologyAdvice we believe our success starts with attracting, hiring, and developing amazing people for our team. In sharing who we are and how we work, we're giving you insight into our culture so you can make sure it's a match for you. Our Culture Compass was created to be remarkably explicit and transparent about our unique culture to give you the best opportunity to thrive in our environment and reach your full potential.
         </p>
 
         <p className="text-lg md:w-3/4 mb-8">
-          We want TA to be the place for you and hope our culture resonates with you! If not, that’s okay. We believe in ensuring that everyone understands and aligns with our team’s goals, fostering a collective sense of purpose that drives our actions and dedication.
+          We want TA to be the place for you and hope our culture resonates with you! If not, that's okay. We believe in ensuring that everyone understands and aligns with our team's goals, fostering a collective sense of purpose that drives our actions and dedication.
         </p>
 
         {sections.map((section, index) => (
@@ -381,95 +467,26 @@ We recognize that diversity extends beyond the color of our skin to include ethn
         ))}
       </div>
 
-      <section className="bg-white px-8 md:px-16 py-12">
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-12">
-          What our team members have to say
-        </h2>
-        <div className="flex flex-col md:flex-row gap-8 justify-center">
-          {testimonials.map((item, index) => (
-            <div
-              key={index}
-              className="bg-[#0E1F1C] text-white p-8 rounded-3xl flex-1"
-            >
-              <div className="flex gap-4">
-                <span className="text-green-400 text-4xl">“</span>
-                <div className="border-l-2 border-green-400 pl-4">
-                  <p className="text-lg font-medium whitespace-pre-line">
-                    {item.text}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+      {/* Core Values Section */}
+      <div className="py-16 px-4 sm:px-6 lg:px-8" style={{ color: TEXT_COLOR }}>
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-gray-900 mb-12">Awards</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-            {awards.map((award, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 p-6 flex items-center justify-center rounded-lg shadow-sm h-40"
-              >
-                <div className="relative w-full h-full flex items-center justify-center">
-                  <Image
-                    src={award.src}
-                    alt={award.alt}
-                    layout="fill"
-                    objectFit="contain"
-                    className="max-w-full max-h-full"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-[#0E1F1C] py-16 px-4 sm:px-6 lg:px-8 text-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center sm:text-left">
-            Benefits of working on our team
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex flex-col items-center sm:items-start text-center sm:text-left">
-                <div className="bg-gray-800 rounded-full p-4 mb-4 flex items-center justify-center">
-                  {benefit.icon}
-                </div>
-                <h3 className="text-2xl font-semibold mb-2">{benefit.title}</h3>
-                <p className="text-base text-gray-300">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0E1F1C] mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12">
             Core values
           </h2>
-
           <div className="space-y-6">
             {coreValues.map((value, index) => (
               <div
                 key={index}
-                className="flex items-start bg-gray-50 rounded-lg p-6 shadow-sm"
+                className="flex items-start bg-gray-50 p-6 rounded-lg shadow-sm"
               >
-                <div className="flex-shrink-0 bg-green-100 p-3 rounded-xl flex items-center justify-center mr-6">
+                <div className="flex-shrink-0 bg-green-100 p-3 rounded-md mr-4">
                   {value.icon}
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-[#0E1F1C] mb-2">
+                  <h3 className="text-xl font-semibold mb-2" style={{ color: TEXT_COLOR }}>
                     {value.title}
                   </h3>
-                  <p className="text-base text-gray-700">
-                    {value.description}
-                  </p>
+                  <p className="text-gray-700">{value.description}</p>
                 </div>
               </div>
             ))}
@@ -477,55 +494,236 @@ We recognize that diversity extends beyond the color of our skin to include ethn
         </div>
       </div>
 
-      <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+      {/* Benefits Section */}
+      <div className="py-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: BENEFITS_BACKGROUND_COLOR, color: 'white' }}>
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white">
+            Benefits of working on our team
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="p-6 rounded-lg shadow-sm"
+                style={{ backgroundColor: BENEFITS_ITEM_BG_COLOR }}
+              >
+                <div className="flex-shrink-0 p-3 rounded-md mb-4" style={{ backgroundColor: TEXT_COLOR }}>
+                  {benefit.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-white">
+                  {benefit.title}
+                </h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Picture Yourself Section */}
+      <div className="py-16 px-4 sm:px-6 lg:px-8" style={{ color: TEXT_COLOR }}>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12">
             Picture yourself at TechnologyAdvice
           </h2>
-
-          <div className="flex flex-col md:flex-row gap-8">
-            {/* Image 1 */}
-            <div className="flex-1">
+          <div className="flex justify-center">
+            <div className="flex flex-col md:flex-row gap-8 w-full">
               <div className="relative w-full h-96 rounded-lg overflow-hidden">
                 <Image
                   src="https://assets.technologyadvice.com/uploads/2023/06/APAC-Outing-768x510.jpeg"
                   alt="Team members wearing crowns"
                   layout="fill"
                   objectFit="cover"
-                  className="rounded-lg"
                 />
               </div>
-            </div>
-
-            {/* Image 2 */}
-            <div className="flex-1">
               <div className="relative w-full h-96 rounded-lg overflow-hidden">
                 <Image
                   src="https://assets.technologyadvice.com/uploads/2023/06/Bucket-List-Benefit-768x432.jpg"
                   alt="Person skydiving"
                   layout="fill"
                   objectFit="cover"
-                  className="rounded-lg"
                 />
               </div>
             </div>
           </div>
+        </div>
+      </div>
 
-          {/* Navigation Arrows (as seen in the image, assuming they are interactive) */}
-          <div className="mt-8 flex gap-4">
-            <button className="flex items-center justify-center w-12 h-12 rounded-full border border-gray-300 text-gray-500 hover:border-gray-500 hover:text-gray-700 transition-colors duration-200">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-              </svg>
-            </button>
-            <button className="flex items-center justify-center w-12 h-12 rounded-full border border-gray-300 text-gray-500 hover:border-gray-500 hover:text-gray-700 transition-colors duration-200">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-              </svg>
-            </button>
+      {/* Awards Section */}
+      <div className="py-16 px-4 sm:px-6 lg:px-8" style={{ color: TEXT_COLOR }}>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12">
+            Awards
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+            {awards.map((award, index) => (
+              <div key={index} className="bg-gray-50 p-6 rounded-lg shadow-sm flex items-center justify-center h-40">
+                <Image
+                  src={award.src}
+                  alt={award.alt}
+                  width={200}
+                  height={100}
+                  className="object-contain max-h-full"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
-    </>
+
+      {/* Jobs Available Section */}
+      {showOpportunities && (
+        <div className="bg-white py-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: GLOBAL_BG_COLOR, color: TEXT_COLOR }}>
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12">
+              Jobs available
+            </h2>
+
+            {/* Filters Section */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-12 items-center justify-start">
+              {/* Location Filter */}
+              <div className="relative inline-block text-left w-full sm:w-auto">
+                <select
+                  value={selectedLocation}
+                  onChange={(e) => setSelectedLocation(e.target.value)}
+                  className="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-10 pr-4 leading-tight focus:outline-none focus:border-blue-500 shadow-sm"
+                  style={{ color: TEXT_COLOR }}
+                >
+                  <option value="">All Locations</option>
+                  {allLocations.map(location => (
+                    <option key={location} value={location}>{location}</option>
+                  ))}
+                </select>
+                <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center px-3 text-gray-700">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                    <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a8.75 8.75 0 002.304-1.213 6.022 6.022 0 012.498-1.725 6.022 6.022 0 002.504-1.727 8.75 8.75 0 002.304-1.215 4.002 4.002 0 002.49-3.44c-.082-1.94-.97-3.614-2.618-4.944A10.05 10.05 0 0012 2.252c-2.34 0-4.526.702-6.235 1.875a10.05 10.05 0 00-2.618 4.943 4.002 4.002 0 002.49 3.44 8.75 8.75 0 002.304 1.215 6.022 6.022 0 012.504 1.727 6.022 6.022 0 012.498 1.725 8.75 8.75 0 00.07.04zm-.484 1.05zm2.25-14.82l-2.09-2.09c-.39-.39-1.023-.39-1.414 0l-2.09 2.09a1 1 0 000 1.414l2.09 2.09a1 1 0 001.414 0l2.09-2.09a1 1 0 000-1.414z" clipRule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Department Filter */}
+              <div className="relative inline-block text-left w-full sm:w-auto">
+                <select
+                  value={selectedDepartment}
+                  onChange={(e) => setSelectedDepartment(e.target.value)}
+                  className="appearance-none bg-white border border-gray-300 rounded-lg py-2 pl-10 pr-4 leading-tight focus:outline-none focus:border-blue-500 shadow-sm"
+                  style={{ color: TEXT_COLOR }}
+                >
+                  <option value="">All Departments</option>
+                  {allDepartments.map(department => (
+                    <option key={department} value={department}>{department}</option>
+                  ))}
+                </select>
+                <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center px-3 text-gray-700">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                    <path fillRule="evenodd" d="M3.792 2.938A49.069 49.069 0 0112 2.25c2.73 0 5.436.142 8.108.407.3-.097.6-.147.9-.147H21.75a.75.75 0 01.75.75v3.626a.75.75 0 01-.65.748L20.25 11.375V15.75a.75.75 0 01-.75.75H15V21a.75.75 0 01-.75.75h-3a.75.75 0 01-.75-.75v-4.5H9.75a.75.75 0 01-.75-.75v-4.375L3.392 8.363a.75.75 0 01-.65-.748V3.688a.75.75 0 01.75-.75h1.17c.3 0 .6.05.9.147zM6.559 6.723A45.013 45.013 0 0112 6.75c1.848 0 3.655.106 5.433.313V7.5L12 10.875 6.559 7.5V6.723zM15 11.375h4.5v3.625H15v-3.625z" clipRule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Search by Title */}
+              <div className="relative w-full sm:w-auto">
+                <input
+                  type="text"
+                  placeholder="Search by Title"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="border border-gray-300 rounded-lg py-2 pl-10 pr-4 leading-tight focus:outline-none focus:border-blue-500 w-full shadow-sm"
+                  style={{ color: TEXT_COLOR }}
+                />
+                <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center px-3 text-gray-700">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                    <path fillRule="evenodd" d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.694 4.693a1.5 1.5 0 11-2.121 2.121l-4.693-4.694A8.25 8.25 0 012.25 10.5z" clipRule="evenodd" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            {/* Job Listings */}
+            {filteredJobCategories.length > 0 ? (
+              filteredJobCategories.map((categoryData, catIndex) => (
+                <div key={catIndex} className="mb-8">
+                  <h3 className="text-2xl font-bold mb-4" style={{ color: TEXT_COLOR }}>{categoryData.category}</h3>
+                  <div className="space-y-4">
+                    {categoryData.jobs.map((job, jobIndex) => (
+                      <div
+                        key={jobIndex}
+                        className="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-gray-50 p-6 rounded-lg shadow-sm"
+                      >
+                        <p className="text-lg font-semibold text-green-700 mb-2 sm:mb-0">
+                          {job.title}
+                        </p>
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-6 text-sm text-gray-600">
+                          <span className="font-medium">{job.department}</span>
+                          <span className="font-medium">{job.location}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))
+            ) : (
+              <p className="text-center text-gray-500 text-lg">No jobs found matching your criteria.</p>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* Interviewing FAQs Section */}
+      <div className="py-16 px-4 sm:px-6 lg:px-8" style={{ color: TEXT_COLOR }}>
+        <div className="max-w-7xl mx-auto">
+          <button
+            onClick={() => setShowFAQs(!showFAQs)}
+            className="flex items-center justify-between w-full py-4 px-6 bg-gray-100 rounded-lg shadow-sm text-left focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
+          >
+            <h2 className="text-2xl font-bold">Interviewing FAQs</h2>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className={`w-6 h-6 transform transition-transform duration-300 ${showFAQs ? 'rotate-180' : ''}`}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+          </button>
+
+          {showFAQs && (
+            <div className="mt-8 space-y-8">
+              {/* FAQ Items */}
+              <div>
+                <h3 className="text-xl font-semibold mb-2">
+                  TechnologyAdvice does not engage with external staffing agencies.
+                </h3>
+                <p className="text-gray-700">
+                  Any candidates introduced by such firms will not be eligible for compensation.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold mb-2">
+                  What does working at TechnologyAdvice look like?
+                </h3>
+                <p className="text-gray-700">
+                  With employees across the globe, we take a remote-first approach. All of our jobs can be performed remotely unless otherwise noted in the job description.
+                </p>
+                <p className="text-gray-700 mt-2">
+                  Whether you will work remotely all the time, sometimes, or never, we want to ensure you have the tools you need to be successful. We will ship the technology and equipment that you need to do your job.
+                </p>
+                <p className="text-gray-700 mt-2">
+                  We also want to ensure that you are fully integrated into the culture and company, so you will have the opportunity to participate in virtual outings. If there is ever a chance for you to visit our headquarters in Nashville, TN, there will be catered lunch and a desk space waiting for you!
+                </p>
+                <p className="text-gray-700 mt-2">
+                  New hires located within 50 miles of an office are requested to work from the office for their first week and for quarterly stakeholder meetings. If you are located in the US, we offer a Hybrid Work Policy allowing our team the choice to work 100% in the office, 100% remote, or a blend of the two unless otherwise noted.
+                </p>
+              </div>
+
+              {/* More FAQ items... */}
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
   );
 }
