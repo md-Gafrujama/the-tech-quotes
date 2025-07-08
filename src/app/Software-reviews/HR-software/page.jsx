@@ -1,49 +1,298 @@
  "use client";
-
+ 
 import React, { useState, useEffect } from "react";
 import {
   Home,
   CheckCircle2,
   Calendar,
-  ChevronDown,
-  ChevronUp,
-  Plus,
-  Minus,
-  ExternalLink,
-  Search,
-  Filter,
-  Star,
+ 
   Users,
-  DollarSign,
-  Clock,
-  Check,
-  X,
+ 
+  CheckCircle,  Shield, TrendingUp, Award,    ArrowRight, Plus, Minus, BarChart3, UserCheck, DollarSign, BookOpen, MessageSquare,Target,Building,Clock, 
+ ChevronRight,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
-
+import { FaThumbsUp, FaRegSun,FaMagic,FaStar,FaLinkedinIn  } from 'react-icons/fa';
+import { FiSearch,FaCheckCircle ,FiChevronDown, FiChevronUp, FiExternalLink   } from 'react-icons/fi';
+import { FaPlus } from 'react-icons/fa6';
 export default function HRSoftwarePage() {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [productSearch, setProductSearch] = useState("");
-  const [filterBy, setFilterBy] = useState("Reviews");
-  const [sortBy, setSortBy] = useState("Featured");
-  const [itemsPerPage, setItemsPerPage] = useState("10 per page");
-  const [expandedSections, setExpandedSections] = useState({});
-  const [isMobile, setIsMobile] = useState(false);
-  const [activeSection, setActiveSection] = useState(null);
-  const [openSections, setOpenSections] = useState({});
-  const [openItems, setOpenItems] = useState({});
+  const [expandedSection, setExpandedSection] = useState(null);
+ const browseGuides = [
+    { title: "Applicant Tracking System (ATS) Recruiting", icon: <UserCheck className="w-4 h-4" /> },
+    { title: "Onboarding", icon: <BookOpen className="w-4 h-4" /> },
+    { title: "Performance Management", icon: <Target className="w-4 h-4" /> },
+    { title: "Learning Management System (LMS)", icon: <Calendar className="w-4 h-4" /> },
+    { title: "Mentoring", icon: <Users className="w-4 h-4" /> },
+    { title: "Employee Engagement", icon: <Award className="w-4 h-4" /> },
+    { title: "Payroll", icon: <DollarSign className="w-4 h-4" /> },
+    { title: "Global Payroll", icon: <Building className="w-4 h-4" /> },
+    { title: "Benefits Administration", icon: <Shield className="w-4 h-4" /> },
+    { title: "Employee Scheduling", icon: <Calendar className="w-4 h-4" /> },
+    { title: "Time Clock", icon: <Clock className="w-4 h-4" /> }
+  ];
+
+  const alternatives = [
+    { title: "ADP Competitors & Alternatives", icon: <Building className="w-4 h-4" /> },
+    { title: "Gusto Competitors & Alternatives", icon: <DollarSign className="w-4 h-4" /> },
+    { title: "BambooHR Competitors & Alternatives", icon: <Users className="w-4 h-4" /> },
+    { title: "Zenefits Competitors & Alternatives", icon: <Shield className="w-4 h-4" /> },
+    { title: "Workday Competitors & Alternatives", icon: <BarChart3 className="w-4 h-4" /> },
+    { title: "Rippling Competitors & Alternatives", icon: <TrendingUp className="w-4 h-4" /> }
+  ];
+
+  const comparisons = [
+    { title: "Zenefits vs. Gusto", icon: <TrendingUp className="w-4 h-4" /> },
+    { title: "Namely vs. Zenefits", icon: <Users className="w-4 h-4" /> },
+    { title: "Workday vs. PeopleSoft", icon: <Building className="w-4 h-4" /> },
+    { title: "Workday vs. Oracle HCM", icon: <BarChart3 className="w-4 h-4" /> },
+    { title: "UKG vs. Workday", icon: <Target className="w-4 h-4" /> },
+    { title: "Gusto vs. ADP", icon: <DollarSign className="w-4 h-4" /> },
+    { title: "ADP vs. Paychex", icon: <Shield className="w-4 h-4" /> },
+    { title: "ADP vs. Paycom", icon: <Award className="w-4 h-4" /> },
+    { title: "IntelliHR vs. Workday", icon: <BookOpen className="w-4 h-4" /> },
+    { title: "Workday vs. SAP SuccessFactors", icon: <TrendingUp className="w-4 h-4" /> }
+  ];
+
+  const recommendations = [
+    { title: "Top HR Information System (HRIS) Software", icon: <BarChart3 className="w-4 h-4" /> },
+    { title: "Top HR Management System (HRMS) Software", icon: <Users className="w-4 h-4" /> },
+    { title: "Top Human Capital Management (HCM) Software", icon: <Building className="w-4 h-4" /> },
+    { title: "Best HR Software for Enterprises", icon: <TrendingUp className="w-4 h-4" /> },
+    { title: "Best HR Software for Small Businesses", icon: <Target className="w-4 h-4" /> },
+    { title: "Best Pre-Employment Testing Software", icon: <UserCheck className="w-4 h-4" /> },
+    { title: "Best Accounts Payable Software", icon: <DollarSign className="w-4 h-4" /> }
+  ];
+ 
+
+  const coreSoftware = [
+    {
+      title: "Human resources information system (HRIS)",
+      icon: <Users className="w-5 h-5" />,
+      description: "Centralized database for all employee information and HR processes"
+    },
+    {
+      title: "Human resources management system (HRMS)",
+      icon: <Shield className="w-5 h-5" />,
+      description: "Comprehensive system managing all HR functions from hiring to retirement"
+    },
+    {
+      title: "Human capital management (HCM) software",
+      icon: <TrendingUp className="w-5 h-5" />,
+      description: "Strategic approach to workforce optimization and talent management"
+    }
+  ];
+
+  const functionSpecific = [
+    {
+      title: "Recruiting",
+      icon: <UserCheck className="w-5 h-5" />,
+      description: "Streamline hiring processes and candidate management"
+    },
+    {
+      title: "Onboarding",
+      icon: <BookOpen className="w-5 h-5" />,
+      description: "Automate new employee orientation and training"
+    },
+    {
+      title: "Payroll software",
+      icon: <DollarSign className="w-5 h-5" />,
+      description: "Manage compensation, benefits, and tax compliance"
+    },
+    {
+      title: "Performance management",
+      icon: <Award className="w-5 h-5" />,
+      description: "Track employee performance and career development"
+    },
+    {
+      title: "Employee engagement",
+      icon: <MessageSquare className="w-5 h-5" />,
+      description: "Foster workplace culture and employee satisfaction"
+    },
+    {
+      title: "Learning management systems (LMS)",
+      icon: <Calendar className="w-5 h-5" />,
+      description: "Deliver training programs and track skill development"
+    }
+  ];
+
+  const benefits = [
+    {
+      title: "Efficiency",
+      icon: <TrendingUp className="w-6 h-6" />,
+      description: "HR software solutions are designed to consolidate capabilities that drive the efficiency of different HR processes. When HR staff can spend less time on repetitive manual tasks, they are able to focus on more valuable priorities. Additionally, HR software provides employees with direct access to the updated employee handbook so they can complete tasks like direct deposit elections or benefits enrollment independently."
+    },
+    {
+      title: "Compliance",
+      icon: <Shield className="w-6 h-6" />,
+      description: "Compliance with HR-related laws and regulations is usually non-negotiable because of the costly penalties associated with violations. HR software helps organizations stay in compliance with current local, state, and federal requirements by automatically updating processes. Typically, this manifests as built-in overtime and pay compliance warnings, legally mandated paperwork tracking, reminders about compliance deadlines, and automated best practices documents."
+    },
+    {
+      title: "Reporting",
+      icon: <BarChart3 className="w-6 h-6" />,
+      description: "Robust HR software reporting features help organizations make informed decisions with accurate data. Many HR platforms offer report generation templates to help users find the information they need, and others offer advanced plugins to support deeper data insights like predictive analytics and natural language processing."
+    }
+  ];
+    const [filters, setFilters] = useState({
+    reviews: '',
+    pricing: '',
+    companySize: '',
+    sort: 'Featured',
+    perPage: '10 per page',
+    search: '',
+  });
+   const keyFeatures = [
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: "Compliance Management",
+      description: "Payroll and benefits administration with built-in safeguards"
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Recruitment & Retention",
+      description: "Streamlined hiring processes and employee engagement tools"
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Performance Tracking",
+      description: "Employee development and performance management systems"
+    },
+    {
+      icon: <Award className="w-6 h-6" />,
+      title: "Data Insights",
+      description: "Analytics for effective workforce planning and decision-making"
+    }
+  ];
+
+  const considerations = [
+    "Business size and scalability needs",
+    "Available budget and ROI expectations",
+    "Current HR processes and workflows",
+    "Integration requirements with existing systems",
+    "Compliance and security requirements",
+    "User experience and adoption ease"
+  ];
+
+ const products = [
+  {
+    logo: '/images/keka.png',
+    name: 'Keka HR',
+    reviews: '6 reviews',
+    stars: 4.5,
+    companySize: 'Medium (250–999 Employees)',
+    description: `A true employee experience platform, Keka is the SME HR Tech space leader in India. It enables businesses of all sizes to manage and digitize total tasks of workplace administration...`,
+    button: { text: 'Visit Website', type: 'primary' },
+  },
+  {
+    logo: '/images/monitask.png',
+    name: 'Monitask',
+    reviews: '7 reviews',
+    stars: 4.7,
+    companySize: 'Micro – Enterprise – Any Company Size',
+    description: `Optimize your team's performance with Monitask—your comprehensive employee monitoring and productivity tracking solution...`,
+    button: { text: 'Visit Website', type: 'primary' },
+  },
+  {
+    logo: '/images/15five.png',
+    name: '15Five',
+    reviews: '51 reviews',
+    stars: 4.7,
+    companySize: 'Any Company Size',
+    description: `15Five is a continuous performance management solution that helps employees grow and develop, in just 15 minutes each week...`,
+    button: { text: 'Visit Product Profile', type: 'secondary' },
+  },
+  {
+    logo: '/images/access.png',
+    name: 'Access SelectHR',
+    reviews: 'Leave a Review',
+    stars: 0,
+    companySize: 'Medium, Enterprise, Large',
+    description: `The Access Group develops business management solutions, specifically HR software. Their products are used by over 100,000 customers in the United Kingdom...`,
+    button: { text: 'Visit Product Profile', type: 'secondary' },
+  },
+    {
+    logo: '/images/acquiretm.png',
+    name: 'AcquireTM',
+    reviews: '1 review',
+    stars: 4.0,
+    companySize: 'Micro (0–49), Medium (250–999), Large (1,000–4,999), Small (50–249)',
+    description: `AcquireTM is a cloud-based applicant tracking and talent acquisition solution that provides a complete hiring platform for small or mid-sized businesses...`,
+    button: { text: 'Visit Product Profile', type: 'secondary' },
+  },
+  {
+    logo: '/images/activtrak.png',
+    name: 'ActivTrak',
+    reviews: 'Leave a Review',
+    stars: 0,
+    companySize: 'Medium (250–999), Large (1,000–4,999)',
+    description: `ActivTrak’s workforce analytics provide predictive insights that help leaders, managers, and employees build trust, deepen engagement and boost productivity...`,
+    button: { text: 'Visit Product Profile', type: 'secondary' },
+  },
+  {
+    logo: '/images/adaptive.png',
+    name: 'Adaptive Suite – Adaptive Insights',
+    reviews: 'Leave a Review',
+    stars: 0,
+    companySize: 'Medium, Enterprise (5,000+), Large',
+    description: `Adaptive Suite is the only unified, cloud-based corporate performance management software...`,
+    button: { text: 'Visit Product Profile', type: 'secondary' },
+  },
+  {
+    logo: '/images/adp.png',
+    name: 'ADP',
+    reviews: '1 review',
+    stars: 1.0,
+    companySize: 'Any Company Size',
+    description: `ADP HR services that empower: Hiring, Onboarding, Managing HR compliance. Whether you’ve got urgent questions or are seeking support...`,
+    button: { text: 'Visit Product Profile', type: 'secondary' },
+  },
+];
+
+   const [openSection, setOpenSection] = useState(null);
+
+  const toggleSection = (section) => {
+    setOpenSection(openSection === section ? null : section);
+  };
+  const Dropdown = ({ label, options, selectedOptions, onChange }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  }
   const [tableOfContents, setTableOfContents] = useState([
     {
       id: "hr-software",
       title: "What is HR software?",
       active: false,
     },
-
+ 
     {
       id: "best-HR-software",
       title: "My picks for the best HR software",
+      active: false,
+    },
+     {
+      id: "ADP-Workforce-Now-Best-overall",
+      title: "ADP Workforce Now: Best overall",
+      active: false,
+    },
+       {
+      id: "Deel-Best-for-startups",
+      title: "Deel: Best for startups",
+      active: false,
+    },
+  
+      {
+      id: "BambooHR-Best-for-small-businesses",
+      title: "   BambooHR: Best for small businesses",
+      active: false,
+    },
+      {
+      id: "Rippling-Best-for-midsize-businesses",
+      title: "Rippling: Best for midsize businesses",
+      active: false,
+    },
+      {
+      id: "SAP-SuccessFactors-HCM-Best-for-large-enterprises",
+      title: "SAP SuccessFactors HCM: Best for large enterprises",
       active: false,
     },
     {
@@ -83,39 +332,129 @@ export default function HRSoftwarePage() {
       active: false,
     },
   ]);
+  const data = [
+    {
+      logo: "/images/adp.png",
+      name: "ADP Workforce Now",
+      link: "#",
+      score: "3.95",
+      useCase: "Best overall",
+      price: "$8/employee",
+    },
+    {
+      logo: "/images/deel.png",
+      name: "Deel",
+      link: "#",
+      score: "3.64",
+      useCase: "Best for startups",
+      price: "$19/employee",
+    },
+    {
+      logo: "/images/bamboohr.png",
+      name: "Bamboo",
+      link: "#",
+      score: "3.64",
+      useCase: "Best for small businesses",
+      price: "$250/mo. for 20 employees",
+    },
+    {
+      logo: "/images/rippling.png",
+      name: "Rippling",
+      link: "#",
+      score: "4.05",
+      useCase: "Best for midsized businesses",
+      price: "$40/mo. + $8/employee",
+    },
+    {
+      logo: "/images/sap.png",
+      name: "SAP SuccessFactors HCM",
+      link: "#",
+      score: "3.81",
+      useCase: "Best for enterprises",
+      price: "$75.50/user",
+    },
+    {
+      logo: "/images/paycor.png",
+      name: "Paycor",
+      link: "#",
+      score: "3.83",
+      useCase: "Best for companies with field and frontline workers",
+      price: "Contact sales",
+    },
+    {
+      logo: "/images/paylocity.png",
+      name: "Paylocity",
+      link: "#",
+      score: "3.76",
+      useCase: "Best for workforce management",
+      price: "$99/mo. + $6/employee",
+    },
+    {
+      logo: "/images/gusto.png",
+      name: "Gusto",
+      link: "#",
+      score: "3.50",
+      useCase: "Best for new businesses in the U.S.",
+      price: "$49/mo. + $6/employee",
+    },
+  ];
+    const [open, setOpen] = useState(null);
 
-  const toggleSection = (sectionKey, labelKey = null) => {
-    setExpandedSections((prev) => ({
-      ...prev,
-      [sectionKey]: !prev[sectionKey],
-    }));
+  const toggle = (index) => {
+    setOpen(open === index ? null : index);
+  };
 
-    if (labelKey) {
-      setActiveSection((prev) => (prev === sectionKey ? null : sectionKey));
-      setOpenSection((prev) => (prev === labelKey ? null : labelKey));
+  const sections = [
+    {
+      title: 'Need Help? Talk to an HR Software Advisor',
+      content: 'Speak with a software expert to get personalized HR recommendations for your business needs.'
+    },
+    {
+      title: 'Why you can trust my advice',
+      content: 'All recommendations are based on in-depth research, verified reviews, and hands-on software trials.'
+    },
+    {
+      title: 'Methodology',
+      content: 'We evaluated over 30 HR software platforms based on pricing, features, support, and user feedback.'
+    },
+    {
+      title: 'Update notes',
+      content: 'Content was last updated on April 25, 2025, with the latest pricing and features for each tool.'
     }
+  ];
 
-    setOpenSections((prev) => ({
-      ...prev,
-      [sectionKey]: !prev[sectionKey],
-    }));
-  };
+  // const toggleSection = (sectionKey, labelKey = null) => {
+  //   setExpandedSections((prev) => ({
+  //     ...prev,
+  //     [sectionKey]: !prev[sectionKey],
+  //   }));
 
-  const toggleItem = (index) => {
-    setOpenItems((prev) => ({
-      ...prev,
-      [index]: !prev[index],
-    }));
-  };
+  //   if (labelKey) {
+  //     setActiveSection((prev) => (prev === sectionKey ? null : sectionKey));
+  //     setOpenSection((prev) => (prev === labelKey ? null : labelKey));
+  //   }
 
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
+  //   setOpenSections((prev) => ({
+  //     ...prev,
+  //     [sectionKey]: !prev[sectionKey],
+  //   }));
+  // };
+
+  // const toggleItem = (index) => {
+  //   setOpenItems((prev) => ({
+  //     ...prev,
+  //     [index]: !prev[index],
+  //   }));
+  // };
+
+  // useEffect(() => {
+  //   const checkMobile = () => {
+  //     setIsMobile(window.innerWidth < 768);
+  //   };
+  //   checkMobile();
+  //   window.addEventListener("resize", checkMobile);
+  //   return () => window.removeEventListener("resize", checkMobile);
+  // }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -140,309 +479,337 @@ export default function HRSoftwarePage() {
         }
       });
     };
+//  const [openSection, setOpenSection] = useState(null);
 
+//   const toggleSection = (section) => {
+//     setOpenSection(openSection === section ? null : section);
+//   };
     // Set initial active state
     handleScroll();
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+const adpScores = [
+  { label: "Overall score", value: 3.95 },
+  { label: "HRIS and reporting", value: 4.63 },
+  { label: "Payroll and benefits", value: 4.38 },
+  { label: "Pricing", value: 2.69 },
+  { label: "Platform/interface", value: 3.80 },
+  { label: "Workforce management", value: 4.13 },
+  { label: "Talent acquisition", value: 4.00 },
+  { label: "Employee relations", value: 3.66 },
+  { label: "Support", value: 3.88 },
+  { label: "User scores", value: 4.40 },
+];
 
-  const toolsContent = {
-    ADP: {
-      title: "ADP Workforce Now: Best overall",
-      logo: "/images/ADP.jpeg",
-      button: {
-        text: "Visit Website",
-        link: "#",
-      },
-      scores: [
-        { label: "Overall Score", score: "3.9/5" },
+const pros = [
+  "Narrative insights to assist with people data analysis.",
+  "Optional HR advisory services for enhanced compliance.",
+  "Extensive product line for fast-growing companies.",
+  "Global payroll support for over 140 countries.",
+];
 
-        { label: "HRIS and reporting", score: "4.63/5" },
-        { label: "Payroll and benefits", score: "4.38/5" },
-        { label: "Pricing", score: "2.69/5" },
-        { label: "Platform/interface", score: "3.80/5" },
-        { label: "Workforce management", score: "4.13/5" },
-        { label: "Talent acquisition", score: "4.0/5" },
-        { label: "Employee relations", score: "3.66/5" },
-        { label: "Support", score: "3.88/5" },
-        { label: "User scores", score: "4.40/5" },
-      ],
-      pros: [
-        "Narrative insights to assist with people data analysis.",
-        "Optional HR advisory services for enhanced compliance.",
-        "Extensive product line for fast-growing companies.",
-        "Global payroll support for over 140 countries.",
-      ],
-      cons: [
-        "Benefits administration is only available on the Plus plan and higher.",
-        "Time and labor management is only available in the highest subscription tier.",
-        "Several features, like recruiting, are powered through acquisitions or third-party partnerships.",
-        "Users report slow customer service and turnaround times.",
-      ],
-      why: {
-        intro: `ADP Workforce Now’s scalability makes it the king of HR software. It bridges the gap between simple human resources information systems (HRIS) and full-scale human capital management (HCM) platforms. In fact, ADP uses Workforce Now as the software to facilitate many of its optional services, like it’s PEO, TotalSource, and global payroll.`,
-        body: `True, Workforce Now lost points for its hard-to-navigate interface and for forcing users to purchase its top plans for access to workforce management and benefits administration modules. Yet, ADP is making moves to make the software less clunky so that it is more accessible for small and large teams alike. For example, the addition of ADP Assist, its AI assistant is a huge improvement for finding information and streamlining HR processes.`,
-        outro: `Workforce Now’s add-on modules, massive product and services catalog, and open API make it stand out among competitors. Choosing Workforce Now also reduces the likelihood of having to jump to a new solution in the future if you grow or shrink since the platform can accommodate your business shifts.`,
-        extras: {
-          "About ": (
-            <>
-              <p className="text-black mb-4">
-                ADP Workforce Now is an all-in-one human resources management
-                system (HRMS) with a range of features to support the employee
-                life cycle from recruitment to separation. Its business
-                services, customization options, and extensive integration
-                library make it the best HR software overall.
-              </p>
-              <p className="text-black">
-                ADP Workforce Now’s 3.95 straddles the line between the needs of
-                both small and large businesses. For example, small businesses
-                can take advantage of its many HR services, including human
-                resources outsourcing (HRO) or professional employer
-                organization (PEO) and employers of record (EOR). Enterprises,
-                meanwhile, will like its workforce analytics to help with
-                strategic initiatives, like reducing turnover.
-              </p>
-            </>
-          ),
-          "Key Features": (
-            <>
-              <h4 className="text-lg font-bold mb-2">
-                Breadth of integrations:
-              </h4>
-              <p className="text-black mb-4">
-                ADP Workforce Now clients have access to ADP Marketplace. Here,
-                you can find solutions to integrate with ADP Workforce Now and
-                consolidate your data among your entire HR tech stack.
-              </p>
-              <p className="text-black mb-4">
-                With integrations available for performance management, time
-                tracking, employee engagement, recruiting, learning management,
-                and financial wellness, you do not have to sacrifice the HR
-                platforms you already use to start with ADP.
-              </p>
-              <h4 className="text-lg font-bold mb-2">
-                Robust payroll functionality
-              </h4>
-              <p className="text-black mb-4">
-                ADP is well-known for its advanced payroll features. You can
-                easily create multiple payroll schedules from ADP Workforce
-                Now’s payroll dashboard to cover different employee
-                classifications. Plus, once you finalize payroll, you can click
-                a button and automatically prepare and download a general ledger
-                file to upload into your accounting system ADP also accommodates
-                more industry- or company-specific payroll needs. For example,
-                if you’re a federal contractor, ADP can help you run certified
-                payroll. Or, if you’re in a service industry like food or
-                hospitality, ADP can calculate tip credits for your service
-                staff to reduce the likelihood of payroll errors.
-              </p>
+const cons = [
+  "Benefits administration is only available on the Plus plan and higher.",
+  "Time and labor management is only available in the highest subscription tier.",
+];
 
-              <h4 className="text-lg font-bold mb-2">Benchmarking:</h4>
-              <p className="text-black">
-                ADP Workforce Now is the only platform on my shortlist with
-                benchmark information for understanding how your business
-                compares to the competition. Using ADP’s U.S. client base of
-                more than 42 million employees, you can see benchmark numbers in
-                your industry and location for:
-              </p>
-              <ul className="list-disc pl-5 text-black">
-                <li>
-                  Creating fair and competitive total compensation packages.
-                </li>
-                <li>Comparing turnover rates.</li>
-                <li>Tracking average time to fill in various roles.</li>
-              </ul>
-              <p className="text-black">
-                Because Workforce Now offers this natively in-app with data that
-                updates in real time, you don’t have to rely on third-party
-                sources for this information—whether through integration or from
-                outdated compensation survey reports. This is also a huge
-                advantage if you’re a small business since access to this
-                information is typically reserved for larger HCM platforms or
-                requires manual input. For comparison, in Rippling, you need to
-                add salary ranges by hand.
-              </p>
-            </>
-          ),
-          Pricing: (
-            <>
-              <p className="text-black mb-4">
-                ADP Workforce Now offers three subscription tiers to choose
-                from: Select, Plus, and Premium. However, it does not reveal
-                starting prices for any of its plans; you must contact ADP’s
-                sales team for a quote.
-              </p>
-              <p className="font-bold  text-black mb-4">
-                In my re-evaluation, Workforce Now’s pricing score dropped from
-                3.13 to 2.69. This is in part due to the quote that I received,
-                which revealed additional costs for HRIS implementation, your
-                payroll schedule, and annual W2 and 1099s processing. For a
-                business with 50 employees and a weekly pay schedule, ADP quoted
-                me $8 per employee, per month (PEPM) plus $180 per month.
-                There’s also a $500 implementation fee.
-              </p>
-              This means ADP can be slightly more expensive overall considering
-              the fees for all of its services, such as check signing and
-              delivery. Still, ADP is one of the only platforms to offer such
-              expanded service options, so if this is a priority for you, going
-              with Workforce Now is your best bet.
-            </>
-          ),
-        },
-      },
-    },
-    Deel: {
-      title: "Deel: Best for startups",
-      logo: "/images/deel.jpg",
-      button: {
-        text: "Visit Website",
-        link: "#",
-      },
-      scores: [
-        { label: "Overall Score", score: "3.64/5" },
-        { label: "HRIS and reporting", score: "3.99/5" },
-        { label: "Payroll and benefits", score: "4.31/5" },
-        { label: "Pricing", score: "3.94/5" },
-        { label: "Platform/interface", score: "4.30/5" },
-        { label: "Workforce management", score: "3.45/5" },
-        { label: "Talent acquisition", score: "0.88/5" },
-        { label: "Employee relations", score: "3.66/5" },
-        { label: "Support", score: "4.38/5" },
-        { label: "User scores", score: "4.06/5" },
-      ],
-      pros: [
-        "Immigration services to hire and relocate talent from across the globe.",
-        "On-demand payroll support for direct and EOR employees.",
-        "Light and dark mode functionality for increased accessibility.",
-        "Diverse account payment options, including cryptocurrency using Coinbase.",
-      ],
-      cons: [
-        "Difficult to navigate user interface (UI).",
-        "Can only pay employees by direct deposit.",
-        "Does not support weekly payroll schedules.",
-        "Lacks recruiting features.",
-      ],
-      why: {
-        intro: `Deel replaces my previous pick for the best HR software for startups, Gusto, by a narrow margin. Deel’s 3.64 beats Gusto’s 3.50 because of the former’s global capabilities that allow you to pay and retain employees worldwide. In fact, despite Gusto’s foray into EOR services in early 2024, it currently only supports 12 countries compared to Deel’s more than 150.`,
-        body: `Deel’s platform is also better equipped to handle the challenges of fast-growing startups than others in this roundup. Need extra support services for your new business? Deel’s PEO, EOR, and U.S. Payroll services provide 24/7 support, a dedicated customer service manager, and white-glove benefits implementation. Need essential employee management tools? Use Deel HR for free to manage compliance, sign documents, and even get access to a basic employee time tracker.`,
-        outro: `Need to complete HR operations without interrupting the flow of work? Use Deel’s Slack plugins to control everyday HR tasks, like requesting and approving time off. This is a much simpler solution if your startup has distributed teams working on various schedules.`,
-        extras: {
-          "About ": (
-            <>
-              <p className="text-black mb-4">
-                Although Deel started as an EOR service provider similar to
-                Oyster and Papaya Global, it’s exploded in recent years with the
-                additions of its Deel HR, U.S. Payroll, Deel PEO, and Deel
-                Engage products for more HR functionality. As a result, Deel is
-                one of the top players in the HR system market, including heavy
-                hitters like Rippling (with which it shares a rather
-                entertaining rivalry).
-              </p>
-              <p className="text-black">
-                However, because Deel started as an EOR, the core of its
-                software aims to carry out global payroll and contract
-                management in sync with its more than 100 international
-                partners. This makes its platform somewhat confusing to navigate
-                since its original purpose was to pull employee information from
-                your onboarding platform or HRIS to facilitate global payroll.
-              </p>
-              <p className="text-black mb-4">
-                Even with Deel HR’s more modern appearance, including a
-                customizable homepage with widgets that mimic BambooHR, expect a
-                bit of a learning curve. That said, its affordability,
-                white-labeling, global capabilities, and workplace communication
-                abilities give Deel a leg up for startups with scrappier HR
-                teams who flow between administrators, employee advocates, and
-                company marketers in the span of one afternoon.
-              </p>
-            </>
-          ),
-          "Key Features": (
-            <>
-              <h4 className="text-lg font-bold mb-2">Contractor management:</h4>
-              <p className="text-black mb-4">
-                Deel isn’t unique when it comes to system features aimed at
-                contractors. Gusto, for example, supports contractor payments in
-                more than 120 countries. But I find Deel’s capabilities far more
-                expansive and versatile.
-              </p>
-              <p classname="text-black mb-4">
-                While Deel’s and Gusto’s contractor features are
-                similar—step-by-step onboarding workflows, contract management,
-                and in-app time trackers—Deel’s benefit offerings for
-                contractors are more robust. For example, Deel offers 15 ways to
-                pay contractors, including through its Deel Card. Gusto’s
-                equivalent, the Gusto Wallet Spending account, is limited to
-                direct employees.
-              </p>
-              <p classname="text-black mb-4">
-                And, for a compliance nerd like myself, Deel’s the only vendor
-                in my roundup with the contractor of record services to avoid
-                the risk of worker misclassification. This is incredibly helpful
-                for a startup where the line between contractor and employee is
-                blurry and varies worldwide.
-              </p>
-              <h4 className="text-lg font-bold mb-2">
-                Tools for distributed teams:
-              </h4>
-              <p className="text-black mb-4">
-                Deel used to be among my honorable mentions for its global
-                capabilities. Unsurprisingly, these tools come in handy for
-                startups where talent may be located across the globe and don’t
-                work a normal nine-to-five. Some tools include its new
-                time-tracking widget, overnight shift support, and mobile app
-                with expense management.
-              </p>
-              <p className="text-black mb-4">
-                But Deel’s Slack plugins, such as employee recognition, are my
-                favorite tools for distributed teams. Slack allows for more
-                free-flowing conversations between coworkers so that
-                peer-to-peer recognition (“Kudos”) feels less like a chore and
-                easier to offer in the moment—a critical component of building
-                up company culture in your startup. Even better is that these
-                plugins are free to use if you have Slack; you don’t need a Deel
-                subscription.
-              </p>
-            </>
-          ),
-          Pricing: (
-            <>
-              <p className="text-black mb-4">
-                You can start using Deel HR at the low price of free. You can
-                also leverage other tools from Deel at no cost, including its
-                Slack plugins (as long as you have a Slack subscription) and
-                global employee cost calculator. This earned Deel a 3.94 in
-                pricing, second only to Gusto’s 4.00. In fact, you can
-                conceivably manage all your employee operations in Deel HR and
-                do payroll yourself for the most cost savings, especially if you
-                have fewer than 10 employees (although I wouldn’t recommend it
-                if you’re new to payroll).
-              </p>
+  // const toolsContent = {
+  //   ADP: {
+  //     title: "ADP Workforce Now: Best overall",
+  //     logo: "/images/ADP.jpeg",
+  //     button: {
+  //       text: "Visit Website",
+  //       link: "#",
+  //     },
+  //     scores: [
+  //       { label: "Overall Score", score: "3.9/5" },
 
-              <p className="font-bold  text-black mb-4">
-                However, if you want to start paying employees through Deel, it
-                becomes expensive once you have more than three U.S.-based
-                employees since you pay $19 PEPM. I’d turn to Gusto or other
-                small business payroll software instead if you just need pay
-                processing. But if you’re looking for global payroll support,
-                either through your own entities or using an EOR, Deel’s pricing
-                is one of the more competitive. Deel also frequently offers
-                discounts if you decide to pay annually.
-              </p>
-            </>
-          ),
-        },
-      },
-    },
-  };
+  //       { label: "HRIS and reporting", score: "4.63/5" },
+  //       { label: "Payroll and benefits", score: "4.38/5" },
+  //       { label: "Pricing", score: "2.69/5" },
+  //       { label: "Platform/interface", score: "3.80/5" },
+  //       { label: "Workforce management", score: "4.13/5" },
+  //       { label: "Talent acquisition", score: "4.0/5" },
+  //       { label: "Employee relations", score: "3.66/5" },
+  //       { label: "Support", score: "3.88/5" },
+  //       { label: "User scores", score: "4.40/5" },
+  //     ],
+  //     pros: [
+  //       "Narrative insights to assist with people data analysis.",
+  //       "Optional HR advisory services for enhanced compliance.",
+  //       "Extensive product line for fast-growing companies.",
+  //       "Global payroll support for over 140 countries.",
+  //     ],
+  //     cons: [
+  //       "Benefits administration is only available on the Plus plan and higher.",
+  //       "Time and labor management is only available in the highest subscription tier.",
+  //       "Several features, like recruiting, are powered through acquisitions or third-party partnerships.",
+  //       "Users report slow customer service and turnaround times.",
+  //     ],
+  //     why: {
+  //       intro: `ADP Workforce Now’s scalability makes it the king of HR software. It bridges the gap between simple human resources information systems (HRIS) and full-scale human capital management (HCM) platforms. In fact, ADP uses Workforce Now as the software to facilitate many of its optional services, like it’s PEO, TotalSource, and global payroll.`,
+  //       body: `True, Workforce Now lost points for its hard-to-navigate interface and for forcing users to purchase its top plans for access to workforce management and benefits administration modules. Yet, ADP is making moves to make the software less clunky so that it is more accessible for small and large teams alike. For example, the addition of ADP Assist, its AI assistant is a huge improvement for finding information and streamlining HR processes.`,
+  //       outro: `Workforce Now’s add-on modules, massive product and services catalog, and open API make it stand out among competitors. Choosing Workforce Now also reduces the likelihood of having to jump to a new solution in the future if you grow or shrink since the platform can accommodate your business shifts.`,
+  //       extras: {
+  //         "About ": (
+  //           <>
+  //             <p className="text-black mb-4">
+  //               ADP Workforce Now is an all-in-one human resources management
+  //               system (HRMS) with a range of features to support the employee
+  //               life cycle from recruitment to separation. Its business
+  //               services, customization options, and extensive integration
+  //               library make it the best HR software overall.
+  //             </p>
+  //             <p className="text-black">
+  //               ADP Workforce Now’s 3.95 straddles the line between the needs of
+  //               both small and large businesses. For example, small businesses
+  //               can take advantage of its many HR services, including human
+  //               resources outsourcing (HRO) or professional employer
+  //               organization (PEO) and employers of record (EOR). Enterprises,
+  //               meanwhile, will like its workforce analytics to help with
+  //               strategic initiatives, like reducing turnover.
+  //             </p>
+  //           </>
+  //         ),
+  //         "Key Features": (
+  //           <>
+  //             <h4 className="text-lg font-bold mb-2">
+  //               Breadth of integrations:
+  //             </h4>
+  //             <p className="text-black mb-4">
+  //               ADP Workforce Now clients have access to ADP Marketplace. Here,
+  //               you can find solutions to integrate with ADP Workforce Now and
+  //               consolidate your data among your entire HR tech stack.
+  //             </p>
+  //             <p className="text-black mb-4">
+  //               With integrations available for performance management, time
+  //               tracking, employee engagement, recruiting, learning management,
+  //               and financial wellness, you do not have to sacrifice the HR
+  //               platforms you already use to start with ADP.
+  //             </p>
+  //             <h4 className="text-lg font-bold mb-2">
+  //               Robust payroll functionality
+  //             </h4>
+  //             <p className="text-black mb-4">
+  //               ADP is well-known for its advanced payroll features. You can
+  //               easily create multiple payroll schedules from ADP Workforce
+  //               Now’s payroll dashboard to cover different employee
+  //               classifications. Plus, once you finalize payroll, you can click
+  //               a button and automatically prepare and download a general ledger
+  //               file to upload into your accounting system ADP also accommodates
+  //               more industry- or company-specific payroll needs. For example,
+  //               if you’re a federal contractor, ADP can help you run certified
+  //               payroll. Or, if you’re in a service industry like food or
+  //               hospitality, ADP can calculate tip credits for your service
+  //               staff to reduce the likelihood of payroll errors.
+  //             </p>
+
+  //             <h4 className="text-lg font-bold mb-2">Benchmarking:</h4>
+  //             <p className="text-black">
+  //               ADP Workforce Now is the only platform on my shortlist with
+  //               benchmark information for understanding how your business
+  //               compares to the competition. Using ADP’s U.S. client base of
+  //               more than 42 million employees, you can see benchmark numbers in
+  //               your industry and location for:
+  //             </p>
+  //             <ul className="list-disc pl-5 text-black">
+  //               <li>
+  //                 Creating fair and competitive total compensation packages.
+  //               </li>
+  //               <li>Comparing turnover rates.</li>
+  //               <li>Tracking average time to fill in various roles.</li>
+  //             </ul>
+  //             <p className="text-black">
+  //               Because Workforce Now offers this natively in-app with data that
+  //               updates in real time, you don’t have to rely on third-party
+  //               sources for this information—whether through integration or from
+  //               outdated compensation survey reports. This is also a huge
+  //               advantage if you’re a small business since access to this
+  //               information is typically reserved for larger HCM platforms or
+  //               requires manual input. For comparison, in Rippling, you need to
+  //               add salary ranges by hand.
+  //             </p>
+  //           </>
+  //         ),
+  //         Pricing: (
+  //           <>
+  //             <p className="text-black mb-4">
+  //               ADP Workforce Now offers three subscription tiers to choose
+  //               from: Select, Plus, and Premium. However, it does not reveal
+  //               starting prices for any of its plans; you must contact ADP’s
+  //               sales team for a quote.
+  //             </p>
+  //             <p className="font-bold  text-black mb-4">
+  //               In my re-evaluation, Workforce Now’s pricing score dropped from
+  //               3.13 to 2.69. This is in part due to the quote that I received,
+  //               which revealed additional costs for HRIS implementation, your
+  //               payroll schedule, and annual W2 and 1099s processing. For a
+  //               business with 50 employees and a weekly pay schedule, ADP quoted
+  //               me $8 per employee, per month (PEPM) plus $180 per month.
+  //               There’s also a $500 implementation fee.
+  //             </p>
+  //             This means ADP can be slightly more expensive overall considering
+  //             the fees for all of its services, such as check signing and
+  //             delivery. Still, ADP is one of the only platforms to offer such
+  //             expanded service options, so if this is a priority for you, going
+  //             with Workforce Now is your best bet.
+  //           </>
+  //         ),
+  //       },
+  //     },
+  //   },
+  //   Deel: {
+  //     title: "Deel: Best for startups",
+  //     logo: "/images/deel.jpg",
+  //     button: {
+  //       text: "Visit Website",
+  //       link: "#",
+  //     },
+  //     scores: [
+  //       { label: "Overall Score", score: "3.64/5" },
+  //       { label: "HRIS and reporting", score: "3.99/5" },
+  //       { label: "Payroll and benefits", score: "4.31/5" },
+  //       { label: "Pricing", score: "3.94/5" },
+  //       { label: "Platform/interface", score: "4.30/5" },
+  //       { label: "Workforce management", score: "3.45/5" },
+  //       { label: "Talent acquisition", score: "0.88/5" },
+  //       { label: "Employee relations", score: "3.66/5" },
+  //       { label: "Support", score: "4.38/5" },
+  //       { label: "User scores", score: "4.06/5" },
+  //     ],
+  //     pros: [
+  //       "Immigration services to hire and relocate talent from across the globe.",
+  //       "On-demand payroll support for direct and EOR employees.",
+  //       "Light and dark mode functionality for increased accessibility.",
+  //       "Diverse account payment options, including cryptocurrency using Coinbase.",
+  //     ],
+  //     cons: [
+  //       "Difficult to navigate user interface (UI).",
+  //       "Can only pay employees by direct deposit.",
+  //       "Does not support weekly payroll schedules.",
+  //       "Lacks recruiting features.",
+  //     ],
+  //     why: {
+  //       intro: `Deel replaces my previous pick for the best HR software for startups, Gusto, by a narrow margin. Deel’s 3.64 beats Gusto’s 3.50 because of the former’s global capabilities that allow you to pay and retain employees worldwide. In fact, despite Gusto’s foray into EOR services in early 2024, it currently only supports 12 countries compared to Deel’s more than 150.`,
+  //       body: `Deel’s platform is also better equipped to handle the challenges of fast-growing startups than others in this roundup. Need extra support services for your new business? Deel’s PEO, EOR, and U.S. Payroll services provide 24/7 support, a dedicated customer service manager, and white-glove benefits implementation. Need essential employee management tools? Use Deel HR for free to manage compliance, sign documents, and even get access to a basic employee time tracker.`,
+  //       outro: `Need to complete HR operations without interrupting the flow of work? Use Deel’s Slack plugins to control everyday HR tasks, like requesting and approving time off. This is a much simpler solution if your startup has distributed teams working on various schedules.`,
+  //       extras: {
+  //         "About ": (
+  //           <>
+  //             <p className="text-black mb-4">
+  //               Although Deel started as an EOR service provider similar to
+  //               Oyster and Papaya Global, it’s exploded in recent years with the
+  //               additions of its Deel HR, U.S. Payroll, Deel PEO, and Deel
+  //               Engage products for more HR functionality. As a result, Deel is
+  //               one of the top players in the HR system market, including heavy
+  //               hitters like Rippling (with which it shares a rather
+  //               entertaining rivalry).
+  //             </p>
+  //             <p className="text-black">
+  //               However, because Deel started as an EOR, the core of its
+  //               software aims to carry out global payroll and contract
+  //               management in sync with its more than 100 international
+  //               partners. This makes its platform somewhat confusing to navigate
+  //               since its original purpose was to pull employee information from
+  //               your onboarding platform or HRIS to facilitate global payroll.
+  //             </p>
+  //             <p className="text-black mb-4">
+  //               Even with Deel HR’s more modern appearance, including a
+  //               customizable homepage with widgets that mimic BambooHR, expect a
+  //               bit of a learning curve. That said, its affordability,
+  //               white-labeling, global capabilities, and workplace communication
+  //               abilities give Deel a leg up for startups with scrappier HR
+  //               teams who flow between administrators, employee advocates, and
+  //               company marketers in the span of one afternoon.
+  //             </p>
+  //           </>
+  //         ),
+  //         "Key Features": (
+  //           <>
+  //             <h4 className="text-lg font-bold mb-2">Contractor management:</h4>
+  //             <p className="text-black mb-4">
+  //               Deel isn’t unique when it comes to system features aimed at
+  //               contractors. Gusto, for example, supports contractor payments in
+  //               more than 120 countries. But I find Deel’s capabilities far more
+  //               expansive and versatile.
+  //             </p>
+  //             <p classname="text-black mb-4">
+  //               While Deel’s and Gusto’s contractor features are
+  //               similar—step-by-step onboarding workflows, contract management,
+  //               and in-app time trackers—Deel’s benefit offerings for
+  //               contractors are more robust. For example, Deel offers 15 ways to
+  //               pay contractors, including through its Deel Card. Gusto’s
+  //               equivalent, the Gusto Wallet Spending account, is limited to
+  //               direct employees.
+  //             </p>
+  //             <p classname="text-black mb-4">
+  //               And, for a compliance nerd like myself, Deel’s the only vendor
+  //               in my roundup with the contractor of record services to avoid
+  //               the risk of worker misclassification. This is incredibly helpful
+  //               for a startup where the line between contractor and employee is
+  //               blurry and varies worldwide.
+  //             </p>
+  //             <h4 className="text-lg font-bold mb-2">
+  //               Tools for distributed teams:
+  //             </h4>
+  //             <p className="text-black mb-4">
+  //               Deel used to be among my honorable mentions for its global
+  //               capabilities. Unsurprisingly, these tools come in handy for
+  //               startups where talent may be located across the globe and don’t
+  //               work a normal nine-to-five. Some tools include its new
+  //               time-tracking widget, overnight shift support, and mobile app
+  //               with expense management.
+  //             </p>
+  //             <p className="text-black mb-4">
+  //               But Deel’s Slack plugins, such as employee recognition, are my
+  //               favorite tools for distributed teams. Slack allows for more
+  //               free-flowing conversations between coworkers so that
+  //               peer-to-peer recognition (“Kudos”) feels less like a chore and
+  //               easier to offer in the moment—a critical component of building
+  //               up company culture in your startup. Even better is that these
+  //               plugins are free to use if you have Slack; you don’t need a Deel
+  //               subscription.
+  //             </p>
+  //           </>
+  //         ),
+  //         Pricing: (
+  //           <>
+  //             <p className="text-black mb-4">
+  //               You can start using Deel HR at the low price of free. You can
+  //               also leverage other tools from Deel at no cost, including its
+  //               Slack plugins (as long as you have a Slack subscription) and
+  //               global employee cost calculator. This earned Deel a 3.94 in
+  //               pricing, second only to Gusto’s 4.00. In fact, you can
+  //               conceivably manage all your employee operations in Deel HR and
+  //               do payroll yourself for the most cost savings, especially if you
+  //               have fewer than 10 employees (although I wouldn’t recommend it
+  //               if you’re new to payroll).
+  //             </p>
+
+  //             <p className="font-bold  text-black mb-4">
+  //               However, if you want to start paying employees through Deel, it
+  //               becomes expensive once you have more than three U.S.-based
+  //               employees since you pay $19 PEPM. I’d turn to Gusto or other
+  //               small business payroll software instead if you just need pay
+  //               processing. But if you’re looking for global payroll support,
+  //               either through your own entities or using an EOR, Deel’s pricing
+  //               is one of the more competitive. Deel also frequently offers
+  //               discounts if you decide to pay annually.
+  //             </p>
+  //           </>
+  //         ),
+  //       },
+  //     },
+  //   },
+  // };
 
   // Convert toolsContent object to array for mapping
-  const toolsArray = Object.entries(toolsContent).map(([key, value]) => ({
-    id: key,
-    ...value,
-  }));
+  // const toolsArray = Object.entries(toolsContent).map(([key, value]) => ({
+  //   id: key,
+  //   ...value,
+  // }));
 
   const coreData = [
     {
@@ -738,7 +1105,7 @@ return (
             <div className="max-w-4xl xl:max-w-5xl">
               <div className="flex items-start space-x-3 sm:space-x-4 bg-white/5 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-6 lg:p-8 border border-white/10">
                 <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 text-green-400 flex-shrink-0 mt-0.5 sm:mt-1" />
-                <div className="text-sm sm:text-base lg:text-lg leading-relaxed text-white/90">
+                <div className="text-lg sm:text-base lg:text-lg leading-relaxed text-white/90">
                   <p>
                     <span className="font-semibold text-white">
                       Technology Advice
@@ -753,14 +1120,14 @@ return (
               </div>
             </div>
             {/* lasted updated */}
-            <div className="mt-8 sm:mt-12 lg:mt-16 pb-8 sm:pb-12 lg:pb-16">
+            <div className="mt-4 sm:mt-8 lg:mt-10 pb-8 sm:pb-12 lg:pb-12">
               <div className="flex items-center space-x-2 sm:space-x-3 text-sm sm:text-base lg:text-lg text-white/70">
                 <Calendar className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
                 <span>Last Updated: April 25, 2025</span>
               </div>
             </div>
             {/* Publication Date */}
-            <div className="mt-8 sm:mt-12 lg:mt-16 pb-8 sm:pb-12 lg:pb-16">
+            <div className="mt-4   lg:mt-8 pb-8 sm:pb-12 lg:pb-12">
               <div className="flex items-center space-x-2 sm:space-x-3 text-sm sm:text-base lg:text-lg text-white/70">
                 <Calendar className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
                 <span>Published Date: January 31, 2025</span>
@@ -1087,1018 +1454,1575 @@ return (
                   </div>
                 </div>
               </section>
-              {/* Featured Partners Section */}
-              <div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg mt-4 transition-shadow duration-300 overflow-hidden p-6 sm:p-8">
-                <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-2xl font-bold text-gray-900">
-                    Featured partners
-                  </h2>
-                  <div className="flex items-center space-x-2 text-sm text-gray-500">
-                    <span>Advertisement</span>
-                    <div className="w-4 h-4 rounded-full bg-gray-400 flex items-center justify-center">
-                      <span className="text-white  font-bold">i</span>
-                    </div>
-                  </div>
-                </div>
+              {/* Featured Partners Section */} 
+              <div className="bg-white px-2 sm:px-4 lg:px-6 py-10">
+<div className="bg-white px-1 sm:px-2 lg:px-3 py-10"></div>
+      <div className="flex items-start justify-between mb-6">
+        <h2 className="text-3xl font-semibold text-gray-900">Featured partners</h2>
+        <div className="text-sm text-gray-500">
+          Advertisement <span className="ml-1 cursor-pointer">ℹ️</span>
+        </div>
+      </div>
 
-                <div className="bg-gray-50 rounded-lg p-6">
-                  <div className="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
-                    <div className="flex items-center space-x-4">
-                      <div className="flex  space-x-2">
-                        <div className="text-xl font-bold text-gray-900">
-                          Keka
-                          <br />
-                          <span className="text-lg">HR</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="w-full sm:w-auto">
-                      <button className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
-                        <span>Visit Website</span>
-                        <ExternalLink className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {/* KEKA HR Card */}
+        <div className="bg-[#f9fafb] rounded-xl p-6 shadow-sm border border-gray-200">
+          <div className="flex items-center justify-center mb-4">
+            <img src="/images/keka-logo.png" alt="Keka Logo" className="h-5" />
+          </div>
+          <h3 className="text-lg font-semibold text-center text-gray-900 mb-4">Keka HR</h3>
+          <div className="flex justify-center mb-4">
+            <a
+              href="#"
+              className="bg-green-600 hover:bg-green-700 text-white text-sm font-medium px-6 py-2 rounded-full flex items-center gap-2"
+            >
+              Visit Website <span>↗</span>
+            </a>
+          </div>
+          <div className="text-sm text-gray-500 mb-2">
+            <span className="font-medium text-gray-800">Good For</span> <br />
+            Medium sized companies <sup>ℹ️</sup>
+          </div>
+          <hr className="my-3" />
+          <div className="text-sm text-gray-500 mb-2">
+            <span className="font-medium text-gray-800">Core Features</span> <br />
+            360 Degree Feedback, Applicant Tracking, Benefits Administration, and 10 more
+          </div>
+          <hr className="my-3" />
+          <div className="text-sm text-gray-500">
+            <span className="font-medium text-gray-800">Integrations</span> <br />
+            QuickBooks Online, Tally
+          </div>
+        </div>
 
-                  <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                    <div>
-                      <div className="text-gray-600 mb-1">Good For</div>
-                      <div className="font-medium text-gray-900">
-                        Medium sized companies
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-gray-600 mb-1">Core Features</div>
-                      <div className="font-medium text-gray-900">
-                        360 Degree Feedback, Applicant Tracking, Benefits
-                        Administration, and 10 more
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-gray-600 mb-1">Integrations</div>
-                      <div className="font-medium text-gray-900">
-                        QuickBooks Online, Tally
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        {/* MONITASK Card */}
+        <div className="bg-[#f9fafb] rounded-xl p-6 shadow-sm border border-gray-200">
+          <div className="flex items-center justify-center mb-4">
+            <img src="/images/monitask-logo.png" alt="Monitask Logo" className="h-6" />
+          </div>
+          <h3 className="text-lg font-semibold text-center text-gray-900 mb-4">Monitask</h3>
+          <div className="flex justify-center mb-4">
+            <a
+              href="#"
+              className="bg-green-600 hover:bg-green-700 text-white text-sm font-medium px-6 py-2 rounded-full flex items-center gap-2"
+            >
+              Visit Website <span>↗</span>
+            </a>
+          </div>
+          <div className="text-sm text-gray-500 mb-2">
+            <span className="font-medium text-gray-800">Good For</span> <br />
+            Any Company Size <sup>ℹ️</sup>
+          </div>
+          <hr className="my-3" />
+          <div className="text-sm text-gray-500 mb-2">
+            <span className="font-medium text-gray-800">Core Features</span> <br />
+            Employee Shift Scheduling, Self-Service Portal, Time/Attendance Management, and 1 more
+          </div>
+          <hr className="my-3" />
+          <div className="text-sm text-gray-500">
+            <span className="font-medium text-gray-800">Integrations</span> <br />
+            Asana, Basecamp, ClickUp, and 10 more
+          </div>
+        </div>
+      </div>
+    </div>
 
-              <div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg mt-4 transition-shadow duration-300 overflow-hidden p-6 sm:p-8">
-                <div className="bg-gray-50 rounded-lg p-6">
-                  <div className="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
-                    <div className="flex items-center space-x-4">
-                      <div className="flex  space-x-2">
-                        <div className="text-xl font-bold text-gray-900">
-                          Montitask
-                        </div>
-                      </div>
-                    </div>
-                    <div className="w-full sm:w-auto">
-                      <button className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
-                        <span>Visit Website</span>
-                        <ExternalLink className="w-4 h-4" />
-                      </button>
-                    </div>
-                  </div>
-
-                  <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-                    <div>
-                      <div className="text-gray-600 mb-1">Good For</div>
-                      <div className="font-medium text-gray-900">
-                        Any Company Size
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-gray-600 mb-1">Core Features</div>
-                      <div className="font-medium text-gray-900">
-                        Employee Shift Scheduling, Self-Service Portal,
-                        Time/Attendance Management, and 1 more
-                      </div>
-                    </div>
-                    <div>
-                      <div className="text-gray-600 mb-1">Integrations</div>
-                      <div className="font-medium text-gray-900">
-                        Asana, Basecamp, ClickUp, and 10 more
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+           
 
               <section id="best-HR-software" className="mt-8">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+               <div className="bg-white p-6 rounded-2xl shadow-md max-w-4xl mx-auto space-y-6 mt-8">
                   <div className="text-center mb-8 sm:mb-12">
                     <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
                   </div>
 
                   {/* Unified Table Layout for All Screen Sizes */}
-                  <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
-                    <div className="overflow-x-auto">
-                      <table className="w-full min-w-full">
-                        <thead>
-                          <tr className="border-b border-gray-200 bg-gray-50">
-                            <th className="text-left py-3 sm:py-6 px-2 sm:px-8 font-semibold text-gray-700 text-sm sm:text-lg"></th>
-                            <th className="text-center py-3 sm:py-6 px-2 sm:px-6 font-semibold text-gray-700 text-sm sm:text-lg">
-                              Overall Score
-                            </th>
-                            <th className="text-center py-3 sm:py-6 px-2 sm:px-6 font-semibold text-gray-700 text-sm sm:text-lg">
-                              Use case
-                            </th>
-                            <th className="text-center py-3 sm:py-6 px-2 sm:px-6 font-semibold text-gray-700 text-sm sm:text-lg">
-                              Starting Price
-                            </th>
+                   <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+        My picks for the best HR software
+      </h2>
 
-                            <th className="text-center py-3 sm:py-6 px-2 sm:px-8 font-semibold text-gray-700 text-sm sm:text-lg">
-                              Action
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {hrData.map((hr, index) => (
-                            <tr
-                              key={hr.id}
-                              className={`border-b border-gray-100 hover:bg-gray-50 transition-colors duration-200 ${
-                                index % 2 === 0 ? "bg-white" : "bg-gray-50/50"
-                              }`}
-                            >
-                              <td className="py-4 sm:py-8 px-2 sm:px-8">
-                                <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-3">
-                                  <div className="w-16 h-8 sm:w-32 sm:h-12 bg-white rounded-lg shadow-md flex items-center justify-center overflow-hidden flex-shrink-0">
-                                    <img
-                                      src={hr.image}
-                                      alt={hr.alt}
-                                      className="w-full h-full object-contain"
-                                    />
-                                  </div>
-                                  <div className="text-center sm:text-left">
-                                    <span className="font-medium text-gray-800 text-xs sm:text-base">
-                                      {hr.name}
-                                    </span>
-                                  </div>
-                                </div>
-                              </td>
-                              <td className="py-4 sm:py-8 px-2 sm:px-6 text-center">
-                                <div className="flex flex-col items-center space-y-1 sm:space-y-2">
-                                  <span className="text-lg sm:text-2xl font-bold text-gray-800">
-                                    {hr.overallScore}
-                                  </span>
-                                  <div className="flex space-x-1 scale-75 sm:scale-100">
-                                    {renderStars(hr.overallScore)}
-                                  </div>
-                                </div>
-                              </td>
-                              <td className="py-4 sm:py-8 px-2 sm:px-6 text-center">
-                                <span className="inline-block bg-blue-100 text-blue-800 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
-                                  {hr.useFor}
-                                </span>
-                              </td>
-                              <td className="py-4 sm:py-8 px-2 sm:px-6">
-                                <span className="inline-block bg-blue-100 text-blue-800 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
-                                  {hr.startingPrice}
-                                </span>
-                              </td>
-
-                              <td className="py-4 sm:py-8 px-2 sm:px-8">
-                                <button className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-medium py-2 px-3 sm:py-3 sm:px-6 rounded-lg transition-all duration-200 flex items-center space-x-1 sm:space-x-2 mx-auto text-xs sm:text-sm">
-                                  <span>Visit Website</span>
-                                  <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
-                                </button>
-                              </td>
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-
-                  <div className="text-center mt-12">
-                    <p className="text-gray-600 text-sm">
-                      Pricing across all featured human resources software
-                      providers are up to date (April 25, 2025). *Based on a
-                      quote I received. ADP Workforce Now charges additional
-                      fees based on your payroll schedule and add-on services
-                      like check printing, signing, and delivery. For a weekly
-                      payroll schedule, ADP quoted me an additional $180 per
-                      month and $500 implementation fee.
-                    </p>
-                  </div>
-                </div>
-              </section>
-              {/* what are best project management tools */}
-
-              {/* Common Heading
-
-                <h1 className="text-3xl font-bold mt-4 text-black mb-2">
-                  What is the best project management software?
-                </h1>
-                <p className="text-gray-700 mt-2">
-                  Here are our top recommendations for project management
-                  software in 2025.
-                </p> */}
-
-              {/* Map through the tools array */}
-              {toolsArray.map((tool) => (
-                <div
-                  key={tool.id}
-                  className="bg-white rounded-2xl sm:rounded-3xl border mt-4  border-gray-200  p-6 mb-8"
-                >
-                  {/* Tool Header */}
-                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
-                        <Image
-                          src={tool.logo}
-                          alt={`${tool.title} logo`}
-                          width={48}
-                          height={48}
-                          className="object-contain"
-                        />
-                      </div>
-                      <h2 className="text-2xl font-bold text-black">
-                        {tool.title}
-                      </h2>
-                    </div>
+      <div className="min-w-[800px]">
+        <table className="w-full text-left border-separate border-spacing-y-3">
+          <thead className="text-sm font-semibold text-gray-600 border-b">
+            <tr>
+              <th className="pb-2"></th>
+              <th className="pb-2">Overall score</th>
+              <th className="pb-2">Use case</th>
+              <th className="pb-2">Starting price</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((company, idx) => (
+              <tr key={idx} className="bg-white rounded-xl shadow-sm">
+                <td className="p-4 flex items-center space-x-3">
+                  <img
+                    src={company.logo}
+                    alt={company.name}
+                    className="w-10 h-10 object-contain"
+                  />
+                  <div>
+                    <p className="font-medium">{company.name}</p>
                     <a
-                      href={tool.button.link}
-                      className="bg-green-600 text-white px-4 py-2 rounded-full text-sm hover:bg-green-700"
+                      href={company.link}
+                      className="mt-1 inline-block text-sm bg-green-600 hover:bg-green-700 text-white px-4 py-1 rounded-full"
                     >
-                      {tool.button.text}
+                      Visit {company.name.split(" ")[0]} ↗
                     </a>
                   </div>
+                </td>
+                <td className="p-4 align-top">
+                  <p className="font-medium">{company.score}</p>
+                  <div className="text-green-600">★★★★☆</div>
+                </td>
+                <td className="p-4 align-top">{company.useCase}</td>
+                <td className="p-4 align-top">{company.price}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
-                  {/* Scores */}
-                  <div className="space-y-4 text-black mb-6">
-                    {tool.scores.map((score, index) => (
-                      <div key={index}>
-                        <div className="flex justify-between text-sm font-medium mb-1">
-                          <span>{score.label}</span>
-                          <span>{score.score}</span>
-                        </div>
-                        <div className="w-full bg-gray-100 rounded-full h-2">
-                          <div
-                            className="bg-green-600 h-2 rounded-full"
-                            style={{
-                              width: `${(parseFloat(score.score) / 5) * 100}%`,
-                            }}
-                          ></div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Pros and Cons */}
-                  <div className="grid md:grid-cols-2 text-black gap-6 mb-6">
-                    <div>
-                      <h3 className="text-lg font-semibold mb-2">Pros</h3>
-                      <ul className="list-disc pl-5 space-y-1">
-                        {tool.pros.map((pro, index) => (
-                          <li key={index}>{pro}</li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold mb-2">Cons</h3>
-                      <ul className="list-disc pl-5 space-y-1">
-                        {tool.cons.map((con, index) => (
-                          <li key={index}>{con}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-
-                  {/* Why I Chose Section */}
-                  <div className="mb-6 text-black">
-                    <h3 className="text-lg font-semibold mb-2">
-                      Why I chose {tool.title.split(":")[0]}
-                    </h3>
-                    <p className="mb-4">{tool.why.intro}</p>
-                    {tool.why.bullets && (
-                      <ul className="list-disc pl-5 space-y-1 mb-4">
-                        {tool.why.bullets.map((bullet, index) => (
-                          <li key={index}>{bullet}</li>
-                        ))}
-                      </ul>
-                    )}
-                    <p>{tool.why.outro}</p>
-                  </div>
-
-                  {/* Expandable Sections */}
-                  {tool.why.extras &&
-                    Object.entries(tool.why.extras).map(([label, content]) => {
-                      const sectionKey = `${tool.id}-${label}`;
-                      return (
-                        <div
-                          key={sectionKey}
-                          className="border-t text-black pt-4 mb-4"
-                        >
-                          <button
-                            onClick={() => toggleSection(sectionKey)}
-                            className="w-full flex justify-between items-center font-medium"
-                          >
-                            <span>{label}</span>
-                            <span className="text-green-600">
-                              {openSections[sectionKey] ? (
-                                <Minus className="w-5 h-5" />
-                              ) : (
-                                <Plus className="w-5 h-5" />
-                              )}
-                            </span>
-                          </button>
-                          {openSections[sectionKey] && (
-                            <div className="mt-2 text-gray-700">
-                              {typeof content === "string" ? (
-                                <p>{content}</p>
-                              ) : (
-                                content
-                              )}
-                            </div>
-                          )}
-                        </div>
-                      );
-                    })}
-                </div>
-              ))}
-
-              <section id="honorable-mentions">
-                <div className="bg-white rounded-lg shadow-sm border border-gray-200">
-                  
-                   
-                  
-                  {/* Content */}
-                  <div className="p-4 sm:p-6">
-                     <div className="px-4 sm:px-6 py-4 sm:py-5">
-                      <h2 className="text-lg sm:text-xl font-semibold text-gray-900">
-                        Honorable mentions
-                      </h2>
-                      <p className="mt-2 text-sm sm:text-base text-gray-600 leading-relaxed">
-                        HR software is a broad and segmented product category.
-                        Below are some runners-up that I think performed well in
-                        specific categories and may better suit your business
-                        needs.
-                      </p>
-                    </div>
-                    {/* Payroll Card */}
-                    <div className="bg-gray-50 rounded-lg p-4 sm:p-5 lg:p-6">
-                      <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 lg:gap-8">
-                        {/* Left Column */}
-                        <div className="flex-1">
-                          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4 mb-4">
-                            <div>
-                              <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1">
-                                Payroll: Best for companies with field and
-                                frontline workers
-                              </h3>
-                              <p className="text-sm text-gray-600">
-                                Alternative for:{" "}
-                                <span className="font-medium">
-                                  Rippling and BambooHR
-                                </span>
-                              </p>
-                            </div>
-                            <Link
-                              href="#"
-                              className="inline-flex items-center px-3 py-2 sm:px-4 sm:py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md transition-colors duration-200 whitespace-nowrap"
-                            >
-                              Visit Website
-                              <ExternalLink className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
-                            </Link>
-                          </div>
-
-                          <div className="mb-4">
-                            <p className="text-sm text-gray-600 mb-2">
-                              Overall score:{" "}
-                              <span className="font-semibold text-gray-900">
-                                4.83/5.00
-                              </span>
-                            </p>
-                            <div className="flex items-center gap-1">
-                              {[...Array(5)].map((_, i) => (
-                                <svg
-                                  key={i}
-                                  className={`w-4 h-4 ${
-                                    i < 4 ? "text-green-500" : "text-gray-300"
-                                  }`}
-                                  fill="currentColor"
-                                  viewBox="0 0 20 20"
-                                >
-                                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                                </svg>
-                              ))}
-                            </div>
-                          </div>
-
-                          <div className="grid md:grid-cols-2 gap-4 lg:gap-6">
-                            <div>
-                              <h4 className="text-sm font-semibold text-gray-900 mb-2">
-                                When to choose Payroll
-                              </h4>
-                              <p className="text-sm text-gray-600 leading-relaxed">
-                                Payroll returns to my honorable mentions list in
-                                2024 for its competitive pricing and feature
-                                set. Although both Payroll and Paylocity offer
-                                similar features and services, Payroll takes the
-                                lead with a slightly more intuitive interface.
-                              </p>
-                              <p className="text-sm text-gray-600 leading-relaxed mt-2">
-                                I'm fond of Payroll's mobile and tablet kiosk
-                                apps, which provide multiple options for
-                                frontline and field workers to keep track of
-                                their HR records and work time. Payroll is also
-                                the only one in my roundup that allows managers
-                                to track employee locations in real-time, which
-                                is great for jobsites employees whose work
-                                locations change daily. Fair this with Payroll's
-                                badge, PIN, biometric, or telephonic timeclock
-                                hardware for stronger time management processes,
-                                especially in locations like restaurants and
-                                manufacturing.
-                              </p>
-                            </div>
-
-                            <div>
-                              <h4 className="text-sm font-semibold text-gray-900 mb-2">
-                                Why it didn't make the list
-                              </h4>
-                              <p className="text-sm text-gray-600 leading-relaxed">
-                                Payroll is a much more robust software platform
-                                than what I need for this comparison. Most data
-                                is still formalized like old-school
-                                spreadsheets, increasing the learning curve for
-                                most businesses. For example, its pay grid for
-                                payroll processing and significantly speed up
-                                payroll processing for advanced users but can be
-                                very confusing if you're unfamiliar with payroll
-                                software.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+           
                 </div>
               </section>
+                         <div className="mt-12 space-y-6">
+      {/* Notes */}
+      <p className="italic text-gray-700">
+        Pricing across all featured human resources software providers are up to date (April 25, 2025).
+      </p>
 
-              {/* find your prodoct management software */}
-              <div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg mt-4 p-6 sm:p-8 transition-shadow duration-300 overflow-hidden">
-                {/* Header */}
-                <div className="text-center mb-10">
-                  <div className="inline-flex items-center justify-center w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl mb-6 shadow-lg">
-                    <Search className="w-8 h-8 text-white" />
-                  </div>
-                  <h2 className="text-4xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4">
-                    Find your new HR software
-                  </h2>
-                </div>
+      <p className="italic text-gray-700">
+        *Based on a quote I received. ADP Workforce Now charges additional fees based on your <a href="#" className="underline text-green-700">payroll schedule</a> and add-on services like check printing, signing, and delivery. For a weekly payroll schedule, ADP quoted me an additional $180 per month and $500 implementation fee.
+      </p>
 
-                {/* Filter Products & Search Section */}
-                <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-6 mb-8 border border-gray-100">
-                  <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-                    {/* Filter Products */}
-                    <div className="lg:col-span-1">
-                      <div className="flex items-center gap-2 mb-3">
-                        <Filter className="w-4 h-4 text-blue-600" />
-                        <h3 className="text-sm font-bold text-gray-700 uppercase tracking-wider">
-                          Filter Products
-                        </h3>
-                      </div>
-                      <div className="relative group">
-                        <input
-                          type="text"
-                          placeholder="Search"
-                          value={searchTerm}
-                          onChange={(e) => setSearchTerm(e.target.value)}
-                          className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-300 bg-white/70 hover:bg-white group-hover:shadow-md"
-                        />
-                        <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                          <Search className="h-5 w-5 text-gray-400 group-hover:text-blue-500 transition-colors" />
-                        </div>
-                      </div>
-                    </div>
+      <p className="italic text-gray-700">
+        **Starting price for Deel U.S. Payroll.
+      </p>
 
-                    {/* Products Search */}
-                    <div className="lg:col-span-3">
-                      <div className="flex items-center gap-2 mb-3">
-                        <Search className="w-4 h-4 text-green-600" />
-                        <h3 className="text-sm font-bold text-gray-700 uppercase tracking-wider">
-                          Search Products
-                        </h3>
-                      </div>
-                      <div className="relative group">
-                        <input
-                          type="text"
-                          placeholder="Search product name"
-                          value={productSearch}
-                          onChange={(e) => setProductSearch(e.target.value)}
-                          className="w-full px-6 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-green-500 focus:ring-4 focus:ring-green-100 transition-all duration-300 bg-white/70 hover:bg-white group-hover:shadow-md text-lg"
-                        />
-                        <div className="absolute inset-y-0 right-0 pr-4 flex items-center">
-                          <div className="bg-gradient-to-r from-green-500 to-blue-500 p-2 rounded-lg cursor-pointer hover:shadow-lg transition-all duration-300 hover:scale-105">
-                            <Search className="h-5 w-5 text-white" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+      <p className="italic text-gray-700">
+        +Starting price for SAP SuccessFactors HCM’s base module, Employee Central.
+      </p>
 
-                {/* Filter Controls */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                  {/* Filter by */}
-                  <div className="group">
-                    <div className="flex items-center gap-2 mb-3">
-                      <Star className="w-4 h-4 text-yellow-500" />
-                      <h3 className="text-sm font-bold text-gray-700 uppercase tracking-wider">
-                        Filter by
-                      </h3>
-                    </div>
-                    <div className="relative">
-                      <select
-                        value={filterBy}
-                        onChange={(e) => setFilterBy(e.target.value)}
-                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-yellow-500 focus:ring-4 focus:ring-yellow-100 transition-all duration-300 bg-white/70 hover:bg-white appearance-none cursor-pointer group-hover:shadow-md"
-                      >
-                        <option>Reviews</option>
-                        <option>Pricing</option>
-                        <option>Company Size</option>
-                        <option>Features</option>
-                        <option>Industry</option>
-                      </select>
-                      <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 pointer-events-none" />
-                    </div>
-                  </div>
-
-                  {/* Sort by */}
-                  <div className="group">
-                    <div className="flex items-center gap-2 mb-3">
-                      <Clock className="w-4 h-4 text-purple-500" />
-                      <h3 className="text-sm font-bold text-gray-700 uppercase tracking-wider">
-                        Sort by
-                      </h3>
-                    </div>
-                    <div className="relative">
-                      <select
-                        value={sortBy}
-                        onChange={(e) => setSortBy(e.target.value)}
-                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-purple-500 focus:ring-4 focus:ring-purple-100 transition-all duration-300 bg-white/70 hover:bg-white appearance-none cursor-pointer group-hover:shadow-md"
-                      >
-                        <option>Featured</option>
-                        <option>Most Reviews</option>
-                        <option>Highest Rated</option>
-                        <option>Lowest Price</option>
-                        <option>Most Popular</option>
-                      </select>
-                      <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 pointer-events-none" />
-                    </div>
-                  </div>
-
-                  {/* Items per page */}
-                  <div className="group">
-                    <div className="flex items-center gap-2 mb-3">
-                      <Users className="w-4 h-4 text-indigo-500" />
-                      <h3 className="text-sm font-bold text-gray-700 uppercase tracking-wider">
-                        Items per page
-                      </h3>
-                    </div>
-                    <div className="relative">
-                      <select
-                        value={itemsPerPage}
-                        onChange={(e) => setItemsPerPage(e.target.value)}
-                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 transition-all duration-300 bg-white/70 hover:bg-white appearance-none cursor-pointer group-hover:shadow-md"
-                      >
-                        <option>10 per page</option>
-                        <option>25 per page</option>
-                        <option>50 per page</option>
-                        <option>100 per page</option>
-                      </select>
-                      <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 pointer-events-none" />
-                    </div>
-                  </div>
-                </div>
+      {/* Accordion */}
+      <div className="divide-y border-t border-gray-200">
+        {sections.map((sec, index) => (
+          <div key={index}>
+            <button
+              className="flex justify-between items-center w-full py-4 text-left font-semibold text-gray-900"
+              onClick={() => toggle(index)}
+            >
+              {sec.title}
+              <Plus className="text-green-700 w-5 h-5" />
+            </button>
+            {open === index && (
+              <div className="pb-4 text-gray-600 text-sm">
+                {sec.content}
               </div>
-              {/* keka HR details */}
-              <section id="new-HR-software" className="mt-8">
-                <div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg mt-4 sm:p-8 transition-shadow duration-300 overflow-hidden">
-                  <div className="p-6  md:p-8 lg:p-10">
-                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 sm:gap-6 mb-6 sm:mb-8">
-                      <div className="flex items-center gap-3 sm:gap-4">
-                        {/* Logo */}
-                        <div className="flex-shrink-0">
-                          <Image
-                            src="/images/keka.png" // Replace with your actual logo path
-                            alt="keka HR Logo"
-                            width={80}
-                            height={80}
-                            className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain"
-                            priority
-                          />
-                        </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+               
 
-                        {/* Title and Review Link */}
-                        <div className="min-w-0 flex-1">
-                          <h1 className="text-xl sm:text-xl md:text-2xl lg:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
-                            Keka HR
-                          </h1>
-                          <Link
-                            href="/reviews/zoho-projects"
-                            className="text-sm sm:text-base md:text-lg text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
-                          >
-                            Leave a Review
-                          </Link>
-                        </div>
-                      </div>
+                
 
-                      {/* Compare Button */}
-                      <div className="flex-shrink-0">
-                        <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-blue-600 hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
-                          <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
-                          Compare
-                        </button>
-                      </div>
-                    </div>
+                  {/*ADP Workforce Now: Best overall*/}
+                  <section id="ADP-Workforce-Now-Best-overall">
+<div className="bg-white p-6 rounded-2xl shadow-md max-w-4xl mx-auto space-y-6 mt-8">
+      {/* Header */}
+      <div className="flex items-start justify-between">
+        <div className="flex items-center gap-4">
+          <img src="/images/adp.png" alt="ADP" className="w-14 h-14 object-contain" />
+          <div>
+            <h2 className="text-xl font-semibold text-gray-900">
+              ADP Workforce Now: Best overall
+            </h2>
+          </div>
+        </div>
+        <a
+          href="#"
+          className="bg-green-600 text-white text-sm font-medium px-4 py-2 rounded-full"
+        >
+          Visit Website ↗
+        </a>
+      </div>
 
-                    {/* Good For Section */}
-                    <div className="mb-6 sm:mb-8">
-                      <div className="flex flex-wrap items-center gap-1 sm:gap-2 text-sm sm:text-base md:text-lg">
-                        <span className="font-semibold text-gray-700">
-                          Good for:
-                        </span>
-                        <div className="flex flex-wrap items-center gap-1">
-                          <span className="text-gray-600">
-                            Medium (250-999 Employees),
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Description Section */}
-                    <div className="mb-6 sm:mb-8">
-                      <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
-                        A true employee experience platform, Keka is the SME HR
-                        Tech space leader in India. It enables businesses to put
-                        to sleep mundane and tedious tasks of workplace
-                        administration. The product helps organisations in
-                        managing their HR processes from hire to retire while
-                        ensuring an awesome user experience to the employees.
-                        Keka follows an employee-first approach, making it
-                        easier for any company to make the journey from good to
-                        great.
-                      </p>
-
-                      <Link
-                        href="/learn-more/keka"
-                        className="text-sm sm:text-base md:text-lg text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
-                      >
-                        Learn More About Keka HR
-                      </Link>
-                    </div>
-
-                    {/* Visit Website Button */}
-                    <div className="flex justify-end">
-                      <Link
-                        href="https://www.keka.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
-                      >
-                        Visit Website
-                        <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Montitask details */}
-                <div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg mt-4 sm:p-8 transition-shadow duration-300 overflow-hidden">
-                  <div className="p-6  md:p-8 lg:p-10">
-                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 sm:gap-6 mb-6 sm:mb-8">
-                      <div className="flex items-center gap-3 sm:gap-4">
-                        {/* Logo */}
-                        <div className="flex-shrink-0">
-                          <Image
-                            src="/images/montitask.png" // Replace with your actual logo path
-                            alt="Montitask Logo"
-                            width={80}
-                            height={80}
-                            className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain"
-                            priority
-                          />
-                        </div>
-
-                        {/* Title and Review Link */}
-                        <div className="min-w-0 flex-1">
-                          <h1 className="text-xl sm:text-xl md:text-2xl lg:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
-                            Montitask
-                          </h1>
-                          <Link
-                            href="/reviews/zoho-projects"
-                            className="text-sm sm:text-base md:text-lg text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
-                          >
-                            Leave a Review
-                          </Link>
-                        </div>
-                      </div>
-
-                      {/* Compare Button */}
-                      <div className="flex-shrink-0">
-                        <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-blue-600 hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
-                          <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
-                          Compare
-                        </button>
-                      </div>
-                    </div>
-
-                    {/* Good For Section */}
-                    <div className="mb-6 sm:mb-8">
-                      <div className="flex flex-wrap items-center gap-1 sm:gap-2 text-sm sm:text-base md:text-lg">
-                        <span className="font-semibold text-gray-700">
-                          Good for:
-                        </span>
-                        <div className="flex flex-wrap items-center gap-1">
-                          <span className="text-gray-600">
-                            Micro (0-49 Employees),
-                          </span>
-                          <span className="text-gray-600">
-                            Medium (250-999 Employees),
-                          </span>
-                          <span className="text-gray-600">
-                            Enterprise (5,000+ Employees),
-                          </span>
-                          <span className="text-gray-600">
-                            Large (1,000-4,999 Employees),
-                          </span>
-                          <span className="text-gray-600">
-                            Small (50-249 Employees),
-                          </span>
-                          <span className="text-gray-600">
-                            Any Company Size
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Description Section */}
-                    <div className="mb-6 sm:mb-8">
-                      <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
-                        Optimize your team's performance with Monitask—your
-                        comprehensive employee monitoring and productivity
-                        tracking solution. Our real-time dashboard delivers
-                        actionable insights that empower managers to streamline
-                        task management and boost efficiency across both remote
-                        and in-office teams. Discover clear, data-driven results
-                        that transform workforce productivity. Click now to
-                        learn how Monitask can elevate your operational success.
-                      </p>
-
-                      <Link
-                        href="/learn-more/montitask"
-                        className="text-sm sm:text-base md:text-lg text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
-                      >
-                        Learn More About Montitask
-                      </Link>
-                    </div>
-
-                    {/* Visit Website Button */}
-                    <div className="flex justify-end">
-                      <Link
-                        href="https://www.montitask.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
-                      >
-                        Visit Website
-                        <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              {/* How do you choose the best HR software Section */}
-              <section id="how-to-choose" className="mt-8 max-w-7xl mx-auto">
-                {" "}
-                <div className="max-w-none">
-                  {/* Main Heading */}
-                  <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-8 sm:mb-10 md:mb-12 lg:mb-16">
-                    How do you choose the best HR software?
-                  </h1>
-
-                  {/* First Paragraph */}
-                  <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-16">
-                    <p className="text-base sm:text-sm md:text-lg lg:text-lg  text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
-                      “When selecting HR software, consider your business size,
-                      budget, day-to-day HR processes, and company goals. It’s
-                      crucial to have software that can manage compliance
-                      obligations, such as payroll and benefits administration.
-                      This software often comes with pre-built safeguards that
-                      limit labor law violations and prevent data entry errors,
-                      making it a must-have for your business.
-                    </p>
-                  </div>
-
-                  {/* Second Paragraph with Links */}
-                  <div className="mb-12 sm:mb-16 md:mb-20 lg:mb-24">
-                    <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
-                      That doesn’t mean HR processes like recruitment,
-                      retention, and employee performance and development are
-                      less important. Your organization should still have
-                      procedures to support these key areas. As your business
-                      grows, you’ll likely add HR software to cover these
-                      functions to improve process efficiency and access data
-                      insights that aid in effective workforce planning.”
-                    </p>
-                  </div>
-
-
-                <section id="types-of-softwre">
-                  <div>
-                    {/* What are the types of HR software? */}
-
-                    <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
-                      What are the types of HR software?
-                    </h1>
-
-                    {/*Contact management Paragraph */}
-                    <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
-                      There are three main categories of HR software: HRIS,
-                      HRMS, and HCM. Although they are often used
-                      interchangeably, there are several technical differences
-                      between them. Some HR software also focuses on specific
-                      human resources functions, like recruiting, onboarding,
-                      payroll, benefits administration, performance management,
-                      employee engagement, and learning management.
-                    </p>
-                  </div>
-
-                  </section>
-                  {/*Core HR software */}
-                  <section
-                    id="core-software"
-                    className="mt-8 max-w-7xl mx-auto"
-                  >
-                    <div className="max-w-none">
-                      {/* Main Heading */}
-                      <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-8 sm:mb-10 md:mb-12 lg:mb-16">
-                        Core HR software
-                      </h1>
-
-                      {/* FAQ Accordion */}
-                      <div className="space-y-0 -mt-8">
-                        {coreData.map((item, index) => (
-                          <div key={index} className="border-b border-gray-200">
-                            {/* Question Button */}
-                            <button
-                              onClick={() => toggleItem(index)}
-                              className="w-full flex items-center justify-between py-6 sm:py-7 md:py-8 lg:py-9 text-left hover:bg-gray-50 transition-colors duration-200"
-                            >
-                              <h3 className="text-base sm:text-lg md:text-xl lg:text-xl font-semibold text-gray-700 leading-relaxed pr-4 sm:pr-6 md:pr-8">
-                                {item.question}
-                              </h3>
-
-                              {/* Plus/Minus Icon */}
-                              <div
-                                className={`flex-shrink-0 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 rounded-md flex items-center justify-center transition-all duration-200 ${
-                                  openItems[index]
-                                    ? "bg-green-600 hover:bg-green-700"
-                                    : "bg-green-600 hover:bg-green-700"
-                                }`}
-                              >
-                                {openItems[index] ? (
-                                  <Minus className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" />
-                                ) : (
-                                  <Plus className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" />
-                                )}
-                              </div>
-                            </button>
-
-                            {/* Answer Content */}
-                            {openItems[index] && (
-                              <div className="pb-6 sm:pb-7 md:pb-8 lg:pb-9 pr-12 sm:pr-16 md:pr-20 lg:pr-24 animate-in slide-in-from-top-2 duration-300">
-                                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
-                                  {item.answer}
-                                </p>
-                              </div>
-                            )}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </section>
-                  {/*Function-specific HR software */}
-                  <section
-                    id="function-specific-software"
-                    className="mt-8 max-w-7xl mx-auto"
-                  >
-                    <div className="max-w-none">
-                      {/* Main Heading */}
-                      <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-8 sm:mb-10 md:mb-12 lg:mb-16">
-                        Function-specific HR software
-                      </h1>
-
-                      {/* FAQ Accordion */}
-                      <div className="space-y-0 -mt-8">
-                        {functionData.map((item, index) => (
-                          <div key={index} className="border-b border-gray-200">
-                            {/* Question Button */}
-                            <button
-                              onClick={() => toggleItem(index)}
-                              className="w-full flex items-center justify-between py-6 sm:py-7 md:py-8 lg:py-9 text-left hover:bg-gray-50 transition-colors duration-200"
-                            >
-                              <h3 className="text-base sm:text-lg md:text-xl lg:text-xl font-semibold text-gray-700 leading-relaxed pr-4 sm:pr-6 md:pr-8">
-                                {item.question}
-                              </h3>
-
-                              {/* Plus/Minus Icon */}
-                              <div
-                                className={`flex-shrink-0 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 rounded-md flex items-center justify-center transition-all duration-200 ${
-                                  openItems[index]
-                                    ? "bg-green-600 hover:bg-green-700"
-                                    : "bg-green-600 hover:bg-green-700"
-                                }`}
-                              >
-                                {openItems[index] ? (
-                                  <Minus className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" />
-                                ) : (
-                                  <Plus className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" />
-                                )}
-                              </div>
-                            </button>
-
-                            {/* Answer Content */}
-                            {openItems[index] && (
-                              <div className="pb-6 sm:pb-7 md:pb-8 lg:pb-9 pr-12 sm:pr-16 md:pr-20 lg:pr-24 animate-in slide-in-from-top-2 duration-300">
-                                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
-                                  {item.answer}
-                                </p>
-                              </div>
-                            )}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </section>
-                </div>
-              </section>
-              {/* What are the benefits of HR software?*/}
-              <section id="benefits" className="mt-8 max-w-7xl mx-auto">
-                {" "}
-                <div className="max-w-none">
-                  {/* Main Heading */}
-                  <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-8 sm:mb-10 md:mb-12 lg:mb-16">
-                    What are the benefits of HR software?
-                  </h1>
-
-                  {/* First Paragraph */}
-                  <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-16">
-                    <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
-                      HR software solutions offer businesses a number of
-                      advantages, including increased efficiency, consistent
-                      compliance, and deeper reporting capabilities.
-                    </p>
-                  </div>
-                  {/* Efficiency Section */}
-                  <div>
-                    <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
-                      Efficiency
-                    </h2>
-
-                    {/*  Efficiency Paragraph */}
-                    <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
-                      Many HR software solutions include automation capabilities
-                      that drive the efficiency of different HR processes. When
-                      HR staff can spend less time on repetitive, manual tasks,
-                      they are able to focus on more valuable priorities.
-                      Additionally, HR software provides employees with direct
-                      access to the services employees need most so they can
-                      complete tasks like direct deposit updates or benefits
-                      enrollment independently.
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  {/* Compliance Heading */}
-                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12">
-                    Compliance
-                  </h2>
-
-                  {/* Compliance Paragraph */}
-                  <p className="text-base sm:text-sm md:text-lg lg:text-lg text-gray-700 leading-relaxed sm:leading-relaxed md:leading-relaxed lg:leading-relaxed">
-                    Compliance with HR-related laws and regulations is usually
-                    non-negotiable because of the costly penalties associated
-                    with violations. HR software helps organizations stay in
-                    compliance with current local, state, federal, and
-                    international laws, as well as industry-specific
-                    regulations. Typically, this manifests as built-in time and
-                    pay compliance warnings, legally mandated paperwork
-                    tracking, news on laws affecting your workforce, and access
-                    to HR best practices documents.
-                  </p>
-                </div>
-              </section>
+      {/* Scores */}
+      <div className="space-y-3">
+        {adpScores.map((item, idx) => (
+          <div key={idx}>
+            <div className="flex justify-between text-sm font-medium text-gray-700">
+              <span>{item.label}</span>
+              <span>{item.value.toFixed(2)}/5.00</span>
             </div>
+            <div className="h-2 bg-gray-200 rounded-full">
+              <div
+                className="h-2 bg-green-600 rounded-full"
+                style={{ width: `${(item.value / 5) * 100}%` }}
+              ></div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Pros and Cons */}
+      <div className="grid md:grid-cols-2 gap-6">
+        <div>
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">Pros</h3>
+          <ul className="space-y-1 list-none text-sm text-gray-700">
+            {pros.map((point, idx) => (
+              <li key={idx} className="flex items-start gap-2">
+                <span className="text-green-600">➕</span>
+                {point}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">Cons</h3>
+          <ul className="space-y-1 list-none text-sm text-gray-700">
+            {cons.map((point, idx) => (
+              <li key={idx} className="flex items-start gap-2">
+                <span className="text-red-500">➖</span>
+                {point}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      {/* Accordion & CTA */}
+      <div className="border-t pt-4 space-y-4">
+        {[
+          "About ADP Workforce Now",
+          "Key features",
+          "Gallery",
+          "Pricing",
+        ] 
+          .map((title, index) => (
+            <div key={index} className="border-b pb-4">
+              <button
+                className="w-full text-left font-semibold text-gray-900"
+                onClick={() => toggle(index)}
+              >
+                {title}
+              </button>
+              {open === index && (
+                <div className="text-sm text-gray-600 mt-2">
+                  {/* Content for each section */}
+                  {title === "About ADP Workforce Now" && (
+                    <p>
+                      ADP Workforce Now is a comprehensive human capital management
+                      solution designed for medium to large businesses. It offers
+                      payroll, HR, talent management, and time and attendance features.
+                    </p>
+                  )}
+                  {title === "Key features" && (
+                    <ul className="list-disc pl-5 space-y-1">
+                      <li>Payroll processing</li>
+                      <li>Time and attendance tracking</li>
+                      <li>Talent management</li>
+                      <li>Benefits administration</li>
+                    </ul>
+                  )}
+                  {title === "Gallery" && (
+                    <p>Gallery content goes here.</p>
+                  )}
+                  {title === "Pricing" && (
+                    <p>Pricing details go here.</p>
+                  )}
+                </div>
+              )}
+            </div>
+          ))}
+        <div className="flex gap-4 pt-4">
+          <button className="px-4 py-2 rounded-full text-sm bg-white border border-green-600 text-green-600 hover:bg-green-50">
+            Read our full review
+          </button>
+          <button className="px-4 py-2 rounded-full text-sm bg-green-600 text-white hover:bg-green-700">
+            Submit your review
+          </button>
+        </div>
+      </div>
+    </div>
+                  </section>
+{/*Deel: Best for startups */}
+  <section id="Deel-Best-for-startups">
+   <div className="bg-white p-6 rounded-2xl shadow-md max-w-4xl mx-auto space-y-6 mt-8">
+      {/* Header */}
+      <div className="flex justify-between items-start">
+        <div className="flex items-start space-x-4">
+          <img src="/images/deel.png" alt="Deel Logo" className="w-12 h-12 object-contain" />
+          <div>
+            <h2 className="text-xl font-semibold text-gray-900">Deel: Best for startups</h2>
+          </div>
+        </div>
+        <a href="#" className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full text-sm">Visit Website ↗</a>
+      </div>
+
+      {/* Scores */}
+      <div className="mt-6">
+        {[
+          ['HRIS and reporting', 3.95],
+          ['Payroll and benefits', 4.13],
+          ['Pricing', 3.64],
+          ['Platform/Interface', 4.50],
+          ['Workforce management', 3.45],
+          ['Talent acquisition', 0.85],
+          ['Employee relations', 3.60],
+          ['Support', 4.38],
+          ['User scores', 4.06]
+        ].map(([label, score], i) => (
+          <div key={i} className="mb-2">
+            <div className="flex justify-between text-sm font-medium text-gray-700">
+              <span>{label}</span>
+              <span>{score}/5.00</span>
+            </div>
+            <div className="w-full bg-gray-200 h-2 rounded">
+              <div
+                className="bg-green-600 h-2 rounded"
+                style={{ width: `${(score / 5) * 100}%` }}
+              ></div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Pros & Cons */}
+      <div className="mt-6">
+        <h3 className="font-semibold text-gray-800 mb-2">Pros</h3>
+        <ul className="text-sm text-gray-700 list-disc pl-5 space-y-1">
+          <li>✔ Immigration services to hire and relocate talent from across the globe.</li>
+          <li>✔ On-demand payroll support for direct and EOR employees.</li>
+          <li>✔ Light and dark mode functionality for increased accessibility.</li>
+          <li>✔ Diverse account payment options, including cryptocurrency using Coinbase.</li>
+        </ul>
+
+        <h3 className="font-semibold text-gray-800 mt-4 mb-2">Cons</h3>
+        <ul className="text-sm text-gray-700 list-disc pl-5 space-y-1">
+          <li>✖ Difficult to navigate user interface (UI).</li>
+          <li>✖ Can only pay employees by direct deposit.</li>
+          <li>✖ Does not support weekly payroll schedules.</li>
+          <li>✖ Lacks recruiting features.</li>
+        </ul>
+      </div>
+
+      {/* Why I chose Deel */}
+      <div className="mt-6 text-sm text-gray-700">
+        <h3 className="font-semibold text-gray-800 mb-2">Why I chose Deel</h3>
+        <p className="mb-2">
+          Deel replaces my previous pick for the <a href="#" className="text-green-600 underline">best HR software for startups</a>, Gusto, by a narrow margin.
+          Deel's 3.64 bests Gusto's 3.50 because of the former's global capabilities that allow you to pay and retain employees worldwide.
+        </p>
+        <p className="mb-2">
+          In fact, despite Gusto's entry into EOR services in early 2024, it currently only supports 12 countries compared to Deel's more than 150.
+        </p>
+        <p className="mb-2">
+          Need extra support services? Deel's PEO, FRO, and U.S. Payroll plans provide 24/7 expert support, access to compliance advisors, global health benefits, employee management tools and more.
+        </p>
+        <p className="mb-2">
+          Deel integrations like Slack plugins streamline workflows without interrupting the flow of work.
+        </p>
+      </div>
+
+      {/* Accordions */}
+      <div className="mt-6 divide-y">
+        {[
+          'About Deel',
+          'Key features',
+          'Gallery',
+          'Pricing'
+        ].map((title, i) => (
+          <div key={i}>
+            <button
+              onClick={() => toggleSection(i)}
+              className="w-full flex justify-between items-center py-4 text-left font-medium text-gray-900"
+            >
+              {title}
+              <span className="text-green-600 text-2xl">{openSection === i ? '-' : '+'}</span>
+            </button>
+            {openSection === i && (
+              <div className="pb-4 text-sm text-gray-700 space-y-2">
+                <p>This is detailed information about {title}.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Phasellus finibus libero vel quam blandit, at laoreet nunc tristique.</p>
+                <p>Sed pretium urna sit amet orci iaculis congue.</p>
+                <p>Aliquam erat volutpat. Quisque eu turpis non nulla sodales egestas.</p>
+                <p>Duis euismod arcu a justo pulvinar, sed feugiat est porttitor.</p>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* Footer Buttons */}
+      <div className="flex gap-4 pt-4">
+          <button className="px-4 py-2 rounded-full text-sm bg-white border border-green-600 text-green-600 hover:bg-green-50">
+            Read our full review
+          </button>
+          <button className="px-4 py-2 rounded-full text-sm bg-green-600 text-white hover:bg-green-700">
+            Submit your review
+          </button>
+        </div>
+    </div>
+    {/* Text Content */}
+      <div>
+  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 flex items-center gap-2 mt-8">
+    <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+      <path d="M12.293 2.293a1 1 0 011.414 0L18 6.586l-1.414 1.414L14 5.414V18h-2V5.414l-2.586 2.586L8 6.586l4.293-4.293z" />
+    </svg>
+    Other HR solutions for startups
+  </h2>
+
+  <h3 className="text-xl font-semibold text-gray-800 mb-3">The case for Bob</h3>
+
+  <p className="text-gray-700 mb-4">
+    I’ve participated in multiple demos of{' '}
+    <Link href="https://www.hibob.com" target="_blank" className="text-green-700 underline font-medium">
+      Bob
+    </Link>, and I’m always impressed with its focus on customization and employee experience. (Bob’s “clubs”
+    for fostering employee engagement is one of my favorite features.) These qualities make it a great
+    candidate for startups where business processes are in flux and you’re only just building your culture.
+  </p>
+     <div className="flex justify-center md:justify-end">
+    <Image
+      src="/images/hi.jpeg"
+      alt="Bob Logo"
+      width={200}
+      height={200}
+      className="object-contain"
+    />
+  {/* CTA Button - Moved Up */}
+   
+
+  {/* Right Image */}
+  
+  </div>
+  <div className="flex justify-left md:justify-left -mt-24"> 
+  <Link
+    href="https://www.hibob.com"
+    target="_blank"
+    className="inline-block mb-6 bg-green-600 hover:bg-green-700 text-white text-lg font-medium py-3 px-6 rounded-full transition"
+  >
+    Visit Bob ↗
+  </Link>
+  </div>
+</div>
+
+ 
+  </section>
+
+
+{/*BambooHR-Best-for-small-businesses*/}
+<section id="BambooHR-Best-for-small-businesses">   
+  <div className="bg-white p-6 rounded-2xl shadow-md max-w-4xl mx-auto space-y-6 mt-8">
+      {/* Header */}
+      <div className="flex justify-between items-start">
+        <div className="flex items-start space-x-4">
+          <img src="/images/bamboohr.png" alt="BambooHR Logo" className="w-12 h-12 object-contain" />
+          <div>
+            <h2 className="text-xl font-semibold text-gray-900">BambooHR: Best for small businesses</h2>
+          </div>
+        </div>
+        <a
+          href="#"
+          className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full text-sm"
+        >
+          Visit Website ↗
+        </a>
+      </div>
+
+      {/* Scores */}
+      <div className="mt-6">
+        {[
+          ['HRIS and reporting', 4.25],
+          ['Payroll and benefits', 3.65],
+          ['Pricing', 2.65],
+          ['Platform/Interface', 4.43],
+          ['Workforce management', 3.88],
+          ['Talent acquisition', 3.88],
+          ['Employee relations', 3.06],
+          ['Support', 3.65],
+          ['User scores', 4.44]
+        ].map(([label, score], i) => (
+          <div key={i} className="mb-2">
+            <div className="flex justify-between text-sm font-medium text-gray-700">
+              <span>{label}</span>
+              <span>{score}/5.00</span>
+            </div>
+            <div className="w-full bg-gray-200 h-2 rounded">
+              <div
+                className="bg-green-600 h-2 rounded"
+                style={{ width: `${(score / 5) * 100}%` }}
+              ></div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Pros & Cons */}
+      <div className="mt-6">
+        <h3 className="font-semibold text-gray-800 mb-2">Pros</h3>
+        <ul className="text-sm text-gray-700 list-disc pl-5 space-y-1">
+          <li>✔ Refreshed new interface for easier navigation.</li>
+          <li>✔ Ability to change platform colors and logos to reflect your brand.</li>
+          <li>✔ Customizable homepage and profile dashboards.</li>
+          <li>✔ Automated wellbeing surveys to track employee happiness over time.</li>
+        </ul>
+
+        <h3 className="font-semibold text-gray-800 mt-4 mb-2">Cons</h3>
+        <ul className="text-sm text-gray-700 list-disc pl-5 space-y-1">
+          <li>✖ Reports have limited customization settings.</li>
+          <li>✖ No modules for employee training or scheduling.</li>
+          <li>✖ Does not support paying employees outside of the U.S.</li>
+          <li>✖ Requires integration with Cronofy for in-app candidate interview scheduling.</li>
+        </ul>
+      </div>
+
+      {/* Why I chose BambooHR */}
+      <div className="mt-6 text-sm text-gray-700">
+        <h3 className="font-semibold text-gray-800 mb-2">Why I chose BambooHR</h3>
+        <p className="mb-2">
+          With a total score of 3.64 out of 5, BambooHR is my top choice for small businesses because it is by far
+          the easiest platform to use on my shortlist. It strikes a perfect balance between simple pre-built workflows
+          for HR teams looking for no-fuss process implementation and features to support processes from hire to retire.
+        </p>
+        <p className="mb-2">
+          In fact, BambooHR is one of the few solutions in my roundup that pays as much attention to the employee experience
+          as system administrators. Besides a modern but user-friendly homepage where employees can see PTO balances,
+          request time off, or clock in for a shift with one click, BambooHR also offers a platform where they can
+          collaborate with peers in Employee Community. This is huge for small businesses where subscribing to standalone
+          employee experience, recognition, and communication platforms can be a costly added expense.
+        </p>
+      </div>
+
+      {/* Accordions */}
+      <div className="mt-6 divide-y">
+        {[
+          'About BambooHR',
+          'Key features',
+          'Gallery',
+          'Pricing'
+        ].map((title, i) => (
+          <div key={i}>
+            <button
+              onClick={() => toggleSection(i)}
+              className="w-full flex justify-between items-center py-4 text-left font-medium text-gray-900"
+            >
+              {title}
+              <span className="text-green-600 text-2xl">{openSection === i ? '-' : '+'}</span>
+            </button>
+            {openSection === i && (
+              <div className="pb-4 text-sm text-gray-700 space-y-2">
+                <p>This is detailed information about {title}.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Phasellus finibus libero vel quam blandit, at laoreet nunc tristique.</p>
+                <p>Sed pretium urna sit amet orci iaculis congue.</p>
+                <p>Aliquam erat volutpat. Quisque eu turpis non nulla sodales egestas.</p>
+                <p>Duis euismod arcu a justo pulvinar, sed feugiat est porttitor.</p>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* Footer Buttons */}
+        {/* Footer Buttons */}
+      <div className="flex gap-4 pt-4">
+          <button className="px-4 py-2 rounded-full text-sm bg-white border border-green-600 text-green-600 hover:bg-green-50">
+            Read our full review
+          </button>
+          <button className="px-4 py-2 rounded-full text-sm bg-green-600 text-white hover:bg-green-700">
+            Submit your review
+          </button>
+        </div>
+         </div>
+             {/* Heading with icon */}
+      <div className="flex items-center gap-2 mb-4 mt-8">
+        <FaThumbsUp className="text-green-600 w-6 h-6" />
+        <h2 className="text-2xl font-semibold text-gray-900">Why is BambooHR so popular?</h2>
+      </div>
+
+      {/* Paragraph */}
+      
+      <p className="text-gray-700 text-base mb-6">
+        BambooHR is a versatile HR suite that covers a lot of ground in the world of HR. As a BambooHR aficionado, I frequently include it in my HR software shortlists—check them out:
+      </p>
+
+      {/* Bullet links */}
+      <ul className="list-disc list-inside space-y-2 text-green-700 font-medium">
+        <li><a href="#" className="hover:underline">Best HRIS</a></li>
+        <li><a href="#" className="hover:underline">Best HR software for small businesses</a></li>
+        <li><a href="#" className="hover:underline">Best performance management software</a></li>
+        <li><a href="#" className="hover:underline">Best HR apps for mobile</a></li>
+        <li><a href="#" className="hover:underline">Best onboarding software</a></li>
+      </ul>
+    
+  </section>
+{/*Rippling-Best-for-midsize-businesses*/}
+  <section id="Rippling-Best-for-midsize-businesses">
+        <div className="bg-white p-6 rounded-2xl shadow-md max-w-4xl mx-auto space-y-6 mt-8">
+      {/* Header */}
+      <div className="flex justify-between items-start">
+        <div className="flex items-start space-x-4">
+          <img src="/images/rippling.png" alt="Rippling Logo" className="w-12 h-12 object-contain" />
+          <div>
+            <h2 className="text-xl font-semibold text-gray-900">Rippling: Best for midsize businesses</h2>
+          </div>
+        </div>
+        <a
+          href="#"
+          className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full text-sm"
+        >
+          Visit Website ↗
+        </a>
+      </div>
+
+      {/* Score */}
+      <div className="mt-4">
+        <p className="text-sm text-gray-600">Overall score</p>
+        <p className="text-lg font-semibold text-gray-900 mb-4">4.05 / 5.00</p>
+      </div>
+
+      {/* Score Bars */}
+      {[
+        ['HRIS and reporting', 4.33],
+        ['Payroll and benefits', 4.55],
+        ['Pricing', 2.50],
+        ['Platform/Interface', 4.45],
+        ['Workforce management', 4.13],
+        ['Talent acquisition', 4.38],
+        ['Employee relations', 3.55],
+        ['Support', 3.44],
+        ['User scores', 4.78],
+      ].map(([label, score], i) => (
+        <div key={i} className="mb-2">
+          <div className="flex justify-between text-sm font-medium text-gray-700">
+            <span>{label}</span>
+            <span>{score}/5.00</span>
+          </div>
+          <div className="w-full bg-gray-200 h-2 rounded">
+            <div
+              className="bg-green-600 h-2 rounded"
+              style={{ width: `${(score / 5) * 100}%` }}
+            ></div>
+          </div>
+        </div>
+      ))}
+
+      {/* Pros */}
+      <div className="mt-6">
+        <h3 className="font-semibold text-gray-800 mb-2">Pros</h3>
+        <ul className="text-sm text-gray-700 list-disc pl-5 space-y-1">
+          <li>✔ Employee profile translation and localization for more than 150 countries.</li>
+          <li>✔ Finance and IT management tools available.</li>
+          <li>✔ EDI, PEQ, ASO, COBRA, ACA, and global payroll services available.</li>
+          <li>✔ Ability to use Excel formulas in reports for more detailed insights.</li>
+        </ul>
+      </div>
+
+      {/* Cons */}
+      <div className="mt-4">
+        <h3 className="font-semibold text-gray-800 mb-2">Cons</h3>
+        <ul className="text-sm text-gray-700 list-disc pl-5 space-y-1">
+          <li>✖ There is no free trial, and it may be too expensive for basic HR needs.</li>
+          <li>✖ Scheduling requires Time and Attendance purchase and lacks automatic schedules.</li>
+          <li>✖ Limited employee engagement and recognition features.</li>
+          <li>✖ API access is now an add-on to Rippling Platform.</li>
+        </ul>
+      </div>
+
+      {/* Why I chose Rippling */}
+      <div className="mt-6 text-sm text-gray-700">
+        <h3 className="font-semibold text-gray-800 mb-2">Why I chose Rippling</h3>
+        <p className="mb-2">
+          Rippling is one of the most adoptable HR programs I’ve demoed, resulting in an overall score of <strong>4.05</strong>.
+          With its customizable workflows and approvals, you don’t need advanced IT training to automate most HR administrative processes in the app.
+          This alone makes Rippling appealing to midsize businesses with a larger headcount, where <a href="#" className="text-green-600 underline">HR automation</a> is a must.
+        </p>
+        <p className="mb-2">
+          Rippling’s global app access and inventory management also means it supports a growing company’s more diverse tech workflows.
+          Expense reimbursement, global payroll, and scheduling modules now work their way end-to-end—from frontline workers to remote employees and traveling professionals.
+        </p>
+        <p className="mb-2">
+          Plus with Rippling’s ability to create custom data fields, you can get as specific as you need with your HR, finance, and other work policies.
+        </p>
+      </div>
+
+      {/* Accordion Sections */}
+      <div className="mt-6 divide-y">
+        {['About Rippling', 'Key features', 'Gallery', 'Pricing'].map((title, i) => (
+          <div key={i}>
+            <button
+              onClick={() => toggleSection(i)}
+              className="w-full flex justify-between items-center py-4 text-left font-medium text-gray-900"
+            >
+              {title}
+              <span className="text-green-600 text-2xl">{openSection === i ? '-' : '+'}</span>
+            </button>
+            {openSection === i && (
+              <div className="pb-4 text-sm text-gray-700 space-y-2">
+                <p>This is detailed information about {title}.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Phasellus finibus libero vel quam blandit, at laoreet nunc tristique.</p>
+                <p>Sed pretium urna sit amet orci iaculis congue.</p>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* Footer Buttons */}
+      <div className="flex gap-4 pt-4">
+          <button className="px-4 py-2 rounded-full text-sm bg-white border border-green-600 text-green-600 hover:bg-green-50">
+            Read our full review
+          </button>
+          <button className="px-4 py-2 rounded-full text-sm bg-green-600 text-white hover:bg-green-700">
+            Submit your review
+          </button>
+        </div>
+    </div>
+    </section>
+       {/* Heading with icon */}
+      <div className="flex items-center gap-2 mb-4 mt-8">
+        <FaRegSun className="text-green-600 w-5 h-5" />
+        <h2 className="text-xl md:text-2xl font-semibold text-gray-900">
+          HR software battle: ADP Workforce Now vs. Rippling
+        </h2>
+      </div>
+
+      {/* Paragraphs */}
+      <div className="text-gray-700 space-y-4 text-base">
+        <p>
+          You may be wondering why I picked ADP Workforce Now as the best HR software despite
+          Rippling’s higher score. Very perceptive—let me explain!
+        </p>
+        <p>
+          If you look strictly at the platforms, Rippling dominates. Rippling has an eye for intuitive
+          platform design, where all modules “talk” to each other without delays or hiccups—this is the
+          advantage Rippling has in building all of its platform capabilities natively.
+        </p>
+        <p>
+          In contrast, ADP’s long lifespan means many of its products stitch together functionality from
+          acquisitions or partnerships. For example, Workforce Now’s recruiting capabilities are possible
+          through its partnership with ZipRecruiter.
+        </p>
+        <p>
+          This isn’t necessarily bad, but it can create a disjointed user experience. Think of pop-up
+          windows to enter different modules, feature settings in multiple areas, or a different platform
+          appearance depending on what you’re doing. Like your control in recruiting. The biggest downside
+          can also be possible data silos.
+        </p>
+        <p>
+          Despite this, Workforce Now reigns supreme when it comes to extensibility, scalability, and service
+          variety. ADP’s decades of business experience means its Workforce Now add-ons and services fit more
+          business use cases than Rippling. Rippling is definitely catching up, though, and I’m excited to see
+          how it continues to differentiate itself.
+        </p>
+      </div>
+{/*SAP-SuccessFactors-HCM-Best-for-large-enterprises*/}
+<section id="SAP-SuccessFactors-HCM-Best-for-large-enterprises">
+   <div className="bg-white p-6 rounded-2xl shadow-md max-w-4xl mx-auto space-y-6 mt-12">
+      {/* Header */}
+      <div className="flex justify-between items-start">
+        <div className="flex items-start space-x-4">
+          <img src="/images/sap.png" alt="SAP Logo" className="w-12 h-12 object-contain" />
+          <div>
+            <h2 className="text-xl font-semibold text-gray-900">
+              SAP SuccessFactors HCM: Best for large enterprises
+            </h2>
+          </div>
+        </div>
+        <a
+          href="#"
+          className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full text-sm"
+        >
+          Visit Website ↗
+        </a>
+      </div>
+
+      {/* Score */}
+      <div className="mt-4">
+        <p className="text-sm text-gray-600">Overall score</p>
+        <p className="text-lg font-semibold text-gray-900 mb-4">3.81 / 5.00</p>
+      </div>
+
+      {/* Score Bars */}
+      {[
+        ['Payroll and benefits', 3.88],
+        ['Pricing', 2.50],
+        ['Platform/Interface', 3.80],
+        ['Workforce management', 4.13],
+        ['Talent acquisition', 4.38],
+        ['Employee relations', 3.95],
+        ['Support', 3.75],
+        ['User scores', 3.29],
+      ].map(([label, score], i) => (
+        <div key={i} className="mb-2">
+          <div className="flex justify-between text-sm font-medium text-gray-700">
+            <span>{label}</span>
+            <span>{score}/5.00</span>
+          </div>
+          <div className="w-full bg-gray-200 h-2 rounded">
+            <div
+              className="bg-green-600 h-2 rounded"
+              style={{ width: `${(score / 5) * 100}%` }}
+            ></div>
+          </div>
+        </div>
+      ))}
+
+      {/* Pros */}
+      <div className="mt-6">
+        <h3 className="font-semibold text-gray-800 mb-2">Pros</h3>
+        <ul className="text-sm text-gray-700 list-disc pl-5 space-y-1">
+          <li>✔ Intelligent text-based employee sentiment analysis.</li>
+          <li>✔ 24/7 customer support via online chat, phone, or email.</li>
+          <li>✔ Accessibility support, including zoom, high contrast themes, screen reader support, and keyboard navigation.</li>
+          <li>✔ Native integration with SAP’s entire product line.</li>
+          <li>✔ More than 2,000 standardized HR metrics.</li>
+        </ul>
+      </div>
+
+      {/* Cons */}
+      <div className="mt-4">
+        <h3 className="font-semibold text-gray-800 mb-2">Cons</h3>
+        <ul className="text-sm text-gray-700 list-disc pl-5 space-y-1">
+          <li>✖ Too expensive for small teams.</li>
+          <li>✖ Confusing line of product tiers and integration options.</li>
+          <li>✖ Complex user interface.</li>
+          <li>✖ Few plug-and-play integrations outside of SAP products and partners.</li>
+        </ul>
+      </div>
+
+      {/* Why I chose SAP SuccessFactors */}
+      <div className="mt-6 text-sm text-gray-700">
+        <h3 className="font-semibold text-gray-800 mb-2">Why I chose SAP SuccessFactors HCM</h3>
+        <p className="mb-2">
+          With a score of 3.81 out of 5, SAP SuccessFactors impressed me with its number of customizable features and enterprise options aimed at enterprises.
+          In fact, by combining its HCM suite with other SAP products, like <a href="#" className="text-green-600 underline">ERP</a>, <a href="#" className="text-green-600 underline">supply chain management</a>,
+          <a href="#" className="text-green-600 underline">financial management</a>, and <a href="#" className="text-green-600 underline">customer relationship management</a>, you can create an open flow of data
+          across traditionally siloed business functions.
+        </p>
+        <p className="mb-2">
+          This is huge to increase process initiatives across all areas of the business that are not people-focused.
+          You can even run predictive simulations of your business on a live data lake.
+        </p>
+        <p className="mb-2">
+          Unfortunately, SAP SuccessFactors’ advanced features and complicated interface can be off-putting if you have no software team or are working with a more modern tool.
+          It doesn’t quite ease-of-use like Rippling or Workday instead. But with its advanced workforce planning options, candidate relationship management (CRM) system, and AI for personalized HR processes,
+          SAP SuccessFactors HCM remains my number one choice for complex, multinational corporations.
+        </p>
+      </div>
+
+      {/* Accordion Sections */}
+      <div className="mt-6 divide-y">
+        {['About SAP SuccessFactors HCM', 'Key features', 'Gallery', 'Pricing'].map((title, i) => (
+          <div key={i}>
+            <button
+              onClick={() => toggleSection(i)}
+              className="w-full flex justify-between items-center py-4 text-left font-medium text-gray-900"
+            >
+              {title}
+              <span className="text-green-600 text-2xl">{openSection === i ? '-' : '+'}</span>
+            </button>
+            {openSection === i && (
+              <div className="pb-4 text-sm text-gray-700 space-y-2">
+                <p>This is detailed information about {title}.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Vestibulum rutrum, massa nec porta bibendum, justo lacus egestas justo.</p>
+                <p>Nulla facilisi. Integer id magna in lorem fermentum viverra.</p>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      {/* Footer Buttons */}
+     {/* Footer Buttons */}
+      <div className="flex gap-4 pt-4">
+          <button className="px-4 py-2 rounded-full text-sm bg-white border border-green-600 text-green-600 hover:bg-green-50">
+            Read our full review
+          </button>
+          <button className="px-4 py-2 rounded-full text-sm bg-green-600 text-white hover:bg-green-700">
+            Submit your review
+          </button>
+        </div>
+    </div>
+      {/* Heading with Icon */}
+      <div className="flex items-center gap-2 mb-4 mt-8">
+        <FaMagic className="text-green-600 w-5 h-5" />
+        <h2 className="text-xl md:text-2xl font-semibold text-gray-900">
+          AI in HR software
+        </h2>
+      </div>
+
+      {/* Body Content */}
+      <div className="text-gray-700 space-y-4 text-base">
+        <p>
+          SAP is hardly the only HR vendor that offers AI tools.{' '}
+          <a href="#" className="text-green-700 underline font-medium">
+            Recruitment platforms
+          </a>, for example, have used AI for years to sort and identify highly qualified candidates from applicant pools.
+          However, with the rise of generative AI, many vendors are announcing plans to integrate more AI capabilities into their products.
+        </p>
+
+        <p>
+          Similar to SAP’s Joule, for example, Workday announced its{' '}
+          <a href="#" className="text-green-700 underline font-medium">
+            Illuminate AI model
+          </a>{' '}
+          to streamline business processes within the “flow of work.”{' '}
+          <a href="#" className="text-green-700 underline font-medium">
+            Gusto also recently announced
+          </a>{' '}
+          the upcoming release of its own small business AI tool, “Gus,” to help you get answers to compliance questions
+          and receive personalized insights about your business.
+        </p>
+
+        <p>
+          But a word of caution: these tools are still in their infancy, so always double-check the information it provides.
+          AI also shouldn’t replace your professional decision-making or your human efforts to improve the employee experience.
+        </p>
+
+        <p>
+          You can learn more by exploring{' '}
+          <a href="#" className="text-green-700 underline font-medium">
+            AI in HR: 6 Ways Artificial Intelligence Impacts the Workplace
+          </a>{' '}
+          and{' '}
+          <a href="#" className="text-green-700 underline font-medium">
+            AI Recruiting: Uses, Advantages, & Disadvantages
+          </a>.
+        </p>
+      </div>
+      </section>
+      {/* Honorable Mentions Section */}
+      <section id="honorable-mentions">
+           <h2 className="text-2xl font-semibold mb-6 mt-8">Honorable mentions</h2>
+
+      {/* Card 1 */}
+      <div className="border rounded-xl p-6 mb-6 shadow-sm space-y-4">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+          <div>
+            <h3 className="text-lg font-semibold">Paycor: Best for companies with field and frontline workers</h3>
+            <p className="text-sm text-gray-500">Alternative for: Rippling and BambooHR</p>
+            <p className="text-sm text-gray-500">Overall score: <span className="font-semibold">3.83 / 5.00</span></p>
+          </div>
+          <a
+            href="#"
+            className="mt-4 md:mt-0 bg-green-100 text-green-800 px-4 py-2 text-sm font-medium rounded-full"
+          >
+            Visit Website
+          </a>
+        </div>
+
+        <div className="flex flex-col md:flex-row gap-6 text-sm">
+          <div className="md:w-1/2 space-y-2">
+            <h4 className="font-semibold">When to choose Paycor</h4>
+            <p>
+              Paycor returns to my honorable mentions list in 2025 after dropping off it with Paylocity in 2024.
+              Although both Paycor and Paylocity offer similar features and services, Paycor takes the lead when it
+              comes to HR for physical workers.
+            </p>
+            <p>
+              Paycor’s HR software includes mobile apps with clock-in capabilities for frontline employees and allows
+              managers to submit group punches for employees, which is great for locations where multiple workers
+              clock in at once.
+            </p>
+          </div>
+          <div className="md:w-1/2 space-y-2">
+            <h4 className="font-semibold">Why it didn’t make the list</h4>
+            <p>
+              Paycor is a much more dated-looking platform than competitors like Rippling. The high learning curve for
+              payroll and compliance features can be confusing if you’re not already familiar.
+            </p>
           </div>
         </div>
       </div>
+
+      {/* In the News */}
+      <div className="bg-gray-50 border-l-4 border-green-500 p-4 mb-6 text-sm rounded-md shadow-sm">
+        <p>
+          In January 2025, <Link href="#" className="text-green-700 underline">Paychex acquired Paycor for $4.1 billion</Link>.
+          My sources shared that Paychex and Paycor will continue to offer their products separately, but they remain
+          on watch for any plan to merge their products — similar to Kronos and Ultimate Software of yore. While the
+          Paycor Stadium name will remain unchanged, I’ll keep you updated as I learn more. If you’re curious,{' '}
+          <Link href="#" className="text-green-700 underline">Paychex Flex</Link> earned a 3.76 out of 5.00 in my evaluation.
+        </p>
+      </div>
+
+      {/* Card 2 */}
+      <div className="border rounded-xl p-6 shadow-sm space-y-4">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+          <div>
+            <h3 className="text-lg font-semibold">Paylocity: Best for workforce management</h3>
+            <p className="text-sm text-gray-500">Alternative for: ADP Workforce Now</p>
+            <p className="text-sm text-gray-500">Overall score: <span className="font-semibold">3.76 / 5.00</span></p>
+          </div>
+          <a
+            href="#"
+            className="mt-4 md:mt-0 bg-green-100 text-green-800 px-4 py-2 text-sm font-medium rounded-full"
+          >
+            Visit Website
+          </a>
+        </div>
+
+        <div className="flex flex-col md:flex-row gap-6 text-sm">
+          <div className="md:w-1/2 space-y-2">
+            <h4 className="font-semibold">When to choose Paylocity</h4>
+            <p>
+              Paylocity is an HCM platform best suited for midsized businesses looking to support day-to-day operations
+              and strategic HR needs. It’s one of the top picks in workforce management.
+            </p>
+            <p>
+              Paylocity offers physical timeclock options plus geolocation and geofencing to restrict clock-ins by
+              device or place, and also has strong collaboration features.
+            </p>
+          </div>
+          <div className="md:w-1/2 space-y-2">
+            <h4 className="font-semibold">Why it didn’t make the list</h4>
+            <p>
+              Paylocity is one of the most confusing interfaces. Combining too many features into self-service portals
+              makes it hard to use, especially when adding focus-intensive tasks like performance reviews. The potential
+              for losing work due to session timeouts can be a real issue.
+            </p>
+          </div>
+        </div>
+      </div>
+            {/* Card 3 */}
+      <div className="border rounded-xl p-6 shadow-sm space-y-4 mt-6">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+          <div>
+            <h3 className="text-lg font-semibold">Gusto: Best for new businesses in the U.S.</h3>
+            <p className="text-sm text-gray-500">Alternative for: Deel</p>
+            <p className="text-sm text-gray-500">Overall score: <span className="font-semibold">3.50 / 5.00</span></p>
+          </div>
+          <a
+            href="#"
+            className="mt-4 md:mt-0 bg-green-100 text-green-800 px-4 py-2 text-sm font-medium rounded-full"
+          >
+            Visit Website
+          </a>
+        </div>
+
+        <div className="flex flex-col md:flex-row gap-6 text-sm">
+          <div className="md:w-1/2 space-y-2">
+            <h4 className="font-semibold">When to choose Gusto</h4>
+            <p>
+              Gusto is one of the best software for newbie HR professionals in the U.S. Navigating between modules is simple, and processes like payroll, job postings, and onboarding use step-by-step workflows to ensure proper completion. Gusto is a stepping-stone platform: it provides you with good foundational HR understanding to prepare you for more advanced capabilities in platforms like Paycor as your business grows.
+            </p>
+            <p>
+              New businesses in the U.S. will like its state registration services, R&D tax credit, garnishment reporting, and state-required anti-harassment training courses. With a 4.00 score, Gusto also beat Deel in pricing since it provides much more affordable subscription tiers for small businesses.
+            </p>
+          </div>
+          <div className="md:w-1/2 space-y-2">
+            <h4 className="font-semibold">Why it didn’t make the list</h4>
+            <p>
+              Although Gusto is an accessible platform for non-tech-savvy administrators, it quickly becomes unwieldy as you add more employees and develop more complicated workforce cadences.
+            </p>
+            <p>
+              For example, Gusto does not have the automation-building capabilities of solutions like Rippling and Deel. Its reporting capabilities are also lackluster, with its payroll emails report the only one with visual dashboards. As a result, you may need to download your raw CSVs to manipulate data and uncover meaningful insights for strategic HR planning.
+            </p>
+          </div>
+        </div>
+      </div>
+
+</section>
+     
+                
+        {/*new-HR-software*/}
+<section id="new-HR-software">
+  <div className="max-w-5xl mx-auto mt-8">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          Find your new HR software
+        </h1>
+
+        <div className="bg-gray-100 rounded-3xl p-6 sm:p-8">
+          <h2 className="text-lg font-semibold text-gray-800 mb-4">
+            Filter Products
+          </h2>
+
+          {/* Search Bar */}
+          <div className="relative mb-6">
+            <input
+              type="text"
+              placeholder="Search product name"
+              className="w-full rounded-full py-3 px-5 pr-12 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value={filters.search}
+              onChange={(e) => setFilters({ ...filters, search: e.target.value })}
+            />
+            <button className="absolute top-1/2 right-3 -translate-y-1/2 text-gray-600 hover:text-gray-900">
+              <div className="bg-gray-200 rounded-full p-2">
+                <FiSearch className="w-5 h-5" />
+              </div>
+            </button>
+          </div>
+
+          {/* Filters */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+            <select className="w-full rounded-full py-3 px-5 text-gray-700 focus:outline-none">
+              <option>Reviews</option>
+            </select>
+            <select className="w-full rounded-full py-3 px-5 text-gray-700 focus:outline-none">
+              <option>Pricing</option>
+            </select>
+            <select className="w-full rounded-full py-3 px-5 text-gray-700 focus:outline-none">
+              <option>Company Size</option>
+            </select>
+          </div>
+
+          {/* Sorting */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <select className="w-full rounded-full py-3 px-5 text-gray-700 focus:outline-none">
+              <option>Featured</option>
+            </select>
+            <select className="w-full rounded-full py-3 px-5 text-gray-700 focus:outline-none">
+              <option>10 per page</option>
+            </select>
+          </div>
+        </div>
+      </div>
+</section>
+      <div className="bg-white min-h-screen p-6 space-y-8">
+     
+
+      {/* Cards */}
+      <div className="max-w-4xl mx-auto space-y-6">
+        {products.map((product, index) => (
+          <div key={index} className="bg-white rounded-xl shadow p-6 flex flex-col gap-4">
+            <div className="flex items-start justify-between">
+              <div className="flex items-center gap-4">
+                <div className="w-10 h-10 relative">
+                  <Image src={product.logo} alt={product.name} fill className="object-contain" />
+                </div>
+                <div>
+                  
+                  <h2 className="font-semibold text-lg">{product.name}</h2>
+                  <p className="text-sm text-gray-500">{product.reviews}</p>
+                </div>
+              </div>
+
+              <button className="text-sm text-blue-600 font-semibold">Compare ▪</button>
+            </div>
+
+            {product.stars > 0 && (
+              <div className="flex items-center text-green-600 text-sm gap-1">
+                <span className="font-semibold">{product.stars}</span>
+                {Array.from({ length: 5 }, (_, i) => (
+                  <FaStar
+                    key={i}
+                    className={i < Math.floor(product.stars) ? 'text-green-500' : 'text-gray-300'}
+                  />
+                ))}
+              </div>
+            )}
+
+            <p className="text-sm text-gray-700 font-medium">Good for: {product.companySize}</p>
+            <p className="text-sm text-gray-600 leading-relaxed">{product.description}</p>
+
+            <div>
+              <button
+                className={`px-4 py-2 rounded font-semibold ${
+                  product.button.type === 'primary'
+                    ? 'bg-green-600 text-white hover:bg-green-700'
+                    : 'border border-gray-400 text-gray-700 hover:bg-gray-100'
+                }`}
+              >
+                {product.button.text}
+              </button>
+              
+            </div>
+          </div>
+          
+        ))}
+          {/* Banner */}
+      <div className=" bg-[#0E1F1C] text-white rounded-xl py-8 px-6 text-center">
+        <h2 className="text-lg font-semibold mb-4">Interested in seeing your product here?</h2>
+        <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded font-semibold text-sm">
+          List Your Product
+        </button>
+      </div>
+      </div>
+    </div>
+     <div className="min-h-screen bg-white p-6">
+      <div className="max-w-4xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            How do you choose the best HR software?
+          </h1>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            A comprehensive guide to selecting the right HR solution for your business needs
+          </p>
+        </div>
+
+        {/* Main Quote Card */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border-l-4 border-[#0E1F1C]">
+          <div className="flex items-start space-x-4">
+            <div className="flex-shrink-0">
+              <div className="w-12 h-12 bg-[#0E1F1C] rounded-full flex items-center justify-center">
+                <Users className="w-6 h-6 text-blue-600" />
+              </div>
+            </div>
+            <div className="flex-1">
+              <blockquote className="text-gray-700 text-lg leading-relaxed mb-6">
+                "When selecting HR software, consider your business size, budget, day-to-day HR processes, and company goals. It's crucial to have software that can manage compliance obligations, such as payroll and benefits administration. This software often comes with pre-built safeguards that limit labor law violations and prevent data entry errors, making it a must-have for your business."
+              </blockquote>
+              <blockquote className="text-gray-700 text-lg leading-relaxed mb-6">
+                "That doesn't mean HR processes like recruitment, retention, and employee performance and development are less important. Your organization should still have procedures to support these key areas. As your business grows, you'll likely add HR software to cover these functions to improve process efficiency and access data insights that aid in effective workforce planning."
+              </blockquote>
+              <div className="flex items-center text-sm text-gray-500">
+                <span className="font-medium">Expert tip from Lead HR Writer</span>
+                <span className="mx-2">•</span>
+                <span className="text-green-600 font-medium">Jessica Dennis</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Key Features Grid */}
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          {keyFeatures.map((feature, index) => (
+            <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-[#0E1F1C] rounded-lg flex items-center justify-center text-white">
+                    {feature.icon}
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Considerations Section */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+            <CheckCircle className="w-8 h-8 text-green-600 mr-3" />
+            Key Considerations
+          </h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            {considerations.map((item, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <div className="flex-shrink-0 w-2 h-2 bg-[#0E1F1C] rounded-full mt-2"></div>
+                <span className="text-gray-700">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Call to Action */}
+       
+
+        
+      </div>
+    </div>
+ <div className="min-h-screen bg-white p-6">
+      <div className="max-w-4xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-white mb-4">
+            How do you choose the best HR software?
+          </h1>
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            A comprehensive guide to selecting the right HR solution for your business needs
+          </p>
+        </div>
+
+        {/* Main Quote Card */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border-l-4 border-green-600">
+          <div className="flex items-start space-x-4">
+            <div className="flex-shrink-0">
+              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                <Users className="w-6 h-6 text-green-600" />
+              </div>
+            </div>
+            <div className="flex-1">
+              <blockquote className="text-gray-700 text-lg leading-relaxed mb-6">
+                "When selecting HR software, consider your business size, budget, day-to-day HR processes, and company goals. It's crucial to have software that can manage compliance obligations, such as payroll and benefits administration. This software often comes with pre-built safeguards that limit labor law violations and prevent data entry errors, making it a must-have for your business."
+              </blockquote>
+              <blockquote className="text-gray-700 text-lg leading-relaxed mb-6">
+                "That doesn't mean HR processes like recruitment, retention, and employee performance and development are less important. Your organization should still have procedures to support these key areas. As your business grows, you'll likely add HR software to cover these functions to improve process efficiency and access data insights that aid in effective workforce planning."
+              </blockquote>
+              <div className="flex items-center text-sm text-gray-500">
+                <span className="font-medium">Expert tip from Lead HR Writer</span>
+                <span className="mx-2">•</span>
+                <span className="text-green-600 font-medium">Jessica Dennis</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Types of HR Software */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-white mb-6">What are the types of HR software?</h2>
+          <div className="bg-white rounded-2xl shadow-xl p-8 mb-6">
+            <p className="text-gray-700 mb-6">
+              There are three main categories of HR software: HRIS, HRMS, and HCM. Although they are often used interchangeably, there are several technical differences between them. Some HR software also focuses on specific human resources functions, like recruiting, onboarding, payroll, benefits administration, performance management, employee engagement, and learning management systems.
+            </p>
+            <div className="text-sm text-green-600 font-medium mb-4">
+              💡 Also read: 15 Must-Have HR System Features
+            </div>
+          </div>
+
+          {/* Core HR Software */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 mb-6">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Core HR software</h3>
+            <div className="space-y-4">
+              {coreSoftware.map((item, index) => (
+                <div key={index} className="flex items-start space-x-4 p-4 border border-gray-200 rounded-lg">
+                  <div className="flex-shrink-0">
+                    <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-green-600">
+                      {item.icon}
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-gray-900 mb-1">{item.title}</h4>
+                    <p className="text-gray-600 text-sm">{item.description}</p>
+                  </div>
+                  <div className="w-6 h-6 bg-green-100 rounded flex items-center justify-center">
+                    <Plus className="w-4 h-4 text-green-600" />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Function-specific HR Software */}
+          <div className="bg-white rounded-2xl shadow-xl p-8 mb-6">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Function-specific HR software</h3>
+            <div className="space-y-4">
+              {functionSpecific.map((item, index) => (
+                <div key={index} className="flex items-start space-x-4 p-4 border border-gray-200 rounded-lg">
+                  <div className="flex-shrink-0">
+                    <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-green-600">
+                      {item.icon}
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-gray-900 mb-1">{item.title}</h4>
+                    <p className="text-gray-600 text-sm">{item.description}</p>
+                  </div>
+                  <div className="w-6 h-6 bg-green-100 rounded flex items-center justify-center">
+                    <Plus className="w-4 h-4 text-green-600" />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Benefits Section */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-white mb-6">What are the benefits of HR software?</h2>
+          <div className="bg-white rounded-2xl shadow-xl p-8 mb-6">
+            <p className="text-gray-700 mb-6">
+              HR software solutions offer businesses a number of advantages, including increased efficiency, consistent compliance, and deeper reporting capabilities.
+            </p>
+            
+            {benefits.map((benefit, index) => (
+              <div key={index} className="mb-6 last:mb-0">
+                <button
+                  onClick={() => toggleSection(`benefit-${index}`)}
+                  className="w-full flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                >
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-green-600">
+                      {benefit.icon}
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900">{benefit.title}</h3>
+                  </div>
+                  {expandedSection === `benefit-${index}` ? 
+                    <Minus className="w-5 h-5 text-gray-600" /> : 
+                    <Plus className="w-5 h-5 text-gray-600" />
+                  }
+                </button>
+                {expandedSection === `benefit-${index}` && (
+                  <div className="mt-4 p-4 bg-gray-50 rounded-lg">
+                    <p className="text-gray-700 leading-relaxed">{benefit.description}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div className="bg-gradient-to-r from-green-600 to-green-700 rounded-2xl shadow-xl p-8 text-center text-white">
+          <h2 className="text-2xl font-bold mb-4">Ready to Find Your Perfect HR Software?</h2>
+          <p className="text-green-100 mb-6 max-w-2xl mx-auto">
+            Take the next step in streamlining your HR processes and improving your workforce management
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
+              Explore Solutions
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
+              Get Expert Consultation
+            </button>
+          </div>
+        </div>
+
+        {/* Additional Reading */}
+        <div className="mt-8 text-center">
+          <div className="inline-flex items-center text-green-400 font-medium">
+            <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
+              <span className="text-green-600 text-sm">💡</span>
+            </div>
+            Also read: How to Choose the Right HR Software for your Business
+          </div>
+        </div>
+      </div>
+    </div>
+ <div className="min-h-screen bg-white p-6">
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="mb-12">
+          <h1 className="text-4xl font-bold text-white mb-4">HR software resources</h1>
+        </div>
+
+        {/* Main Content Grid */}
+        <div className="grid lg:grid-cols-2 gap-8 mb-12">
+          {/* Browse Guides Section */}
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Browse other HR software guides</h2>
+            <div className="space-y-3">
+              {browseGuides.map((guide, index) => (
+                <div key={index} className="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer group">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center text-green-600">
+                      {guide.icon}
+                    </div>
+                    <span className="text-gray-700 group-hover:text-green-600 transition-colors">{guide.title}</span>
+                  </div>
+                  <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-green-600 transition-colors" />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Alternatives Section */}
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Find an alternative to your current HR software</h2>
+            <div className="space-y-3 mb-6">
+              {alternatives.map((alternative, index) => (
+                <div key={index} className="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer group">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center text-green-600">
+                      {alternative.icon}
+                    </div>
+                    <span className="text-gray-700 group-hover:text-green-600 transition-colors">{alternative.title}</span>
+                  </div>
+                  <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-green-600 transition-colors" />
+                </div>
+              ))}
+            </div>
+            <button className="text-green-600 font-medium hover:text-green-700 transition-colors flex items-center">
+              See more...
+              <ArrowRight className="w-4 h-4 ml-1" />
+            </button>
+          </div>
+        </div>
+
+        {/* Bottom Grid */}
+        <div className="grid lg:grid-cols-2 gap-8 mb-12">
+          {/* Comparisons Section */}
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Compare top HR software solutions</h2>
+            <div className="space-y-3 mb-6">
+              {comparisons.map((comparison, index) => (
+                <div key={index} className="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer group">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center text-green-600">
+                      {comparison.icon}
+                    </div>
+                    <span className="text-gray-700 group-hover:text-green-600 transition-colors">{comparison.title}</span>
+                  </div>
+                  <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-green-600 transition-colors" />
+                </div>
+              ))}
+            </div>
+            <button className="text-green-600 font-medium hover:text-green-700 transition-colors flex items-center">
+              See more...
+              <ArrowRight className="w-4 h-4 ml-1" />
+            </button>
+          </div>
+
+          {/* Recommendations Section */}
+          <div className="bg-white rounded-2xl shadow-xl p-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">More software recommendation</h2>
+            <div className="space-y-3">
+              {recommendations.map((recommendation, index) => (
+                <div key={index} className="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer group">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center text-green-600">
+                      {recommendation.icon}
+                    </div>
+                    <span className="text-gray-700 group-hover:text-green-600 transition-colors">{recommendation.title}</span>
+                  </div>
+                  <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-green-600 transition-colors" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+       <div className="bg-[#F5F7FA] p-6 rounded-2xl flex flex-col md:flex-row items-center md:items-start gap-6 max-w-5xl mx-auto shadow-sm">
+      {/* Profile Image */}
+      <div className="flex flex-col items-center md:items-start text-center md:text-left">
+        <div className="w-24 h-24 relative rounded-full overflow-hidden border-2 border-white shadow">
+          <Image
+            src="/images/HR.jpeg" // Replace with actual path
+            alt="Jessica Dennis"
+            fill
+            className="object-cover"
+          />
+        </div>
+        <h3 className="mt-4 text-lg font-semibold text-[#4B4BE8]">Jessica Dennis</h3>
+        <p className="text-sm text-gray-600">Lead Writer</p>
+
+        {/* LinkedIn Icon */}
+        <a
+          href="https://www.linkedin.com/in/jessicadennis" // Replace with actual profile
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-3 inline-flex items-center justify-center w-8 h-8 border border-green-600 rounded-full text-green-600 hover:bg-green-100 transition"
+        >
+          <FaLinkedinIn />
+        </a>
+      </div>
+
+      {/* Bio Text */}
+      <div className="text-gray-800 text-sm leading-relaxed">
+        <p>
+          Jessica Dennis has more than six years of experience in HR administration, having held roles as an HR representative, generalist, and office manager. Her specific areas of expertise include onboarding, payroll, benefits, compliance, workforce management, unemployment insurance, and workers’ compensation claims management.
+        </p>
+        <p className="mt-2">
+          Her hands-on HR background fuels her insightful writing on HR technology and best practices. Her work has been featured in <em>TechnologyAdvice, TechRepublic, Fit Small Business, CNBC</em>, and <em>HR Digest</em>, providing nuanced takes on HR topics.
+        </p>
+      </div>
+    </div>
+
+        {/* Call to Action */}
+        
+      </div>
+    </div>
+
+
+</div>
+            
+ 
+ 
+             
+            </div>
+          </div>
+        </div>
     </>
   );
 }
