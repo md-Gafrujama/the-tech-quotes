@@ -49,6 +49,31 @@ export default function Payroll() {
       active: false,
     },
     {
+      id: "gusto",
+      title: "1. Gusto",
+      active: false,
+    },
+    {
+      id: "onpay",
+      title: "2. OnPay",
+      active: false,
+    },
+    {
+      id: "quickbooks",
+      title: "3. QuickBooks Payroll",
+      active: false,
+    },
+    {
+      id: "paycor",
+      title: "4. Paycor",
+      active: false,
+    },
+    {
+      id: "patriot",
+      title: "5. Patriot Payroll",
+      active: false,
+    },
+    {
       id: "honorable-mention",
       title: "Honorable mention",
       active: false,
@@ -114,6 +139,75 @@ export default function Payroll() {
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
+
+const payrollData = [
+    {
+      id: 1,
+      name: "Gusto",
+      image: "/images/gusto.png",
+      alt: "Gusto",
+      expertScore: 4.27,
+      bestFor: "Best overall",
+      startingPrice:"$49/mo. + $6/employee/mo.",
+      contractorOnlyPayroll:"$35/mo. + $6/worker/mo.",
+      learnmore:"Gusto product overview",
+      visitUrl: "Gusto",
+      
+      
+    },
+    {
+      id: 2,
+      name: "OnPay",
+      image: "/images/onpay.png",
+      alt: "OnPay",
+      expertScore: 4.11,
+      bestFor: "Ease of use",
+      startingPrice:"$49/mo. + $6/employee/mo.",
+      contractorOnlyPayroll:"Included in payroll plan",
+      learnmore:"OnPay product overview",
+      visitUrl: "OnPay",
+      
+    },
+    {
+      id: 3,
+      name: "QuickBooks Payroll",
+      image: "/images/quickbooks.png",
+      alt: "QuickBooks Payroll",
+      expertScore: 4.08,
+      bestFor: "Accounting integration",
+      startingPrice:"$50/mo. + $6/employee/mo.",
+      contractorOnlyPayroll:"$15/mo. for up to 20 contractors + $2/additional worker",
+      learnmore:"",
+      visitUrl: "QuickBooks Payroll",
+      
+    },
+    {
+      id: 4,
+     name: "Paycor",
+      image: "/images/paycor.jpg",
+      alt: "Paycor",
+      expertScore: 3.77,
+      bestFor: "Growing businesses",
+      startingPrice:"$99/mo. + $6/employee/mo.*",
+      contractorOnlyPayroll:"Included in payroll plan",
+      learnmore:"Paycor product overview",
+      visitUrl: "Paycor",
+      
+    },
+    {
+      id: 5,
+     name: "Patriot Payroll",
+      image: "/images/patriot.jpg",
+      alt: "Patriot Payroll",
+      expertScore: 3.67,
+      bestFor: "Affordability",
+      startingPrice:"$37/mo. + $5/employee/mo.**",
+      contractorOnlyPayroll:"Included in payroll plan",
+      learnmore:"",
+      visitUrl: "Patriot Payroll",
+      
+    },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -485,7 +579,7 @@ export default function Payroll() {
 
 paycor: {
     title: "Paycor: Best for growing businesses",
-    logo: "/images/paycor.png",
+    logo: "/images/paycor.jpg",
     button: {
       text: "Visit Website",
       link: "#",
@@ -1316,15 +1410,75 @@ Jessica Dennis
               </div>
 
               {/* what are best payroll tools */}
-      <section id="best-pm-software">
+<section id="best-payroll-software" className="mt-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8 sm:mb-12">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+            Best payroll software
+          </h1>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
+        </div>
+
+        <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-full">
+              <thead>
+                <tr className="border-b border-gray-200 bg-gray-50">
+                  <th className="text-left py-3 px-6 font-semibold text-gray-700 text-sm sm:text-base">Platform</th>
+                  <th className="text-center py-3 px-6 font-semibold text-gray-700 text-sm sm:text-base">Score</th>
+                  <th className="text-center py-3 px-6 font-semibold text-gray-700 text-sm sm:text-base">Best For</th>
+                  <th className="text-center py-3 px-6 font-semibold text-gray-700 text-sm sm:text-base">Starting Price</th>
+                  <th className="text-center py-3 px-6 font-semibold text-gray-700 text-sm sm:text-base">Contractor Payroll</th>
+                  <th className="text-center py-3 px-6 font-semibold text-gray-700 text-sm sm:text-base">Learn More</th>
+                  <th className="text-center py-3 px-6 font-semibold text-gray-700 text-sm sm:text-base">Visit</th>
+                </tr>
+              </thead>
+              <tbody>
+                {payrollData.map((item) => (
+                  <tr key={item.id} className="border-b border-gray-100 hover:bg-gray-50 transition">
+                    <td className="py-4 px-6 flex items-center space-x-3">
+                      <img src={item.image} alt={item.alt} className="w-12 h-12 object-contain" />
+                      <span className="text-sm font-medium text-gray-800">{item.name}</span>
+                    </td>
+                    <td className="py-4 px-6 text-center text-sm text-gray-700">{item.expertScore}</td>
+                    <td className="py-4 px-6 text-center text-sm text-gray-700">{item.bestFor}</td>
+                    <td className="py-4 px-6 text-center text-sm text-gray-700">{item.startingPrice}</td>
+                    <td className="py-4 px-6 text-center text-sm text-gray-700">{item.contractorOnlyPayroll}</td>
+                    <td className="py-4 px-6 text-center text-sm text-blue-600 underline">
+                      {item.learnmore ? item.learnmore : "N/A"}
+                    </td>
+                    <td className="py-4 px-6 text-center">
+                      <a
+                        href={item.visitUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white bg-green-600 hover:bg-green-700 px-4 py-2 rounded text-sm"
+                      >
+                        Visit 
+                      </a>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div className="text-center mt-12">
+          <p className="text-gray-600 text-sm">
+            This is for Patriot Payroll’s Full Service plan, which includes tax filing services. If you prefer to file
+            tax forms yourself, Patriot offers a Basic Payroll package that costs $17 per month + $4 per employee
+            monthly.
+          </p>
+        </div>
+      </div>
+    </section>
+
+      <section id="gusto">
       {/* Common Heading */}
      
-        <h1 className="text-3xl font-bold mt-4 text-black mb-2">
-          What is the payroll software?
-        </h1>
-        <p className="text-gray-700">
-          Here are our top recommendations for payroll software in 2025.
-        </p>
+       
+        
      
 
       {/* Map through the tools array */}
@@ -1598,8 +1752,8 @@ Jessica Dennis
                       {/* Logo */}
                       <div className="flex-shrink-0">
                         <Image
-                          src="/images/project3.jpg" // Replace with your actual logo path
-                          alt="Zoho Projects Logo"
+                          src="/images/keka.png" // Replace with your actual logo path
+                          alt="keka Projects Logo"
                           width={80}
                           height={80}
                           className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain"
@@ -1613,7 +1767,7 @@ Jessica Dennis
                          Keka HR
                         </h1>
                         <Link
-                          href="/reviews/zoho-projects"
+                          href=""
                           className="text-sm sm:text-base md:text-lg text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
                         >
                           Leave a Review
@@ -1662,7 +1816,343 @@ Jessica Dennis
                   {/* Visit Website Button */}
                   <div className="flex justify-end">
                     <Link
-                      href="https://www.zoho.com/projects/"
+                      href="/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                    >
+                      Visit Website
+                      <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* // second product */}
+
+<div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg mt-4 sm:p-8 transition-shadow duration-300 overflow-hidden">
+                <div className="p-6  md:p-8 lg:p-10">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 sm:gap-6 mb-6 sm:mb-8">
+                    <div className="flex items-center gap-3 sm:gap-4">
+                      {/* Logo */}
+                      <div className="flex-shrink-0">
+                        <Image
+                          src="/images/access.png" // Replace with your actual logo path
+                          alt="access Projects Logo"
+                          width={80}
+                          height={80}
+                          className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain"
+                          priority
+                        />
+                      </div>
+
+                      {/* Title and Review Link */}
+                      <div className="min-w-0 flex-1">
+                        <h1 className="text-xl sm:text-xl md:text-2xl lg:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
+                         Access SelectHR
+                        </h1>
+                        <Link
+                          href="/reviews/zoho-projects"
+                          className="text-sm sm:text-base md:text-lg text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
+                        >
+                          Leave a Review
+                        </Link>
+                      </div>
+                    </div>
+
+                    {/* Compare Button */}
+                    <div className="flex-shrink-0">
+                      <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-blue-600 hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
+                        <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
+                        Compare
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Good For Section */}
+                  <div className="mb-6 sm:mb-8">
+                    <div className="flex flex-wrap items-center gap-1 sm:gap-2 text-sm sm:text-base md:text-lg">
+                      <span className="font-semibold text-gray-700">
+                        Good for:
+                      </span>
+                      <div className="flex flex-wrap items-center gap-1">
+                        <span className="text-gray-600">
+                          Medium (250-999 Employees), Enterprise (5,000+ Employees), Large (1,000-4,999 Employees)
+                        </span>
+                        
+                   
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Description Section */}
+                  <div className="mb-6 sm:mb-8">
+                    <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
+                      The Access Group develops business management solutions, specifically HR software. Their products are used by more than 5,000 customers in the United Kingdom, including corporate and non-profit organizations. Recently, the company has been rated among the fastest growing software developers in the UK and among the top places to work in the country. The company continues to evolve today.</p>
+
+                    <Link
+                      href=""
+                      className="text-sm sm:text-base md:text-lg text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                    >
+                      Learn More About Access SelectHR
+                    </Link>
+                  </div>
+
+                  {/* Visit Website Button */}
+                  <div className="flex justify-end">
+                    <Link
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                    >
+                      Visit Website
+                      <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              {/* third product */}
+
+              <div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg mt-4 sm:p-8 transition-shadow duration-300 overflow-hidden">
+                <div className="p-6  md:p-8 lg:p-10">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 sm:gap-6 mb-6 sm:mb-8">
+                    <div className="flex items-center gap-3 sm:gap-4">
+                      {/* Logo */}
+                      <div className="flex-shrink-0">
+                        <Image
+                          src="/images/accomplish.png" // Replace with your actual logo path
+                          alt="accomplish Projects Logo"
+                          width={80}
+                          height={80}
+                          className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain"
+                          priority
+                        />
+                      </div>
+
+                      {/* Title and Review Link */}
+                      <div className="min-w-0 flex-1">
+                        <h1 className="text-xl sm:text-xl md:text-2xl lg:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
+                         Accomplish EP
+                        </h1>
+                        <Link
+                          href="/reviews/zoho-projects"
+                          className="text-sm sm:text-base md:text-lg text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
+                        >
+                          Leave a Review
+                        </Link>
+                      </div>
+                    </div>
+
+                    {/* Compare Button */}
+                    <div className="flex-shrink-0">
+                      <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-blue-600 hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
+                        <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
+                        Compare
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Good For Section */}
+                  <div className="mb-6 sm:mb-8">
+                    <div className="flex flex-wrap items-center gap-1 sm:gap-2 text-sm sm:text-base md:text-lg">
+                      <span className="font-semibold text-gray-700">
+                        Good for:
+                      </span>
+                      <div className="flex flex-wrap items-center gap-1">
+                        <span className="text-gray-600">
+                          Medium (250-999 Employees), Large (1,000-4,999 Employees)
+                        </span>
+                        
+                   
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Description Section */}
+                  <div className="mb-6 sm:mb-8">
+                    <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
+                      Accomplish EP is a cloud-based human capital management (HCM) platform for small and mid-sized companies. It offers HR, payroll, time tracking, benefits, performance reviews, and compliance capabilities under a single concept application.</p>
+
+                    <Link
+                      href="/learn-more/Keka-hr-projects"
+                      className="text-sm sm:text-base md:text-lg text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                    >
+                      Learn More About Accomplish EP
+                    </Link>
+                  </div>
+
+                  {/* Visit Website Button */}
+                  <div className="flex justify-end">
+                    <Link
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                    >
+                      Visit Website
+                      <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
+                    </Link>
+                  </div>
+
+                </div>
+              </div>
+              {/* fourth product */}
+              <div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg mt-4 sm:p-8 transition-shadow duration-300 overflow-hidden">
+                <div className="p-6  md:p-8 lg:p-10">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 sm:gap-6 mb-6 sm:mb-8">
+                    <div className="flex items-center gap-3 sm:gap-4">
+                      {/* Logo */}
+                      <div className="flex-shrink-0">
+                        <Image
+                          src="/images/acquire.png" // Replace with your actual logo path
+                          alt="acquire Projects Logo"
+                          width={80}
+                          height={80}
+                          className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain"
+                          priority
+                        />
+                      </div>
+
+                      {/* Title and Review Link */}
+                      <div className="min-w-0 flex-1">
+                        <h1 className="text-xl sm:text-xl md:text-2xl lg:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
+                         AcquireTM
+                        </h1>
+                        <Link
+                          href="/reviews/zoho-projects"
+                          className="text-sm sm:text-base md:text-lg text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
+                        >
+                          Leave a Review
+                        </Link>
+                      </div>
+                    </div>
+
+                    {/* Compare Button */}
+                    <div className="flex-shrink-0">
+                      <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-blue-600 hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
+                        <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
+                        Compare
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Good For Section */}
+                  <div className="mb-6 sm:mb-8">
+                    <div className="flex flex-wrap items-center gap-1 sm:gap-2 text-sm sm:text-base md:text-lg">
+                      <span className="font-semibold text-gray-700">
+                        Good for:
+                      </span>
+                      <div className="flex flex-wrap items-center gap-1">
+                        <span className="text-gray-600">
+                          Micro (0-49 Employees), Medium (250-999 Employees), Large (1,000-4,999 Employees), Small (50-249 Employees)
+                        </span>
+                        
+                   
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Description Section */}
+                  <div className="mb-6 sm:mb-8">
+                    <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
+                     AcquireTM is a cloud-based applicant tracking and talent acquisition solution that provides a complete hiring platform for small or mid-sized businesses. AcquireTM provides an intuitive and easy to use solution that gives HR administrators, recruiters and hiring managers the tools they need to take control of hiring processes.</p>
+
+                    <Link
+                      href="/learn-more/Keka-hr-projects"
+                      className="text-sm sm:text-base md:text-lg text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                    >
+                      Learn More About AcquireTM
+                    </Link>
+                  </div>
+
+                  {/* Visit Website Button */}
+                  <div className="flex justify-end">
+                    <Link
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                    >
+                      Visit Website
+                      <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              {/* fifth product */}
+              <div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg mt-4 sm:p-8 transition-shadow duration-300 overflow-hidden">
+                <div className="p-6  md:p-8 lg:p-10">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 sm:gap-6 mb-6 sm:mb-8">
+                    <div className="flex items-center gap-3 sm:gap-4">
+                      {/* Logo */}
+                      <div className="flex-shrink-0">
+                        <Image
+                          src="/images/adaptive.jpeg" // Replace with your actual logo path
+                          alt="Zoho Projects Logo"
+                          width={80}
+                          height={80}
+                          className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain"
+                          priority
+                        />
+                      </div>
+
+                      {/* Title and Review Link */}
+                      <div className="min-w-0 flex-1">
+                        <h1 className="text-xl sm:text-xl md:text-2xl lg:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
+                         Adaptive Suite - Adaptive Insights
+                        </h1>
+                        <Link
+                          href="/reviews/zoho-projects"
+                          className="text-sm sm:text-base md:text-lg text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
+                        >
+                          Leave a Review
+                        </Link>
+                      </div>
+                    </div>
+
+                    {/* Compare Button */}
+                    <div className="flex-shrink-0">
+                      <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-blue-600 hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
+                        <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
+                        Compare
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Good For Section */}
+                  <div className="mb-6 sm:mb-8">
+                    <div className="flex flex-wrap items-center gap-1 sm:gap-2 text-sm sm:text-base md:text-lg">
+                      <span className="font-semibold text-gray-700">
+                        Good for:
+                      </span>
+                      <div className="flex flex-wrap items-center gap-1">
+                        <span className="text-gray-600">
+                          Medium (250-999 Employees), Enterprise (5,000+ Employees), Large (1,000-4,999 Employees)
+                        </span>
+                        
+                   
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Description Section */}
+                  <div className="mb-6 sm:mb-8">
+                    <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
+                      Adaptive Suite is the only unified, cloud-based corporate performance management software on the market. Designed to be easy to use and implement, it is accessible from anywhere, an all-in-one package including the best business performance management software modules that Adaptive Insights distributes.</p>
+
+                    <Link
+                      href="/learn-more/Keka-hr-projects"
+                      className="text-sm sm:text-base md:text-lg text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                    >
+                       Learn More About Adaptive Suite - Adaptive Insights
+                    </Link>
+                  </div>
+
+                  {/* Visit Website Button */}
+                  <div className="flex justify-end">
+                    <Link
+                      href=""
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
