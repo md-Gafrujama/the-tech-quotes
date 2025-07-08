@@ -13,7 +13,7 @@ import {
   Search,
   Filter,
   Star,
-  Users, 
+  Users,
   DollarSign,
   Clock,
 } from "lucide-react";
@@ -30,11 +30,12 @@ export default function Employeedisciplinary() {
   const [expandedSections, setExpandedSections] = useState({});
   const [isMobile, setIsMobile] = useState(false);
   const [activeSection, setActiveSection] = useState(null);
- const [openSections, setOpenSections] = useState({});
+  const [openSections, setOpenSections] = useState({});
   const [openItems, setOpenItems] = useState({});
+  const [openNested, setOpenNested] = useState(null);
   const [tableOfContents, setTableOfContents] = useState([
     {
-      id: "what-is-disciplinary-action ",
+      id: "what-is-disciplinary-action",
       title: "What is disciplinary action (and why it matters)",
       active: false,
     },
@@ -59,48 +60,48 @@ export default function Employeedisciplinary() {
       active: false,
     },
     { id: "common-sanctions", title: "Common sanctions", active: false },
-  {
+    {
       id: "before-you-start",
       title: "Before you start: What to have in place (and what to watch for)",
       active: false,
     },
-     {
+    {
       id: "disciplinary-action-form-template",
       title: "Disciplinary action form template",
       active: false,
     },
-     {
+    {
       id: "employee-disciplinary-process-steps",
       title: "Employee disciplinary process steps",
       active: false,
-    }, 
+    },
     {
       id: "common-mistakes-to-avoid",
       title: "Common mistakes to avoid",
       active: false,
     },
-     {
-      id: "employee-disciplinary-action-FAQs ",
+    {
+      id: "employee-disciplinary-action-FAQs",
       title: "Employee disciplinary action FAQs ",
       active: false,
     },
-]);
+  ]);
 
- const toggleSection = (sectionKey, labelKey = null) => {
-  setExpandedSections((prev) => ({
-    ...prev,
-    [sectionKey]: !prev[sectionKey],
-  }));
+  const toggleSection = (sectionKey, labelKey = null) => {
+    setExpandedSections((prev) => ({
+      ...prev,
+      [sectionKey]: !prev[sectionKey],
+    }));
 
-  if (labelKey) {
-    setActiveSection((prev) => (prev === sectionKey ? null : sectionKey));
-  }
-  
-  setOpenSections(prev => ({
-    ...prev,
-    [sectionKey]: !prev[sectionKey]
-  }));
-};
+    if (labelKey) {
+      setActiveSection((prev) => (prev === sectionKey ? null : sectionKey));
+    }
+
+    setOpenSections((prev) => ({
+      ...prev,
+      [sectionKey]: !prev[sectionKey],
+    }));
+  };
 
   const toggleItem = (index) => {
     setOpenItems((prev) => ({
@@ -108,7 +109,10 @@ export default function Employeedisciplinary() {
       [index]: !prev[index],
     }));
   };
- 
+  const toggleNested = (key) => {
+    setOpenNested(openNested === key ? null : key);
+  };
+
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
@@ -149,547 +153,6 @@ export default function Employeedisciplinary() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-//   const toolsContent = {
-//    gusto: {
-//     title: " Gusto: Best overall project management software",
-//     logo: "/images/gusto.png",
-//     button: {
-//       text: "Visit Website",
-//       link: "#",
-//     },
-//     scores: [
-//       { label: "User reviews", score: "4.64/5" },
-      
-//       { label: "Pricing", score: "4.06/5" },
-
-//       { label: "Customer support", score: "4/5" },
-//       { label: "Platform and interface", score: "4.23/5" },
-//       { label: "HRIS features", score: "4.63/5" },
-//       { label: "Reporting and analytics", score: "4.56/5" },
-//       { label: "Payroll features", score: "4.15/5" },
-      
-//     ],
-//     pros: [
-//       "International contractor payroll in more than 120 countries.",
-// "Gusto-brokered health insurance that integrates with payroll on all plans.",
-// "Customer service is available by phone, email, or chat.",
-// "Native employee financial wellness tools through Gusto Wallet app and Gusto debit card.",
-//     ],
-//     cons: [
-//       "No dedicated account manager (unless with a Premium subscription).",
-// "Check delivery is currently in beta and costs $1.50 per check.",
-// "The lowest price plan is only for single-state payroll.",
-// "Employer of Record (EOR) services to hire and pay global workers are limited to 12 countries.",
-//     ],
-//     why: {
-//       intro: `Gusto’s simple but modern user interface (UI) helps you quickly establish basic payroll flows and maintain compliance requirements. It offers a wide range of payroll tools and services, such as its AutoPilot feature, which automatically approves pay runs, saving you time from manually doing payroll yourself. You also don’t have to worry about payroll tax filings and remittances, Gusto will handle these for you.`,
-//       bullets: [
-//        " With a 4.27 out of 5 score, Gusto’s rating reflects its capability to offer accessible tools to both payroll newbies and experts while supporting their needs. In addition to full-service payroll, Gusto’s project tracking allows you to pay your contractors the right amount while providing you with data to make more accurate, competitive project bids to your clients. And if you decide to grow into an international business, Gusto can compliantly pay your global contractors and employees. It can even help you hire international employees with its EOR service—Gusto Global.",
-//       ],
-//       outro: `For HR features, Gusto provides basic versions of several HR processes, like performance reviews, but it’s not the best choice if you need a full-scale human capital management (HCM) system. Paycor or Rippling are better options in this scenario. Both have feature-rich HR platforms that can handle simple to complex HR processes.`,
-//       extras: {
-//         "About Gusto": (
-//           <>
-//             <p className="text-black mb-4">
-//              Gusto started as an employee and contractor payments company but now supports various HR functions like benefits administration, performance management, recruitment, and global payroll. As a full-service payroll company, it offers automatic deductions, remittances, and filings of federal, state, and local taxes. It can even handle minimum wage adjustments for tip credits and child support payments in 49 states (all but South Carolina). In contrast, many standalone payroll solutions for small businesses require you to process garnishments and local taxes manually. 
-//             </p>
-//             <p className="text-black">
-//               Gusto also supports global businesses with contractor payments in more than 120 countries. For its Gusto Global product, it partnered with Remote to offer EOR services for employers needing to hire and pay workers 
-//             </p>
-           
-//             <p className="text-black">
-//              While the coverage may be limited as of this writing, Gusto plans to expand its EOR services to other countries soon.</p>
-//            <h4 className="text-lg font-bold mb-2">
-//               Gusto limitations
-//             </h4>
-//             <p className="text-black">
-//               Even if it has started offering global hiring and payroll services, Gusto is not the most scalable solution in the market. Enterprise businesses, for example, will have difficulty finding crucial pay data insights, such as pay disparities and compensation benchmarks. This is because Gusto has limited report customization capabilities and completely lacks data visualization. Instead, you’ll need to export the reports to a spreadsheet program to create customized charts and gain data insights. </p>
-//             <p className="text-black">
-//              Gusto also becomes tedious to use once you have more than 50 employees. Unless you upgrade to a higher tier, it still requires some manual data inputs for things like time tracking and new hire onboarding.  </p>
-//           </>
-//         ),
-//         "Key Features": (
-//           <>
-//             <h4 className="text-lg font-bold mb-2">
-//               Simple payroll interface
-//             </h4>
-//             <p className="text-black mb-4">
-//              Gusto’s payroll module features a progress bar with steps and instructions at the top so you stay on track and remember what information you need for payroll finalization. If you don’t enable Gusto’s AutoPilot function, running payroll takes only three steps: enter employee earnings and actual work hours, input time off details, and review and submit.  </p>
-            
-//             <p className="text-black mb-4">
-//              If you don’t have a native or integrated time-tracking module, Gusto makes the process somewhat less tedious than Rippling, which previously held the top spot in this list. This is because Gusto includes fields to adjust employees’ hours, earnings, deductions, and reimbursements on the same page. You only have to open the section to adjust the fields that apply to each employee. </p>
-           
-//             <p className="text-black mb-4">
-//               This is unlike Rippling, which separates hourly and salaried employees into different steps and puts each employee’s earnings and deductions in tabs. You will need to switch tabs and do long, horizontal scrolls to find and adjust the pay codes that apply to each employee. As a result, Rippling requires significantly more clicks to finish payroll than Gusto.</p>
-//             <h4 className="text-lg font-bold mb-2">
-//              Payroll add-ons
-//             </h4>
-//             <p className="text-black">
-//              Gusto offers several add-on features that benefit small businesses. It can help you save money with R&D tax credits or start a pay-as-you-go workers’ compensation policy through its partner, NEXT Insurance. If you sign up for its state tax registration add-on, Gusto will file and monitor all the paperwork needed to expand your business into new states. </p>
-         
-//          <p className="text-black">
-//              Further, Gusto has a free bill pay module. It allows you to create an electronic roster of all your vendors, upload bills from suppliers and subcontractors, and schedule payments. However, its features aren’t extensive—you can’t attribute codes, like utilities, to payments for accounting purposes or send transactions to stakeholders for approval. You also can’t filter or export bill payment data to your accounting application. Nevertheless, if you’re switching to Gusto after doing accounting and payroll processes yourself, it is a step up from manually maintaining billing and vendor profiles.</p> </>
-//         ),
-//         "Pricing": (
-//           <>
-//             <p className="text-black mb-4">
-//              Gusto’s pricing starts at $49 monthly plus $6 per employee, per month (PEPM). You can choose between three tiers: Simple, Plus, and Premium. Similar to QuickBooks Payroll, Gusto also offers a contractor-only payroll plan for $35 per month plus $6 per contractor per month*. However, it isn’t as affordable as QuickBooks Payroll, which only costs $15 monthly for up to 20 workers plus $2 for each additional contractor.</p>
-           
-//             <h4 className="text-lg font-bold mb-2">
-//              Gusto contractor-only plan
-//             </h4>
-//             <ul className="list-disc pl-5 text-black mb-4">
-//               <li>Monthly fee: $35 plus $6 per contractor.</li>
-//               <li>Includes unlimited US contractor payments, four-day direct deposits, 1099-NECs at the end of the year, and new hire reporting, if required in your state. </li>
-//             </ul>
-//             <h4 className="text-lg font-bold mb-2">
-//               Add-ons
-//             </h4>
-//             <div className="text-black mb-4">
-//   <ul className="list-disc pl-5 mb-4">
-//     <li><b>International contractor payments:</b> Price varies by foreign exchange rate.</li>
-//     <li><b>State tax registration:</b> Prices vary by state.</li>
-//     <li><b>R&D tax credits:</b> Pay 15% of identified tax credits.</li>
-//     <li><b>Gusto Global:</b> $699 PEPM.</li>
-//     <li><b>Health insurance broker integration:</b> $6 per month per eligible employee.</li>
-//     <li><b>401(k) retirement savings:</b> Price varies by 401(k) integration.</li>
-//     <li><b>Health Savings Accounts (HSAs):</b> $2.50 per month per participant.**</li>
-//     <li><b>Flexible Spending Accounts (FSAs):</b> $4 per month per participant, with a $20 per month minimum.**</li>
-//     <li><b>Dependent care FSAs:</b> $4 per month per participant, with a $20 per month minimum.**</li>
-//     <li><b>Commuter benefits:</b> $4 per month per participant, with a $20 per month minimum.**</li>
-//     <li><b>Workers’ compensation:</b> Price of premiums only.</li>
-//     <li><b>Life and disability insurance:</b> Price of premiums only.</li>
-//     <li><b>Next-day direct deposit:</b> $15/mo. + $3 PEPM.***</li>
-//     <li><b>Time tracking:</b> $6 PEPM.***</li>
-//     <li><b>Performance reviews:</b> $3 PEPM.***</li>
-//     <li><b>HR resources:</b> $50/mo. + $5 PEPM (includes compliance alerts and access to HR experts and HR templates).***</li>
-//     <li><b>Priority support and HR resources:</b> $8 PEPM; only available with the Plus plan.</li>
-//     <li><b>Annually updated labor law posters:</b> $8.99/mo. (onsite posters); $10/mo. for up to five employees, plus $1/mo. for each additional employee (ePoster service for remote employees)</li>
-//   </ul>
-
-//   <p className="mb-2">
-//     For new clients, Gusto waives the $35 monthly base fee for the first six months. This could change anytime, so please explore its website for the latest deals.
-//   </p>
-//   <p className="mb-2">
-//     <b>**</b> Annual $200 service charge covers HSAs, FSAs, dependent care FSAs, and commuter benefits.
-//   </p>
-//   <p>
-//     <b>***</b> Add-on only for the Simple plan; included for free with the Plus and Premium tiers.
-//   </p>
-// </div>
-
-           
-//           </>
-//         ),
-//       },
-//     },
-//   },
-//   onpay: {
-//     title: " OnPay: Best for ease of use",
-//     logo: "/images/onpay.png",
-//     button: {
-//       text: "Visit Website",
-//       link: "#",
-//     },
-//     scores: [
-//         { label: "Overall Score", score: "4.11/5" },
-//      { label: "User reviews", score: "4.07/5" },
-      
-//       { label: "Pricing", score: "4.5/5" },
-
-//       { label: "Customer support", score: "3.75/5" },
-//       { label: "Platform and interface", score: "3.46/5" },
-//       { label: "HRIS features", score: "4.63/5" },
-//       { label: "Reporting and analytics", score: "4.06/5" },
-//       { label: "Payroll features", score: "4.05/5" },
-//     ],
-//     pros: [
-//       "Free setup and data migration.",
-//       "Specialized payroll services for particular industries like agriculture, churches, and nonprofits.",
-//       "Employee rosters, organizational charts, leave management, and customizable onboarding included.",
-//     ],
-//     cons: [
-//       "Does not offer native time-tracking and accounting modules.",
-//       "Limited third-party integrations.",
-//        "Not suitable for fast-growing companies.",
-//        "No mobile app.",
-//     ],
-//     why: {
-//       intro: `OnPay has an intuitive interface and uncomplicated payroll workflows that can accommodate multiple payroll schedules, worker types, and pay methods. Coming in with a score of 4.11 out of 5, OnPay makes running payroll easy with its simple-to-use features and automatic alerts that highlight payroll errors and discrepancies. It also comes with a suite of HR tools to meet minimum compliance requirements by state and industry, including PTO policy management, compliance audits, and an HR resource library.`,
-//      outro: `OnPay’s flat-rate pricing structure makes planning for and controlling long-term business costs much easier. However, this also makes OnPay less likely to innovate and offer more modern features at the same rate as competitors. Its one-price-fits-all feature means that adding more capabilities will result in profit loss for the company unless they raise prices or offer add-on modules for additional fees. If you want a small business payroll product that improves and adapts constantly, go with Gusto instead. Over the years, the company has added more functionalities to its platform, the latest include global payroll and EOR services.`,
-     
-//       extras: {
-//         "About OnPay": (
-//           <>
-//             <p className="text-black mb-4">
-//              OnPay’s specialty may be payroll, but it has all the features you need to manage small business HR processes, such as time off management, benefits administration, task management, and customizable onboarding workflows. These all come standard with OnPay, unlike the other providers on my list that require you to purchase a higher subscription to get some of these features. </p>
-//             <p className="text-black">
-//              OnPay may not have automatic pay run features, but its interface is straightforward, requiring just as many (or fewer) clicks as Gusto to complete payroll. Like Gusto, OnPay lets you add or adjust earnings and deductions on the same screen, avoiding extra clicks and cumbersome spreadsheets. You can also adjust specific employee pay information in a sidebar window without leaving the workflow. </p>
-//           <p className="text-black mb-4">
-//              While it doesn’t offer a contractor-only plan like QuickBooks Payroll and Gusto, OnPay allows you to pay contractors within the same pay cycle as your regular employees. This avoids repeating the payroll process for your different worker classifications at the end of every pay period.</p>
-//          <h4 className="text-lg font-bold mb-2">
-//               OnPay limitations
-//             </h4>
-//          <p className="text-black mb-4">
-//               OnPay is not the best choice if you expect to need more robust payroll features later. It supports unlimited and multi-state payroll but lacks global payroll functionality. OnPay may flag you of payroll errors as you process employee payments, but lacks in-app compliance checkers, so you’ll have to become familiar with new laws on minimum wages, PTO, and overtime in each state where your employees reside before running payroll. </p>
-//             <p className="text-black mb-4">
-//               One of the biggest drawbacks, especially for businesses with mostly non-exempt hourly workers, is OnPay’s lack of native time-tracking or scheduling features. It does integrate with popular options like When I Work and Deputy, but QuickBooks Payroll may be a better choice if you want easy data transfers from time tracking to payroll.  </p>
-//           </>
-//         ),
-//         "Key Features": (
-//           <>
-//             <h4 className="text-lg font-bold mb-2">
-//             Employee engagement and recordkeeping
-//             </h4>
-//             <p className="text-black mb-4">
-//              OnPay offers basic staff engagement and recordkeeping features that you rarely see in standalone payroll platforms, such as employee profile bios and customizable fun fact questions. Workers can view this information and work contact numbers directly in OnPay. This is useful if you have shift workers who need to reach team members to report emergencies like tardies or other shift changes. </p>
-            
-//             <p className="text-black mb-4">
-//              You can use its customizable forms to create documents for tracking business and staff information, such as collecting employee T-shirt sizes for an upcoming work event or tracking company equipment like computers and keys. Its e-signature capabilities also allow you to collect essential documents and obtain legal acknowledgments from employees. For instance, employees can electronically sign uniform deduction agreements to deduct the cost from their next paychecks. </p>
-            
-//             <p className="text-black mb-4">
-//              You can even create similar flows for handbook policies, including any that impact payroll processes, such as employee bonuses, reimbursements, and other deductions. Gusto may have similar functionalities but reserves it for its higher-paying plans. </p>
-//             <h4 className="text-lg font-bold mb-2">
-//               Payroll reports builder
-//             </h4>
-//             <p className="text-black">
-//              OnPay includes a payroll-specific reports dashboard, with links to important reports, like general ledger (GL) summary and payroll register, directly on the main page. Graphs also provide quick views of the number of employees paid each month and paid wages by type to track costs and turnover. </p>
-//             <p className="text-black">
-//              You can save custom reports and views to access the data you need as it changes with each pay run. I was also impressed with OnPay’s report designer, which lets you filter and drag-and-drop report columns to adjust your view in real time without downloading data to a spreadsheet program of choice. This saves you time from downloading reports repeatedly. In contrast, Gusto only lets you choose the columns or data fields you want. You can’t rearrange the order without running the report and selecting the columns again. If you want an easier way of viewing and filtering data fields for your reports, use OnPay.</p>
-//           </>
-//         ),
-//         "Pricing": (
-//           <>
-//             <p className="text-black mb-4">
-//               OnPay has the simplest pricing of all the vendors on my list. For $49 per month plus $6 PEPM, you get access to OnPay’s entire platform, including payroll and basic HR features. These include: </p>
-            
-            
-//             <ul className="list-disc pl-5 text-black mb-4">
-//               <li>Multi-state payroll.</li>
-//               <li>Customized employee onboarding and task checklists.</li>
-//            <li>Personnel file storage.</li>
-//            <li>PTO management.</li>
-//            <li>OnPay-brokered health insurance benefits.
-// </li>
-//            <li>Company directory and organizational charts.</li>
-//            <li>HR resource library.</li>
-//            <li>Customer support by phone, chat, and email.</li>
-
-          
-
-//             </ul>
-//           <p className="text-black mb-4">
-//               OnPay’s feature is comparable to Gusto’s least expensive Simple plan, but OnPay has a slightly lower monthly base software fee ($40 vs $49) and surpasses Gusto Simple’s capabilities. It includes multi-state payroll—a feature that Gusto offers in its Plus and Premium tiers. OnPay’s tax filing service is also a bit better than QuickBooks Payroll because it covers federal, state, and local taxes; whereas QuickBooks Payroll will require you to upgrade to either its Premium and Elite plans if you want it to file local tax forms for you. With its competitive one-price-fits-all model, it’s a better choice for small establishments without major growth goals. However, if you have plans to grow, consider Paycor—its all-in-one platform can handle basic to advanced payroll and HR processes.</p>
-            
-//           </>
-//         ),
-//       },
-//     },
-//   },
-//   quickbooks: {
-//     title: "QuickBooks Payroll: Best for its accounting integration",
-//     logo: "/images/quickbooks.png",
-//     button: {
-//       text: "Visit Website",
-//       link: "#",
-//     },
-//     scores: [
-//        { label: "Overall Score", score: "4.08/5" },
-//      { label: "User reviews", score: "3.99/5" },
-      
-//       { label: "Pricing", score: "4.13/5" },
-
-//       { label: "Customer support", score: "3.88/5" },
-//       { label: "Platform and interface", score: "4.25/5" },
-//       { label: "HRIS features", score: "4.56/5" },
-//       { label: "Reporting and analytics", score: "3.86/5" },
-//       { label: "Payroll features", score: "4.05/5" },
-//     ],
-//     pros: [
-//       "Online chat support available 24/7.",
-//       "Tax penalty protection for any reason on its Elite subscription tier.",
-//       "Next-day or same-day direct deposits (depending on subscription tier).",
-//       "Direct integration with QuickBooks Time and other Intuit products.",
-//       "Personal HR advisor at Elite subscription tier.",
-       
-//     ],
-//     cons: [
-//       "Local tax filings are only available in Premium and Elite plans.",
-//       "Additional fees for tax filings in multiple states, unless on Elite plan.",
-//       "QuickBooks time and attendance features open in a separate application.",
-//     " Service capped at 150 employees.",
-//     ],
-//     why: {
-//       intro: `QuickBooks Payroll is one of the top providers for small business payroll, with an interface, pricing, and features very similar to those of competitors like Gusto and OnPay. It earned 4.08 out of 5 and stands out for its accounting functions—even within its payroll product—and easy integration with Intuit QuickBooks products. It automatically syncs payroll data to your chart of accounts and offers data analysis tools, provided you have a QuickBooks Online subscription. You can even customize how it enters this data into your accounts to meet your business needs.`,
-//       bullets: [
-//         "Customizable dashboards and workflows suit different team structures",
-//         "Powerful reporting provides deep insights into project performance",
-//         "Time tracking and resource management help optimize team capacity",
-//       ],
-//       outro: `While QuickBooks Payroll is an excellent choice if you want to save money by joining your payroll and accounting processes together, it lost points for its minimal HR and employee management features. For example, it relies on partnerships with Allstate Health Solutions and Mineral for benefits offerings and HR advisory services. It also doesn’t have Gusto’s hiring and performance management tools, OnPay’s detailed employee profiles, and Paycor’s feature-rich HR platform.`,
-//       extras: {
-//         "About QuickBooks Payroll": (
-//           <>
-//             <p className="text-black mb-4">
-//             As a small-business accounting giant, Intuit’s QuickBooks is highly likely one of the first software products you purchase alongside a payroll solution. If you get both QuickBooks Online and QuickBooks Payroll, you can manage accounting and payroll data from the same app so you can see a single view of your business’s cash flow. Running payroll in QuickBooks is also relatively easy. It automatically populates earnings for your salaried employees, but you’ll have to manually enter regular and overtime hours for your non-exempt hourly staff. However, upgrading to its higher subscription tiers grants you access to its native time and scheduling capabilities.</p>
-//             <p className="text-black">
-//              In addition to attendance monitoring and staff scheduling, you get geolocation, geofencing, and mobile time clock tools. This is helpful if you employ mostly field workers without a central base of operations. Plus, as you progress subscription tiers, you access additional project tracking features.  By comparison, Paycor and Gusto are the only alternatives on my list that offers equivalent time tracking and scheduling support—although Paycor’s are add-on modules while Gusto’s scheduling tools are limited.</p>
-//            <h4 className="text-lg font-bold mb-2">
-//               QuickBooks Payroll limitations
-//             </h4>
-//          <p className="text-black mb-4">
-//               QuickBooks Payroll is ideal to use if you’re a QuickBooks user or only need a standalone payroll option for your small business. It doesn’t support third-party integration options for strategic HR functions, such as recruitment and performance management. It also lacks an organizational chart and customized onboarding workflows. </p>
-//               </>
-//         ),
-//         "Key Features": (
-//           <>
-//             <h4 className="text-lg font-bold mb-2">
-//             Contractor and vendor billing
-//             </h4>
-//             <p className="text-black mb-4">
-//              If you bundle your QuickBooks Payroll subscription with QuickBooks Online, you can run payroll and vendor bill payments from the same system. QuickBooks’ is significantly more advanced than Gusto’s bill pay option. In addition to creating a list of vendors and paying them directly from the platform, it lets you set up multi-conditional approval workflows and log bills by categories to assist with expense management. This is great if you’re managing bills from multiple work locations and need certain employees to confirm bill accuracy, such as when bills exceed a certain dollar threshold.</p>
-            
-//             <p className="text-black mb-4">
-//              If you don’t have employees, QuickBooks offers a contractor payments option with accounting features. Besides being more affordable than Gusto’s contractor-only plan, it doesn’t restrict you from following typical employee payroll schedules. Instead, you can pay contractors per any pay agreement you make or alongside your regular billing cadences. This provides you more control over your company costs, allowing you to schedule payments during periods of higher revenue.</p>
-            
-//              <h4 className="text-lg font-bold mb-2">
-//              General ledger integration
-//             </h4>
-//             <p className="text-black">
-//              Exporting payroll ledgers to your accounting program of choice can be tedious, especially if your payroll platform doesn’t integrate with your accounting program. However, when you use QuickBooks Payroll and QuickBooks Online together, the system automatically records applicable pay data in your chart of accounts once you finalize payroll. While it automatically assigns default accounts to map your payroll based on wages, expenses, and liabilities, you can modify these settings to your liking. </p>
-//             <p className="text-black">
-//              For example, you may use a particular account to monitor your contribution to payroll taxes outside of a general expense account. Besides helping you understand your tax liabilities, you can also use it to determine some of the costs associated with hiring a new employee for recruitment and headcount planning purposes.</p>
-//           </>
-//         ),
-//         "Pricing": (
-//           <>
-//             <p className="text-black mb-4">
-//               QuickBooks offers several different pricing plans and bundles, depending on whether you want only payroll features or payroll and accounting. If you want more information on QuickBooks payroll and accounting suites, check out its payroll and bookkeeping bundles. But if you only need small business payroll, its lowest-priced tier starts at $50 per month plus $6 PEPM. </p>
-            
-//             <p className="text-black mb-4">
-//               Unlike the other payroll processing software on my list, it offers an affordable contractor-only plan and an option to get 50% off monthly base fees for your first three months* with QuickBooks Payroll. However, it lost points given the barebones HR features of its lowest-priced Core plan. You also need to upgrade to at least its Premium plan if you want automated local tax filings, time tracking tools, and 24/7 product support.</p>
-//              <h4 className="text-lg font-bold mb-2">
-//              QuickBooks contractor-only payments plan
-//             </h4>
-//             <ul className="list-disc pl-5 text-black mb-4">
-//               <li>Monthly fee: $15 for 20 contractors plus $2 per additional worker.</li>
-//               <li>Includes unlimited US contractor payments, next-day direct deposits, contractor self-setup tools, and unlimited electronic filings of 1099-MISC and 1099-NECs.</li>
-           
-
-          
-
-//             </ul>
-//           <p className="text-black mb-4">
-//               Note that these terms can change anytime, so please check their website for the latest new client promotions.</p>
-//           </> )  },
-//     },
-//   },
-
-
-// paycor: {
-//     title: "Paycor: Best for growing businesses",
-//     logo: "/images/paycor.png",
-//     button: {
-//       text: "Visit Website",
-//       link: "#",
-//     },
-//     scores: [
-//        { label: "Overall Score", score: "3.77/5" },
-//      { label: "User reviews", score: "4.29/5" },
-      
-//       { label: "Pricing", score: "1.69/5" },
-
-//       { label: "Customer support", score: "4.25/5" },
-//       { label: "Platform and interface", score: "4.38/5" },
-//       { label: "HRIS features", score: "4.25/5" },
-//       { label: "Reporting and analytics", score: "4.35/5" },
-//       { label: "Payroll features", score: "4.18/5" },
-//     ],
-//     pros: [
-//     "Multi-state payroll with automated local tax deductions and filings included in all plans.",
-//     "Robust employee self-service features, including earned wage access, via its mobile app.",
-//     "Capability to view multiple pay cycles months in advance for effective status change management.",
-//     "Automatic prorated pay for mid-cycle hourly employee pay rate changes (with Paycor’s time tracking add-on)."
-//   ],
-//   cons: [
-//     "Non-transparent pricing.",
-//     "Must purchase Essential plan or higher for onboarding, analytics, and PTO management modules.",
-//     "Time tracking, scheduling, and benefits administration are paid add-on modules.",
-//     "Difficult to navigate UI."
-//   ],
-//     why: {
-//       intro: `Paycor’s advanced analytics, in-app tax compliance alerts, and customizable payroll processes suit growing businesses that need more advanced and versatile pay controls. I was impressed with its pay grid for completing payroll functions, which lets me adjust how I wanted to see and complete payroll. It also allows me to do payroll faster since I don’t have to go through a set series of steps compared to competitors like Rippling and Gusto.`,
-//      outro:` With a total score of 3.77 out of 5, Paycor also stands out for its wide range of HR tools that can support a small business’s growing HR needs. For example, unlike Patriot Payroll and QuickBooks Payroll, Paycor has a full-scale recruiting module that leverages artificial intelligence (AI) HR tools to source top prospects and engage passive candidates. Other features like compensation planning, pulse surveys, and career management support your long-term talent needs and align them with your company’s objectives and costs.`,
-//       outro: `However, its monthly fees aren’t published on its website—you have to call Paycor to request a quote. Plus, it does not include support for businesses with international teams. But if you need a customizable payroll system or more robust modules to complete your increasingly advanced HR needs, then Paycor is a great choice.`,
-//       extras: {
-//         "About Paycor": (
-//           <>
-//             <p className="text-black mb-4">
-//             Paycor is an all-in-one human resources management system (HRMS) that offers modules for critical HR functions like payroll as well as auxiliary processes like learning and development. This versatility makes Paycor best suited for growing and established companies that need direct control over their payroll processes in a unified HR tech stack. </p>
-//             <p className="text-black">
-//              It lets you add or modify existing payroll schedules as needed, and the system will automatically make the necessary adjustments. It has a customizable pay grid organized by rows of employees, which lets you add and remove columns for information like bonuses and commissions to fit your needs. You can even pay terminated employees without temporarily changing their employment status in the system. This is great if there was an error in the employee’s previous payroll and you need to pay them an adjustment after they’ve separated from the company.</p>
-//           <p className="text-black">
-//              There are also buttons to automatically adjust an employee’s gross pay so the net pay is a specified amount, like in the case of bonus checks. Plus, Paycor has alerts for shortfalls, no pay, earnings, and hours based on your company’s needs.</p>
-          
-//            <h4 className="text-lg font-bold mb-2">
-//              Paycor limitations
-//             </h4>
-//          <p className="text-black mb-4">
-//               Paycor’s pay grid setup may increase payroll efficiency for large teams, but it can be overwhelming for small businesses and startups that need dedicated support. Without a step-by-step guide, newbies are less likely to remember to add or adjust critical pay items. Gusto, for instance, has a separate step just for keying PTO hours—a crucial data point that’s easy to miss if you’re managing payroll on top of multiple other HR functions.</p>
-//              <p className="text-black mb-4">
-//               Paycor also doesn’t support payroll outside of the U.S., so it’s a better option for domestic businesses with seasoned HR or payroll specialists that need flexibility over their pay processes.</p>
-             
-//               </>
-//         ),
-//         "Key Features": (
-//           <>
-//             <h4 className="text-lg font-bold mb-2">
-//             Multiple employee payment methods
-//             </h4>
-//             <p className="text-black mb-4">
-//              Paycor lets you pay employees through direct deposits, paycards, or checks. It also offers on-demand pay, allowing employees to access up to 50% of their wages before payday through its mobile app. Free budgeting, financial counseling, and learning resources for employees also compete with the financial wellness resources offered by Gusto.</p>
-            
-//             <p className="text-black mb-4">
-//             Another great feature is Paycor’s check-stuffing services to pay your unbanked employees. While most payroll platforms let you print live checks, it adds extra steps to the payroll process like ensuring you have the proper check stock paper and magnetic ink to manually print checks.</p>
-            
-//              <h4 className="text-lg font-bold mb-2">
-//              Custom reports and analytics
-//             </h4>
-//             <p className="text-black">
-//              Before finalizing payroll, Paycor populates charts so you can view key information about payroll runs quickly. Doughnut charts allow you to see the breakdown of employer and employee tax liabilities, while a series of quick links lets you download popular reports, like your payroll journal. It even pre-populates employee pay stubs up to three days before paydays, enabling your workers to check their expected payouts and report pay errors.</p>
-//             <p className="text-black">
-//             Paycor also has a report builder to craft customized reports from scratch. You can work off pre-existing reports by adding, renaming, or creating new columns for analysis. Many of the payroll reports also come with visualizations, like total compensation by month and department, to understand changes in labor costs without switching to your accounting software.</p>
-//            <p className="text-black">
-//             Further, Paycor’s analytics module includes an AI digital assistant to ask questions and receive answers about your employee data in natural language. Meanwhile, benchmarking and predictive analytics let you compare pay practices with industry standards and adequately plan for the future.</p>
-          
-//           </>
-//         ),
-//         "Pricing": (
-//           <>
-//             <p className="text-black mb-4">
-//               If you have fewer than 50 employees, Paycor offers four small business plans: Basic, Essential, Core, and Complete. Paycor does not publish pricing on its website, but based on the quote I received, monthly fees start at $99 plus $6 PEPM. If you have 50 or more employees, you must contact Paycor’s sales team for a customized quote for its mid-market tier.</p>
-            
-//               </> )  },
-//     },
-//   },
-   
-// patriot: {
-//     title: "Patriot Payroll: Best budget-friendly payroll software",
-//     logo: "/images/quickbooks.png",
-//     button: {
-//       text: "Visit Website",
-//       link: "#",
-//     },
-//     scores: [
-//        { label: "Overall Score", score: "3.67/5" },
-//      { label: "User reviews", score: "4.46/5" },
-      
-//       { label: "Pricing", score: "4.56/5" },
-
-//       { label: "Customer support", score: "4/5" },
-//       { label: "Platform and interface", score: "2.88/5" },
-//       { label: "HRIS features", score: "1.88/5" },
-//       { label: "Reporting and analytics", score: "4.13/5" },
-//       { label: "Payroll features", score: "4.05/5" },
-//     ],
-//     pros: [
-//     "Simple yet intuitive payroll platform.",
-//     "Free payroll setup assistance.",
-//     "Time tracking, basic HRIS, and accounting tools are available as paid add-ons.",
-//     "Has an affordable full-service payroll plan and do-it-yourself (DIY) tax filing option."
-//   ],
-//   cons: [
-//     "Only integrates with QuickBooks Desktop or QuickBooks Online.",
-//     "Doesn’t file new hire reports (but can generate them).",
-//     "Multi-state payroll costs extra."
-//   ],
-//     why: {
-//       intro: `Patriot’s payroll module made my list of the best payroll software for small businesses mainly because of its affordability. For a monthly fee of $37 plus $5 PEPM, you get unlimited pay runs with tax payment and filing services. This is the lowest full-service payroll plan that I reviewed and comes with all of the essential tools you need to pay employees and contractors. If you have a limited budget and prefer to handle tax filings yourself, its basic plan only costs $17 per month plus $4 PEPM. It has all the features included in the full-service option but without tax filing services.`,
-      
-//       outro: `It can handle multiple pay rates—max of five—and you can add a description to each rate. This makes it easy to track and differentiate pay rates for hourly employees who may be assigned to different roles with various pay rates. I also like that it lets you change employee hourly rates while running payroll without canceling or closing the pay run page. Other online payroll services will require you to update the employee’s pay rate in the system’s HRIS module before you can process payroll.`,
-//      outro:`Patriot Payroll earned an overall score of 3.67 out of 5, losing points for its limited HRIS features and third-party software integrations. It also only generates new hire reports, but you have to file these yourself. While it has over a dozen payroll report types, you need to get its HR add-on if you want employee-related reports like staff demographics and retirement plan contribution reports.`,
-//       extras: {
-//         "About Patriot Payroll": (
-//           <>
-//             <p className="text-black mb-4">
-//             Similar to QuickBooks, Patriot offers software for payroll and accounting. Its platform has a simple but intuitive interface that helps streamline processes, making it easy for small businesses to learn and use its various features. With its payroll module, you get unlimited pay runs with automatic federal, state, and local tax deductions and filings—provided you sign up for its full-service plan. It offers several essential payroll features, such as multiple pay schedules and customizable money and deduction types, enabling you to create your own employee deductions and company-paid contributions and payments, such as special bonuses. </p>
-//             <p className="text-black">
-//              If you have a multi-location business, you can assign employees to a primary work location in the system, which also includes a work-from-home option. Patriot Payroll will then calculate the applicable payroll taxes based on the employee’s work location. Plus, you don’t need to manually search for workers assigned to specific business sites when running payroll. Patriot Patriot has a filter option that lets you choose the work location, allowing you to process and review payroll only for specific teams.</p>
-//            <h4 className="text-lg font-bold mb-2">
-//              Patriot Payroll limitations
-//             </h4>
-//          <p className="text-black mb-4">
-//              Patriot Payroll may support unlimited pay runs for US-based workers, but it lacks Gusto’s global payment tools. Its contractor-only package also does not compete well with QuickBooks Payroll, which only costs $15 monthly for up to 20 workers; whereas Patriot charges $17 per month plus $4 PEPM if you’re on its basic plan. Plus, Patriot collects add-on fees for time tracking and multi-state payroll tax filings. And even if you get the HRIS add on, the features are very limited. This is unlike Gusto and OnPay, which include basic hiring tools and automated onboarding flows in their starter tiers. </p>
-//              <p className="text-black mb-4">
-//              While you can get two-day direct deposits with Patriot Payroll, it only offers this to qualified customers. If you don’t meet Patriot’s requirements, you will only be entitled to a four-day option. This is unlike the other providers in this guide that don’t have qualifying assessments for two-day direct deposits. However, if you require fast payouts to expedite payroll processing times and don’t need a wide range of HR tools, consider QuickBooks Payroll as it offers a next-day option in its basic plan. </p>
-             
-//               </>
-//         ),
-//         "Key Features": (
-//           <>
-//             <h4 className="text-lg font-bold mb-2">
-//            Net to gross payroll tool
-//             </h4>
-//             <p className="text-black mb-4">
-//              While it may be easy to notify employees that they are eligible for a specific bonus, you have to constantly remind them that the amount they see may be subject to tax. Typically, workers find it difficult to determine the applicable payroll tax deductions—intead, they prefer knowing the take-home bonus amount they stand to get. With Patriot’s net to gross payroll tool, you don’t need to do manual calculations to figure this out. You simply input the bonus amount you want employees to receive and the system will automatically gross it up for taxes. This helps you save time and ensures payroll compliance.</p>
-            
-//              <h4 className="text-lg font-bold mb-2">
-//              Flexible payroll services
-//             </h4>
-//             <p className="text-black">
-//              What I like about Patriot is that it provides full-service and DIY payroll options. If you have a very small team—let’s say, up to 10 employees—and are comfortable handling tax payments and filings, you can start with Patriot Payroll’s Basic plan. Once you exceed 10 workers, you can switch to its Full-service package, where Patriot will handle tax remittances and filings for you. </p>
-//             <p className="text-black">
-//              Patriot also offers flexible payroll setup options for new clients. If you’re familiar with using pay processing tools, you can follow its online wizard to create your Patriot Payroll account and complete setup requirements. If you need help, it also offers free payroll setup assistance. You only need to provide the necessary company and employee information and Patriot will handle the setup process for you. Plus, it provides extended weekday support. If you have questions about its features, you can contact the software support team via phone, email, or chat from Monday to Friday, 9 AM to 7 PM Eastern Time (ET).</p>
-//           </>
-//         ),
-//         "Pricing": (
-//           <>
-//             <p className="text-black mb-4">
-//              You can get Patriot Payroll as a standalone solution or enhance its platform by selecting paid add-ons for time tracking and an HR software, a module that contains basic HR reporting and HRIS functionalities. There are two plans: Basic Payroll and Full Service Payroll. Both have similar features, except for the payroll tax filing services and tax filing guarantee included in the Full Service plan. </p>
-            
-//              <h4 className="text-lg font-bold mb-2">
-//              Add-ons
-//             </h4>
-//            <ul className="list-disc pl-5 text-black mb-4">
-//   <li>
-//     <b>Time and attendance:</b> $6 monthly plus $2 PEPM.  
-//     Includes employee time cards, custom overtime rules, multiple job roles tracking, manager permissions, time tracking reports, and online clock ins/outs via the employee online portal or the My Patriot employee mobile app.
-//   </li>
-//   <li>
-//     <b>HR software:</b> $6 monthly plus $2 PEPM.  
-//     Includes document management, HR reports, HR manager permissions, and basic employee information management tools.
-//   </li>
-//   <li>
-//     <b>Multi-state tax payments and filings*:</b> $12 monthly for each additional state.
-//   </li>
-//   <li>
-//     <b>Accounting Basic plan:</b> $20 per month.  
-//     Includes automatic bank imports, income and expense tracking, account reconciliation, credit card payments, financial reports, and unlimited customers, invoices, contractors, vendors, and payments.
-//   </li>
-//   <li>
-//     <b>Accounting Premium plan:</b> $30 per month.  
-//     Everything in Basic, plus recurring invoices, receipt management, send invoice payment reminders, user-based permissions, and the capability to create and send estimates.
-//   </li>
-//   <li>
-//     <b>Bookkeeping service:</b> Starts at $100 per month plus a one-time onboarding fee (call for a quote); only available as an add-on to the Accounting Premium plan.
-//   </li>
-// </ul>
-
-//           <p className="text-black mb-4">
-//              This only applies to Full Service plan holders.</p>
-//           </> )  },
-//     },
-//   },
-   
-// };
-
-//    // Convert toolsContent object to array for mapping
-//   const toolsArray = Object.entries(toolsContent).map(([key, value]) => ({
-//     id: key,
-//     ...value
-//   }));
-
-
   const faqData = [
     {
       question: "Who should be involved in the disciplinary action process?",
@@ -701,22 +164,59 @@ export default function Employeedisciplinary() {
       answer:
         "Disciplinary action should occur as soon as reasonably possible following the behavior or incident. Generally, the earlier you see and correct the employee’s behavior, the less likely it is to become a bad habit. So, you should wait no longer than a day or two after the observed behavior to confront the employee.",
     },
-    
-      
+
     {
       question: "Can I fire an employee without a written warning?",
       answer:
         "Technically, yes, as long as your employee works in an at-will state. But just because you can doesn’t mean you should. Written warnings demonstrate the reasons that led to termination, the steps you took to correct or help the employee change course, and that the employee was aware of their misconduct. They are crucial documents that can help you in the event of a lawsuit. ",
     },
     {
-      question: "What if the employee refused to sign the disciplinary action form?",
-      answer: 
-     "You should document the refusal by writing “employee refused to sign” on the form. Add the date and have another manager present as a witness. Make sure the witness also signs the form. Then, give a copy of the form to the employee."
-    ,
+      question:
+        "What if the employee refused to sign the disciplinary action form?",
+      answer:
+        "You should document the refusal by writing “employee refused to sign” on the form. Add the date and have another manager present as a witness. Make sure the witness also signs the form. Then, give a copy of the form to the employee.",
     },
-   
-    
   ];
+  // Content for each section - you can modify these
+  const sectionContent = {
+    counseling:
+      "Managers or HR representatives hold one-on-one conversations with employees to clarify expectations and correct the infraction or behavior before it worsens. This is your early-stage intervention, informal yet documented, and is typically used to address minor issues, such as incomplete work or a missed deadline.",
+    verbal:
+      "A verbal warning is a formal part of the disciplinary process, even if it doesn’t involve written consequences yet. The process is similar to an informal counseling session. But, despite the name, managers or HR staff should document the conversation, get signatures from meeting participants, and add it to the employee’s personnel file.",
+    written:
+      "A written warning is similar to a verbal warning but more serious. Managers, HR staff, or both have a conversation with the employee about the continued infractions and provide clear and time-bound expectations for improvement. All parties sign the warning to acknowledge it and place it in the employee’s personnel file.",
+    retraining:
+      "Retraining can happen at any time in the disciplinary process and involves training the employee again on proper procedures, processes, or policies.",
+    demotion:
+      "A more severe disciplinary action in which managers or HR teams move the employee into a lower position, typically a step below their current role. This is usually a result of poor employee performance and usually involves the loss of title and pay.",
+    privileges:
+      "Loss of privileges involves taking away particular freedoms due to an employee’s behavior. The best are tied directly to the employee’s misconduct. For example, you may take a company credit card away from an employee who consistently turns in expense reports late. Or, you may revoke the employee’s flex time benefit if the employee fails to work the minimum number of hours each week.",
+    agreements:
+      "Last-chance agreements are contracts with employees outlining the steps employees must take to correct their behaviors or face termination. As the name suggests, this is typically the “last chance” employees have to save their jobs. Many collective bargaining agreements (CBAs) include last-chance agreements as a step in the disciplinary action procedure for union employees.",
+    paycut:
+      "Pay cuts result in a compensation reduction due to employee misconduct. A word of caution: although pay cuts are legal, watch the timing of when they go into effect. You should have a conversation with the employee outlining the reason for the pay cut, note when it will go into effect, and document it. This allows employees to agree or disagree to work at this new rate and avoid violations of federal and state labor laws, like the Fair Labor Standards Act (FLSA).",
+    suspension:
+      "Suspension involves removing the employee from the workplace for a period of time. Depending on the seriousness of the infraction, suspensions may be paid or unpaid. You can use suspensions during investigations to keep the workplace safe as you understand the facts of the incident.",
+    termination:
+      "As the last step of any disciplinary action process, termination is the permanent dismissal of the employee from the workplace. In some cases, the employee’s behavior may be severe enough that termination occurs immediately following the behavior.",
+  };
+
+  const AccordionItem = ({ title, section, children }) => (
+    <div className="border-b border-gray-200">
+      <button
+        onClick={() => toggleSection(section)}
+        className="w-full flex justify-between items-center py-4 text-left focus:outline-none hover:bg-gray-50"
+      >
+        <span className="text-gray-800 font-medium">{title}</span>
+        <div className="w-7 h-7 bg-green-600 rounded flex items-center justify-center text-white font-bold">
+          {openSections[section] ? "−" : "+"}
+        </div>
+      </button>
+      {openSections[section] && (
+        <div className="pb-4 text-gray-700">{children}</div>
+      )}
+    </div>
+  );
 
   const shareUrl = typeof window !== "undefined" ? window.location.href : "";
   const shareTitle = "Employee Disciplinary Action Guide + Form Template";
@@ -747,15 +247,25 @@ export default function Employeedisciplinary() {
       "_blank"
     );
   };
-
- 
+  const NestedItem = ({ title, name, children }) => (
+    <div className="border-b border-gray-100">
+      <button
+        onClick={() => toggleNested(name)}
+        className="w-full flex justify-between items-center py-3 text-left focus:outline-none hover:bg-gray-50"
+      >
+        <span className="text-gray-700 font-medium">{title}</span>
+        <div className="w-6 h-6 bg-green-500 rounded flex items-center justify-center text-white font-bold">
+          {openNested === name ? "−" : "+"}
+        </div>
+      </button>
+      {openNested === name && <div className="pl-4 pr-2 pb-4">{children}</div>}
+    </div>
+  );
 
   return (
     <>
       <Head>
-        <title>
-          Employee Disciplinary Action Guide + Form Template
-        </title>
+        <title>Employee Disciplinary Action Guide + Form Template</title>
         <meta
           name="description"
           content="Comprehensive guide to choosing the best payroll software for your business needs."
@@ -819,14 +329,14 @@ export default function Employeedisciplinary() {
           >
             <div className="flex items-center space-x-2 sm:space-x-3 text-sm sm:text-base lg:text-lg">
               <Link
-                href="/"
+                href="#"
                 className="text-white/80 hover:text-white transition-colors group"
                 aria-label="Go to homepage"
               >
                 <Home className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 group-hover:scale-110 transition-transform" />
               </Link>
               <Link
-                href="/"
+                href="#"
                 className="text-white/80 hover:text-white transition-colors cursor-pointer"
                 aria-label="Go to homepage"
               >
@@ -842,7 +352,7 @@ export default function Employeedisciplinary() {
           {/* Main Heading */}
           <div className="max-w-6xl">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-8 sm:mb-12 lg:mb-16">
-              Employee Disciplinary Action  
+              Employee Disciplinary Action
               <span className="block mt-2 sm:mt-4">Guide + Form Template</span>
             </h1>
           </div>
@@ -853,8 +363,8 @@ export default function Employeedisciplinary() {
             <div className="flex items-center space-x-3 sm:space-x-4">
               <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full overflow-hidden flex-shrink-0 relative">
                 <Image
-                  src="/images/project1.png"
-                  alt="Kara Sherrer - Author"
+                  src="/images/h1.png"
+                  alt="Kara Sherrer- Author"
                   fill
                   sizes="(max-width: 640px) 48px, (max-width: 1024px) 56px, 64px"
                   className="object-cover"
@@ -872,8 +382,6 @@ export default function Employeedisciplinary() {
                 </p>
               </div>
             </div>
-
-            
           </div>
 
           {/* Disclaimer Section */}
@@ -984,27 +492,87 @@ export default function Employeedisciplinary() {
                 </div>
               </div>
             </div>
+
             {/* Main Content */}
 
             <div className="flex-1 max-w-4xl">
-              <section id="what-is-disciplinary-action">
-                <div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg mt-4 transition-shadow duration-300 overflow-hidden p-6 sm:p-8">
-                  {/* Header */}
-                  <header className="mb-8">
-                    <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                     What is disciplinary action (and why it matters)
-                    </h1>
-                  </header>
+              <p className="text-sm text-gray-700 italic leading-relaxed">
+                <span className="font-semibold not-italic">Disclaimer:</span>{" "}
+                This article is not intended as legal advice. Please seek
+                counsel from an employment law attorney to understand the
+                requirements for your specific employee disciplinary action
+                situation.
+              </p>
+              <div className="bg-gray-50 border border-gray-300 rounded-2xl p-6 mb-6 shadow-sm">
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">
+                  Key takeaways
+                </h3>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <div className="flex-shrink-0 w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5">
+                      <svg
+                        className="w-3 h-3 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <p className="text-gray-700 leading-relaxed">
+                      The employee disciplinary action process is the guideline
+                      or policy businesses follow in the event of unwanted
+                      employee behaviors or policy violations.
+                    </p>
+                  </div>
 
-                  {/* Main Content */}
-                  <div className="prose prose-lg max-w-none">
-                   
-                    <p className="text-gray-700 leading-relaxed mb-6">
-                      Disciplinary action is a formal response to workplace behavior that violates company policies or disrupts business operations. At its best, it’s a structured way to step in early to help employees course-correct before a small issue turns into a serious one.
-                     </p>  
+                  <div className="flex items-start space-x-3">
+                    <div className="flex-shrink-0 w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5">
+                      <svg
+                        className="w-3 h-3 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <p className="text-gray-700 leading-relaxed">
+                      Most companies follow a progressive disciplinary process
+                      with the following steps: counseling, verbal warning,
+                      written warning, final warning, and termination.
+                    </p>
+                  </div>
+
+                  <div className="flex items-start space-x-3">
+                    <div className="flex-shrink-0 w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5">
+                      <svg
+                        className="w-3 h-3 text-white"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    </div>
+                    <p className="text-gray-700 leading-relaxed">
+                      Each step of the disciplinary action process requires
+                      conversations with the employee and thorough
+                      documentation, which you can manage with the recordkeeping
+                      capabilities of HR software.
+                    </p>
                   </div>
                 </div>
-              </section>
+              </div>
 
               {/* Featured Partners Section */}
               <div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg mt-4 transition-shadow duration-300 overflow-hidden p-6 sm:p-8">
@@ -1023,16 +591,19 @@ export default function Employeedisciplinary() {
                 <div className="bg-gray-50 rounded-lg p-6">
                   <div className="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
                     <div className="flex items-center space-x-4">
-                      <div className="flex  space-x-2">
-                        <div className="w-8 h-8 bg-gradient-to-r from-red-500 to-orange-500 rounded flex items-center justify-center">
-                          <span className="text-white font-bold text-sm">
-                            keka
-                          </span>
+                      <div className="flex items-center space-x-4">
+                        <div className="w-16 h-16 flex-shrink-0">
+                          <Image
+                            src="/images/keka.png"
+                            alt="Keka HR Logo"
+                            width={64}
+                            height={64}
+                            className="w-full h-full object-contain"
+                            priority={false}
+                          />
                         </div>
                         <div className="text-xl font-bold text-gray-900">
                           Keka HR
-                          <br />
-                          <span className="text-lg">Projects</span>
                         </div>
                       </div>
                     </div>
@@ -1048,318 +619,1568 @@ export default function Employeedisciplinary() {
                     <div>
                       <div className="text-gray-600 mb-1">Good For</div>
                       <div className="font-medium text-gray-900">
-                       Medium sized companies
+                        Medium sized companies
                       </div>
                     </div>
                     <div>
                       <div className="text-gray-600 mb-1">Core Features</div>
                       <div className="font-medium text-gray-900">
-                       360 Degree Feedback, Applicant Tracking, Benefits Administration, and 10 more </div>
+                        360 Degree Feedback, Applicant Tracking, Benefits
+                        Administration, and 10 more
+                      </div>
                     </div>
                     <div>
                       <div className="text-gray-600 mb-1">Integrations</div>
                       <div className="font-medium text-gray-900">
-                       QuickBooks Online, Tally
+                        QuickBooks Online, Tally
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-             
-              <section id="when-to-use-disciplinary-action">
-                <div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg mt-4 transition-shadow duration-300 overflow-hidden p-6 sm:p-8">
-                  {/* Header */}
-                  <header className="mb-8">
-                    <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                    When to use disciplinary action and when not to
-                    </h1>
-                  </header>
-
-                  {/* Main Content */}
-                  <div className="prose prose-lg max-w-none">
-                   
-                    <p className="text-gray-700 leading-relaxed mb-6">
-                      It may be easy to reach for an employee disciplinary action form when someone misses the mark, but not every misstep warrants formal discipline. Sometimes what looks like misconduct is really a training gap, poor onboarding, unclear expectations, or a miscommunication. </p>            
-                  </div>
-                </div>
-              </section>    
-
-              <section id="disciplinary-models-and-sanctions">
-                <div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg mt-4 transition-shadow duration-300 overflow-hidden p-6 sm:p-8">
-                  {/* Header */}
-                  <header className="mb-8">
-                    <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                    Disciplinary models and sanctions
-                    </h1>
-                  </header>
-
-                  {/* Main Content */}
-                  <div className="prose prose-lg max-w-none">
-                   
-                    <p className="text-gray-700 leading-relaxed mb-6">
-                      Most employee disciplinary action plans take one of three models: positive, progressive, or hybrid, which is a combination of both. You should choose a model and stick to it. Inconsistency in how policies or rules are followed, especially between departments, is where most HR headaches begin. </p>            
-                  </div>
-                </div>
-              </section>  
-
-
-                    {/* Expandable Sections */}
-<div className="space-y-4">
-  
- 
-                      {/* Counseling or coaching */}
-<div  div className="border border-gray-200 rounded-lg">
-  <button
-    onClick={() => toggleSection("Counseling")}
-    className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors duration-200"
-  >
-    <h3 className="text-lg font-semibold text-gray-900">Counseling or coaching</h3>
-    <div className="text-green-600">
-      {expandedSections["Counseling"] ? (
-        <Minus className="w-5 h-5" />
-      ) : (
-        <Plus className="w-5 h-5" />
-      )}
-    </div>
-  </button>
-
-  {expandedSections["Counseling"] && (
-    <div className="px-4 pb-4 border-t border-gray-200">
-      <div className="pt-4 space-y-4 text-gray-700 text-sm">
-        <p>
-         Managers or HR representatives hold one-on-one conversations with employees to clarify expectations and correct the infraction or behavior before it worsens. This is your early-stage intervention, informal yet documented, and is typically used to address minor issues, such as incomplete work or a missed deadline.</p>
-
-      </div>
-    </div>
-
-  )}</div></div>
-
-  {/* verbal warning */}
-  <div className="border border-gray-200 rounded-lg">
-  <button
-    onClick={() => toggleSection("Verbal")}
-    className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors duration-200"
-  >
-    <h3 className="text-lg font-semibold text-gray-900">Verbal warning</h3>
-    <div className="text-green-600">
-      {expandedSections["Verbal"] ? (
-        <Minus className="w-5 h-5" />
-      ) : (
-        <Plus className="w-5 h-5" />
-      )}
-    </div>
-  </button>
-
-  {expandedSections["Verbal"] && (
-    <div className="px-4 pb-4 border-t border-gray-200">
-      <div className="pt-4 space-y-4 text-gray-700 text-sm">
-        <p>
-         A verbal warning is a formal part of the disciplinary process, even if it doesn’t involve written consequences yet. The process is similar to an informal counseling session. But, despite the name, managers or HR staff should document the conversation, get signatures from meeting participants, and add it to the employee’s personnel file.</p>
-
-      </div>
-    </div>
-
-  )}
-</div>
-
-
-{/* //why-you-can-trust-my-advice */}
-<div className="border border-gray-200 rounded-lg">
-  <button
-    onClick={() => toggleSection("why-you-can-trust-my-advice")}
-    className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors duration-200"
-  >
-    <h3 className="text-lg font-semibold text-gray-900">Why you can trust my advice</h3>
-    <div className="text-green-600">
-      {expandedSections["why-you-can-trust-my-advice"] ? (
-        <Minus className="w-5 h-5" />
-      ) : (
-        <Plus className="w-5 h-5" />
-      )}
-    </div>
-  </button>
-
-  {expandedSections["why-you-can-trust-my-advice"] && (
-    <div className="px-4 pb-4 border-t border-gray-200">
-      <div className="pt-4 space-y-4 text-gray-700 text-sm">
-        <p>
-          My recommendations for the best payroll software for small companies are based on more than five years of experience writing about and evaluating payroll systems for small to mid-sized businesses (SMBs). I also have 10 years of expertise handling different facets of human resources, including managing HRIS, time tracking, and pay processing software. These allowed me to provide insights to help business owners determine which payroll platform best fits their needs. </p>
-</div>
-    </div>
-  )}
-</div>
-                  
-                
-              
-              
-
-              {/* Disciplinary action form template */}
-              <section id="disciplinary-action-form-template">
-                <div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg mt-4 transition-shadow duration-300 overflow-hidden p-6 sm:p-8">
-                  {/* Header */}
-                  <header className="mb-8">
-                    <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                     Disciplinary action form template
-                    </h1>
-                  </header>
-
-                  {/* Main Content */}
-                  <div className="prose prose-lg max-w-none">
-                   
-                    <p className="text-gray-700 leading-relaxed mb-6">
-                     Documentation is key, so it’s helpful to prepare an employee disciplinary action form and disciplinary write ups examples. Add these to your policy and employee handbook, including a guide on how to fill it out. </p>            
-                  </div>
-                </div>
-              </section> 
-     
-
-      
-
-              {/* Employee disciplinary process steps */}
-              <section
-                id="employee-disciplinary-process-steps"
-                className="mt-8 max-w-7xl mx-auto"
-              >
-                <div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg mt-4 p-6 sm:p-8 transition-shadow duration-300 overflow-hidden">
-                  {/* Header */}
-                  <div className="text-center mb-10">
-                    <div className="inline-flex items-center justify-center w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl mb-6 shadow-lg">
-                      <Search className="w-8 h-8 text-white" />
-                    </div>
-                    <h2 className="text-4xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4">
-                      Employee disciplinary process steps
-                    </h2>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                      Each step of the disciplinary process should be documented and tied to specific policies. Here’s a breakdown of what each step typically involves:
-                    </p>
-                    <h3 className="text-4xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4">
-                      Step 1: Identify the problem and investigate
-                    </h3>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                      Before taking any action, you need a clear, fact-based understanding of the issue at hand. That’s where a workplace investigation comes in. Use it to determine what happened, when the incident occurred, who was involved, and whether any policies were violated.  </p>
-                  <h3 className="text-4xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4">
-                      Step 2: Have a one-on-one meeting
-                    </h3>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                      Most disciplinary action plans start with a one-on-one meeting between the employee and their manager. Often called counseling or coaching sessions, this informal meeting gives the manager a chance to address minor issues early, before they turn into a serious problem.  </p>
-                 
-                  </div></div>
-</section>
-                  
-  <section
-                id="common-mistakes-to-avoid"
-                className="mt-8 max-w-7xl mx-auto"
-              >
-                <div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg mt-4 p-6 sm:p-8 transition-shadow duration-300 overflow-hidden">
-                  {/* Header */}
-                  <div className="text-center mb-10">
-                    <div className="inline-flex items-center justify-center w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl mb-6 shadow-lg">
-                      <Search className="w-8 h-8 text-white" />
-                    </div>
-                    <h2 className="text-4xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4">
-                      Common mistakes to avoid
-                    </h2>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                      Even with a solid process in place, it’s easy to make mistakes that weaken your disciplinary action plan, or cause confusion for the employee. Here are some of the pitfalls I see most often, and how to steer clear of them.  </p>
-                    
-                  </div></div>
-</section>
-              {/* products details */}
-
-              <div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg mt-4 sm:p-8 transition-shadow duration-300 overflow-hidden">
-                <div className="p-6  md:p-8 lg:p-10">
-                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 sm:gap-6 mb-6 sm:mb-8">
-                    <div className="flex items-center gap-3 sm:gap-4">
-                      {/* Logo */}
-                      <div className="flex-shrink-0">
-                        <Image
-                          src="/images/project3.jpg" // Replace with your actual logo path
-                          alt="Zoho Projects Logo"
-                          width={80}
-                          height={80}
-                          className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain"
-                          priority
-                        />
-                      </div>
-
-                      {/* Title and Review Link */}
-                      <div className="min-w-0 flex-1">
-                        <h1 className="text-xl sm:text-xl md:text-2xl lg:text-4xl font-bold text-gray-900 mb-1 sm:mb-2">
-                         Keka HR
-                        </h1>
-                        <Link
-                          href="/reviews/zoho-projects"
-                          className="text-sm sm:text-base md:text-lg text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
-                        >
-                          Leave a Review
-                        </Link>
+                <div className="bg-gray-50 rounded-lg mt-4 p-6">
+                  <div className="flex flex-col sm:flex-row items-center justify-between space-y-4 sm:space-y-0">
+                    <div className="flex items-center space-x-4">
+                      <div className="flex items-center space-x-4">
+                        <div className="w-16 h-16 flex-shrink-0">
+                          <Image
+                            src="/images/monitask.png"
+                            alt="Monitask Logo"
+                            width={64}
+                            height={64}
+                            className="w-full h-full object-contain"
+                            priority={false}
+                          />
+                        </div>
+                        <div className="text-xl font-bold text-gray-900">
+                          Monitask
+                        </div>
                       </div>
                     </div>
-
-                    {/* Compare Button */}
-                    <div className="flex-shrink-0">
-                      <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-blue-600 hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
-                        <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
-                        Compare
+                    <div className="w-full sm:w-auto">
+                      <button className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
+                        <span>Visit Website</span>
+                        <ExternalLink className="w-4 h-4" />
                       </button>
                     </div>
                   </div>
 
-                  {/* Good For Section */}
-                  <div className="mb-6 sm:mb-8">
-                    <div className="flex flex-wrap items-center gap-1 sm:gap-2 text-sm sm:text-base md:text-lg">
-                      <span className="font-semibold text-gray-700">
-                        Good for:
-                      </span>
-                      <div className="flex flex-wrap items-center gap-1">
-                        <span className="text-gray-600">
-                          Medium (250-999 Employees),
-                        </span>
-                        
-                   
+                  <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                    <div>
+                      <div className="text-gray-600 mb-1">Good For</div>
+                      <div className="font-medium text-gray-900">
+                        Any Company Size
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-gray-600 mb-1">Core Features</div>
+                      <div className="font-medium text-gray-900">
+                        Employee Shift Scheduling, Self-Service Portal,
+                        Time/Attendance Management, and 1 more
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-gray-600 mb-1">Integrations</div>
+                      <div className="font-medium text-gray-900">
+                        Asana, Basecamp, ClickUp, and 10 more
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
 
-                  {/* Description Section */}
-                  <div className="mb-6 sm:mb-8">
-                    <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-4 sm:mb-6">
-                      A true employee experience platform, Keka is the SME HR Tech space leader in India. It enables businesses to put to sleep mundane and tedious tasks of workplace administration. The product helps organisations in managing their HR processes from hire to retire while ensuring an awesome user experience to the employees. Keka follows an employee-first approach, making it easier for any company to make the journey from good to great. Learn More About Keka HR </p>
+              <div className="mb-8 sm:mb-12 mt-6">
+                <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed mb-6">
+                  Disciplinary action isn't just a compliance formality. When
+                  done right, it reinforces expectations, supports individual
+                  accountability, and helps the entire team operate more
+                  effectively. When ignored or poorly handled, unresolved
+                  problems tend to grow, workplace dynamics become strained, and
+                  employees start questioning whether policies really apply to
+                  everyone.
+                </p>
 
+                <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed mb-6">
+                  That's why having a structured disciplinary action process is
+                  critical. It allows you to address issues fairly and
+                  consistently while protecting both the organization and the
+                  employee.
+                </p>
+
+                <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed">
+                  In this guide, I'll walk you through how to manage the process
+                  with clarity, documentation, and practical steps you can use.
+                  It also includes disciplinary action examples and a form
+                  template you can download for free.
+                </p>
+              </div>
+              <section id="what-is-disciplinary-action">
+                {/* What is disciplinary action section */}
+                <div className="mb-8 sm:mb-12">
+                  <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 sm:mb-8">
+                    What is disciplinary action (and why it matters)
+                  </h1>
+
+                  <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed mb-6">
+                    Disciplinary action is a formal response to workplace
+                    behavior that violates company policies or disrupts business
+                    operations. At its best, it's a structured way to step in
+                    early to help employees course-correct before a small issue
+                    turns into a serious one.
+                  </p>
+
+                  <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed mb-4">
+                    A strong disciplinary action helps:
+                  </p>
+
+                  <ul className="list-disc pl-6 sm:pl-8 mb-6 space-y-2">
+                    <li className="text-gray-700 text-sm sm:text-base lg:text-lg">
+                      Reinforce accountability and trust across the team
+                    </li>
+                    <li className="text-gray-700 text-sm sm:text-base lg:text-lg">
+                      Provide employees a fair chance to improve
+                    </li>
+                    <li className="text-gray-700 text-sm sm:text-base lg:text-lg">
+                      Build documentation that protects against legal claims
+                    </li>
+                  </ul>
+
+                  <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed mb-6">
+                    Most employers use a step-based approach that usually starts
+                    with an investigation and a one-on-one meeting or coaching
+                    conversation. It progresses to verbal or written warnings,
+                    and may end in termination if things don't improve.
+                  </p>
+
+                  <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed">
+                    However, the point isn't to punish an employee for slipping
+                    up. It's about showing them how to get it right, with
+                    clarity, consistency, and a plan that supports both
+                    performance and fairness.
+                  </p>
+                </div>
+              </section>
+
+              {/* When to use disciplinary action section */}
+              <div className="mb-8 sm:mb-12">
+                <section id="when-to-use-disciplinary-action">
+                  <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 sm:mb-8">
+                    When to use disciplinary action and when not to
+                  </h1>
+
+                  <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed mb-8">
+                    It may be easy to reach for an employee disciplinary action
+                    form when someone misses the mark, but not every misstep
+                    warrants formal discipline. Sometimes what looks like
+                    misconduct is really a training gap, poor onboarding,
+                    unclear expectations, or a miscommunication.
+                  </p>
+                </section>
+                <section id="when-disciplinary-action-typically-applies">
+                  <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
+                    When disciplinary action typically applies
+                  </h2>
+
+                  <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed mb-4">
+                    While certainly not exhaustive, the list below includes some
+                    of the most common disciplinary action examples:
+                  </p>
+
+                  <ul className="list-disc pl-6 sm:pl-8 mb-6 space-y-2">
+                    <li className="text-gray-700 text-sm sm:text-base lg:text-lg">
+                      <strong>General misconduct:</strong> Employee behavior
+                      that doesn't intentionally mean to harm others or the
+                      company, such as forgetting to lock the office door at the
+                      end of the day.
+                    </li>
+                    <li className="text-gray-700 text-sm sm:text-base lg:text-lg">
+                      <strong>Workplace violence or threats.*</strong>
+                    </li>
+                    <li className="text-gray-700 text-sm sm:text-base lg:text-lg">
+                      <strong>
+                        Weapons or prohibited substances in the workplace.*
+                      </strong>
+                    </li>
+                    <li className="text-gray-700 text-sm sm:text-base lg:text-lg">
+                      <strong>Sexual harassment.*</strong>
+                    </li>
+                    <li className="text-gray-700 text-sm sm:text-base lg:text-lg">
+                      <strong>Theft of company or employee property.*</strong>
+                    </li>
+                    <li className="text-gray-700 text-sm sm:text-base lg:text-lg">
+                      <strong>Time theft:</strong> Purposefully changing or
+                      misrepresenting time clock data for more take-home pay.
+                    </li>
+                    <li className="text-gray-700 text-sm sm:text-base lg:text-lg">
+                      <strong>Excessive attendance violations.</strong>
+                    </li>
+                    <li className="text-gray-700 text-sm sm:text-base lg:text-lg">
+                      <strong>Discrimination.*</strong>
+                    </li>
+                    <li className="text-gray-700 text-sm sm:text-base lg:text-lg">
+                      <strong>Falsifying documentation.</strong>
+                    </li>
+                  </ul>
+
+                  <p className="text-gray-700 text-sm sm:text-base lg:text-lg italic mb-8">
+                    *Some of these examples may warrant immediate termination
+                    depending on their severity.
+                  </p>
+                </section>
+                {/* Example Box */}
+                <div className="border-2 border-green-300 rounded-3xl p-4 sm:p-6 bg-green-50 mb-8">
+                  <div className="flex items-start mb-4">
+                    <div className="w-4 h-4 bg-green-500 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                    <h3 className="text-base sm:text-lg font-bold text-gray-900">
+                      An example:
+                    </h3>
+                  </div>
+                  <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed mb-4">
+                    Let's say you have a call center business with a company
+                    policy requiring employees to shut down their computers at
+                    the end of the day. This is important because the computers
+                    include sensitive, HIPAA-protected data from clients in the
+                    medical industry and a third-party maintenance crew comes in
+                    every night after hours to clean.
+                  </p>
+                  <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed">
+                    If you walk in one morning and notice that one of your
+                    employees did not turn off their computer after being
+                    trained on the policy, you may need to start the employee
+                    disciplinary process with a verbal warning.
+                  </p>
+                </div>
+              </div>
+
+              <section id="when-it’s-best-to-hold-off">
+                {/* When it's best to hold off section */}
+                <div className="mb-8 sm:mb-12">
+                  <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 sm:mb-8">
+                    When it's best to hold off
+                  </h1>
+
+                  <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed mb-4">
+                    There are times when disciplinary action may not be the
+                    right starting point, or at least not yet. These include:
+                  </p>
+
+                  <ul className="list-disc pl-6 sm:pl-8 mb-6 space-y-2">
+                    <li className="text-gray-700 text-sm sm:text-base lg:text-lg">
+                      When the issue stems from unclear expectations, outdated
+                      SOPs, or poor communication.
+                    </li>
+                    <li className="text-gray-700 text-sm sm:text-base lg:text-lg">
+                      When the employee hasn't received proper training.
+                    </li>
+                    <li className="text-gray-700 text-sm sm:text-base lg:text-lg">
+                      When the behavior may be linked to a disability, religious
+                      need, caregiving duty, or medical condition, and
+                      accommodations haven't been addressed.
+                    </li>
+                    <li className="text-gray-700 text-sm sm:text-base lg:text-lg">
+                      When it's a first-time offense that appears accidental,
+                      not willful.
+                    </li>
+                  </ul>
+
+                  <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed mb-2">
+                    Similarly, performance issues, like failing to meet{" "}
                     <Link
-                      href="/learn-more/Keka-hr-projects"
-                      className="text-sm sm:text-base md:text-lg text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                      href="#"
+                      className="text-green-600 hover:text-green-800 underline"
                     >
-                      Learn More About Keka HR
+                      key performance indicators (KPIs)
+                    </Link>{" "}
+                    or{" "}
+                    <Link
+                      href="#"
+                      className="text-green-600 hover:text-green-800 underline"
+                    >
+                      objectives and key results (OKRs)
                     </Link>
+                    , don't always qualify for disciplinary action. Unless you
+                    can prove it's intentional, addressing poor performance
+                    through focused manager-employee one-on-ones, further
+                    training, or{" "}
+                    <Link
+                      href="#"
+                      className="text-green-600 hover:text-green-800 underline"
+                    >
+                      performance improvement plans (PIPs)
+                    </Link>{" "}
+                    can be more effective. You may even learn their poor
+                    performance results from work practices that contribute to{" "}
+                    <Link
+                      href="#"
+                      className="text-green-600 hover:text-green-800 underline"
+                    >
+                      employee burnout
+                    </Link>{" "}
+                    or{" "}
+                    <Link
+                      href="#"
+                      className="text-green-600 hover:text-green-800 underline"
+                    >
+                      staff unhappiness
+                    </Link>
+                    .
+                  </p>
+
+                  {/* Example Box */}
+                  <div className="border-2 border-green-300 rounded-3xl p-4 sm:p-6 bg-green-50 mb-8">
+                    <div className="flex items-start mb-4">
+                      <div className="w-4 h-4 bg-green-500 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                      <h3 className="text-base sm:text-lg font-bold text-gray-900">
+                        An example:
+                      </h3>
+                    </div>
+                    <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed">
+                      Let's say you're a foreperson at a manufacturing plant,
+                      and your team's goal is to assemble 50 products a day.
+                      Each of your team members must first fabricate several
+                      smaller parts to produce the larger product.
+                    </p>
+                    <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed mt-4">
+                      One of your team members consistently fails to meet this
+                      daily goal compared to the rest of their teammates.
+                      Instead of immediately disciplining them for their failure
+                      to meet objectives, consider the resources you can provide
+                      the employee to get them to where they need to be, such as
+                      extra training or more frequent check-ins to address
+                      concerns or questions.
+                    </p>
+                  </div>
+                </div>
+              </section>
+              <section id="disciplinary-models-and-sanctions">
+                {/* Disciplinary models and sanctions section */}
+                <div className="mb-8 sm:mb-12">
+                  <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 sm:mb-8">
+                    Disciplinary models and sanctions
+                  </h1>
+
+                  <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed mb-6">
+                    Most employee disciplinary action plans take one of three
+                    models: positive, progressive, or hybrid, which is a
+                    combination of both. You should choose a model and stick to
+                    it. Inconsistency in how policies or rules are followed,
+                    especially between departments, is where most HR headaches
+                    begin.
+                  </p>
+
+                  <div className="mb-6">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">
+                      • Positive discipline:
+                    </h3>
+                    <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed mb-4">
+                      Positive discipline highlights the employee's positive
+                      behaviors during disciplinary conversations instead of
+                      reprimanding them. Managers balance this with{" "}
+                      <Link
+                        href="#"
+                        className="text-green-600 hover:text-green-800 underline"
+                      >
+                        employee feedback
+                      </Link>{" "}
+                      and constructive criticism to change behaviors. Employees
+                      also take part in selecting or creating any corrective
+                      actions. If their behavior improves, employees receive
+                      positive reinforcement through recognition and rewards.
+                    </p>
+                    <p className="text-gray-700 text-sm sm:text-base lg:text-lg italic mb-6">
+                      <strong>Best for:</strong> Coaching cultures, flat
+                      organizations, or teams where psychological safety is a
+                      top priority.
+                    </p>
                   </div>
 
-                  {/* Visit Website Button */}
-                  <div className="flex justify-end">
+                  <div className="mb-6">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">
+                      • Progressive discipline:
+                    </h3>
+                    <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed mb-4">
+                      This is the most common model. It has a rigid set of steps
+                      that HR departments and managers follow, where
+                      disciplinary actions become more severe as employees
+                      continue the unwanted behavior.
+                    </p>
+                    <p className="text-gray-700 text-sm sm:text-base lg:text-lg italic">
+                      <strong>Best for:</strong> Large teams, compliance-driven
+                      work environments, and roles with high liability.
+                    </p>
+                  </div>
+                  <div className="mb-6">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3">
+                      • Hybrid model:
+                    </h3>
+                    <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed mb-4">
+                      Combining positive and progressive disciplinary techniques
+                      allows employers to take a more nuanced approach to
+                      employee misconduct or behavioral issues. For example,
+                      positive discipline can inform disciplinary conversations
+                      and strategies for recognizing employees as they improve.
+                      Meanwhile, progressive discipline tactics ensure
+                      discipline remains fair and consistent across employees in
+                      the same or similar situations in the workplace.
+                    </p>
+                    <p className="text-gray-700 text-sm sm:text-base lg:text-lg italic">
+                      <strong>Best for:</strong> Companies with mixed workforces
+                      or evolving needs.
+                    </p>
+                  </div>
+                </div>
+              </section>
+              <section id="common-sanctions">
+                <div className="mb-12">
+                  <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    Common sanctions
+                  </h1>
+
+                  <p className="text-gray-700 text-lg mb-6">
+                    There are various types of disciplinary sanctions or
+                    employee corrective actions, and these should scale based on
+                    the severity of the issue. The goal is to apply a response
+                    that fits the situation, not underreacting to serious
+                    problems or overcorrecting minor ones.
+                  </p>
+
+                  <p className="text-gray-700 text-lg mb-8">
+                    Whatever action you take, document the rationale behind it.
+                    Clear documentation helps ensure consistency, transparency,
+                    and legal defensibility.
+                  </p>
+
+                  <p className="text-gray-700 text-lg mb-8">
+                    Below are some of the most common disciplinary sanctions:*
+                  </p>
+
+                  <div className="space-y-0 text-lg">
+                    <AccordionItem
+                      title="Counseling or coaching"
+                      section="counseling"
+                    >
+                      {sectionContent.counseling}
+                    </AccordionItem>
+
+                    <AccordionItem title="Verbal warning" section="verbal">
+                      {sectionContent.verbal}
+                    </AccordionItem>
+
+                    <AccordionItem title="Written warning" section="written">
+                      {sectionContent.written}
+                    </AccordionItem>
+
+                    <AccordionItem title="Retraining" section="retraining">
+                      {sectionContent.retraining}
+                    </AccordionItem>
+
+                    <AccordionItem title="Demotion" section="demotion">
+                      {sectionContent.demotion}
+                    </AccordionItem>
+
+                    <AccordionItem
+                      title="Loss of privileges"
+                      section="privileges"
+                    >
+                      {sectionContent.privileges}
+                    </AccordionItem>
+                    <AccordionItem
+                      title="Last-chance agreements"
+                      section="agreements"
+                    >
+                      {sectionContent.agreements}
+                    </AccordionItem>
+                    <AccordionItem title="Pay cut" section="paycut">
+                      {sectionContent.paycut}
+                    </AccordionItem>
+                    <AccordionItem title="Suspension" section="suspension">
+                      {sectionContent.suspension}
+                    </AccordionItem>
+                    <AccordionItem title="Termination" section="termination">
+                      {sectionContent.termination}
+                    </AccordionItem>
+                  </div>
+                </div>
+              </section>
+              {/* Note Section */}
+              <div className="mb-12">
+                <p className="text-gray-600 italic text-sm mb-8">
+                  *Note: Be careful if you have an employment contract with the
+                  employee or a collective bargaining agreement (CBA). You may
+                  be unable to take particular disciplinary action under these
+                  contracts.
+                </p>
+              </div>
+
+              {/* Before You Start Section */}
+              <section id="before-you-start">
+                <div className="mb-12">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                    Before you start: What to have in place (and what to watch
+                    for)
+                  </h2>
+
+                  <p className="text-gray-700 text-lg mb-6">
+                    Don't move into a formal discipline process without making
+                    sure your foundation is solid. You need a process that
+                    protects the employee's rights and the company's interests,
+                    in addition to manager training and legal and{" "}
+                    <Link href="#" className="text-green-600 underline">
+                      HR compliance
+                    </Link>{" "}
+                    checks.
+                  </p>
+
+                  <p className="text-gray-700 text-lg mb-8">
+                    Here's what to put in place and what to verify.
+                  </p>
+
+                  <div className="space-y-0 text-lg">
+                    {/* Legal Compliance */}
+                    <AccordionItem title="Legal compliance" section="legal">
+                      <p className="text-gray-700 text-lg mb-4">
+                        Most states, except for Montana, are at-will. At-will
+                        means you can fire an employee with or without reason,
+                        as long as it is not illegal. Disciplinary action is the
+                        same unless you have a CBA or employment contract that
+                        prevents you from making specific steps.
+                        <br />
+                        <br />
+                        However, you should be familiar with the laws of the
+                        states where your employees work. For example, some
+                        states prevent you from disciplining or firing employees
+                        for refusing to violate state law. Some examples include
+                        disciplining an employee for filing for workers'
+                        compensation or refusing to come to work because of jury
+                        duty obligations.
+                      </p>
+
+                      <div className="p-4 border border-green-400 rounded-md bg-green-50">
+                        <h3 className="text-green-700 text-xl font-bold mb-2">
+                          💡 Federal laws on disciplinary action
+                        </h3>
+                        <p className="text-lg text-gray-700 mb-3">
+                          Federal laws do not prevent you from taking employee
+                          disciplinary action. However, you cannot discipline
+                          employees for situations outlined by the following
+                          laws.
+                        </p>
+                        <ul className="list-disc ml-6 text-lg text-gray-700 space-y-2">
+                          <li>
+                            <strong>Anti-discrimination laws:</strong> Laws that
+                            protect fairness and equality in hiring, employment
+                            decisions, and benefits access. Examples include
+                            Title VII of the Civil Rights Act, ADA, FMLA, PWFA,
+                            ADEA, GINA, and USERRA.
+                          </li>
+                          <li>
+                            <strong>Whistleblowing laws:</strong> Laws that
+                            protect workers from adverse employment actions
+                            should they notify regulatory agencies of workplace
+                            health or safety violations, discriminatory
+                            practices, or the use of lie detectors. The OSH Act
+                            of 1970 is one example.
+                          </li>
+                          <li>
+                            <strong>Unionizing:</strong> The{" "}
+                            <Link
+                              href="https://www.nlrb.gov"
+                              className="text-green-600 underline"
+                              target="_blank"
+                            >
+                              National Labor Relations Act (NLRA)
+                            </Link>{" "}
+                            protects employees who collectively bargain or
+                            support a union from adverse employment action.
+                          </li>
+                        </ul>
+                        <p className="text-sm text-gray-500 mt-3 italic">
+                          Note: Some states include equivalent laws to the
+                          above. As a rule, always follow the law that provides
+                          more employee rights and protections.
+                        </p>
+                      </div>
+                    </AccordionItem>
+
+                    <AccordionItem
+                      title="A clear, written policy"
+                      section="policy"
+                    >
+                      <p className="text-lg text-gray-700 mb-4">
+                        You will need to align with all relevant stakeholders
+                        when creating your disciplinary action policy. Because
+                        it affects employees' tenure with the company, your
+                        executive teams must agree on the policy’s approach,
+                        scope, and list of progressive discipline steps. Once
+                        finalized, you should add this policy to your{" "}
+                        <Link href="#" className="text-green-600 underline">
+                          employee handbook
+                        </Link>{" "}
+                        for easy access.
+                      </p>
+
+                      <p className="text-lg text-gray-700 mb-4">
+                        At a minimum, your policy should include the following
+                        elements:
+                      </p>
+
+                      <div className="  divide-y">
+                        <NestedItem
+                          title="Employment relationship statement"
+                          name="employment"
+                        >
+                          <p className="text-lg text-gray-700">
+                            These statements clarify the relationship between
+                            you and your employee. For example, if your employee
+                            works in an at-will state, you should note that
+                            their employment is at-will, and either you or the
+                            employee can terminate the relationship at any time,
+                            with or without reason. Or, note the terms of their
+                            employment relationship based on any contracts or
+                            CBAs.
+                          </p>
+                        </NestedItem>
+
+                        <NestedItem
+                          title="Disciplinary action steps"
+                          name="steps"
+                        >
+                          <p className="text-lg text-gray-700">
+                            These are the stages of your disciplinary action
+                            process, starting from the least severe to the most
+                            severe consequences. Each step should include the
+                            manager’s, HR staff’s, and employee’s
+                            responsibilities and include examples of behaviors
+                            that might warrant starting at a particular step.
+                          </p>
+                        </NestedItem>
+
+                        <NestedItem
+                          title="Investigation process"
+                          name="investigation"
+                        >
+                          <p className="text-lg text-gray-700">
+                            You may need to investigate incidents, behaviors,
+                            offenses, or complaints before taking disciplinary
+                            action to understand the best course of action.
+                            Detail this process, including who is involved in
+                            the investigation and response turnaround times.
+                          </p>
+                        </NestedItem>
+
+                        <NestedItem title="Complaint process" name="complaint">
+                          <p className="text-lg text-gray-700">
+                            This details how employees can report a workplace
+                            concern or complaint to management. Like with the
+                            investigation process, explain who employees should
+                            contact, what they need to provide, and response
+                            turnaround times. You should also include language
+                            noting that employees can report these concerns
+                            without fear of retaliation.
+                          </p>
+                        </NestedItem>
+
+                        <NestedItem title="Documentation process" name="docs">
+                          <p className="text-lg text-gray-700 mb-2">
+                            With each step, make clear what managers or HR staff
+                            need to document for the worker’s employment file.
+                            For example, typical documentation practices
+                            include:
+                          </p>
+                          <ul className="list-disc ml-6 text-lg text-gray-800 space-y-2">
+                            <li>Basic employee information</li>
+                            <li>Description of the infraction</li>
+                            <li>Clear, relevant, and time-bound goals</li>
+                            <li>Resources to help the employee</li>
+                            <li>Next steps in the disciplinary process</li>
+                            <li>Signatures of managers, employees</li>
+                            <li>Feedback section for employee disagreement</li>
+                          </ul>
+                        </NestedItem>
+
+                        <NestedItem
+                          title="Right to skip or combine steps"
+                          name="skip"
+                        >
+                          <p className="text-lg text-gray-700">
+                            Although you might indicate what offenses warrant
+                            starting at various steps in the disciplinary
+                            process, it’s impossible to predict every situation
+                            or behavior. To show this, include a statement that
+                            you hold the right to skip or combine steps in the
+                            disciplinary process based on the seriousness of the
+                            infraction.
+                          </p>
+                        </NestedItem>
+
+                        <NestedItem
+                          title="Termination process"
+                          name="termination"
+                        >
+                          <p className="text-lg text-gray-700">
+                            Explain the termination process should the
+                            employee’s behavior result in dismissal, including
+                            who approves the decision. You should also disclose
+                            relevant offboarding processes, such as benefits
+                            termination, last check procedures,
+                            <Link href="#" className="text-green-600 underline">
+                              {" "}
+                              severance pay
+                            </Link>
+                            , filing for unemployment, and returning company
+                            equipment.
+                          </p>
+                        </NestedItem>
+
+                        <NestedItem title="Appeal process" name="appeal">
+                          <p className="text-lg text-gray-700">
+                            Following any disciplinary action, detail how long
+                            employees have to submit an appeal. The appeal
+                            process should outline what should be included in
+                            the appeal, how long after the disciplinary action
+                            they have to submit any appeal (usually five
+                            business days), who should receive the appeal, and
+                            the response turnaround time.
+                          </p>
+                        </NestedItem>
+                      </div>
+                    </AccordionItem>
+                  </div>
+                </div>
+
+                {/* Video Section */}
+                <div className="mb-12">
+                  {/* Responsive container with fixed aspect ratio */}
+                  <div
+                    className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-lg shadow-md"
+                    style={{ paddingTop: "56.25%" }}
+                  >
+                    <iframe
+                      className="absolute top-0 left-0 w-full h-full"
+                      src="https://www.youtube.com/embed/uPKoyxAFCEQ"
+                      title="Legal Documents Made Easy | SixFifty"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+
+                  <div className="mt-6 text-center">
                     <Link
-                      href="https://www.zoho.com/projects/"
+                      href="https://sixfifty.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                      className="inline-block bg-green-400 hover:bg-green-500 text-white font-medium py-3 px-8 rounded-full transition-colors duration-200"
                     >
-                      Visit Website
-                      <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
+                      Visit SixFifty ↗
                     </Link>
                   </div>
                 </div>
-              </div>
-              
 
-            
+                {/* Additional Sections */}
+                <div className="space-y-0 text-lg">
+                  {/* HR vs manager roles */}
+                  <AccordionItem title="HR vs manager roles" section="hr">
+                    <p className="text-lg text-gray-700 mb-4">
+                      Clarify who’s responsible for what. Generally:
+                    </p>
+                    <ul className="list-disc ml-6 text-lg text-gray-800 space-y-1">
+                      <li>
+                        <strong>Managers</strong> initiate and document early
+                        steps (e.g., coaching, verbal warnings)
+                      </li>
+                      <li>
+                        <strong>HR</strong> reviews written warnings, ensures
+                        compliance, and leads serious actions (e.g.,
+                        suspensions, terminations)
+                      </li>
+                    </ul>
+                  </AccordionItem>
 
-             
+                  {/* Manager training */}
+                  <AccordionItem title="Manager training" section="training">
+                    <p className="text-lg text-gray-700 mb-4">
+                      Using an online platform to train managers and even HR
+                      teams is a good strategy.{" "}
+                      <Link
+                        href="https://www.coassemble.com"
+                        target="_blank"
+                        className="text-green-600 underline"
+                      >
+                        Learning management systems (LMSs)
+                      </Link>
+                      , like Coassemble, allow you to create courses for
+                      teaching leaders about the disciplinary process, including
+                      how to complete the necessary documentation.
+                    </p>
+                    <p className="text-lg text-gray-700 mb-4">
+                      As a result, you can prepare your managers to handle
+                      situations, improve policy consistency, and foster more
+                      effective and constructive conversations with direct
+                      reports.
+                    </p>
 
-              {/* FAQs */}
-              <section id="payroll-faqs" className="mt-8 max-w-7xl mx-auto">
+                    <div className="rounded-md overflow-hidden shadow-md">
+                      <Image
+                        src="/images/action-4.jpg"
+                        alt="Manager training preview showing Coassemble platform"
+                        width={800}
+                        height={400}
+                        className="object-cover w-full"
+                      />
+                    </div>
+
+                    <p className="text-sm text-gray-500 mt-2">
+                      Coassemble offers a disciplinary action template to train
+                      your people managers on effective disciplinary techniques
+                      and policy processes.{" "}
+                      <span className="text-green-600">Source: Coassemble</span>
+                    </p>
+
+                    <div className="mt-4 text-center">
+                      <Link
+                        href="https://coassemble.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block bg-green-400 hover:bg-green-500 text-white font-medium py-3 px-8 rounded-full transition-colors duration-200"
+                      >
+                        Visit Coassemble ↗
+                      </Link>
+                    </div>
+                  </AccordionItem>
+                </div>
+              </section>
+              <section id="disciplinary-action-form-template">
+                {/* Form Template Section */}
+                <div className="mt-12 mb-12">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    Disciplinary action form template
+                  </h2>
+
+                  <p className="text-gray-700 text-lg mb-4">
+                    Documentation is key, so it's helpful to prepare an{" "}
+                    <Link href="#" className="text-green-600 underline">
+                      employee disciplinary action form
+                    </Link>{" "}
+                    and
+                    <Link href="#" className="text-green-600 underline">
+                      {" "}
+                      disciplinary write ups examples
+                    </Link>
+                    . Add these to your policy and employee handbook, including
+                    a guide on how to fill it out.
+                  </p>
+
+                  <p className="text-gray-700 text-lg mb-8">
+                    If you're looking for a form, our template contains the
+                    essential data items needed.
+                  </p>
+
+                  {/* 2-Column Layout for Google Drive + Downloads */}
+                  <div className="flex flex-col lg:flex-row lg:space-x-8">
+                    {/* Google Drive Card */}
+                    <div className="bg-white border border-gray-200 rounded-lg p-6 mb-6 w-full max-w-2xl min-h-[520px]">
+                      <div className="flex items-center mb-4">
+                        <div className="w-8 h-8 bg-green-500 rounded mr-3 flex items-center justify-center">
+                          <svg
+                            className="w-4 h-4 text-white"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z" />
+                          </svg>
+                        </div>
+                        <span className="text-gray-600 text-sm">
+                          Google Drive
+                        </span>
+                      </div>
+
+                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                        You need access
+                      </h3>
+                      <p className="text-sm text-gray-600 mb-4">
+                        Request access, or switch to an account with access.
+                      </p>
+
+                      <div className="mb-4">
+                        <label className="block text-sm text-gray-600 mb-2">
+                          Message (optional)
+                        </label>
+                        <textarea
+                          className="w-full p-2 border border-gray-300 rounded text-sm"
+                          rows="3"
+                          placeholder=""
+                        />
+                      </div>
+
+                      <button className="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded text-sm font-medium">
+                        Request access
+                      </button>
+
+                      <div className="mt-4 text-center">
+                        <p className="text-xs text-gray-500">
+                          You're signed in as
+                        </p>
+                        <div className="flex items-center justify-center mt-1">
+                          <div className="w-6 h-6 bg-green-500 rounded-full mr-2"></div>
+                          <span className="text-xs text-gray-700">
+                            srivastavashreshtha1@gmail.com
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Download Buttons */}
+                    <div className="w-full lg:w-2/5">
+                      <p className="text-gray-700 mb-4 font-semibold">
+                        Download our employee disciplinary action template for
+                        free:
+                      </p>
+
+                      <div className="space-y-3 max-w-xs">
+                        <button className="w-full bg-green-400 hover:bg-green-500 text-white py-3 px-4 rounded-full font-medium transition-colors duration-200">
+                          Download as PDF ↓
+                        </button>
+                        <button className="w-full bg-green-400 hover:bg-green-500 text-white py-3 px-4 rounded-full font-medium transition-colors duration-200">
+                          Download as Google Doc ↓
+                        </button>
+                        <button className="w-full bg-green-400 hover:bg-green-500 text-white py-3 px-4 rounded-full font-medium transition-colors duration-200">
+                          Download Google Sheet ↓
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section id="employee-disciplinary-process-steps">
+                {/* Process Steps Section */}
+                <div className="mt-12">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                    Employee disciplinary process steps
+                  </h2>
+
+                  <p className="text-gray-700 text-lg mb-8">
+                    Each step of the disciplinary process should be documented
+                    and tied to specific policies. Here's a breakdown of what
+                    each step typically involves:
+                  </p>
+
+                  <div className="mb-8">
+                    <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                      Step 1: Identify the problem and investigate
+                    </h3>
+
+                    <p className="text-gray-700 text-lg mb-4">
+                      Before taking any action, you need a clear, fact-based
+                      understanding of the issue at hand. That's where a
+                      workplace investigation comes in. Use it to determine what
+                      happened, when the incident occurred, who was involved,
+                      and whether any policies were violated.
+                    </p>
+
+                    <p className="text-gray-700 text-lg mb-4">
+                      You should review and collect any relevant documentation,
+                      such as attendance logs, performance records, emails, and
+                      security footage. You should also get insights from
+                      relevant company sources: talk to those involved and
+                      gather written statements if needed. Your goal is to
+                      confirm whether this was an isolated incident or part of a
+                      pattern.
+                    </p>
+
+                    <p className="text-gray-700 text-lg mb-4">
+                      If the incident or allegations are serious, such as sexual
+                      harassment, you may need to place the accused on a
+                      temporary suspension or leave of absence to look further.
+                      The length of time varies, but it's reasonable to expect
+                      you have outlined basic timelines.
+                    </p>
+
+                    <p className="text-gray-700 text-lg mb-4">
+                      During this time, learn as much about the incident as you
+                      can. Consulting with employment law attorneys is a
+                      sub-optimal but sometimes necessary step at this stage.
+                    </p>
+
+                    <p className="text-gray-700 text-lg mb-4">
+                      With evidence in hand, you will need to decide where to
+                      start in your disciplinary action process. If the
+                      investigation reveals that the employee's behavior was a
+                      minor infraction, you may want to start from step one in
+                      your progressive discipline process. However, if the
+                      misconduct may mean you skip your usual steps and go
+                      straight for termination.
+                    </p>
+                  </div>
+
+                  <div className="mb-8">
+                    <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                      Step 2: Have a one-on-one meeting
+                    </h3>
+
+                    <p className="text-gray-700 text-lg mb-4">
+                      Most disciplinary action plans start with a one-on-one
+                      meeting between the employee and their manager. Rather
+                      than called counseling or coaching sessions, this informal
+                      meeting is to give the manager a chance to address minor
+                      issues early, before they turn into a serious problem.
+                    </p>
+
+                    <p className="text-gray-700 text-lg mb-4">
+                      The goal is to inform employees of the unwanted behavior
+                      and quickly course-correct. It is also about proactively
+                      building the relationship by setting clear expectations
+                      with your employees, or the workplace.
+                    </p>
+
+                    <p className="text-gray-700 text-lg mb-4">
+                      These meetings should be a two-way conversation, not a
+                      lecture, and should follow constructive feedback best
+                      practices. They should also occur as soon as reasonably
+                      possible after the incident so that the employee can
+                      associate clear action plans with the feedback.
+                    </p>
+
+                    <p className="text-gray-700 text-lg mb-4">
+                      Use this time to ask the employee questions and understand
+                      the reasoning for their actions— you might even realize
+                      your{" "}
+                      <Link href="#" className="text-green-600 underline">
+                        implicit biases
+                      </Link>{" "}
+                      are clouding your judgment.
+                    </p>
+
+                    <p className="text-gray-700 text-lg mb-4">
+                      For example, during a coaching conversation about
+                      excessive tardiness, you might learn the employee's
+                      frequent lateness resulted from a childcare issue. Action
+                      are to work on this. When thinking challenges your prior
+                      belief that all tardy employees are "lazy," with this
+                      knowledge, you can work with the employee to help them get
+                      to work on time, such as by highlighting your commuter
+                      benefits or adjusting their start and end times.
+                    </p>
+
+                    <p className="text-gray-700 text-lg mb-4">
+                      Although these initial conversations are more informal,
+                      you should still document them, such as a quick note in
+                      the employee's personnel file. Most HR software lets you
+                      upload this documentation into employees' electronic
+                      profiles. Other platforms, like Bob, let you schedule
+                      impromptu or regular meetings and create agendas, which
+                      help streamline and document disciplinary conversations
+                      for future reference.
+                    </p>
+                  </div>
+
+                  {/* Bob Software Screenshot */}
+                  <div className="mb-8">
+                    {/* Image Centered */}
+                    <div className="flex justify-center">
+                      <div className="relative w-[400px] h-[266px] bg-gray-100 rounded-lg overflow-hidden">
+                        <img
+                          src="/images/action-1.jpg"
+                          alt="Bob HR software interface showing one-on-one meeting management"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+
+                    {/* Description */}
+                    <p className="text-sm text-gray-600 mt-2 text-center">
+                      <span className="font-medium">Bob</span> includes
+                      one-on-one meeting management features to help you
+                      structure and record disciplinary conversations with your
+                      employees for more effective constructive feedback.{" "}
+                      <span className="text-green-600">Source: Bob</span>
+                    </p>
+
+                    {/* Button */}
+                    <div className="mt-4 text-center">
+                      <Link
+                        href="https://bob.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-8 rounded-full transition-colors duration-200"
+                      >
+                        Visit Bob ↗
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+                <div className="mb-8">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                    Step 3: Issue a formal warning
+                  </h2>
+
+                  <div className="space-y-4 text-lg text-gray-700">
+                    <p>
+                      The next step is issuing a formal warning if the
+                      employee's unwanted behavior escalates after two to three
+                      informal conversations. Formal warnings are official
+                      records of the employee's infraction placed in their
+                      personnel file.
+                    </p>
+
+                    <p>
+                      Formal warnings consist of both a meeting with the
+                      employee plus written documentation. Because this is the
+                      first official record of disciplinary action, it's a good
+                      idea to include a{" "}
+                      <Link
+                        href="#"
+                        className="text-green-600 hover:text-green-800 underline"
+                      >
+                        reliable witness
+                      </Link>{" "}
+                      in the meeting, with the manager and employee. Usually,
+                      that's someone from the HR department, but it can also be
+                      another manager or administrator willing to bear witness.
+                    </p>
+
+                    <p>The conversation should cover the following:</p>
+
+                    <ul className="list-disc ml-6 text-lg space-y-1">
+                      <li>
+                        A detailed description of the offenses, including dates
+                        and any supporting evidence (such as time cards,
+                        handbook policies, videos, or emails).
+                      </li>
+                      <li>
+                        An explanation of how this behavior affects the company
+                        or coworkers.
+                      </li>
+                      <li>
+                        The steps you have already taken to correct the
+                        behavior.
+                      </li>
+                      <li>
+                        Actionable and measurable objectives to fix the
+                        behavior.
+                      </li>
+                      <li>
+                        Resources to help the employee succeed, such as{" "}
+                        <Link
+                          href="#"
+                          className="text-green-600 hover:text-green-800 underline"
+                        >
+                          additional training
+                        </Link>{" "}
+                        or{" "}
+                        <Link
+                          href="#"
+                          className="text-green-600 hover:text-green-800 underline"
+                        >
+                          policy reviews
+                        </Link>
+                        .
+                      </li>
+                      <li>
+                        Future disciplinary steps should the behavior continue.
+                      </li>
+                      <li>
+                        Time for questions and feedback from the employee.
+                      </li>
+                      <li>Explanation of your appeal process.</li>
+                    </ul>
+
+                    <p>
+                      Documentation of the warning should include these same
+                      elements, plus an area for the manager, witness, and
+                      employee to sign and date.
+                    </p>
+
+                    <p>
+                      You should also add a refusal acknowledgment section if
+                      the form should employees disagree with the warning.
+                      Employees can sign here to acknowledge they received the
+                      warning but disagree with it. You can also offer space for
+                      employees to explain why they disagree.
+                    </p>
+
+                    <p>
+                      Remember to provide ample time for the employee to dispute
+                      or explain their side of the issue on you would during
+                      regular manager-employee conversations. And you'd follow
+                      up conversations with HR or the{" "}
+                      <Link
+                        href="#"
+                        className="text-green-600 hover:text-green-800 underline"
+                      >
+                        legal team
+                      </Link>{" "}
+                      to resolve.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mb-8">
+                  <p className="text-lg text-gray-700 mb-4">
+                    Most disciplinary action plans require two to three formal
+                    warnings before progressing to the next step. Some companies
+                    also distinguish between verbal and written warnings, with
+                    verbal warnings a less severe first step.
+                  </p>
+
+                  <p className="text-lg text-gray-700 mb-6">
+                    Despite the name, verbal warnings should follow the same
+                    process as written warnings, including thorough
+                    documentation, business helping you in the event of a
+                    lawsuit, employees can reference it to understand their
+                    expectations going forward.
+                  </p>
+
+                  {/* Form Image Placeholder - Replace with actual form images */}
+                  <div className="mb-6">
+                    <Image
+                      src="/images/action-2.png"
+                      alt="Disciplinary Action Form"
+                      width={800}
+                      height={600}
+                      className="w-full h-auto border border-gray-300 rounded"
+                    />
+                  </div>
+                  <div className="text-sm text-gray-600 text-center">
+                    <p>
+                      Describe the issue, detail past corrective actions, and
+                      note the disciplinary action you will take now.
+                    </p>
+                    <p>Source: TechnologyAdvice</p>
+                  </div>
+
+                  <div className="mb-6">
+                    <Image
+                      src="/images/action-3.png"
+                      alt="Corrective Action Form"
+                      width={800}
+                      height={400}
+                      className="w-full h-auto border border-gray-300 rounded"
+                    />
+                  </div>
+                  <div className="text-sm text-gray-600 text-center mb-6">
+                    <p>
+                      Provide goals and resources for the employee and detail
+                      the next steps should the employee continue with their
+                      unsatisfactory conduct. Source: TechnologyAdvice
+                    </p>
+                  </div>
+                </div>
+
+                {/* Step 4: Take last-chance actions */}
+                <div className="mb-8">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                    Step 4: Take last-chance actions
+                  </h2>
+
+                  <div className="space-y-4 text-lg text-gray-700">
+                    <p>
+                      A{" "}
+                      <Link
+                        href="#"
+                        className="text-green-600 hover:text-green-800 underline"
+                      >
+                        last-chance action
+                      </Link>{" "}
+                      is the step in your{" "}
+                      <Link
+                        href="#"
+                        className="text-green-600 hover:text-green-800 underline"
+                      >
+                        disciplinary policy
+                      </Link>{" "}
+                      before termination. It occurs if the employee continues
+                      exhibiting behavior or performance issues after prior
+                      conversations and formal warnings.
+                    </p>
+
+                    <p>
+                      Depending on your{" "}
+                      <Link
+                        href="#"
+                        className="text-green-600 hover:text-green-800 underline"
+                      >
+                        disciplinary action policy
+                      </Link>
+                      , what you decide to take as your last-chance action can
+                      differ. Some of the most common include:
+                    </p>
+
+                    <ul className="list-disc ml-6 space-y-1">
+                      <li>Final written warning</li>
+                      <li>Paid or unpaid suspension</li>
+                      <li>Loss of privileges</li>
+                      <li>
+                        Pay decrease or demotion (in line with{" "}
+                        <Link
+                          href="#"
+                          className="text-green-600 hover:text-green-800 underline"
+                        >
+                          state and federal laws
+                        </Link>
+                        )
+                      </li>
+                      <li>Last-chance agreement</li>
+                    </ul>
+
+                    <p>
+                      Like{" "}
+                      <Link
+                        href="#"
+                        className="text-green-600 hover:text-green-800 underline"
+                      >
+                        formal warnings
+                      </Link>
+                      , document whatever last-chance action you take, including
+                      what led to the decision. Hold a conversation with the
+                      employee along with a{" "}
+                      <Link
+                        href="#"
+                        className="text-green-600 hover:text-green-800 underline"
+                      >
+                        reliable witness
+                      </Link>
+                      . Stress to the employee that this is their last chance to
+                      improve and that future infractions could lead to
+                      termination.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Step 5: Recommend for termination */}
+                <div className="mb-8">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                    Step 5: Recommend for termination
+                  </h2>
+
+                  <div className="space-y-4 text-lg text-gray-700">
+                    <p>
+                      Termination is the last step in your{" "}
+                      <Link
+                        href="#"
+                        className="text-green-600 hover:text-green-800 underline"
+                      >
+                        disciplinary process
+                      </Link>
+                      . It occurs if the employee continues the same offenses
+                      after you've followed all other disciplinary steps and
+                      provided ample resources and support to help the employee
+                      improve.
+                    </p>
+
+                    <p>
+                      Because termination comes with several legal consequences,
+                      it's always wise to consult with your{" "}
+                      <Link
+                        href="#"
+                        className="text-green-600 hover:text-green-800 underline"
+                      >
+                        HR department
+                      </Link>{" "}
+                      or{" "}
+                      <Link
+                        href="#"
+                        className="text-green-600 hover:text-green-800 underline"
+                      >
+                        employment law attorney
+                      </Link>{" "}
+                      before you have the termination conversation with the
+                      employee. If you have{" "}
+                      <Link
+                        href="#"
+                        className="text-green-600 hover:text-green-800 underline"
+                      >
+                        employment practices liability insurance (EPLI)
+                      </Link>
+                      , check if you have access to an{" "}
+                      <Link
+                        href="#"
+                        className="text-green-600 hover:text-green-800 underline"
+                      >
+                        employee hotline
+                      </Link>{" "}
+                      in the event of a case of wrongful termination is
+                      warranted.
+                    </p>
+
+                    <p>
+                      Although unfortunate, remember that termination may be the
+                      best option if you followed the steps in your{" "}
+                      <Link
+                        href="#"
+                        className="text-green-600 hover:text-green-800 underline"
+                      >
+                        disciplinary action policy
+                      </Link>{" "}
+                      and did everything in your power to help the employee
+                      improve. Termination allows you to find a more effective
+                      team player and may even improve team morale.
+                    </p>
+                  </div>
+
+                  <div className="bg-green-50 border border-green-200 rounded-3xl p-4 mt-6">
+                    <div className="flex items-start">
+                      <div className="bg-green-100 rounded-full p-2 mr-3 mt-1">
+                        <svg
+                          className="w-9 h-9 text-green-600"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-lg font-medium text-green-800">
+                          Nervous about conducting the termination conversation?
+                        </p>
+                        <p className="text-lg text-green-700">
+                          Learn tips and strategies to prepare for the
+                          conversation and hold an effective meeting in{" "}
+                          <Link
+                            href="#"
+                            className="text-green-600 hover:text-green-800 underline"
+                          >
+                            How to Fire an Employee (and Stay out of Trouble)
+                          </Link>
+                          .
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Step 6: Record your decisions and maintain consistency */}
+                <div className="mb-8">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                    Step 6: Record your decisions and maintain consistency
+                  </h2>
+
+                  <div className="space-y-4 text-slg text-gray-700">
+                    <p>
+                      Every{" "}
+                      <Link
+                        href="#"
+                        className="text-green-600 hover:text-green-800 underline"
+                      >
+                        disciplinary action
+                      </Link>{" "}
+                      or{" "}
+                      <Link
+                        href="#"
+                        className="text-green-600 hover:text-green-800 underline"
+                      >
+                        termination decision
+                      </Link>{" "}
+                      you make sets a precedent. Following your policy allows
+                      you to remain consistent with all employees in the same or
+                      similar situations. Record any deviations from policy and
+                      your reasoning for future reference.
+                    </p>
+
+                    <p>
+                      Beyond that, a standardized{" "}
+                      <Link
+                        href="#"
+                        className="text-green-600 hover:text-green-800 underline"
+                      >
+                        disciplinary procedure
+                      </Link>{" "}
+                      you follow demonstrates your commitment to treating all{" "}
+                      <Link
+                        href="#"
+                        className="text-green-600 hover:text-green-800 underline"
+                      >
+                        employees fairly
+                      </Link>{" "}
+                      and consistently according to their circumstances.
+                    </p>
+                  </div>
+                </div>
+              </section>
+              <section id="common-mistakes-to-avoid">
+                <h2 className="text-2xl text-black sm:text-3xl lg:text-4xl font-semibold mb-4">
+                  Common mistakes to avoid
+                </h2>
+                <p className="text-lg text-black mb-4">
+                  Even with a solid process in place, it’s easy to make mistakes
+                  that weaken your disciplinary action plan, or cause confusion
+                  for the employee. Here are some of the pitfalls I see most
+                  often, and how to steer clear of them.
+                </p>
+
+                <ul className="list-disc ml-5 space-y-2 text-lg text-black">
+                  <li>
+                    <strong>Using vague terms like “bad attitude”:</strong>{" "}
+                    Words like this don’t explain the issue or hold up well in
+                    documentation. Be specific about what happened and describe
+                    the behavior, not the emotion behind it.
+                  </li>
+                  <li>
+                    <strong>
+                      Not checking for legal or accommodation issues first:
+                    </strong>{" "}
+                    You should pause if there’s a chance the behavior is linked
+                    to a medical condition, family leave, or another legal
+                    reason. Talk to legal before moving forward.
+                  </li>
+                  <li>
+                    <strong>Forgetting to follow up after warnings:</strong> If
+                    you don’t check in after a warning, the employee may think
+                    it wasn’t serious. Set a timeline and stick to it.
+                    Follow-through shows that expectations matter.
+                  </li>
+                  <li>
+                    <strong>Skipping early documentation:</strong> Don’t wait
+                    until you’re writing a warning to start keeping records. A
+                    quick note about an earlier coaching conversation can help
+                    show you gave the employee a fair chance to improve.
+                  </li>
+                  <li>
+                    <strong>
+                      Applying different standards to different employees:
+                    </strong>{" "}
+                    Holding one employee accountable while giving another one a
+                    pass, especially for the same issue, can lead to trust
+                    issues and even legal problems. Discipline needs to be fair
+                    and consistent.
+                  </li>
+                </ul>
+
+                <p className="text-lg text-black mt-4">
+                  Managing the employee disciplinary action policy can be
+                  stressful. It becomes even more so as your company grows and
+                  segments into different departments, divisions, and locations.
+                  Despite the shifts, you must maintain and follow the same
+                  disciplinary procedures for all your employees.
+                </p>
+
+                <p className="text-lg text-black mt-4">
+                  Investing in effective HR software can simplify disciplinary
+                  management as you expand. Most platforms include
+                  <a
+                    href="#"
+                    className="text-green-600 underline hover:text-green-800"
+                  >
+                    human resources information system (HRIS)
+                  </a>{" "}
+                  for tracking and storing personal data and monitoring
+                  employment changes. Other features include policy templates,
+                  automated workflows, and e-signature capabilities for
+                  efficient documentation and retention.
+                </p>
+              </section>
+              <section
+                id="employee-disciplinary-action-FAQs"
+                className="mt-8 max-w-7xl mx-auto"
+              >
                 <div className="max-w-none">
                   {/* Main Heading */}
                   <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-8 sm:mb-10 md:mb-12 lg:mb-16">
-                    Payroll software FAQs
+                    Frequently Asked Questions (FAQ)
                   </h1>
 
                   {/* FAQ Accordion */}
@@ -1404,11 +2225,120 @@ export default function Employeedisciplinary() {
                   </div>
                 </div>
               </section>
+              {/* Author Bio Section */}
+
+              <div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg mt-4 sm:p-8 transition-shadow duration-300 overflow-hidden">
+                <div className="flex items-start space-x-6">
+                  <div className="flex-shrink-0">
+                    <Image
+                      src="/images/h1.png"
+                      alt="Robie Ann Ferrer"
+                      width={120}
+                      height={120}
+                      className="rounded-full"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-blue-600 text-xl font-medium mb-4">
+                      <Link
+                        href="/author/Robie Ann Ferrer"
+                        className="hover:underline"
+                      >
+                        Robie Ann Ferrer
+                      </Link>
+                    </h3>
+
+                    <p className="text-gray-700 leading-relaxed">
+                      Robie Ann Ferrer is a human resources professional with a
+                      decade of experience helping companies manage their
+                      workforce and optimize HR processes. Her background
+                      includes roles as an HR Specialist and HR Business
+                      Partner, where she handled various facets of HR, such as
+                      payroll, benefits administration, employee services,
+                      compensation management, and HR systems.
+                    </p>
+                    <div className="flex space-x-2 mt-3">
+                      <Link
+                        href="#"
+                        className="w-8 h-8 rounded-full bg-pink-100 flex items-center justify-center hover:bg-pink-200 transition-colors"
+                      >
+                        <svg
+                          className="w-4 h-4 text-pink-600"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+        {/* Related posts */}
+        <section className="-mt-16 p-28">
+          <h2 className="text-4xl text-black font-bold mb-4">Related posts</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {/* Card 1 */}
+            <div className="rounded-xl border border-gray-200 p-4 shadow-sm bg-white h-72 flex flex-col justify-between">
+              <div>
+                <div className="relative w-full h-40 rounded-lg overflow-hidden mb-2">
+                  <Image
+                    src="/images/hr-4.jpg"
+                    alt="AI Performance Review"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <p className="text-lg text-[#111827] font-semibold leading-snug">
+                  Ziprecruiter vs Indeed: 2025 Comparison for Employers
+                </p>
+              </div>
+              <p className="text-sm text-[#6B7280] mt-2">July 3, 2025</p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="rounded-xl border border-gray-200 p-4 shadow-sm bg-white h-72 flex flex-col justify-between">
+              <div>
+                <div className="relative w-full h-40 rounded-lg overflow-hidden mb-2">
+                  <Image
+                    src="/images/hr-2.jpg"
+                    alt="Payroll Guide"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <p className="text-lg text-[#111827] font-semibold leading-snug">
+                  How to Do Payroll Yourself: A Comprehensive Small Business
+                  Guide
+                </p>
+              </div>
+              <p className="text-sm text-[#6B7280] mt-2">May 13, 2025</p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="rounded-xl border border-gray-200 p-4 shadow-sm bg-white h-72 flex flex-col justify-between">
+              <div>
+                <div className="relative w-full h-40 rounded-lg overflow-hidden mb-2">
+                  <Image
+                    src="/images/hr-3.jpg"
+                    alt="HR Software"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <p className="text-lg text-[#111827] font-semibold leading-snug">
+                  Best Human Resources (HR) Software for Small Businesses in
+                  2025
+                </p>
+              </div>
+              <p className="text-sm text-[#6B7280] mt-2">May 5, 2025</p>
+            </div>
+          </div>
+        </section>
       </div>
-      </div>
-      
-     </>
+    </>
   );
 }
