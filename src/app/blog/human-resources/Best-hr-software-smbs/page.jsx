@@ -2334,7 +2334,7 @@ export default function Employeedisciplinary() {
                   2025
                 </p>
               </div>
-              <p className="text-sm text-[#6B7280] mt-2">May 5, 2025</p>
+              <p className="text-sm text-black mt-2">May 5, 2025</p>
             </div>
           </div>
         </section>
