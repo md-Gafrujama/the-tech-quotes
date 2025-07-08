@@ -58,87 +58,87 @@ const cards = [
     image: "/images/hr-6.jpg",
     link: "/blog/",
   },
-  {
-    title: "HR Compliance Checklist: Must-Have Steps for 2025 & Beyond",
-    description:
-      "Stay compliant with our 2025 HR compliance checklist. Download our checklist to cover key regulations, hiring...",
-    author: "Bryan Driscoll",
-    date: "March 14, 2025",
-    image: "/images/hr-7.jpg",
-    link: "/blog/",
-  },
-  {
-    title: "5 Best HR Outsourcing Companies for 2025",
-    description:
-      "Browsing for the best payroll outsourcing software? We review the top solutions to help you find the perfect fit for...",
-    author: "Kaylyn McKenna",
-    date: "February 24, 2025",
-    image: "/images/hr-8.jpg",
-    link: "/blog/",
-  },
-  {
-    title: "5 Must-Have Integrations for Your ATS",
-    description:
-      "Key takeaways Modern applicant tracking systems (ATS) are a huge asset for recruiters. They make life easier by...",
-    author: "Hanna Sillo",
-    date: "February 21, 2025",
-    image: "/images/hr-9.jpg",
-    link: "/blog/",
-  },
-    {
-    title: "Best HRIS Systems of 2025",
-    description:
-      "Looking for the best HRIS system on the market? We review the top HRIS systems so you can find the perfect fit for your...",
-    author: "Robie Ann Ferrer",
-    date: "February 18, 2025",
-    image: "/images/hr-10.jpg",
-    link: "/blog/",
-  },
-  {
-    title: "Essential Recruiting Metrics You Need to Be Tracking in 2024",
-    description:
-      "Are you tracking the right recruiting metrics to evaluate the success of your strategies?",
-    author: "Irene Casucian",
-    date: "February 17, 2025",
-    image: "/images/hr-11.jpg",
-    link: "/blog/",
-  },
-  {
-    title: "AI Recruiting: Uses, Advantages, & Disadvantages 2025",
-    description:
-      "Using AI for recruiting can increase hiring efficiency and effectiveness, but it can also exacerbate hiring biases and...",
-    author: "Alana Rudder",
-    date: "February 11, 2025",
-    image: "/images/hr-12.png",
-    link: "/blog/",
-  },
-  {
-    title: "ADP vs Paychex: Payroll Comparison 2025",
-    description:
-      "Key takeaways ADP vs Paychex: Which is better? ADP and Paychex are leading providers of payroll systems and HR...",
-    author: "Robie Ann Ferrer",
-    date: "February 10, 2025",
-    image: "/images/hr-13.jpg",
-    link: "/blog/",
-  },
-  {
-    title: "Best Free Applicant Tracking Software (ATS) in 2025",
-    description:
-      "The best free ATS helps HR teams manage the hiring process effectively and efficiently. Discover our expert picks...",
-    author: "Alana Rudder",
-    date: "February 7, 2025",
-    image: "/images/hr-14.jpg",
-    link: "/blog/",
-  },
-  {
-    title: "Employee Referrals: Meaning, Benefits, and Useful Tips",
-    description:
-      "Employee referrals allow companies to diversify their talent pools and speed up recruiting—when done right.",
-    author: "Marta Gomez-Taylor",
-    date: "February 3, 2025",
-    image: "/images/hr-15.jpg",
-    link: "/blog/",
-  },
+  // {
+  //   title: "HR Compliance Checklist: Must-Have Steps for 2025 & Beyond",
+  //   description:
+  //     "Stay compliant with our 2025 HR compliance checklist. Download our checklist to cover key regulations, hiring...",
+  //   author: "Bryan Driscoll",
+  //   date: "March 14, 2025",
+  //   image: "/images/hr-7.jpg",
+  //   link: "/blog/",
+  // },
+  // {
+  //   title: "5 Best HR Outsourcing Companies for 2025",
+  //   description:
+  //     "Browsing for the best payroll outsourcing software? We review the top solutions to help you find the perfect fit for...",
+  //   author: "Kaylyn McKenna",
+  //   date: "February 24, 2025",
+  //   image: "/images/hr-8.jpg",
+  //   link: "/blog/",
+  // },
+  // {
+  //   title: "5 Must-Have Integrations for Your ATS",
+  //   description:
+  //     "Key takeaways Modern applicant tracking systems (ATS) are a huge asset for recruiters. They make life easier by...",
+  //   author: "Hanna Sillo",
+  //   date: "February 21, 2025",
+  //   image: "/images/hr-9.jpg",
+  //   link: "/blog/",
+  // },
+  //   {
+  //   title: "Best HRIS Systems of 2025",
+  //   description:
+  //     "Looking for the best HRIS system on the market? We review the top HRIS systems so you can find the perfect fit for your...",
+  //   author: "Robie Ann Ferrer",
+  //   date: "February 18, 2025",
+  //   image: "/images/hr-10.jpg",
+  //   link: "/blog/",
+  // },
+  // {
+  //   title: "Essential Recruiting Metrics You Need to Be Tracking in 2024",
+  //   description:
+  //     "Are you tracking the right recruiting metrics to evaluate the success of your strategies?",
+  //   author: "Irene Casucian",
+  //   date: "February 17, 2025",
+  //   image: "/images/hr-11.jpg",
+  //   link: "/blog/",
+  // },
+  // {
+  //   title: "AI Recruiting: Uses, Advantages, & Disadvantages 2025",
+  //   description:
+  //     "Using AI for recruiting can increase hiring efficiency and effectiveness, but it can also exacerbate hiring biases and...",
+  //   author: "Alana Rudder",
+  //   date: "February 11, 2025",
+  //   image: "/images/hr-12.png",
+  //   link: "/blog/",
+  // },
+  // {
+  //   title: "ADP vs Paychex: Payroll Comparison 2025",
+  //   description:
+  //     "Key takeaways ADP vs Paychex: Which is better? ADP and Paychex are leading providers of payroll systems and HR...",
+  //   author: "Robie Ann Ferrer",
+  //   date: "February 10, 2025",
+  //   image: "/images/hr-13.jpg",
+  //   link: "/blog/",
+  // },
+  // {
+  //   title: "Best Free Applicant Tracking Software (ATS) in 2025",
+  //   description:
+  //     "The best free ATS helps HR teams manage the hiring process effectively and efficiently. Discover our expert picks...",
+  //   author: "Alana Rudder",
+  //   date: "February 7, 2025",
+  //   image: "/images/hr-14.jpg",
+  //   link: "/blog/",
+  // },
+  // {
+  //   title: "Employee Referrals: Meaning, Benefits, and Useful Tips",
+  //   description:
+  //     "Employee referrals allow companies to diversify their talent pools and speed up recruiting—when done right.",
+  //   author: "Marta Gomez-Taylor",
+  //   date: "February 3, 2025",
+  //   image: "/images/hr-15.jpg",
+  //   link: "/blog/",
+  // },
 ];
 
 export default function HumanResourcesPage() {
