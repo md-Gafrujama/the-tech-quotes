@@ -40,6 +40,7 @@ export default function ProjectManagementPage() {
       title: "Mailchimp Alternatives comparison chart",
       active: false,
     },
+
     {
       id: "tools",
       title: "Mailchimp Alternatives Tools",
@@ -132,27 +133,26 @@ export default function ProjectManagementPage() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toolsContent = {
-    Brevo: {
-      title: "Brevo: Best overall",
-      logo: "/images/Brevo.png",
-      button: {
-        text: "Visit Website",
-        link: "#",
-      },
-
-      pros: [
-        "Powerful automation workflows for personalized customer engagement",
-        "Multi-channel messaging including email, SMS, and WhatsApp",
-        "Flexible pay-as-you-go pricing option for varying send volumes",
-        "High deliverability rates and GDPR compliance",
-        "Built-in CRM and landing page tools",
-      ],
-      cons: [
-        "Some advanced features require higher-tier plans",
-        "Pay-as-you-go pricing can be confusing for beginners",
-        "Enterprise pricing is custom and may be costly for small businesses",
-      ],
+ const toolsContent = {
+  brevo: {
+    title: "Brevo: Best overall",
+    logo: "/images/Brevo.png",
+    button: {
+      text: "Visit Website",
+      link: "#",
+    },
+    pros: [
+      "Powerful automation workflows for personalized customer engagement",
+      "Multi-channel messaging including email, SMS, and WhatsApp",
+      "Flexible pay-as-you-go pricing option for varying send volumes",
+      "High deliverability rates and GDPR compliance",
+      "Built-in CRM and landing page tools",
+    ],
+    cons: [
+      "Some advanced features require higher-tier plans",
+      "Pay-as-you-go pricing can be confusing for beginners",
+      "Enterprise pricing is custom and may be costly for small businesses",
+    ],
       why : {
         intro: `Brevo stands out as the best overall alternative to Mailchimp because it combines advanced automation capabilities with multi-channel communication options in one platform. Unlike providers like Constant Contact that focus solely on email, Brevo lets marketers integrate SMS and WhatsApp campaigns seamlessly. Its flexible pricing — including a pay-as-you-go option — caters well to businesses of all sizes, from startups to enterprises. While Mailchimp offers solid basics, Brevo’s broader feature set and AI-powered tools provide more value for those ready to scale their email marketing efforts.`,
 
@@ -257,13 +257,465 @@ export default function ProjectManagementPage() {
         },
       },
     },
+
+    //constant contact
+    constantcontact: {
+      title: "Constant Contact: Best for event-based campaigns",
+      logo: "/images/constantcontact.png",
+      button: {
+        text: "Visit Website",
+        link: "#",
+      },
+
+      pros: [
+  "Robust event management tools for seamless planning and promotion",
+  "Extensive library of customizable templates catering to various industries",
+  "Strong customer support with live chat, phone, and email options",
+  "AI-powered content generation and automation workflows",
+  "Social media ad integration for cross-platform marketing",
+],
+cons: [
+  "Pricing may be higher compared to some competitors",
+  "Limited advanced segmentation features on lower-tier plans",
+  "Some features, like SMS marketing, are add-ons and not included in all plans",
+],
+why: {
+  intro: `Constant Contact stands out for businesses that prioritize event-driven marketing and community engagement. While it may not match the multi-channel depth of platforms like Brevo or the extensive integrations of Mailchimp, Constant Contact excels in simplicity, usability, and practical tools designed for SMBs. Its intuitive interface, powerful event promotion features, and built-in social media advertising capabilities make it a strong contender for brands that value ease of use and hands-on customer support.`,
+  extras: {
+    "Key Features": (
+      <>
+        <h4 className="text-lg font-bold mb-2">Email Templates:</h4>
+        <p className="text-black mb-4">
+          Access a vast library of professionally designed templates suitable for various occasions and industries.
+        </p>
+        <h4 className="text-lg font-bold mb-2">Automation Workflows:</h4>
+        <p className="text-black mb-4">
+          Set up automated email sequences for welcome messages, follow-ups, and more.
+        </p>
+        <h4 className="text-lg font-bold mb-2">AI Content Generator:</h4>
+        <p className="text-black mb-4">
+          Utilize AI to assist in crafting compelling email content with minimal effort.
+        </p>
+        <h4 className="text-lg font-bold mb-2">Social Media Advertising:</h4>
+        <p className="text-black mb-4">
+          Integrate with Facebook and Instagram to run targeted ad campaigns directly from the platform.
+        </p>
+        <h4 className="text-lg font-bold mb-2">Contact Segmentation:</h4>
+        <p className="text-black mb-4">
+          Organize contacts into lists based on behavior, demographics, and engagement levels.
+        </p>
+        <h4 className="text-lg font-bold mb-2">SMS Marketing:</h4>
+        <p className="text-black mb-4">
+          Reach customers via text messages, with 500 free messages included in the Premium plan.
+        </p>
+        <h4 className="text-lg font-bold mb-2">Google Ads Integration:</h4>
+        <p className="text-black mb-4">
+          Manage and track Google Ads campaigns alongside email marketing efforts.
+        </p>
+        <h4 className="text-lg font-bold mb-2">Revenue Reporting:</h4>
+        <p className="text-black">
+          Analyze the financial impact of campaigns with detailed revenue tracking and reporting tools.
+        </p>
+      </>
+    ),
+    Pricing: (
+      <>
+        <h4 className="text-lg font-bold mb-2">Lite Plan:</h4>
+        <p className="font-bold text-black mb-4">
+          Price: <span className="font-light">From $12/month</span>
+        </p>
+        <h6 className="text-lg font-bold mb-2">Features:</h6>
+        <ul className="list-disc pl-5 text-black">
+          <li>Drag-and-drop email editor</li>
+          <li>AI copy generator</li>
+          <li>Email templates</li>
+        </ul>
+        <h4 className="text-lg font-bold mb-2">Standard Plan:</h4>
+        <p className="font-bold text-black mb-4">
+          Price: <span className="font-light">From $35/month</span>
+        </p>
+        <h6 className="text-lg font-bold mb-2">Features:</h6>
+        <ul className="list-disc pl-5 text-black">
+          <li>Email scheduling and subject line testing</li>
+          <li>Advanced reporting</li>
+        </ul>
+        <h4 className="text-lg font-bold mb-2">Premium Plan:</h4>
+        <p className="font-bold text-black mb-4">
+          Price: <span className="font-light">From $80/month</span>
+        </p>
+        <h6 className="text-lg font-bold mb-2">Features:</h6>
+        <ul className="list-disc pl-5 text-black">
+          <li>Host events, sell products, and take payments</li>
+          <li>Data import through wide range of integrations</li>
+        </ul>
+        <p className="text-sm text-black italic mt-4">
+          Note: Pricing varies based on the number of contacts and email sends. Overages may apply. See pricing tiers for details.
+        </p>
+      </>
+          ),
+        },
+      },
+    },
+
+    //hostinger
+    hostinger: {
+      title: "Hostinger: Best budget bundle",
+      logo: "/images/Hostinger.png",
+      button: {
+        text: "Visit Website",
+        link: "#",
+      },
+
+      pros: [
+  "Affordable web hosting plus email functionality under one roof",
+  "Generous features, even on entry-level plans",
+  "AI-powered tools for design, writing, and SEO included in Business plan",
+  "Excellent uptime and security features, including free SSL and malware scanning",
+  "Scales easily with options for shared, cloud, and VPS hosting",
+],
+cons: [
+  "Renewal prices are significantly higher than introductory rates",
+  "Email functionality is basic unless you pay for a dedicated email plan",
+  "E-commerce features limited to 500 products, even on higher-tier plans",
+],
+why: {
+  intro: `While Hostinger isn’t a traditional email marketing platform, it earns a spot on this list for small businesses and entrepreneurs looking to bundle their website and email needs into a single, low-cost solution. Compared to dedicated platforms like Brevo or Constant Contact, it’s not as advanced in automation or analytics — but for budget-conscious users focused on getting a site and branded email up and running quickly, it’s hard to beat. The inclusion of AI tools and a drag-and-drop builder makes it even more appealing for DIY marketers.`,
+  extras: {
+    "Key Features": (
+      <>
+        <h4 className="text-lg font-bold mb-2">Integrated Website Builder:</h4>
+        <p className="text-black mb-4">
+          Drag-and-drop builder with 150+ templates and AI tools for writing, image generation, SEO, and heatmaps.
+        </p>
+        <h4 className="text-lg font-bold mb-2">E-Commerce Support:</h4>
+        <p className="text-black mb-4">
+          Sell up to 500 products, with support for multiple payment options and zero platform transaction fees.
+        </p>
+        <h4 className="text-lg font-bold mb-2">Email Hosting Options:</h4>
+        <p className="text-black mb-4">
+          Includes 100 basic email mailboxes (1 GB each), with paid business email plans for larger storage and advanced features.
+        </p>
+        <h4 className="text-lg font-bold mb-2">SSL & Security:</h4>
+        <p className="text-black mb-4">
+          Comes with free SSL certificates, malware scanning, Cloudflare-protected nameservers, and a 99.9% uptime guarantee.
+        </p>
+        <h4 className="text-lg font-bold mb-2">Scalable Hosting Options:</h4>
+        <p className="text-black mb-4">
+          Offers shared, WordPress, cloud, and VPS hosting to meet growing business needs.
+        </p>
+        <h4 className="text-lg font-bold mb-2">Support & Refund Policy:</h4>
+        <p className="text-black">
+          24/7 live chat support and a 30-day money-back guarantee on all plans.
+        </p>
+      </>
+    ),
+    Pricing: (
+      <>
+        <h4 className="text-lg font-bold mb-2">Premium Website Builder:</h4>
+        <p className="font-bold text-black mb-4">
+          Price: <span className="font-light">$2.99/month</span> (renews at $10.99/month)
+        </p>
+        <h4 className="text-lg font-bold mb-2">Business Website Builder:</h4>
+        <p className="font-bold text-black mb-4">
+          Price: <span className="font-light">$3.99/month</span> (renews at $13.99/month)
+        </p>
+        <h4 className="text-lg font-bold mb-2">Business Email (add-on):</h4>
+        <p className="font-bold text-black">
+          Price: <span className="font-light">From $0.59/month</span>
+        </p>
+      </>
+          ),
+        },
+      },
+    },
+
+    //proton 
+    proton: {
+      title: "Proton: Best for privacy and security",
+      logo: "/images/proton.png",
+      button: {
+        text: "Visit Website",
+        link: "#",
+      },
+
+      pros: [
+  "End-to-end encryption for email, calendar, and storage",
+  "Based in Switzerland with strict privacy laws and zero-access architecture",
+  "Supports custom domains and multiple addresses per user",
+  "Business suite includes secure VPN, cloud storage, and password manager",
+  "Great fit for nonprofits, activists, and privacy-conscious organizations",
+],
+cons: [
+  "No traditional email marketing or automation tools",
+  "Pricing is per user, which can get expensive for larger teams",
+  "Limited third-party integrations compared to mainstream ESPs",
+],
+why: {
+  intro: `Proton isn’t your typical email marketing tool — but for organizations where privacy, security, and data sovereignty are top priorities, it’s unmatched. Based in Switzerland and protected by some of the world’s strongest privacy laws, Proton offers fully encrypted email and productivity tools that keep your data away from surveillance and advertisers. It’s especially appealing for nonprofits, advocacy groups, and anyone handling sensitive communications. While it lacks automation and design tools offered by platforms like Brevo or Constant Contact, it delivers unmatched peace of mind for teams who value confidentiality above all else.`,
+  extras: {
+    "Key Features": (
+      <>
+        <h4 className="text-lg font-bold mb-2">End-to-End Encryption:</h4>
+        <p className="text-black mb-4">
+          Ensures that only you and your recipients can access message contents — Proton never can.
+        </p>
+        <h4 className="text-lg font-bold mb-2">Swiss Privacy Protections:</h4>
+        <p className="text-black mb-4">
+          Operates under Swiss law, outside U.S. and EU jurisdiction, with a strong legal commitment to privacy.
+        </p>
+        <h4 className="text-lg font-bold mb-2">Proton Scribe (AI Writing Assistant):</h4>
+        <p className="text-black mb-4">
+          Compose and revise emails securely with built-in AI tools across all business plans.
+        </p>
+        <h4 className="text-lg font-bold mb-2">Secure Workspace Suite:</h4>
+        <p className="text-black mb-4">
+          Business Suite includes encrypted cloud storage (Drive), calendar, VPN, and password manager — all seamlessly integrated.
+        </p>
+        <h4 className="text-lg font-bold mb-2">Custom Domains & User Management:</h4>
+        <p className="text-black mb-4">
+          Use your own domain and manage multiple addresses per user with centralized admin tools.
+        </p>
+        <h4 className="text-lg font-bold mb-2">Easy Migration Tools:</h4>
+        <p className="text-black mb-4">
+          The Easy Switch feature simplifies the process of moving email and contacts from other providers.
+        </p>
+        <h4 className="text-lg font-bold mb-2">Priority Support & Uptime Guarantees:</h4>
+        <p className="text-black">
+          Fast, responsive support included in all paid plans, with the highest SLA on Business Suite and Enterprise.
+        </p>
+      </>
+    ),
+    Pricing: (
+      <>
+        <h4 className="text-lg font-bold mb-2">Mail Essentials:</h4>
+        <p className="font-bold text-black mb-4">
+          Price: <span className="font-light">$7.99/user/month (billed annually)</span>
+        </p>
+        <ul className="list-disc pl-5 text-black mb-4">
+          <li>15 GB storage per user</li>
+          <li>3 custom email domains</li>
+        </ul>
+        <h4 className="text-lg font-bold mb-2">Mail Professional:</h4>
+        <p className="font-bold text-black mb-4">
+          Price: <span className="font-light">$10.99/user/month (billed annually)</span>
+        </p>
+        <ul className="list-disc pl-5 text-black mb-4">
+          <li>50 GB storage per user</li>
+          <li>10 custom email domains</li>
+        </ul>
+        <h4 className="text-lg font-bold mb-2">Business Suite:</h4>
+        <p className="font-bold text-black mb-4">
+          Price: <span className="font-light">$14.99/user/month (billed annually)</span>
+        </p>
+        <ul className="list-disc pl-5 text-black mb-4">
+          <li>1 TB storage per user</li>
+          <li>15 custom email domains</li>
+          <li>Access to VPN, cloud storage, calendar, and password manager</li>
+        </ul>
+        <h4 className="text-lg font-bold mb-2">Enterprise:</h4>
+        <p className="font-bold text-black">
+          Price: <span className="font-light">Custom pricing</span>
+        </p>
+        <ul className="list-disc pl-5 text-black">
+          <li>Tailored for large companies, nonprofits, or public sector teams</li>
+          <li>Includes highest SLA and full feature customization</li>
+        </ul>
+      </>
+          ),
+        },
+      },
+    },
+    //scalahosting
+    scalahosting: {
+      title: "ScalaHosting: Best for web hosting with premium email",
+      logo: "/images/scalahosting.png",
+      button: {
+        text: "Visit Website",
+        link: "#",
+      },
+
+      pros: [
+  "All-in-one email hosting with generous storage and mailbox limits",
+  "Four scalable plans — from small teams to enterprise-level — offering competitive prices",
+  "Advanced spam filtering, daily backups, and malware protection",
+  "Choice of user-friendly SPanel or traditional cPanel control panels",
+  "24/7 live chat support and anytime money-back guarantee",
+],
+cons: [
+  "Not a dedicated email marketing solution, 3rd party integrations needed",
+  "No native CRM or list segmentation features",
+  "Not beginner-focused for email marketing, setup and management may require more technical knowledge",
+],
+why: {
+  intro: `Like Hostinger, ScalaHosting isn’t a conventional email marketing platform, but it’s ideal for marketers and small businesses who prefer a premium bundled solution. It offers robust VPS hosting plus powerful email capabilities under one roof, and at prices that aren’t too far outside the bell curve. Mail functionality includes multiple mailboxes, generous storage, advanced security tools, and flexibility in scaling. It’s more capable than Hostinger if you need a web host/email combo, and only slightly pricier.`,
+  extras: {
+    "Key Features": (
+      <>
+        <h4 className="text-lg font-bold mb-2">Flexible Email Tiers:</h4>
+        <p className="text-black mb-4">
+          Four plans supporting from 10 to unlimited mailboxes and 1 to unlimited domains.
+        </p>
+        <h4 className="text-lg font-bold mb-2">Robust Security:</h4>
+        <p className="text-black mb-4">
+          Advanced spam filtering (SpamAssassin), daily offsite backups, SShield firewall, malware protection, and optional dedicated IP.
+        </p>
+        <h4 className="text-lg font-bold mb-2">Protocols & Access:</h4>
+        <p className="text-black mb-4">
+          Full support for IMAP, POP3, SMTP, and both webmail and desktop clients via SPanel or cPanel.
+        </p>
+        <h4 className="text-lg font-bold mb-2">Control Panels:</h4>
+        <p className="text-black mb-4">
+          SPanel offers a clean, intuitive experience; traditional cPanel is also available for familiarity.
+        </p>
+        <h4 className="text-lg font-bold mb-2">Deliverability & Management:</h4>
+        <p className="text-black mb-4">
+          Includes anti-blacklist protection, branded webmail, SMTP relay, and strong inbox deliverability measures.
+        </p>
+        <h4 className="text-lg font-bold mb-2">Scalable Infrastructure:</h4>
+        <p className="text-black mb-4">
+          Backed by VPS/cloud architecture, easily upgradeable storage, and powerful hosting performance.
+        </p>
+        <h4 className="text-lg font-bold mb-2">Support & Guarantee:</h4>
+        <p className="text-black">
+          24/7 live chat support plus an anytime money-back guarantee.
+        </p>
+      </>
+    ),
+    Pricing: (
+      <>
+        <h4 className="text-lg font-bold mb-2">StartUp Plan:</h4>
+        <p className="font-bold text-black mb-4">
+          Price: <span className="font-light">$4.95/month</span> (renews at $12.95/month)
+        </p>
+        <h4 className="text-lg font-bold mb-2">SmallBiz Plan:</h4>
+        <p className="font-bold text-black mb-4">
+          Price: <span className="font-light">$6.95/month</span> (renews at $15.95/month)
+        </p>
+        <h4 className="text-lg font-bold mb-2">Medium Plan:</h4>
+        <p className="font-bold text-black mb-4">
+          Price: <span className="font-light">$9.95/month</span> (renews at $20.95/month)
+        </p>
+        <h4 className="text-lg font-bold mb-2">Cloud Plan:</h4>
+        <p className="font-bold text-black">
+          Price: <span className="font-light">$14.95/month</span> (renews at $29.95/month)
+        </p>
+      </>
+          ),
+        },
+      },
+    },
+    //clickfunnels
+    clickfunnels: {
+      title: "ClickFunnels: Best for sales synergy",
+      logo: "/images/clickfunnels.png",
+      button: {
+        text: "Visit Website",
+        link: "#",
+      },
+
+      pros: [
+  "All-in-one funnel builder: landing pages, sales, membership, and course funnels",
+  "Built-in email marketing, CRM, payment integrations, and AI tools",
+  "Scales team workflows with multiple workspaces and team member support",
+  "Includes training materials (FunnelFlix) and group onboarding calls",
+  "Annual plans offer significant savings compared to monthly pricing",
+],
+cons: [
+  "High starting price ($81–97/month), with limited team members on entry plan",
+  "Pricing and discount structure (e.g., annual vs monthly) can be confusing",
+  "Best suited for advanced users — steep learning curve for beginners",
+],
+why: {
+  intro: `ClickFunnels shines for marketers prioritizing building complete sales funnels over standalone email campaigns. Unlike tools such as Brevo or Constant Contact, it unifies funnel creation, email outreach, CRM, payment handling, and course hosting under a single platform. This makes it unique for advanced users ready to move beyond basic email sequences into full conversion-focused customer journeys. Though pricier, it’s perfect for marketers who want to coordinate effectively with their partners on the sales team.`,
+  extras: {
+    "Key Features": (
+      <>
+        <h4 className="text-lg font-bold mb-2">Funnel Builder:</h4>
+        <p className="text-black mb-4">
+          Drag-and-drop interface for creating sales funnels, landing pages, membership areas, and upsell/downsell paths.
+        </p>
+        <h4 className="text-lg font-bold mb-2">Email Marketing & CRM:</h4>
+        <p className="text-black mb-4">
+          Built-in email broadcasts, simple automation, contact tagging, and a unified Message Hub.
+        </p>
+        <h4 className="text-lg font-bold mb-2">Team Collaboration:</h4>
+        <p className="text-black mb-4">
+          Multiple workspaces and team member support begin with Scale plan (5 workspaces, 5 users).
+        </p>
+        <h4 className="text-lg font-bold mb-2">AI Tools:</h4>
+        <p className="text-black mb-4">
+          Includes AI content generation (text/voice), with increasing word limits per plan (1M–10M words).
+        </p>
+        <h4 className="text-lg font-bold mb-2">Payment Integrations:</h4>
+        <p className="text-black mb-4">
+          Smart Checkout with built-in payment processing and affiliate tracking (Backpack).
+        </p>
+        <h4 className="text-lg font-bold mb-2">Membership & Course Hosting:</h4>
+        <p className="text-black mb-4">
+          Create and manage online courses and membership portals natively within funnels.
+        </p>
+        <h4 className="text-lg font-bold mb-2">Analytics & A/B Testing:</h4>
+        <p className="text-black mb-4">
+          Track funnel performance and run tests to optimize conversion rates.
+        </p>
+        <h4 className="text-lg font-bold mb-2">Support & Training:</h4>
+        <p className="text-black">
+          Access FunnelFlix video library, group onboarding, and live support (varies by plan).
+        </p>
+      </>
+    ),
+    Pricing: (
+      <>
+        <h4 className="text-lg font-bold mb-2">Launch Plan:</h4>
+        <p className="font-bold text-black mb-4">
+          Price: <span className="font-light">$97/month</span> (billed annually)
+        </p>
+        <ul className="list-disc pl-5 text-black mb-4">
+          <li>2 team members</li>
+          <li>10,000 contacts</li>
+          <li>50,000 emails/month</li>
+        </ul>
+        <h4 className="text-lg font-bold mb-2">Scale Plan:</h4>
+        <p className="font-bold text-black mb-4">
+          Price: <span className="font-light">$197/month</span> (billed annually)
+        </p>
+        <ul className="list-disc pl-5 text-black mb-4">
+          <li>5 team members</li>
+          <li>75,000 contacts</li>
+          <li>300,000 emails/month</li>
+        </ul>
+        <h4 className="text-lg font-bold mb-2">Optimize Plan:</h4>
+        <p className="font-bold text-black mb-4">
+          Price: <span className="font-light">$297/month</span> (billed annually)
+        </p>
+        <ul className="list-disc pl-5 text-black mb-4">
+          <li>10 team members</li>
+          <li>150,000 contacts</li>
+          <li>750,000 emails/month</li>
+        </ul>
+        <h4 className="text-lg font-bold mb-2">Dominate Plan:</h4>
+        <p className="font-bold text-black">
+          Price: <span className="font-light">$5,997/year</span>
+        </p>
+        <ul className="list-disc pl-5 text-black">
+          <li>20 team members</li>
+          <li>400,000 contacts</li>
+          <li>1.2M emails/month</li>
+        </ul>
+      </>
+          ),
+        },
+      },
+    },
   };
 
   // Convert toolsContent object to array for mapping
   const toolsArray = Object.entries(toolsContent).map(([key, value]) => ({
-    id: key,
-    ...value,
-  }));
+  id: key,
+  ...value,
+}));
+
+
 
   const faqData = [
     {
@@ -340,7 +792,7 @@ export default function ProjectManagementPage() {
   {
     id: 2,
     name: "Constant Contact",
-    image: "/images/Constant_Contact.png",
+    image: "/images/constantcontact.png",
     alt: "Constant Contact",
     StartingPrice: "$12/month",
     visitUrl: "Constant_Contact",
@@ -348,6 +800,55 @@ export default function ProjectManagementPage() {
       "Event management tools",
       "Social media integration",
       "Robust contact management",
+    ],
+  },
+  {
+    id: 3,
+    name: "Hostinger",
+    image: "/images/Hostinger.png",
+    alt: "Hostinger",
+    StartingPrice: "$2.99/month",
+    visitUrl: "Hostinger",
+    keyFeatures: [
+      "Integrated website builder",
+      "Scalable hosting options",
+      "Bundled email hosting",
+    ],
+  },{
+    id: 4,
+    name: "Proton",
+    image: "/images/proton.png",
+    alt: "Proton",
+    StartingPrice: "$7.99/month",
+    visitUrl: "Proton",
+    keyFeatures: [
+      "End-to-end encryption",
+      "Strict privacy protections",
+      "Secure workspace suite",
+    ],
+  },{
+    id: 5,
+    name: "ScalaHosting",
+    image: "/images/scalahosting.png",
+    alt: "ScalaHosting",
+    StartingPrice: "$4.95/month",
+    visitUrl: "ScalaHosting",
+    keyFeatures: [
+      "Flexible email tiers",
+      "Scalable infrastructure",
+      "Advanced email tools",
+    ],
+  },{
+    id: 6,
+    name: "ClickFunnels",
+    image: "/images/clickfunnels.png",
+    alt: "ClickFunnels",
+    StartingPrice: "$97/month",
+    visitUrl: "ClickFunnels",
+    keyFeatures: [
+      "Advanced sales funnel tools",
+      "Built-in CRM",
+      "AI-powered tools",
     ],
   },
 ];
@@ -829,7 +1330,7 @@ export default function ProjectManagementPage() {
               <section id="comparison-chart" className="mt-8">
                 <div className="bg-white rounded-2xl sm:rounded-3xl border mt-4  border-gray-200  p-6 mb-8">
                   <div className="text-center mb-8 sm:mb-12">
-                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+                    <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
                       Mailchimp Alternatives comparison chart
                     </h1>
                     <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
@@ -916,114 +1417,95 @@ export default function ProjectManagementPage() {
                   </div>
                 </div>
               </section>
-              {/* what are best project management tools */}
-
-              {/* Common Heading
-
-                <h1 className="text-3xl font-bold mt-4 text-black mb-2">
-                  What is the best project management software?
-                </h1>
-                <p className="text-gray-700 mt-2">
-                  Here are our top recommendations for project management
-                  software in 2025.
-                </p> */}
+            
 
               {/* Map through the tools array */}
-              <section id="tools">
-              {toolsArray.map((tool) => (
-                <div
-                  key={tool.id}
-                  className="bg-white rounded-2xl sm:rounded-3xl border mt-4  border-gray-200  p-6 mb-8"
-                >
-                  {/* Tool Header */}
-                  <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
-                        <Image
-                          src={tool.logo}
-                          alt={`${tool.title} logo`}
-                          width={48}
-                          height={48}
-                          className="object-contain"
-                        />
-                      </div>
-                      <h2 className="text-2xl font-bold text-black">
-                        {tool.title}
-                      </h2>
-                    </div>
-                    <a
-                      href={tool.button.link}
-                      className="bg-green-600 text-white px-4 py-2 rounded-full text-sm hover:bg-green-700"
-                    >
-                      {tool.button.text}
-                    </a>
-                  </div>
+               <section id="tools">
+      {toolsArray.map((tool) => (
+        <div
+          key={tool.id}
+          className="bg-white rounded-2xl sm:rounded-3xl border mt-4 border-gray-200 p-6 mb-8"
+        >
+          {/* Tool Header */}
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                <Image
+                  src={tool.logo}
+                  alt={`${tool.title} logo`}
+                  width={48}
+                  height={48}
+                  className="object-contain"
+                />
+              </div>
+              <h2 className="text-2xl font-bold text-black">{tool.title}</h2>
+            </div>
+            <a
+              href={tool.button.link}
+              className="bg-green-600 text-white px-4 py-2 rounded-full text-sm hover:bg-green-700"
+            >
+              {tool.button.text}
+            </a>
+          </div>
 
-                  {/* Pros and Cons */}
-                  <div className="grid md:grid-cols-2 text-black gap-6 mb-6">
-                    <div>
-                      <h3 className="text-lg font-semibold mb-2">Pros</h3>
-                      <ul className="list-disc pl-5 space-y-1">
-                        {tool.pros.map((pro, index) => (
-                          <li key={index}>{pro}</li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-semibold mb-2">Cons</h3>
-                      <ul className="list-disc pl-5 space-y-1">
-                        {tool.cons.map((con, index) => (
-                          <li key={index}>{con}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
+          {/* Pros and Cons */}
+          <div className="grid md:grid-cols-2 text-black gap-6 mb-6">
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Pros</h3>
+              <ul className="list-disc pl-5 space-y-1">
+                {tool.pros.map((pro, index) => (
+                  <li key={index}>{pro}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-2">Cons</h3>
+              <ul className="list-disc pl-5 space-y-1">
+                {tool.cons.map((con, index) => (
+                  <li key={index}>{con}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
 
-                  {/* Why I Chose Section */}
-                  <div className="mb-6 text-black">
-                    <h3 className="text-lg font-semibold mb-2">
-                      Why I chose {tool.title.split(":")[0]}
-                    </h3>
-                    <p className="mb-4">{tool.why.intro}</p>
-                  </div>
+          {/* Why I Chose Section */}
+          <div className="mb-6 text-black">
+            <h3 className="text-lg font-semibold mb-2">
+              Why I chose {tool.title.split(":"[0])}
+            </h3>
+            <p className="mb-4">{tool.why.intro}</p>
+          </div>
 
-                  {/* Expandable Sections */}
-                  {tool.why.extras &&
-                    Object.entries(tool.why.extras).map(([label, content]) => {
-                      const sectionKey = `${tool.id}-${label}`;
-                      return (
-                        <div
-                          key={sectionKey}
-                          className="border-t text-black pt-4 mb-4"
-                        >
-                          <button
-                            onClick={() => toggleSection(sectionKey)}
-                            className="w-full flex justify-between items-center font-medium"
-                          >
-                            <span>{label}</span>
-                            <span className="text-green-600">
-                              {openSections[sectionKey] ? (
-                                <Minus className="w-5 h-5" />
-                              ) : (
-                                <Plus className="w-5 h-5" />
-                              )}
-                            </span>
-                          </button>
-                          {openSections[sectionKey] && (
-                            <div className="mt-2 text-gray-700">
-                              {typeof content === "string" ? (
-                                <p>{content}</p>
-                              ) : (
-                                content
-                              )}
-                            </div>
-                          )}
-                        </div>
-                      );
-                    })}
+          {/* Expandable Sections */}
+          {tool.why.extras &&
+            Object.entries(tool.why.extras).map(([label, content]) => {
+              const sectionKey = `${tool.id}-${label}`;
+              return (
+                <div key={sectionKey} className="border-t text-black pt-4 mb-4">
+                  <button
+                    onClick={() => toggleSection(sectionKey)}
+                    className="w-full flex justify-between items-center font-medium"
+                  >
+                    <span>{label}</span>
+                    <span className="text-green-600">
+                      {openSections[sectionKey] ? (
+                        <Minus className="w-5 h-5" />
+                      ) : (
+                        <Plus className="w-5 h-5" />
+                      )}
+                    </span>
+                  </button>
+                  {openSections[sectionKey] && (
+                    <div className="mt-4 text-gray-700">
+                      {typeof content === "string" ? <p>{content}</p> : content}
+                    </div>
+                  )}
                 </div>
-              ))}
-              </section>
+              );
+            })}
+        </div>
+      ))}
+    </section>
 
               {/* What Creators, agencies, and small businesses each need from newsletter tools */}
 
@@ -1164,6 +1646,12 @@ export default function ProjectManagementPage() {
                     <p className="text-black mb-4">
                       If your audience doesn’t engage via social media, this
                       feature adds little value.
+                    </p>
+                     <h4 className="text-lg font-bold mb-2">
+                     Excessive Template Libraries: {" "}
+                    </h4>
+                    <p className="text-black mb-4">
+                      Too many templates can overwhelm and slow down your workflow.
                     </p>
                   </div>
                 </div>
