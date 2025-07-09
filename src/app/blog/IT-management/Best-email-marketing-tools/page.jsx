@@ -528,7 +528,7 @@ why: {
     //scalahosting
     scalahosting: {
       title: "ScalaHosting: Best for web hosting with premium email",
-      logo: "/images/scalahosting.png",
+      logo: "/images/Scalahosting.png",
       button: {
         text: "Visit Website",
         link: "#",
