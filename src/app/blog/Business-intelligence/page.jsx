@@ -4,30 +4,30 @@ import Image from "next/image";
 import Head from 'next/head';
 const cards = [
   {
-    title: "Top 5 Types of Project Management Methodologies",
+    title: "The Best AI-Powered BI Tools to Stay Ahead in 2025",
     description:
-      "Understanding the different project management methodologies will help you decide which is best for your needs...",
-    author: "Brandon Matthews",
-    date: "January 16, 2025",
-    image: "/images/pm-1.jpeg",
+      "AI BI tools use machine learning to deliver smarter insights fast. Explore the best options to drive better decisions and outpace competitors..",
+    author: "J.R. Johnivan",
+    date: "May 19, 2025",
+    image: "/images/bi-1.jpg",
     link: "/blog/Business-intelligence/Top-Business-Intelligence-Software",
   },
   {
-    title: "What is Workflow Automation in Project Management & Why Is It Important?",
+    title: "Best Power BI Alternatives: Top Tools for Data Analytics in 2025",
     description:
-      "Key takeaways: Workflow automation improves productivity in project teams with the help of software...",
-    author: "Kara Shear",
-    date: "January 4, 2025",
-    image: "/images/pm-2.jpeg",
+      "Exploring alternatives to Power BI? Check out the top BI tools with great features, better pricing, and seamless integrations to find your fit.",
+    author: "Kashyap Vyas",
+    date: "March 25, 2025",
+    image: "/images/bi-2.jpeg",
     link: "/blog/Business-intelligence/Top-Business-Intelligence-Software",
   },
   {
-    title: "Wrike vs. Asana Review: The Complete Guide",
+    title: "Mastering Data Migration: Five Best Practices for a Seamless Transition in 2025",
     description:
-      "Wrike and Asana are two popular project management software options. While they share some overlap, each...",
-    author: "Kara Shear",
-    date: "December 18, 2024",
-    image: "/images/pm-3.jpg",
+      "What is data migration? Moving data from one application to another can be advantageous, read our complete guide to learn how your business can benefit.",
+    author: "Kezia Jungco",
+    date: "March 7, 2025",
+    image: "/images/bi-3.jpg",
     link: "/blog/Business-intelligence/Top-Business-Intelligence-Software",
   },
   // {
