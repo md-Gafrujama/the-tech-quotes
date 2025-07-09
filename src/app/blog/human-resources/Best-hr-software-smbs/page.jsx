@@ -177,6 +177,25 @@ export default function Employeedisciplinary() {
         "You should document the refusal by writing “employee refused to sign” on the form. Add the date and have another manager present as a witness. Make sure the witness also signs the form. Then, give a copy of the form to the employee.",
     },
   ];
+
+    const posts = [
+ 
+  {
+    title: 'How to Do Payroll Yourself: A Comprehensive Small Business Guide',
+    date: 'May 13, 2025',
+    image: '/images/hr-2.jpg',
+  },
+  {
+    title: 'Best Human Resources (HR) Software for Small Businesses in 2025',
+    date: 'May 5, 2025',
+    image: '/images/hr-3.jpg',
+  },
+   {
+    title: 'Ziprecruiter vs Indeed:2025 Comparison for Employees',
+    date: 'July 3, 2025',
+    image: '/images/hr-4.jpg',
+  },
+];
   // Content for each section - you can modify these
   const sectionContent = {
     counseling:
@@ -2277,67 +2296,40 @@ export default function Employeedisciplinary() {
             </div>
           </div>
         </div>
-        {/* Related posts */}
-        <section className="-mt-16 p-28">
-          <h2 className="text-4xl text-black font-bold mb-4">Related posts</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {/* Card 1 */}
-            <div className="rounded-xl border border-gray-200 p-4 shadow-sm bg-white h-72 flex flex-col justify-between">
-              <div>
-                <div className="relative w-full h-40 rounded-lg overflow-hidden mb-2">
-                  <Image
-                    src="/images/hr-4.jpg"
-                    alt="AI Performance Review"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <p className="text-lg text-[#111827] font-semibold leading-snug">
-                  Ziprecruiter vs Indeed: 2025 Comparison for Employers
-                </p>
-              </div>
-              <p className="text-sm text-[#6B7280] mt-2">July 3, 2025</p>
-            </div>
 
-            {/* Card 2 */}
-            <div className="rounded-xl border border-gray-200 p-4 shadow-sm bg-white h-72 flex flex-col justify-between">
-              <div>
-                <div className="relative w-full h-40 rounded-lg overflow-hidden mb-2">
-                  <Image
-                    src="/images/hr-2.jpg"
-                    alt="Payroll Guide"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <p className="text-lg text-[#111827] font-semibold leading-snug">
-                  How to Do Payroll Yourself: A Comprehensive Small Business
-                  Guide
-                </p>
-              </div>
-              <p className="text-sm text-[#6B7280] mt-2">May 13, 2025</p>
-            </div>
+        {/* related postes */}
 
-            {/* Card 3 */}
-            <div className="rounded-xl border border-gray-200 p-4 shadow-sm bg-white h-72 flex flex-col justify-between">
-              <div>
-                <div className="relative w-full h-40 rounded-lg overflow-hidden mb-2">
-                  <Image
-                    src="/images/hr-3.jpg"
-                    alt="HR Software"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <p className="text-lg text-[#111827] font-semibold leading-snug">
-                  Best Human Resources (HR) Software for Small Businesses in
-                  2025
-                </p>
-              </div>
-              <p className="text-sm text-black mt-2">May 5, 2025</p>
-            </div>
-          </div>
-        </section>
+       <section className="w-full px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 2xl:px-32 py-12 bg-white">
+             <h2 className="text-3xl sm:text-4xl font-bold text-[#111827] mb-8">
+               Related posts
+             </h2>
+       
+             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+               {posts.map((post, index) => (
+                 <div
+                   key={index}
+                   className="bg-[#F9FAFB] rounded-2xl overflow-hidden shadow-sm border border-gray-200 flex flex-col"
+                 >
+                   <div className="relative w-full h-52 sm:h-60 md:h-64">
+                     <Image
+                       src={post.image}
+                       alt={post.title}
+                       fill
+                       className="object-cover"
+                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                       priority
+                     />
+                   </div>
+                   <div className="p-4 sm:p-5 flex flex-col justify-between flex-grow">
+                     <p className="text-[#111827] font-semibold text-base sm:text-lg leading-snug line-clamp-3">
+                       {post.title}
+                     </p>
+                     <p className="text-sm text-gray-500 mt-3">{post.date}</p>
+                   </div>
+                 </div>
+               ))}
+             </div>
+           </section>
       </div>
     </>
   );

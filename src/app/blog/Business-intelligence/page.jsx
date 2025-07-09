@@ -30,87 +30,87 @@ const cards = [
     image: "/images/pm-3.jpg",
     link: "/blog/Business-intelligence/Top-Business-Intelligence-Software",
   },
-  {
-    title: "Mind Map Template and Examples",
-    description:
-      "A mind map template can help simplify your planning and brainstorming process. Here's how it can benefit your...",
-    author: "Kara Shear",
-    date: "December 17, 2024",
-    image: "/images/pm-4.jpeg",
-    link: "/blog/",
-  },
-  {
-    title: " The Project Closure Checklist: Overview, Examples & Template",
-    description:
-      "A project closure checklist can help keep your team aligned and ensure no task gets missed. Here’s how to...",
-    author: "Amy Rose Smith",
-    date: "December 12, 2024",
-    image: "/images/pm-5.jpg",
-    link: "/blog/",
-  },
-  {
-    title: "Tips on How to Plan Quality Management in Projects",
-    description:
-      "Creating a quality management plan can help reduce risks and improve outcomes. Read on to know more for better...",
-    author: "Stephen Pratt",
-    date: "October 3, 2024",
-    image: "/images/pm-6.jpeg",
-    link: "/blog/",
-  },
-  {
-    title: "Best Free Project Management Software",
-    description:
-      "Sometimes a spreadsheet just won’t cut it. But a free project management tool doesn’t ruin your budget either...",
-    author: "Charlotte T. Reid",
-    date: "September 19, 2024",
-    image: "/images/hr-7.jpg",
-    link: "/blog/",
-  },
-  {
-    title: "Asana vs monday: Top Project Management Software",
-    description:
-      "Compare Asana and Monday’s key project management features to help you choose the best fit...",
-    author: "Stephen Pratt",
-    date: "September 13, 2024",
-    image: "/images/hr-8.jpg",
-    link: "/blog/",
-  },
-  {
-    title: "What is a Mind Map? Examples, Tips and More",
-    description:
-      "A mind map is a brainstorming tool that helps you visualize ideas. This article shares four ideas to create...",
-    author: "Kara Shear",
-    date: "September 11, 2024",
-    image: "/images/hr-9.jpg",
-    link: "/blog/",
-  },
-  {
-    title: "Design Review Process Guide: Definition, Steps & Types",
-    description:
-      "Need the steps of the design review process? This guide explains what it is and how to execute it effectively...",
-    author: "Kara Shear",
-    date: "August 30, 2024",
-    image: "/images/hr-10.jpg",
-    link: "/blog/",
-  },
-  {
-    title: "Project Management Basics",
-    description:
-      "Key takeaways: Project management is a structured way of managing tasks that may include goals, timelines...",
-    author: "Kara Shear",
-    date: "August 18, 2024",
-    image: "/images/hr-11.jpg",
-    link: "/blog/",
-  },
-  {
-    title: "8 Common Project Risks & How to Manage Them",
-    description:
-      "What are the top common project risks? Learn the best practices and strategies for minimizing them in...",
-    author: "Amy Rose Smith",
-    date: "August 10, 2024",
-    image: "/images/hr-12.png",
-    link: "/blog/",
-  },
+  // {
+  //   title: "Mind Map Template and Examples",
+  //   description:
+  //     "A mind map template can help simplify your planning and brainstorming process. Here's how it can benefit your...",
+  //   author: "Kara Shear",
+  //   date: "December 17, 2024",
+  //   image: "/images/pm-4.jpeg",
+  //   link: "/blog/",
+  // },
+  // {
+  //   title: " The Project Closure Checklist: Overview, Examples & Template",
+  //   description:
+  //     "A project closure checklist can help keep your team aligned and ensure no task gets missed. Here’s how to...",
+  //   author: "Amy Rose Smith",
+  //   date: "December 12, 2024",
+  //   image: "/images/pm-5.jpg",
+  //   link: "/blog/",
+  // },
+  // {
+  //   title: "Tips on How to Plan Quality Management in Projects",
+  //   description:
+  //     "Creating a quality management plan can help reduce risks and improve outcomes. Read on to know more for better...",
+  //   author: "Stephen Pratt",
+  //   date: "October 3, 2024",
+  //   image: "/images/pm-6.jpeg",
+  //   link: "/blog/",
+  // },
+  // {
+  //   title: "Best Free Project Management Software",
+  //   description:
+  //     "Sometimes a spreadsheet just won’t cut it. But a free project management tool doesn’t ruin your budget either...",
+  //   author: "Charlotte T. Reid",
+  //   date: "September 19, 2024",
+  //   image: "/images/hr-7.jpg",
+  //   link: "/blog/",
+  // },
+  // {
+  //   title: "Asana vs monday: Top Project Management Software",
+  //   description:
+  //     "Compare Asana and Monday’s key project management features to help you choose the best fit...",
+  //   author: "Stephen Pratt",
+  //   date: "September 13, 2024",
+  //   image: "/images/hr-8.jpg",
+  //   link: "/blog/",
+  // },
+  // {
+  //   title: "What is a Mind Map? Examples, Tips and More",
+  //   description:
+  //     "A mind map is a brainstorming tool that helps you visualize ideas. This article shares four ideas to create...",
+  //   author: "Kara Shear",
+  //   date: "September 11, 2024",
+  //   image: "/images/hr-9.jpg",
+  //   link: "/blog/",
+  // },
+  // {
+  //   title: "Design Review Process Guide: Definition, Steps & Types",
+  //   description:
+  //     "Need the steps of the design review process? This guide explains what it is and how to execute it effectively...",
+  //   author: "Kara Shear",
+  //   date: "August 30, 2024",
+  //   image: "/images/hr-10.jpg",
+  //   link: "/blog/",
+  // },
+  // {
+  //   title: "Project Management Basics",
+  //   description:
+  //     "Key takeaways: Project management is a structured way of managing tasks that may include goals, timelines...",
+  //   author: "Kara Shear",
+  //   date: "August 18, 2024",
+  //   image: "/images/hr-11.jpg",
+  //   link: "/blog/",
+  // },
+  // {
+  //   title: "8 Common Project Risks & How to Manage Them",
+  //   description:
+  //     "What are the top common project risks? Learn the best practices and strategies for minimizing them in...",
+  //   author: "Amy Rose Smith",
+  //   date: "August 10, 2024",
+  //   image: "/images/hr-12.png",
+  //   link: "/blog/",
+  // },
 ];
 
 export default function ProjectManagement() {
