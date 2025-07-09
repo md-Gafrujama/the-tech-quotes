@@ -385,37 +385,46 @@ export default function Page() {
           </div>
 
           {/* Overlapping Hover-Animated Images */}
-          <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] flex items-center justify-center order-1 md:order-2">
-            {/* Bottom Image */}
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-[4px] sm:border-[6px] border-[#0D1B2A] z-10 transition-transform duration-300 hover:scale-110">
-              <Image 
-                src="/images/group3.png" 
-                alt="Team Meeting" 
-                fill 
-                className="object-cover"
-              />
-            </div>
+  <div className="relative w-full h-[350px] sm:h-[400px] md:h-[380px] flex items-center justify-center order-1 md:order-2 overflow-hidden ">
 
-            {/* Top Left Image */}
-            <div className="absolute top-8 sm:top-12 left-8 sm:left-12 w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-[4px] sm:border-[6px] border-[#0D1B2A] z-20 transition-transform duration-300 hover:scale-110">
-              <Image 
-                src="/images/group1.png" 
-                alt="Team Collaboration" 
-                fill 
-                className="object-cover"
-              />
-            </div>
+  {/* Animated Background Blobs */}
+   
+   
 
-            {/* Top Right Image */}
-            <div className="absolute top-8 sm:top-12 right-8 sm:right-12 w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-[4px] sm:border-[6px] border-[#0D1B2A] z-30 transition-transform duration-300 hover:scale-110">
-              <Image 
-                src="/images/group2.png" 
-                alt="Individual Work" 
-                fill 
-                className="object-cover"
-              />
-            </div>
-          </div>
+  {/* Center Image */}
+  <div className="absolute top-[75%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 rounded-xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm z-30 shadow-md transition-transform duration-300 hover:scale-105">
+    <Image 
+      src="/images/group3.png" 
+      alt="Team Meeting" 
+      fill 
+      className="object-cover"
+    />
+  </div>
+
+  {/* Left Image */}
+  <div className="absolute top-[30%] left-[33%] transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 rounded-xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm z-20 shadow-md transition-transform duration-300 hover:scale-105">
+    <Image 
+      src="/images/group1.png" 
+      alt="Team Collaboration" 
+      fill 
+      className="object-cover"
+    />
+  </div>
+
+  {/* Right Image */}
+  <div className="absolute top-[30%] right-[34%] transform translate-x-1/2 -translate-y-1/2 w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 rounded-xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm z-20 shadow-md transition-transform duration-300 hover:scale-105">
+    <Image 
+      src="/images/group2.png" 
+      alt="Individual Work" 
+      fill 
+      className="object-cover"
+    />
+  </div>
+</div>
+
+
+
+
         </div>
       </section>
 
