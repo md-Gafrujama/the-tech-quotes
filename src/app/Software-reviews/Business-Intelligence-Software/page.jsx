@@ -334,11 +334,16 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
         
        <div className="bg-white rounded-xl shadow-md border overflow-hidden mt-12">
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center p-6 border-b bg-[#F5F8F7]">
-          <div>
-            <h3 className="text-xl sm:text-2xl font-semibold text-gray-800">
-              Tableau: Best for data visualization
-            </h3>
-          </div>
+         <div className="flex items-center gap-4">
+  <img
+    src="/images/tableau.png" // replace with your image path or URL
+    alt="Tableau Logo"
+    className="w-10 h-10 object-contain"
+  />
+  <h3 className="text-xl sm:text-2xl font-semibold text-gray-800">
+    Tableau: Best for data visualization
+  </h3>
+</div>
           <a
             href="#"
             target="_blank"
@@ -578,11 +583,17 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
                               {/* Sisense Card */}
   <div className="bg-white rounded-xl shadow-md border overflow-hidden mt-12">
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center p-6 border-b bg-[#F5F8F7]">
-      <div>
-        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800">
-          Sisense: Best for embedded analytics
-        </h3>
-      </div>
+     <div className="flex items-center gap-4">
+  <img
+    src="/images/sisense.png" // replace with your image path or URL
+    alt="  sisense Logo"
+    className="w-10 h-10 object-contain"
+  />
+  <h3 className="text-xl sm:text-2xl font-semibold text-gray-800">
+   Sisense: Best for embedded analytics
+  </h3>
+</div>
+      
       <a
         href="#"
         target="_blank"
@@ -822,11 +833,19 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
   </div>
    <div className="bg-white rounded-xl shadow-md border overflow-hidden mt-12">
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center p-6 border-b bg-[#F5F8F7]">
-      <div>
-        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800">
-          Qlik Sense: Best mobile BI software
-        </h3>
-      </div>
+      <div className="flex items-center gap-4">
+  <img
+    src="/images/qlikicon.png" // replace with your image path or URL
+    alt="  qlikicon Logo"
+    className="w-10 h-10 object-contain"
+  />
+  <h3 className="text-xl sm:text-2xl font-semibold text-gray-800">
+   Qlik Sense: Best mobile BI software
+  </h3>
+</div>
+     
+     
+      
       <a
         href="#"
         target="_blank"
@@ -1045,11 +1064,19 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
   {/* Section 5 - Zoho Analytics Pick Card */}
   <div className="bg-white rounded-xl shadow-md border overflow-hidden mt-12">
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center p-6 border-b bg-[#F5F8F7]">
-      <div>
-        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800">
-          Zoho Analytics: Best self-service BI software
-        </h3>
-      </div>
+      <div className="flex items-center gap-4">
+  <img
+    src="/images/zoho-analytics.png" // replace with your image path or URL
+    alt="  zoho Logo"
+    className="w-10 h-10 object-contain"
+  />
+  <h3 className="text-xl sm:text-2xl font-semibold text-gray-800">
+  Zoho Analytics: Best self-service BI software
+  </h3>
+</div>
+
+     
+      
       <a
         href="#"
         target="_blank"
@@ -1273,11 +1300,19 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
   {/* Section 6 - IBM Cognos Analytics Pick Card */}
    <div className="bg-white rounded-xl shadow-md border overflow-hidden mt-12">
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center p-6 border-b bg-[#F5F8F7]">
-      <div>
-        <h3 className="text-xl sm:text-2xl font-semibold text-gray-800">
-          IBM Cognos Analytics: Best for reporting
-        </h3>
-      </div>
+        <div className="flex items-center gap-4">
+  <img
+    src="/images/IBM.png" // replace with your image path or URL
+    alt="  IBM Logo"
+    className="w-10 h-10 object-contain"
+  />
+  <h3 className="text-xl sm:text-2xl font-semibold text-gray-800">
+    IBM Cognos Analytics: Best for reporting
+  </h3>
+</div>
+      
+      
+      
       <a
         href="#"
         target="_blank"
@@ -1603,25 +1638,12 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
         </div>
         {/* Product Cards */}
 <div className="mt-10 space-y-6">
-  {/* Angles Enterprise for SAP */}
-  <div className="bg-white p-6 rounded-xl border shadow-sm">
-    <div className="flex items-center justify-between">
-      <img src="/images/angles-logo.jpg" alt="Angles logo" className="h-6" />
-      <a href="#" className="text-blue-600 text-sm font-medium hover:underline">Compare</a>
-    </div>
-    <h3 className="text-lg font-semibold text-gray-800 mt-2">Angles Enterprise for SAP <span className="text-sm text-blue-500 ml-2">Leave a Review</span></h3>
-    <p className="text-sm text-gray-600 mt-1"><strong>Good for:</strong> Medium (250–999 Employees), Enterprise (5,000+ Employees), Large (1,000–4,999 Employees)</p>
-    <p className="text-gray-700 text-sm mt-3">
-      Angles for SAP works “plug-and-play” on any SAP ERP, including both ECC and S/4HANA, to collect and prepare data so it is suitable to analyze. It understands context, connections, and integrations, and it simplifies data for business users. It then creates insights into what is happening at an operational level now and in the foreseeable future by enriching the data with pre-built supply chain and finance calculations, on a transaction level and in the form of operational KPIs. 
-      <a href="#" className="text-blue-600 font-medium ml-1">Learn More About Angles Enterprise for SAP</a>
-    </p>
-    <button className="mt-4 inline-block px-5 py-2 bg-gray-100 text-sm font-medium text-gray-800 rounded-full border hover:bg-gray-200 transition">Visit Product Profile</button>
-  </div>
+ 
 
   {/* Angles Professional */}
   <div className="bg-white p-6 rounded-xl border shadow-sm">
     <div className="flex items-center justify-between">
-      <img src="/images/angles-logo.jpg" alt="Angles logo" className="h-6" />
+      <img src="/images/angles.jpg" alt="Angles logo" className="h-6" />
       <a href="#" className="text-blue-600 text-sm font-medium hover:underline">Compare</a>
     </div>
     <h3 className="text-lg font-semibold text-gray-800 mt-2">Angles Professional <span className="text-sm text-blue-500 ml-2">Leave a Review</span></h3>
@@ -1638,7 +1660,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
   {/* APISCRAPY */}
   <div className="bg-white p-6 rounded-xl border shadow-sm">
     <div className="flex items-center justify-between">
-      <img src="/images/apiscrapy-logo.png" alt="APISCRAPY logo" className="h-6" />
+      <img src="/images/apiscrapy.png" alt="APISCRAPY logo" className="h-6" />
       <a href="#" className="text-blue-600 text-sm font-medium hover:underline">Compare</a>
     </div>
     <h3 className="text-lg font-semibold text-gray-800 mt-2">
@@ -1657,7 +1679,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
   {/* Ayata */}
   <div className="bg-white p-6 rounded-xl border shadow-sm">
     <div className="flex items-center justify-between">
-      <img src="/images/ayata-logo.png" alt="Ayata logo" className="h-6" />
+      <img src="/images/ayata.png" alt="Ayata logo" className="h-6" />
       <a href="#" className="text-blue-600 text-sm font-medium hover:underline">Compare</a>
     </div>
     <h3 className="text-lg font-semibold text-gray-800 mt-2">
@@ -1674,7 +1696,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
   {/* BigBI Software */}
   <div className="bg-white p-6 rounded-xl border shadow-sm">
     <div className="flex items-center justify-between">
-      <img src="/images/bigbi-logo.png" alt="BigBI Software logo" className="h-6" />
+      <img src="/images/bigbi.png" alt="BigBI Software logo" className="h-6" />
       <a href="#" className="text-blue-600 text-sm font-medium hover:underline">Compare</a>
     </div>
     <h3 className="text-lg font-semibold text-gray-800 mt-2">
@@ -1700,7 +1722,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
     {/* Bilbeo Analytics Card */}
   <div className="bg-white border rounded-xl p-6 shadow-sm flex flex-col gap-4 mt-10">
     <div className="flex justify-between items-start">
-      <img src="/images/bilbeo-logo.png" alt="Bilbeo Logo" className="h-8" />
+      <img src="/images/bilbeo.png" alt="Bilbeo Logo" className="h-8" />
       <div className="flex items-center gap-4">
         <a href="#" className="text-green-600 text-sm">Leave a Review</a>
         <a href="#" className="text-blue-700 font-semibold text-sm">Compare</a>
@@ -1724,7 +1746,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
   {/* BIME Card */}
   <div className="bg-white border rounded-xl p-6 shadow-sm flex flex-col gap-4 mt-10">
     <div className="flex justify-between items-start">
-      <img src="/images/bime-logo.png" alt="BIME Logo" className="h-6" />
+      <img src="/images/bime.png" alt="BIME Logo" className="h-6" />
       <div className="flex items-center gap-4">
         <a href="#" className="text-green-600 text-sm">Leave a Review</a>
         <a href="#" className="text-blue-700 font-semibold text-sm">Compare</a>
@@ -1748,7 +1770,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
   {/* bipp Analytics Card */}
   <div className="bg-white border rounded-xl p-6 shadow-sm flex flex-col gap-4 mt-10">
     <div className="flex justify-between items-start">
-      <img src="/images/bipp-logo.jpg" alt="bipp Logo" className="h-6" />
+      <img src="/images/bipp.jpg" alt="bipp Logo" className="h-6" />
       <div className="flex items-center gap-4">
         <a href="#" className="text-green-600 text-sm">Leave a Review</a>
         <a href="#" className="text-blue-700 font-semibold text-sm">Compare</a>
@@ -1771,7 +1793,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
   {/* Birst Card */}
 <div className="bg-white border rounded-xl p-6 shadow-sm flex flex-col gap-4 mt-10">
   <div className="flex justify-between items-start">
-    <img src="/images/birst-logo.png" alt="Birst Logo" className="h-6" />
+    <img src="/images/birst.png" alt="Birst Logo" className="h-6" />
     <div className="flex items-center gap-4">
       <span className="text-green-700 text-sm font-semibold">4.5 (1 review)</span>
       <a href="#" className="text-blue-700 font-semibold text-sm">Compare</a>
@@ -1796,7 +1818,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
 {/* Birt Analytics - Actuate Card */}
 <div className="bg-white border rounded-xl p-6 shadow-sm flex flex-col gap-4 mt-10">
   <div className="flex justify-between items-start">
-    <img src="/images/birt-logo.jpg" alt="Birt Analytics Logo" className="h-6" />
+    <img src="/images/bird.jpg" alt="Birt Analytics Logo" className="h-6" />
     <div className="flex items-center gap-4">
       <a href="#" className="text-green-600 text-sm">Leave a Review</a>
       <a href="#" className="text-blue-700 font-semibold text-sm">Compare</a>
