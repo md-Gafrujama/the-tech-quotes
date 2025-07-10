@@ -2,14 +2,15 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
+import { FaQuoteLeft } from "react-icons/fa";
 
 export default function CareersPage() {
   const [openIndex, setOpenIndex] = useState(null);
   const [showOpportunities, setShowOpportunities] = useState(false);
+  const [showFAQs, setShowFAQs] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedLocation, setSelectedLocation] = useState('');
   const [selectedDepartment, setSelectedDepartment] = useState('');
-  const [showFAQs, setShowFAQs] = useState(false);
 
   const toggleSection = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -17,6 +18,27 @@ export default function CareersPage() {
 
   const scrollToCulture = () => {
     const element = document.getElementById("culture-compass");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    // Close other sections when clicking Culture
+    setShowOpportunities(false);
+    setShowFAQs(false);
+  };
+
+  const handleOpportunitiesClick = () => {
+    setShowOpportunities(true);
+    setShowFAQs(false);
+    const element = document.getElementById("opportunities-section");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleFAQsClick = () => {
+    setShowFAQs(true);
+    setShowOpportunities(false);
+    const element = document.getElementById("faqs-section");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
@@ -113,28 +135,28 @@ We recognize that diversity extends beyond the color of our skin to include ethn
     },
   ];
 
-  const testimonials = [
-    {
-      text: `There are endless opportunities to explore and advance your career at TechnologyAdvice. The company invests a lot of training and time into it's team members and it's apparent that you get what you put in. If you want growth, opportunity, and an exciting fast-paced environment, TA is the right place for you.`,
-    },
-    {
-      text: `You will grow really fast at TA and learn a lot quickly. You will learn how to challenge yourself and stretch your capabilities. The organization is goal driven and focused. The team is fun and my colleagues are great to work with and people are friendly.`,
-    },
-    {
-      text: `I have never been a part of a company that is as positive as TechnologyAdvice. TA's management lives by the 5 core values, and this trickles down throughout the entire organization.`,
-    },
-  ];
+ const testimonials = [
+  {
+    text: `There are endless opportunities to explore and advance your career at TechnologyAdvice. The company invests a lot of training and time into it's team members and it’s apparent that you get what you put in. If you want growth, opportunity, and an exciting fast-paced environment, TA is the right place for you.`,
+  },
+  {
+    text: `You will grow really fast at TA and learn a lot quickly. You will learn how to challenge yourself and stretch your capabilities. The organization is goal driven and focused. The team is fun and my colleagues are great to work with and people are friendly.`,
+  },
+  {
+    text: `I have never been a part of a company that is as positive as TechnologyAdvice. TA’s management lives by the 5 core values, and this trickles down throughout the entire organization.`,
+  },
+];
 
   const awards = [
-    { src: 'https://assets.technologyadvice.com/uploads/2024/06/award-inc-5000.png', alt: 'Inc. 5000 6-Time Award Winner' },
-    { src: 'https://assets.technologyadvice.com/uploads/2024/06/award-next.png', alt: '2019 Winner Next Awards' },
-    { src: 'https://assets.technologyadvice.com/uploads/2024/06/award-500.png', alt: 'Deloitte Technology Fast 500' },
-    { src: 'https://assets.technologyadvice.com/uploads/2024/06/award-forbes.png', alt: "Forbes America's Best Startup Employers 2021" },
-    { src: 'https://assets.technologyadvice.com/uploads/2024/06/award-nbj.png', alt: 'NBA Small Business Award Recipient' },
-    { src: 'https://assets.technologyadvice.com/uploads/2024/06/award-best-workplaces.png', alt: 'Inc. Best Workplaces 2021' },
-    { src: 'https://assets.technologyadvice.com/uploads/2024/06/award-best-business.png', alt: 'Best Business Award' },
-    { src: 'https://assets.technologyadvice.com/uploads/2024/06/Built-In-2-1.png', alt: 'Top Workplaces Tennessee' },
-    { src: 'https://assets.technologyadvice.com/uploads/2024/06/Built-In-2.png', alt: 'Top Workplaces USA' },
+    { src: '/images/award1.png', alt: 'Inc. 5000 6-Time Award Winner' },
+    { src: '/images/award2.png', alt: '2019 Winner Next Awards' },
+    { src: '/images/award3.png', alt: 'Deloitte Technology Fast 500' },
+    { src: '/images/award4.png', alt: "Forbes America's Best Startup Employers 2021" },
+    { src: '/images/award5.png', alt: 'NBA Small Business Award Recipient' },
+    { src: '/images/award6.png', alt: 'Inc. Best Workplaces 2021' },
+    { src: '/images/award7.png', alt: 'Best Business Award' },
+    { src: '/images/award8.png', alt: 'Top Workplaces Tennessee' },
+   
   ];
 
   const benefits = [
@@ -409,18 +431,17 @@ We recognize that diversity extends beyond the color of our skin to include ethn
                 Subscribe to our Talent Community →
               </a>
             </div>
-
-            <button
-              className="bg-[#ffd800] text-black px-8 py-3 rounded-full font-semibold hover:opacity-90 transition"
-            >
-              Apply Now
-            </button>
+<a href="/About-Us/Careers/opportunities" className="inline-block">
+  <button className="bg-[#ffd800] text-black px-8 py-3 rounded-full font-semibold hover:opacity-90 transition">
+    Apply Now
+  </button>
+</a>
           </div>
 
           <div className="md:w-1/2 flex justify-center">
             <div className="rounded-xl overflow-hidden w-full max-w-md">
               <Image
-                src="https://assets.technologyadvice.com/uploads/2024/06/ta-careers.png"
+                src="/images/careers1.png"
                 alt="Team working together"
                 width={500}
                 height={500}
@@ -430,15 +451,16 @@ We recognize that diversity extends beyond the color of our skin to include ethn
           </div>
         </div>
 
-        <div className="flex flex-wrap gap-8 mt-12 text-[#ffd800] font-semibold">
-          <button onClick={scrollToCulture} className="hover:underline">Culture</button>
-          <button onClick={() => setShowOpportunities(true)} className="hover:underline">Opportunities</button>
-          <button onClick={() => setShowFAQs(true)} className="hover:underline">FAQs</button>
-        </div>
+       <div className="flex flex-wrap gap-8 mt-50 text-[#ffd800] font-semibold text-xl">
+  <a href="/About-Us/Careers" className="hover:underline">Culture</a>
+  <a href="/About-Us/Careers/opportunities" className="hover:underline">Opportunities</a>
+  <a href="/About-Us/Careers/faqs" className="hover:underline">FAQs</a>
+</div>
+
       </div>
 
       {/* Culture Compass Section */}
-      <div id="culture-compass" className="bg-white min-h-screen text-black px-8 md:px-16 py-12">
+      <div id="culture-compass" className="bg-white min-h-screen text-black max-w-6xl mx-auto px-4 py-16">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Culture Compass</h2>
 
         <p className="text-lg md:w-3/4 mb-4">
@@ -466,9 +488,110 @@ We recognize that diversity extends beyond the color of our skin to include ethn
           </div>
         ))}
       </div>
+{/* 
+testimonials */}
+ <section className="py-16 bg-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-semibold text-center text-gray-900 mb-12">
+          What our team members have to say
+        </h2>
+        <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          {testimonials.map((t, idx) => (
+            <div
+              key={idx}
+              className="bg-[#0d1424] text-white p-6 rounded-2xl shadow-md h-full min-h-[330px] flex flex-col justify-between"
+            >
+              <div className="flex items-start gap-3 mb-4">
+                <FaQuoteLeft className="text-green-400 text-xl mt-1" />
+                <span className="h-full w-0.5 bg-green-400 mt-1" />
+              </div>
+              <p className="text-md font-medium leading-relaxed">
+                {t.text}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
 
+     {/* Awards Section */}
+      <div className="py-16 px-4  max-w-6xl mx-auto sm:px-6 lg:px-8" style={{ color: TEXT_COLOR }}>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12">
+            Awards
+          </h2>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+            {awards.map((award, index) => (
+              <div key={index} className="bg-gray-50 p-6 rounded-lg shadow-sm flex items-center justify-center h-40">
+                <Image
+                  src={award.src}
+                  alt={award.alt}
+                  width={200}
+                  height={100}
+                  className="object-contain max-h-full"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+
+{/* Benefits Section */}
+      <div className=" sm:px-6 lg:px-8  mx-auto px-4 py-16" style={{ backgroundColor: BENEFITS_BACKGROUND_COLOR, color: 'white' }}>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl md:text-5xl max-w-6xl mx-auto font-bold mb-12 text-white">
+            Benefits of working on our team
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="p-6 rounded-lg shadow-sm"
+                style={{ backgroundColor: BENEFITS_ITEM_BG_COLOR }}
+              >
+                <div className="flex-shrink-0 p-3 rounded-md mb-4" style={{ backgroundColor: TEXT_COLOR }}>
+                  {benefit.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-2 text-white">
+                  {benefit.title}
+                </h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      {/* video section */}
+      <section className="py-16 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-[#f6f8fc] rounded-2xl grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
+          {/* Left Side - Text */}
+          <div className="p-8 flex flex-col justify-center">
+            <h2 className="text-3xl font-bold text-[#0d1424] mb-4">
+              We’d love to work with you
+            </h2>
+            <p className="text-gray-700 text-lg leading-relaxed max-w-md">
+              No matter who you are or what stage of your career you find yourself, when you join the TechnologyAdvice team you begin an incredible adventure.
+            </p>
+          </div>
+
+          {/* Right Side - Video */}
+         <div className="w-full h-full aspect-video">
+  <iframe
+    className="w-full h-full"
+    src="https://www.youtube.com/embed/2D4-ar_d5K4?list=PLFagkHjQLihMrfT0Czpl97H7XuxQ8Uf96"
+    title="TechnologyAdvice - Careers Video"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  ></iframe>
+</div>
+        </div>
+      </div>
+    </section>
       {/* Core Values Section */}
-      <div className="py-16 px-4 sm:px-6 lg:px-8" style={{ color: TEXT_COLOR }}>
+      <div className=" sm:px-6 lg:px-8 max-w-6xl mx-auto px-4 py-16" style={{ color: TEXT_COLOR }}>
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12">
             Core values
@@ -494,35 +617,11 @@ We recognize that diversity extends beyond the color of our skin to include ethn
         </div>
       </div>
 
-      {/* Benefits Section */}
-      <div className="py-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: BENEFITS_BACKGROUND_COLOR, color: 'white' }}>
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white">
-            Benefits of working on our team
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="p-6 rounded-lg shadow-sm"
-                style={{ backgroundColor: BENEFITS_ITEM_BG_COLOR }}
-              >
-                <div className="flex-shrink-0 p-3 rounded-md mb-4" style={{ backgroundColor: TEXT_COLOR }}>
-                  {benefit.icon}
-                </div>
-                <h3 className="text-xl font-semibold mb-2 text-white">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-300">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      
 
       {/* Picture Yourself Section */}
       <div className="py-16 px-4 sm:px-6 lg:px-8" style={{ color: TEXT_COLOR }}>
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12">
             Picture yourself at TechnologyAdvice
           </h2>
@@ -530,7 +629,7 @@ We recognize that diversity extends beyond the color of our skin to include ethn
             <div className="flex flex-col md:flex-row gap-8 w-full">
               <div className="relative w-full h-96 rounded-lg overflow-hidden">
                 <Image
-                  src="https://assets.technologyadvice.com/uploads/2023/06/APAC-Outing-768x510.jpeg"
+                  src="/images/APAC1.jpeg"
                   alt="Team members wearing crowns"
                   layout="fill"
                   objectFit="cover"
@@ -538,7 +637,7 @@ We recognize that diversity extends beyond the color of our skin to include ethn
               </div>
               <div className="relative w-full h-96 rounded-lg overflow-hidden">
                 <Image
-                  src="https://assets.technologyadvice.com/uploads/2023/06/Bucket-List-Benefit-768x432.jpg"
+                  src="/images/APCA1.jpg"
                   alt="Person skydiving"
                   layout="fill"
                   objectFit="cover"
@@ -549,31 +648,10 @@ We recognize that diversity extends beyond the color of our skin to include ethn
         </div>
       </div>
 
-      {/* Awards Section */}
-      <div className="py-16 px-4 sm:px-6 lg:px-8" style={{ color: TEXT_COLOR }}>
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12">
-            Awards
-          </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-            {awards.map((award, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-lg shadow-sm flex items-center justify-center h-40">
-                <Image
-                  src={award.src}
-                  alt={award.alt}
-                  width={200}
-                  height={100}
-                  className="object-contain max-h-full"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Jobs Available Section */}
+     
+      {/* Jobs Available Section - Only shown when showOpportunities is true */}
       {showOpportunities && (
-        <div className="bg-white py-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: GLOBAL_BG_COLOR, color: TEXT_COLOR }}>
+        <div id="opportunities-section" className="bg-white py-16 px-4 sm:px-6 lg:px-8" style={{ backgroundColor: GLOBAL_BG_COLOR, color: TEXT_COLOR }}>
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-12">
               Jobs available
@@ -596,7 +674,7 @@ We recognize that diversity extends beyond the color of our skin to include ethn
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center px-3 text-gray-700">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-                    <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a8.75 8.75 0 002.304-1.213 6.022 6.022 0 012.498-1.725 6.022 6.022 0 002.504-1.727 8.75 8.75 0 002.304-1.215 4.002 4.002 0 002.49-3.44c-.082-1.94-.97-3.614-2.618-4.944A10.05 10.05 0 0012 2.252c-2.34 0-4.526.702-6.235 1.875a10.05 10.05 0 00-2.618 4.943 4.002 4.002 0 002.49 3.44 8.75 8.75 0 002.304 1.215 6.022 6.022 0 012.504 1.727 6.022 6.022 0 012.498 1.725 8.75 8.75 0 00.07.04zm-.484 1.05zm2.25-14.82l-2.09-2.09c-.39-.39-1.023-.39-1.414 0l-2.09 2.09a1 1 0 000 1.414l2.09 2.09a1 1 0 001.414 0l2.09-2.09a1 1 0 000-1.414z" clipRule="evenodd" />
+                    <path fillRule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a8.75 8.75 0 002.304-1.213 6.022 6.022 0 012.498-1.725 6.022 6.022 0 012.504-1.727 8.75 8.75 0 002.304-1.215 4.002 4.002 0 002.49-3.44c-.082-1.94-.97-3.614-2.618-4.944A10.05 10.05 0 0012 2.252c-2.34 0-4.526.702-6.235 1.875a10.05 10.05 0 00-2.618 4.943 4.002 4.002 0 002.49 3.44 8.75 8.75 0 002.304 1.215 6.022 6.022 0 012.504 1.727 6.022 6.022 0 012.498 1.725 8.75 8.75 0 00.07.04zm-.484 1.05zm2.25-14.82l-2.09-2.09c-.39-.39-1.023-.39-1.414 0l-2.09 2.09a1 1 0 000 1.414l2.09 2.09a1 1 0 001.414 0l2.09-2.09a1 1 0 000-1.414z" clipRule="evenodd" />
                   </svg>
                 </div>
               </div>
@@ -669,28 +747,15 @@ We recognize that diversity extends beyond the color of our skin to include ethn
         </div>
       )}
 
-      {/* Interviewing FAQs Section */}
-      <div className="py-16 px-4 sm:px-6 lg:px-8" style={{ color: TEXT_COLOR }}>
-        <div className="max-w-7xl mx-auto">
-          <button
-            onClick={() => setShowFAQs(!showFAQs)}
-            className="flex items-center justify-between w-full py-4 px-6 bg-gray-100 rounded-lg shadow-sm text-left focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-300"
-          >
-            <h2 className="text-2xl font-bold">Interviewing FAQs</h2>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className={`w-6 h-6 transform transition-transform duration-300 ${showFAQs ? 'rotate-180' : ''}`}
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-            </svg>
-          </button>
+      {/* Interviewing FAQs Section - Only shown when showFAQs is true */}
+      {showFAQs && (
+        <div id="faqs-section" className="py-16 px-4 sm:px-6 lg:px-8" style={{ color: TEXT_COLOR }}>
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold mb-12">
+              Interviewing FAQs
+            </h2>
 
-          {showFAQs && (
-            <div className="mt-8 space-y-8">
+            <div className="space-y-8">
               {/* FAQ Items */}
               <div>
                 <h3 className="text-xl font-semibold mb-2">
@@ -718,12 +783,104 @@ We recognize that diversity extends beyond the color of our skin to include ethn
                   New hires located within 50 miles of an office are requested to work from the office for their first week and for quarterly stakeholder meetings. If you are located in the US, we offer a Hybrid Work Policy allowing our team the choice to work 100% in the office, 100% remote, or a blend of the two unless otherwise noted.
                 </p>
               </div>
+              
+              <div>
+                <h3 className="text-xl font-semibold mb-2">
+                  What does TechnologyAdvice do?
+                </h3>
+                <p className="text-gray-700">
+                  Our 'what' can be broken down into two focuses.
+                  We help people who are in need of new or optimized tech (primarily software) for their business get unbiased advice and data that helps them make sound purchasing decisions.
+                  We help technology companies connect with an exclusive audience of 100 million buyers to ease the burden of prospecting blindly and meet buyers on their terms. We shorten the sales cycle by doing the initial vetting and qualifying of a prospect.
+                </p>
+              </div>
+              
+              <div>
+                <h3 className="text-xl font-semibold mb-2">
+                  I just submitted my application — what happens next?
+                </h3>
+                <p className="text-gray-700">
+                  We're so excited you're interested in working with us! After applying, you will receive a confirmation email from our applicant tracking system confirming your application has been received. We review every application that we receive but unfortunately are unable to respond to every applicant directly. We will reach out to qualified candidates with an update on the next step within 5 – 7 days. Typically, a member of our HR team will conduct a phone interview with qualified candidates.
+                </p>
+              </div>
 
-              {/* More FAQ items... */}
+              <div>
+                <h3 className="text-xl font-semibold mb-2">
+                  What are the steps in your hiring process?
+                </h3>
+                <p className="text-gray-700">
+                  Below is an overview of our standard hiring process and typical time commitment for each stage:
+                  Phone Interview, 20 – 30 minutes 
+                  Skills Assessment, approximately 2 hours (on task) 
+                  Hiring Manager Interview, 60 – 90 minutes 
+                  Test Drive, 3 – 4 hours 
+                  Certain stages in the hiring process may be adjusted depending on the position or hiring manager.
+                  What is a Test Drive?
+                  Just like you wouldn't buy a car without test driving it first, we want candidates and future employees to have the opportunity to test their potential new role and company! You'll get a taste of a typical day and meet some of the team members you could work alongside!
+                </p>
+              </div>
+              
+              <div>
+                <h3 className="text-xl font-semibold mb-2">
+                  How long does your hiring process take?
+                </h3>
+                <p className="text-gray-700">
+                  It varies based on the position, but on average it takes around 2-3 weeks from when you apply to when an offer goes out. Our priority is always finding the right match rather than meeting a timeline. We want to ensure that not only are you a good fit for us but that we're also a good fit for you.
+                  Be sure to keep your recruiter in the loop regarding any additional opportunities you are exploring so our recruitment team can work to accommodate your timeline and availability.
+                </p>
+              </div>
+              
+              <div>
+                <h3 className="text-xl font-semibold mb-2">
+                  What should I wear to my interview?
+                </h3>
+                <p className="text-gray-700">
+                  Congrats on making it to the next stage! While we're a pretty casual bunch day-to-day, we believe interviews are a chance to put your best foot forward. Business casual is a safe bet, but if you're unsure, it's always better to be slightly overdressed than underdressed. When in doubt—dress to impress!
+                </p>
+              </div>
+              
+              <div>
+                <h3 className="text-xl font-semibold mb-2">
+                  How do you foster diversity, equity, and inclusion?
+                </h3>
+                <p className="text-gray-700">
+                  We're so glad you asked! TechnologyAdvice launched its Diversity, Equity, and Inclusion committee in 2019 and regularly holds events, training, book clubs, and listening sessions to support our team and ensure we offer an inclusive workplace for all. DE&I is an ongoing and continuous effort. We're committed to growing, learning, and bettering ourselves, our communities, and our future.
+                </p>
+              </div>
+              
+              <div>
+                <h3 className="text-xl font-semibold mb-2">
+                  I know someone who would make a great fit for TechnologyAdvice, but am not a current employee. Can I make a referral?
+                </h3>
+                <p className="text-gray-700">
+                  We're so glad you'd like to recommend someone to work with us. We offer up to a $1,000 USD bonus for an eligible referral who is hired and completes 90 days of working with us in the US, UK, AU, and SG. For full-time roles that are based in the Philippines, you could be eligible for a $200 bonus. Please make note of our additional requirements below.
+                  To be eligible for a referral bonus, the candidate you refer cannot previously exist in our ATS or has been previously reached out to by our HR team. Internal team members must submit their referrals in our ATS.
+                  Additionally, you must either a) email careers@technologyadvice.com with your referral prior to the candidate applying, and/or b) the candidate MUST list your name in the "Did someone specifically refer you to apply?" section of the application. Only one referral bonus will be paid for each successful new hire, be sure they name you!
+                </p>
+              </div>
+              
+              <div>
+                <h3 className="text-xl font-semibold mb-2">
+                  I was referred to TechnologyAdvice by a friend, colleague, pet sitter, etc.
+                </h3>
+                <p className="text-gray-700">
+                  That's great! Make sure that you list their name in the "Did someone specifically refer you to apply?" section of the application. Please only list one name. We may contact them for any further insight they may be able to provide.
+                </p>
+              </div>
+              
+              <div>
+                <h3 className="text-xl font-semibold mb-2">
+                  I want to work at TechnologyAdvice, but I don't see a role I'm qualified for/interested in.
+                </h3>
+                <p className="text-gray-700">
+                  We understand that waiting for the right role is really important. One way to stay up to date on open roles is our community newsletter! We will highlight open jobs, provide company updates, and even offer interviewing/career tips!
+                  You can also fill out our general application to tell us a bit more about yourself and what you're looking for in a position. We're a fast-growing company and we are always looking for talented folks to join and have hired a number of individuals through our general application.
+                  We'll reach out if we have a role that's a fit for you now or in the future.
+                </p>
+              </div>
             </div>
-          )}
+          </div>
         </div>
-      </div>
+      )}
     </div>
-  );
-}
+  );}

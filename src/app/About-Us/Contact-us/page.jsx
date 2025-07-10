@@ -79,6 +79,7 @@ export default function ContactPage() {
         <div className="bg-[#0E1F1C] text-white py-16 px-8">
           <div className="max-w-6xl mx-auto">
             <p className="text-sm mb-2">
+              
               <Link href="/" className=" hover:text-green-400">
                 🏠 Home
               </Link>{" "}
