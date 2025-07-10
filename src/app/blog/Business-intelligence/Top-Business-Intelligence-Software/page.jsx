@@ -659,6 +659,9 @@ export default function Employeedisciplinary() {
               The Best AI-Powered BI
               <span className="block mt-2 sm:mt-4">Tools to Stay Ahead in</span>
               <span className="block mt-2 sm:mt-4">2025</span>
+                <p className="text-lg font-light sm:text-xl text-slate-300 leading-relaxed max-w-3xl">
+            AI BI tools use machine learning to deliver smarter insights fast. Explore the best options to drive better decisions and outpace competitors.
+          </p>
             </h1>
           </div>
 

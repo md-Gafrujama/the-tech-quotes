@@ -31,60 +31,60 @@ const cards = [
     image: "/images/sales-3.jpg",
     link: "/blog/Sales-Crm/Credit-card",
   },
-  {
-    title: "How to Use Square to Accept Credit Card Payments",
-    description:
-      "Step-by-step ways to accept credit card payments with Square. Includes options for in-person, online, and invoicing...",
-    author: "Amy Lynn Dean",
-    date: "June 7, 2025",
-    image: "/images/sales-4.jpeg",
-    link: "/blog/Sales-Crm/Credit-card",
-  },
-  {
-    title: "The Ultimate Guide to Social Selling: Trust-building Strategies & Tools",
-    description:
-      "Learn what social selling is and how to build trust, boost engagement, and drive more qualified leads straight into your CRM...",
-    author: "Bianca Caballero",
-    date: "June 3, 2025",
-    image: "/images/sales-5.jpeg",
-    link: "/blog/sales/social-selling-guide",
-  },
-  {
-    title: "Stripe Review: What Users Love (& Complain About) in 2025",
-    description:
-      "Thinking of using Stripe? In this 2025 Stripe review, we break down the features, who they benefit, and whether it's the...",
-    author: "Amy Lynn Dean",
-    date: "May 29, 2025",
-    image: "/images/sales-6.jpeg",
-    link: "/blog/sales/stripe-review-2025",
-  },
-  {
-    title: "Stripe vs Square: Which Payment Platform is Best in 2025?",
-    description:
-      "Stripe and Square are two popular payment processing platforms. In each of the key categories compared, we explain the differences...",
-    author: "Amy Lynn Dean",
-    date: "May 21, 2025",
-    image: "/images/sales-7.jpeg",
-    link: "/blog/sales/stripe-vs-square-2025",
-  },
-  {
-    title: "How to Use a POS System",
-    description:
-      "A point-of-sale (POS) system is essential for managing orders, sales, and customer data. While many types are available, learn what makes a good POS system...",
-    author: "Amy Lynn Dean",
-    date: "May 14, 2025",
-    image: "/images/sales-8.jpeg",
-    link: "/blog/sales/how-to-use-pos-system",
-  },
-  {
-    title: "Stripe vs. Paypal: Which is Better in 2025?",
-    description:
-      "Stripe vs Paypal: Which is better in 2025? We compare features, integrations, global reach, and pricing availability...",
-    author: "Amy Lynn Dean",
-    date: "April 30, 2025",
-    image: "/images/sales-9.jpeg",
-    link: "/blog/sales/stripe-vs-paypal-2025",
-  },
+  // {
+  //   title: "How to Use Square to Accept Credit Card Payments",
+  //   description:
+  //     "Step-by-step ways to accept credit card payments with Square. Includes options for in-person, online, and invoicing...",
+  //   author: "Amy Lynn Dean",
+  //   date: "June 7, 2025",
+  //   image: "/images/sales-4.jpeg",
+  //   link: "/blog/Sales-Crm/Credit-card",
+  // },
+  // {
+  //   title: "The Ultimate Guide to Social Selling: Trust-building Strategies & Tools",
+  //   description:
+  //     "Learn what social selling is and how to build trust, boost engagement, and drive more qualified leads straight into your CRM...",
+  //   author: "Bianca Caballero",
+  //   date: "June 3, 2025",
+  //   image: "/images/sales-5.jpeg",
+  //   link: "/blog/sales/social-selling-guide",
+  // },
+  // {
+  //   title: "Stripe Review: What Users Love (& Complain About) in 2025",
+  //   description:
+  //     "Thinking of using Stripe? In this 2025 Stripe review, we break down the features, who they benefit, and whether it's the...",
+  //   author: "Amy Lynn Dean",
+  //   date: "May 29, 2025",
+  //   image: "/images/sales-6.jpeg",
+  //   link: "/blog/sales/stripe-review-2025",
+  // },
+  // {
+  //   title: "Stripe vs Square: Which Payment Platform is Best in 2025?",
+  //   description:
+  //     "Stripe and Square are two popular payment processing platforms. In each of the key categories compared, we explain the differences...",
+  //   author: "Amy Lynn Dean",
+  //   date: "May 21, 2025",
+  //   image: "/images/sales-7.jpeg",
+  //   link: "/blog/sales/stripe-vs-square-2025",
+  // },
+  // {
+  //   title: "How to Use a POS System",
+  //   description:
+  //     "A point-of-sale (POS) system is essential for managing orders, sales, and customer data. While many types are available, learn what makes a good POS system...",
+  //   author: "Amy Lynn Dean",
+  //   date: "May 14, 2025",
+  //   image: "/images/sales-8.jpeg",
+  //   link: "/blog/sales/how-to-use-pos-system",
+  // },
+  // {
+  //   title: "Stripe vs. Paypal: Which is Better in 2025?",
+  //   description:
+  //     "Stripe vs Paypal: Which is better in 2025? We compare features, integrations, global reach, and pricing availability...",
+  //   author: "Amy Lynn Dean",
+  //   date: "April 30, 2025",
+  //   image: "/images/sales-9.jpeg",
+  //   link: "/blog/sales/stripe-vs-paypal-2025",
+  // },
 ];
 export default function SalesCrm() {
   return (
