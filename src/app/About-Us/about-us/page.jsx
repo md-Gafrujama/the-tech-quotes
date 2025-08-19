@@ -231,13 +231,13 @@ const AboutHero = () => {
         </p>
 
         <p>
-          TechnologyAdvice has been named an Inc. 5000 America’s Fastest-Growing Private Company
+         The tech-quotes has been named an Inc. 5000 America’s Fastest-Growing Private Company
           seven times, and was listed on the Inc. Best Workplaces list three times. The company is
           also a seven-time recipient of the Tennessean Top Workplaces Award.
         </p>
       </div>
     </section>
-   <section className="bg-white px-4 sm:px-8 lg:px-20 py-20">
+   <section className="bg-white px-3 sm:px-8 lg:px-20 py-20">
       <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12">
         Executive leadership
       </h2>
