@@ -105,7 +105,7 @@ export default function ContactPage() {
     className="rounded-2xl p-8 transition-all duration-300 border border-transparent hover:border-green-600 hover:bg-[#f8fff5] hover:shadow-lg block"
   >
     <div className="flex items-start gap-5">
-      <div className="bg-green-600 p-3 rounded-md">{item.icon}</div>
+      <div className="bg-[#ffd800] p-3 rounded-md">{item.icon}</div>
       <div>
         <h3 className="font-semibold text-xl text-gray-900 mb-1">
           {item.title}

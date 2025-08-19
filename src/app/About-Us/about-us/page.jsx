@@ -56,31 +56,31 @@ const locations = [
 
 const values = [
   {
-    icon: <LucideSearchCheck className="text-white" size={28} />,
+    icon: <LucideSearchCheck className="text-[#ffd800]" size={28} />,
     title: "Be transparent",
     description:
       "As stakeholders of TA, we deserve to have honest, open, and consistent information about our business. Every employee, no matter the level on the org chart, practices transparency about their work.",
   },
   {
-    icon: <LucideRocket className="text-white" size={28} />,
+    icon: <LucideRocket className="text-[#ffd800]" size={28} />,
     title: "Challenge mediocrity",
     description:
       "We attack our goals with passion and a sense of urgency. We hold each other accountable and produce results above and beyond expectations.",
   },
   {
-    icon: <LucideGraduationCap className="text-white" size={28} />,
+    icon: <LucideGraduationCap className="text-[#ffd800]" size={28} />,
     title: "Crave knowledge",
     description:
       "At TechnologyAdvice we strive to increase our knowledge, deepen our understanding, and invest in our personal and professional growth.",
   },
   {
-    icon: <LucideCalculator className="text-white" size={28} />,
+    icon: <LucideCalculator className="text-[#ffd800]" size={28} />,
     title: "Make calculated Decisions",
     description:
       "We combine data with cross-team collaboration and balance diligence with speed to ensure prudent and tactical decisions that grow our business.",
   },
   {
-    icon: <LucideAward className="text-white" size={28} />,
+    icon: <LucideAward className="text-[#ffd800]" size={28} />,
     title: "Value each other",
     description:
       "We go out of our way to lift each other up, applaud victories, and communicate with respect and honesty. We care about the success of the team and motivate and encourage one another.",
@@ -195,7 +195,7 @@ const AboutHero = () => {
           as a business. Through acquisitions, we now own more than 20 media brands, including{" "}
           <Link
             href="https://www.techrepublic.com"
-            className="text-green-600 font-semibold hover:underline"
+            className="text-[#ffd800] font-semibold hover:underline"
             target="_blank"
           >
             TechRepublic
@@ -203,7 +203,7 @@ const AboutHero = () => {
           ,{" "}
           <Link
             href="https://www.eweek.com"
-            className="text-green-600 font-semibold hover:underline"
+            className="text-[#ffd800] font-semibold hover:underline"
             target="_blank"
           >
             eWeek
@@ -211,7 +211,7 @@ const AboutHero = () => {
           ,{" "}
           <Link
             href="https://www.datamation.com"
-            className="text-green-600 font-semibold hover:underline"
+            className="text-[#ffd800] font-semibold hover:underline"
             target="_blank"
           >
             Datamation
@@ -219,7 +219,7 @@ const AboutHero = () => {
           , and{" "}
           <Link
             href="https://www.channelinsider.com"
-            className="text-green-600 font-semibold hover:underline"
+            className="text-[#ffd800] font-semibold hover:underline"
             target="_blank"
           >
             Channel Insider
@@ -259,7 +259,7 @@ const AboutHero = () => {
                 href={leader.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute -top-2 -right-2 bg-white border border-green-500 text-green-600 rounded-full p-2 hover:bg-green-50"
+                className="absolute -top-2 -right-2 bg-white border border-[#ffd800] text-[#ffd800] rounded-full p-2 hover:bg-green-50"
               >
                 <FaLinkedinIn size={14} />
               </Link>
@@ -363,7 +363,7 @@ const AboutHero = () => {
                 <h3 className="text-lg font-semibold text-gray-800 pr-4">
                   {item.question}
                 </h3>
-                <div className="w-9 h-9 bg-green-600 hover:bg-green-700 rounded-md flex items-center justify-center">
+                <div className="w-9 h-9 bg-[#ffd800] hover:bg-green-700 rounded-md flex items-center justify-center">
                   {openItems[index] ? (
                     <Minus className="w-5 h-5 text-white" />
                   ) : (
