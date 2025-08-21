@@ -10,81 +10,81 @@ import { motion, useAnimationControls } from 'framer-motion';
 import { Users, Grid, Package, Award } from "lucide-react";
 import { useState } from 'react';
 const logos = [
-  "/images/salesforce.svg",
-  "/images/oracle.svg",
-  "/images/sap.svg",
-  "/images/dell.svg",
-  "/images/ibm.svg",
-  "/images/jazzhr.svg",
+  "/images/partners-salesforce.svg",
+  "/images/partners-oracle.svg",
+  "/images/partners-sap.svg",
+  "/images/partner-dell.svg",
+  "/images/partner-ibm.svg",
+  "/images/partners-jazzhr.svg",
 ];
 
 const posts = [
   {
     title: 'Best Human Resources (HR) Software for Small...',
     date: 'May 5, 2025',
-    image: '/images/post1.png',
+    image: '/images/small-business-hr-software.png',
     href:'/blogs/',
     bg: 'bg-gray-100',
   },
   {
     title: 'Best HRIS Systems of 2025',
     date: 'February 18, 2025',
-    image: '/images/post2.png',
+    image: '/images/best HRIS.png',
     href:'/blogs/',
     bg: 'bg-gray-100',
   },
   {
     title: 'Best HRMS Software',
     date: 'September 19, 2024',
-    image: '/images/hrms.jpeg',
+    image: '/images/Best-HRMS-Software.jpeg',
     href: '/blog/human-resources/best-hrms-software',
     bg: 'bg-gray-100',
   },
   {
     title: 'Asana vs monday: Top Project Management...',
     date: 'September 19, 2024',
-    image: '/images/asana-vs-monday.jpeg',
+    image: '/images/monday-asana.jpeg',
     href: '/blog/project-management/asana-vs-monday',
     bg: 'bg-gray-100',
   },  {
     title: 'Smartsheet vs. monday.com Comparison',
     date: 'March 26, 2024',
-    image: '/images/smartsheet-vs-monday.png',
+    image: '/images/Smartsheet.png',
     href: '/blog/smartsheet-vs-monday',
     bg: 'bg-gray-100',
   },
   {
     title: 'CRM For Outlook: Integrate & Manage Customers...',
     date: 'January 14, 2025',
-    image: '/images/crm-outlook.png',
+    image: '/images/crm outlook.png',
     href: '/blog/crm-outlook',
     bg: 'bg-gray-100',
   },
   {
     title: 'What is Rapid Application Development...',
     date: 'April 8, 2024',
-    image: '/images/rapid.jpeg',
+    image: '/images/Software-prototype.jpeg',
     href: '/blog/rapid-application-development',
     bg: 'bg-gray-100',
   },
   {
     title: 'Types of Human Resource Information...',
     date: 'April 30, 2024',
-    image: '/images/hris.jpeg',
+    image: '/images/tacom-types-hr.jpeg',
     href: '/blog/hris-types',
     bg: 'bg-gray-100',
   },
   {
     title: 'What Is Proof of Concept (POC)?',
     date: 'January 9, 2024',
-    image: '/images/poc.jpeg',
+    image: '/images/AdobeStock.jpeg',
     href: '/blog/proof-of-concept',
     bg: 'bg-gray-100',
   },
   {
     title: 'How to Create an Effective CRM Strategy',
     date: 'November 26, 2024',
-    image: '/images/crm.jpg',
+    image: '/images/crm strategy.jpg',
     href: '/blog/crm-strategy',
     bg: 'bg-gray-100',
   },
@@ -169,6 +169,7 @@ const categories = [
       '/tools/ge-healthcare'
     ],
     cardLink: '/categories/ehr-emr',
+   
   },
   {
     title: 'Project Management Software',

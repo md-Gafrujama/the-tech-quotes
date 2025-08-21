@@ -546,7 +546,7 @@ const toolsContent = {
             models and{" "}
             <Link
               href="https://wrike.com/project-management-guide/"
-              className="text-green-600 hover:text-green-700 font-medium underline"
+              className="text-[#ffd800] hover:text-green-700 font-medium underline"
             >
               project management strategies
             </Link>
@@ -766,7 +766,7 @@ const toolsContent = {
             reports, make it ideal for organizations that follow the{" "}
             <Link
               href="https://www.atlassian.com/agile"
-              className="text-green-600 hover:text-green-700 font-medium underline"
+              className="text-[#ffd800] hover:text-green-700 font-medium underline"
             >
               Scrum or Kanban
             </Link>{" "}
@@ -1405,7 +1405,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                       href={`#${item.id}`}
                       className={`block py-2 px-3 rounded-md text-sm transition-colors duration-200 ${
                         item.active
-                          ? "bg-green-50 text-green-700 border-l-4 border-green-500 font-medium"
+                          ? "bg-green-50 text-[#ffd800] border-l-4 border-green-500 font-medium"
                           : "text-gray-600 hover:text-black hover:bg-gray-100"
                       }`}
                     >
@@ -1485,14 +1485,14 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                       and stakeholders through different{" "}
                       <a
                         href="#"
-                        className="text-green-600 hover:text-green-700 underline"
+                        className="text-[#ffd800] hover:text-green-700 underline"
                       >
                         phases of the project management life cycle
                       </a>
                       , especially during{" "}
                       <a
                         href="#"
-                        className="text-green-600 hover:text-green-700 underline"
+                        className="text-[#ffd800] hover:text-green-700 underline"
                       >
                         project planning
                       </a>
@@ -1503,28 +1503,28 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                       With functions that include{" "}
                       <a
                         href="#"
-                        className="text-green-600 hover:text-green-700 underline"
+                        className="text-[#ffd800] hover:text-green-700 underline"
                       >
                         project planning
                       </a>
                       ,{" "}
                       <a
                         href="#"
-                        className="text-green-600 hover:text-green-700 underline"
+                        className="text-[#ffd800] hover:text-green-700 underline"
                       >
                         scheduling
                       </a>
                       ,{" "}
                       <a
                         href="#"
-                        className="text-green-600 hover:text-green-700 underline"
+                        className="text-[#ffd800] hover:text-green-700 underline"
                       >
                         task management
                       </a>
                       , and resource allocation, the right{" "}
                       <a
                         href="#"
-                        className="text-green-600 hover:text-green-700 underline"
+                        className="text-[#ffd800] hover:text-green-700 underline"
                       >
                         project management
                       </a>{" "}
@@ -1534,7 +1534,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                       features that enhance file sharing, communication, and{" "}
                       <a
                         href="#"
-                        className="text-green-600 hover:text-green-700 underline"
+                        className="text-[#ffd800] hover:text-green-700 underline"
                       >
                         collaboration
                       </a>
@@ -1566,7 +1566,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                         <p className="text-gray-700">
                           <a
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#ffd800] hover:text-green-700 font-medium underline"
                           >
                             monday.com
                           </a>{" "}
@@ -1590,7 +1590,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                         <p className="text-gray-700">
                           <a
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#ffd800] hover:text-green-700 font-medium underline"
                           >
                             Asana
                           </a>{" "}
@@ -1615,7 +1615,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                         <p className="text-gray-700">
                           <a
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#ffd800] hover:text-green-700 font-medium underline"
                           >
                             Wrike
                           </a>{" "}
@@ -1639,7 +1639,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                         <p className="text-gray-700">
                           <a
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#ffd800] hover:text-green-700 font-medium underline"
                           >
                             Jira
                           </a>{" "}
@@ -1663,7 +1663,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                         <p className="text-gray-700">
                           <a
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#ffd800] hover:text-green-700 font-medium underline"
                           >
                             ClickUp
                           </a>{" "}
@@ -1684,7 +1684,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                           <h3 className="text-lg font-semibold text-gray-900">
                             Update notes
                           </h3>
-                          <div className="text-green-600">
+                          <div className="text-[#ffd800]">
                             {expandedSections["update-notes"] ? (
                               <Minus className="w-5 h-5" />
                             ) : (
@@ -1705,7 +1705,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                                   • February 23, 2024:{" "}
                                   <a
                                     href="#"
-                                    className="text-green-600 hover:text-green-700 font-medium underline"
+                                    className="text-[#ffd800] hover:text-green-700 font-medium underline"
                                   >
                                     Irene Casucian​{" "}
                                   </a>
@@ -1732,7 +1732,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                           <h3 className="text-lg font-semibold text-gray-900">
                             Our methodology
                           </h3>
-                          <div className="text-green-600">
+                          <div className="text-[#ffd800]">
                             {expandedSections["methodology"] ? (
                               <Minus className="w-5 h-5" />
                             ) : (
@@ -1770,7 +1770,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                                   1.{" "}
                                   <a
                                     href="#"
-                                    className="text-green-600 hover:text-green-700 underline"
+                                    className="text-[#ffd800] hover:text-green-700 underline"
                                   >
                                     monday.com
                                   </a>
@@ -1779,7 +1779,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                                   2.{" "}
                                   <a
                                     href="#"
-                                    className="text-green-600 hover:text-green-700 underline"
+                                    className="text-[#ffd800] hover:text-green-700 underline"
                                   >
                                     Jira
                                   </a>
@@ -1788,7 +1788,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                                   3.{" "}
                                   <a
                                     href="#"
-                                    className="text-green-600 hover:text-green-700 underline"
+                                    className="text-[#ffd800] hover:text-green-700 underline"
                                   >
                                     Trello
                                   </a>
@@ -1797,7 +1797,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                                   4.{" "}
                                   <a
                                     href="#"
-                                    className="text-green-600 hover:text-green-700 underline"
+                                    className="text-[#ffd800] hover:text-green-700 underline"
                                   >
                                     Asana
                                   </a>
@@ -1806,7 +1806,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                                   5.{" "}
                                   <a
                                     href="#"
-                                    className="text-green-600 hover:text-green-700 underline"
+                                    className="text-[#ffd800] hover:text-green-700 underline"
                                   >
                                     Airtable
                                   </a>
@@ -1815,7 +1815,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                                   6.{" "}
                                   <a
                                     href="#"
-                                    className="text-green-600 hover:text-green-700 underline"
+                                    className="text-[#ffd800] hover:text-green-700 underline"
                                   >
                                     Wrike
                                   </a>
@@ -1824,7 +1824,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                                   7.{" "}
                                   <a
                                     href="#"
-                                    className="text-green-600 hover:text-green-700 underline"
+                                    className="text-[#ffd800] hover:text-green-700 underline"
                                   >
                                     ClickUp
                                   </a>
@@ -1911,7 +1911,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
     </div>
                     </div>
                     <div className="w-full sm:w-auto">
-                      <button className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
+                      <button className="w-full sm:w-auto bg-[#ffd800] hover:bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
                         <span>Visit Website</span>
                         <ExternalLink className="w-4 h-4" />
                       </button>
@@ -1973,7 +1973,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                       </div>
                       <a
                         href={tool.button.link}
-                        className="bg-green-600 text-white px-4 py-2 rounded-full text-sm hover:bg-green-700"
+                        className="bg-[#ffd800] text-white px-4 py-2 rounded-full text-sm hover:bg-green-700"
                       >
                         {tool.button.text}
                       </a>
@@ -1989,7 +1989,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                           </div>
                           <div className="w-full bg-gray-100 rounded-full h-2">
                             <div
-                              className="bg-green-600 h-2 rounded-full"
+                              className="bg-[#ffd800] h-2 rounded-full"
                               style={{
                                 width: `${
                                   (parseFloat(score.score) / 5) * 100
@@ -2052,7 +2052,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                                 className="w-full flex justify-between items-center font-medium"
                               >
                                 <span>{label}</span>
-                                <span className="text-green-600">
+                                <span className="text-[#ffd800]">
                                   {openSections[sectionKey] ? (
                                     <Minus className="w-5 h-5" />
                                   ) : (
@@ -2249,7 +2249,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                         </h1>
                         <Link
                           href="/reviews/zoho-projects"
-                          className="text-sm sm:text-base md:text-lg text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
+                          className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
                         >
                           Leave a Review
                         </Link>
@@ -2258,7 +2258,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
 
                     {/* Compare Button */}
                     <div className="flex-shrink-0">
-                      <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-blue-600 hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
+                      <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#ffd800] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
                         <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
                         Compare
                       </button>
@@ -2306,7 +2306,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
 
                     <Link
                       href="/learn-more/zoho-projects"
-                      className="text-sm sm:text-base md:text-lg text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                      className="text-sm sm:text-base md:text-lg text-[#ffd800]  hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
                     >
                       Learn More About Zoho Projects
                     </Link>
@@ -2318,7 +2318,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                       href="https://www.zoho.com/projects/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#ffd800] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
                     >
                       Visit Website
                       <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -2351,7 +2351,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                         </h1>
                         <Link
                           href="/reviews/zoho-projects"
-                          className="text-sm sm:text-base md:text-lg text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
+                          className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
                         >
                           Leave a Review
                         </Link>
@@ -2360,7 +2360,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
 
                     {/* Compare Button */}
                     <div className="flex-shrink-0">
-                      <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-blue-600 hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
+                      <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#ffd800] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
                         <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
                         Compare
                       </button>
@@ -2401,7 +2401,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
 
                     <Link
                       href="/learn-more/zoho-projects"
-                      className="text-sm sm:text-base md:text-lg text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                      className="text-sm sm:text-base md:text-lg text-[#ffd800]  hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
                     >
                       Learn More About 2-Plan
                     </Link>
@@ -2413,7 +2413,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                       href="https://www.2-plan.com/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#ffd800] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
                     >
                       Visit Website
                       <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -2446,7 +2446,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                         </h1>
                         <div className="flex items-center gap-2">
                           <div className="flex items-center">
-                            <span className="text-green-600 text-lg">★★★★★</span>
+                            <span className="text-[#ffd800] text-lg">★★★★★</span>
                           </div>
                           <span className="text-sm sm:text-base font-medium text-gray-700">5</span>
                           <span className="text-sm text-gray-500">( 1 review )</span>
@@ -2456,7 +2456,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
 
                     {/* Compare Button */}
                     <div className="flex-shrink-0">
-                      <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-blue-600 hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
+                      <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#ffd800] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
                         <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
                         Compare
                       </button>
@@ -2495,7 +2495,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
 
                     <Link
                       href="/learn-more/24SevenOffice"
-                      className="text-sm sm:text-base md:text-lg text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                      className="text-sm sm:text-base md:text-lg text-[#ffd800]  hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
                     >
                       Learn More About 24SevenOffice
                     </Link>
@@ -2507,7 +2507,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                       href="https://www.24sevenoffice.com/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#ffd800] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
                     >
                       Visit Website
                       <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -2540,7 +2540,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                         </h1>
                         <div className="flex items-center gap-2">
                           <div className="flex items-center">
-                            <span className="text-green-600 text-lg">★★★★</span>
+                            <span className="text-[#ffd800] text-lg">★★★★</span>
                             <span className="text-gray-300 text-lg">★</span>
                           </div>
                           <span className="text-sm sm:text-base font-medium text-gray-700">4.8</span>
@@ -2551,7 +2551,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
 
                     {/* Compare Button */}
                     <div className="flex-shrink-0">
-                      <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-blue-600 hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
+                      <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#ffd800] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
                         <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
                         Compare
                       </button>
@@ -2592,7 +2592,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
 
                     <Link
                       href="/learn-more/4castplus"
-                      className="text-sm sm:text-base md:text-lg text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                      className="text-sm sm:text-base md:text-lg text-[#ffd800]  hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
                     >
                       Learn More About 4castplus
                     </Link>
@@ -2604,7 +2604,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                       href="https://www.4castplus.com/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#ffd800] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
                     >
                       Visit Website
                       <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -2637,7 +2637,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                         </h1>
                         <Link
                           href="/reviews/zoho-projects"
-                          className="text-sm sm:text-base md:text-lg text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
+                          className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
                         >
                           Leave a Review
                         </Link>
@@ -2646,7 +2646,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
 
                     {/* Compare Button */}
                     <div className="flex-shrink-0">
-                      <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-blue-600 hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
+                      <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#ffd800] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
                         <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
                         Compare
                       </button>
@@ -2678,7 +2678,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
 
                     <Link
                       href="/learn-more/5day-io"
-                      className="text-sm sm:text-base md:text-lg text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                      className="text-sm sm:text-base md:text-lg text-[#ffd800]  hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
                     >
                       Learn More About 5day.io
                     </Link>
@@ -2690,7 +2690,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                       href="https://www.zoho.com/projects/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#ffd800] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
                     >
                       Visit Website
                       <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -2761,7 +2761,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                         </h1>
                         <Link
                           href="/reviews/zoho-projects"
-                          className="text-sm sm:text-base md:text-lg text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
+                          className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
                         >
                           Leave a Review
                         </Link>
@@ -2770,7 +2770,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
 
                     {/* Compare Button */}
                     <div className="flex-shrink-0">
-                      <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-blue-600 hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
+                      <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#ffd800] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
                         <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
                         Compare
                       </button>
@@ -2810,7 +2810,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
 
                     <Link
                       href="/learn-more/zoho-projects"
-                      className="text-sm sm:text-base md:text-lg text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                      className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
                     >
                       Learn More About 5pm-Disarea
                     </Link>
@@ -2822,7 +2822,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                       href="https://www.5pmweb.com/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg--[#ffd800] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
                     >
                       Visit Website
                       <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -2855,7 +2855,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                         </h1>
                         <Link
                           href="/reviews/zoho-projects"
-                          className="text-sm sm:text-base md:text-lg text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
+                          className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
                         >
                           Leave a Review
                         </Link>
@@ -2864,7 +2864,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
 
                     {/* Compare Button */}
                     <div className="flex-shrink-0">
-                      <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-blue-600 hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
+                      <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#ffd800] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
                         <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
                         Compare
                       </button>
@@ -2910,7 +2910,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
 
                     <Link
                       href="/learn-more/zoho-projects"
-                      className="text-sm sm:text-base md:text-lg text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                      className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
                     >
                       Learn More About Accelo
                     </Link>
@@ -2922,7 +2922,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                       href="https://www.accelo.com/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#ffd800] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
                     >
                       Visit Website
                       <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -2955,7 +2955,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                         </h1>
                         <Link
                           href="/reviews/zoho-projects"
-                          className="text-sm sm:text-base md:text-lg text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
+                          className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
                         >
                           Leave a Review
                         </Link>
@@ -2964,7 +2964,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
 
                     {/* Compare Button */}
                     <div className="flex-shrink-0">
-                      <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-blue-600 hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
+                      <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#ffd800] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
                         <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
                         Compare
                       </button>
@@ -3007,7 +3007,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
 
                     <Link
                       href="/learn-more/zoho-projects"
-                      className="text-sm sm:text-base md:text-lg text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                      className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
                     >
                       Learn More About AccuLynx
                     </Link>
@@ -3019,7 +3019,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                       href="https://www.acculynx.com/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#ffd800] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
                     >
                       Visit Website
                       <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -3052,7 +3052,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                         </h1>
                         <Link
                           href="/reviews/zoho-projects"
-                          className="text-sm sm:text-base md:text-lg text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
+                          className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
                         >
                           Leave a Review
                         </Link>
@@ -3061,7 +3061,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
 
                     {/* Compare Button */}
                     <div className="flex-shrink-0">
-                      <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-blue-600 hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
+                      <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#ffd800] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
                         <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
                         Compare
                       </button>
@@ -3099,7 +3099,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
 
                     <Link
                       href="/learn-more/zoho-projects"
-                      className="text-sm sm:text-base md:text-lg text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                      className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
                     >
                       Learn More About AceProject
                     </Link>
@@ -3111,7 +3111,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                       href="https://www.aceproject.com/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#ffd800] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
                     >
                       Visit Website
                       <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -3144,7 +3144,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                         </h1>
                         <Link
                           href="/reviews/zoho-projects"
-                          className="text-sm sm:text-base md:text-lg text-blue-600 hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
+                          className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
                         >
                           Leave a Review
                         </Link>
@@ -3153,7 +3153,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
 
                     {/* Compare Button */}
                     <div className="flex-shrink-0">
-                      <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-blue-600 hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
+                      <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#ffd800] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
                         <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
                         Compare
                       </button>
@@ -3170,7 +3170,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
 
                     <Link
                       href="/learn-more/zoho-projects"
-                      className="text-sm sm:text-base md:text-lg text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                      className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
                     >
                       Learn More About Aconex
                     </Link>
@@ -3182,7 +3182,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                       href="https://www.aconex.com/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#ffd800] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
                     >
                       Visit Website
                       <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -3219,14 +3219,14 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                       features, but many solutions are designed to help a{" "}
                       <Link
                         href="/small-team-project-management"
-                        className="text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-medium"
+                        className="text-[#ffd800] hover:text-green-800 hover:underline transition-colors duration-200 font-medium"
                       >
                         small team
                       </Link>{" "}
                       or{" "}
                       <Link
                         href="/enterprise-project-management"
-                        className="text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-medium"
+                        className="text-[#ffd800] hover:text-green-800 hover:underline transition-colors duration-200 font-medium"
                       >
                         enterprise
                       </Link>{" "}
@@ -3281,7 +3281,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                     and revenue goals. A forecasting tool can also
                     <Link
                       href="/enterprise-project-management"
-                      className="text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-medium"
+                      className="text-[#ffd800] hover:text-green-800 hover:underline transition-colors duration-200 font-medium"
                     >
                       predict project risks
                     </Link>{" "}
@@ -3342,7 +3342,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                     As the name implies,{" "}
                     <Link
                       href="/enterprise-project-management"
-                      className="text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-medium"
+                      className="text-[#ffd800] hover:text-green-800 hover:underline transition-colors duration-200 font-medium"
                     >
                       time-tracking software
                     </Link>{" "}
@@ -3374,7 +3374,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                     bottlenecks and stay on top of the project’s progress.
                     <Link
                       href="/enterprise-project-management"
-                      className="text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-medium"
+                      className="text-[#ffd800] hover:text-green-800 hover:underline transition-colors duration-200 font-medium"
                     >
                       Task management software
                     </Link>{" "}
@@ -3386,7 +3386,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                     Also Read:
                     <Link
                       href="/enterprise-project-management"
-                      className="text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-medium"
+                      className="text-[#ffd800] hover:text-green-800 hover:underline transition-colors duration-200 font-medium"
                     >
                       Choose the Right Task Management Software: Types and
                       Considerations
@@ -3418,7 +3418,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                     Some PM tools rely on the
                     <Link
                       href="/enterprise-project-management"
-                      className="text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-medium"
+                      className="text-[#ffd800] hover:text-green-800 hover:underline transition-colors duration-200 font-medium"
                     >
                       Kanban
                     </Link>{" "}
@@ -3441,7 +3441,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                     Task dependencies are often represented through
                     <Link
                       href="/enterprise-project-management"
-                      className="text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-medium"
+                      className="text-[#ffd800] hover:text-green-800 hover:underline transition-colors duration-200 font-medium"
                     >
                       Gantt charts
                     </Link>{" "}
@@ -3702,7 +3702,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                         <li>
                           <Link
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#ffd800] hover:text-green-700 font-medium underline"
                           >
                             Agile Project Management Software
                           </Link>
@@ -3710,7 +3710,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                         <li>
                           <Link
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#ffd800] hover:text-green-700 font-medium underline"
                           >
                             Bug Tracking Software
                           </Link>
@@ -3718,7 +3718,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                         <li>
                           <Link
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#ffd800] hover:text-green-700 font-medium underline"
                           >
                             Enterprise Project Management Software
                           </Link>
@@ -3726,7 +3726,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                         <li>
                           <Link
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#ffd800] hover:text-green-700 font-medium underline"
                           >
                             Marketing Project Management Software
                           </Link>
@@ -3734,7 +3734,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                         <li>
                           <Link
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#ffd800] hover:text-green-700 font-medium underline"
                           >
                             Project Portfolio Management Software
                           </Link>
@@ -3742,7 +3742,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                         <li>
                           <Link
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#ffd800] hover:text-green-700 font-medium underline"
                           >
                             Time Tracking Software
                           </Link>
@@ -3750,7 +3750,7 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                         <li>
                           <Link
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#ffd800] hover:text-green-700 font-medium underline"
                           >
                             Visual Project Management Software
                           </Link>
@@ -3786,8 +3786,8 @@ Despite drawbacks, such as the lack of phone support and limited mobile app func
                           <div
                             className={`flex-shrink-0 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 rounded-md flex items-center justify-center transition-all duration-200 ${
                               openItems[index]
-                                ? "bg-green-600 hover:bg-green-700"
-                                : "bg-green-600 hover:bg-green-700"
+                                ? "bg-[#ffd800] hover:bg-green-700"
+                                : "bg-[#ffd800] hover:bg-green-700"
                             }`}
                           >
                             {openItems[index] ? (

@@ -199,7 +199,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
           }}
           className={`block py-2 px-3 rounded-md text-sm cursor-pointer transition-colors duration-200 ${
             activeSection === i
-              ? "bg-green-50 text-green-700 border-l-4 border-green-500 font-medium"
+              ? "bg-green-50 text-[#ffd800] border-l-4 border-green-500 font-medium"
               : "text-gray-600 hover:text-black hover:bg-gray-100"
           }`}
         >
@@ -255,7 +255,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
 
               <div className="space-y-4 text-gray-700">
                 <p>
-                  <Link href="#" className="text-green-600 font-medium underline">
+                  <Link href="#" className="text-[#ffd800] font-medium underline">
                     Business intelligence (BI) software
                   </Link>{" "}
                   is any application that collects and processes large amounts of unstructured data from
@@ -270,19 +270,19 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
 
                 <ul className="list-disc ml-5 space-y-2">
                   <li>
-                    <Link href="#" className="text-green-600 font-medium">Tableau</Link>: Best for data visualization
+                    <Link href="#" className="text-[#ffd800] font-medium">Tableau</Link>: Best for data visualization
                   </li>
                   <li>
-                    <Link href="#" className="text-green-600 font-medium">Sisense</Link>: Best for embedded analytics
+                    <Link href="#" className="text-[#ffd800] font-medium">Sisense</Link>: Best for embedded analytics
                   </li>
                   <li>
-                    <Link href="#" className="text-green-600 font-medium">Qlik Sense</Link>: Best mobile BI software
+                    <Link href="#" className="text-[#ffd800] font-medium">Qlik Sense</Link>: Best mobile BI software
                   </li>
                   <li>
-                    <Link href="#" className="text-green-600 font-medium">Zoho Analytics</Link>: Best self-service BI software
+                    <Link href="#" className="text-[#ffd800] font-medium">Zoho Analytics</Link>: Best self-service BI software
                   </li>
                   <li>
-                    <Link href="#" className="text-green-600 font-medium">IBM Cognos Analytics</Link>: Best for reporting
+                    <Link href="#" className="text-[#ffd800] font-medium">IBM Cognos Analytics</Link>: Best for reporting
                   </li>
                 </ul>
                   {/* Collapsible Sections */}
@@ -293,7 +293,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
                     <FaClock className="text-gray-500" />
                     Update notes
                   </div>
-                  <button className="w-6 h-6 flex items-center justify-center rounded bg-green-600 text-white text-sm">
+                  <button className="w-6 h-6 flex items-center justify-center rounded bg-[#ffd800] text-white text-sm">
                     {openSection === 'updates' ? <FaMinus /> : <FaPlus />}
                   </button>
                 </div>
@@ -311,7 +311,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
                     <FaClock className="text-gray-500" />
                     Methodology
                   </div>
-                  <button className="w-6 h-6 flex items-center justify-center rounded bg-green-600 text-white text-sm">
+                  <button className="w-6 h-6 flex items-center justify-center rounded bg-[#ffd800] text-white text-sm">
                     {openSection === 'methodology' ? <FaMinus /> : <FaPlus />}
                   </button>
                 </div>
@@ -343,7 +343,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
             href="#"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 md:mt-0 inline-block bg-green-600 text-white text-sm font-medium px-4 py-2 rounded hover:bg-green-700 transition"
+            className="mt-4 md:mt-0 inline-block bg-[#ffd800] text-black text-sm font-medium px-4 py-2 rounded hover:bg-green-700 transition"
           >
             Visit Website
           </a>
@@ -355,7 +355,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
             <span className="font-semibold text-lg text-gray-800">4.3/5</span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
-            <div className="bg-green-600 h-2 rounded-full" style={{ width: "86%" }}></div>
+            <div className="bg-[#ffd800] h-2 rounded-full" style={{ width: "86%" }}></div>
           </div>
         </div>
 
@@ -416,7 +416,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
               The software's focus on enhancing user experience and customization, coupled with strategic integrations, positions it as a comprehensive tool for data-driven decision-making. In comparison to its key competitors, Tableau offers a unique combination of versatility, innovation, and user-centric design, making it an strong asset in any data-driven organization's toolkit.
             </p>
             
-            <a href="#" className="text-green-600 font-medium inline-block mt-4">
+            <a href="#" className="text-[#ffd800] font-medium inline-block mt-4">
               Also read: Top Tableau Alternatives For Visualizing & Analyzing Data
             </a>
           </div>
@@ -566,7 +566,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
           </div>
             <a 
                 href="#" 
-                className="inline-block mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors text-sm font-medium"
+                className="inline-block mt-4 px-4 py-2 bg-[#ffd800] text-black rounded hover:bg-green-700 transition-colors text-sm font-medium"
               >
                 Read our full review
               </a>
@@ -587,7 +587,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
         href="#"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-4 md:mt-0 inline-block bg-green-600 text-white text-sm font-medium px-4 py-2 rounded hover:bg-green-700 transition"
+        className="mt-4 md:mt-0 inline-block bg-[#ffd800] text-black text-sm font-medium px-4 py-2 rounded hover:bg-green-700 transition"
       >
         Visit Website
       </a>
@@ -600,7 +600,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
         <span className="font-semibold text-lg text-gray-800">4.1/5</span>
       </div>
       <div className="w-full bg-gray-200 rounded-full h-2">
-        <div className="bg-green-600 h-2 rounded-full" style={{ width: "82%" }}></div>
+        <div className="bg-[#ffd800] h-2 rounded-full" style={{ width: "82%" }}></div>
       </div>
     </div>
 
@@ -673,7 +673,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
           The software's 'Fusion Embed' solution is designed specifically for building white-labeled analytic experiences in apps, a testament to its strong embedded analytics capabilities. This feature, along with Sisense's scalability and customization options with minimal coding, makes it an ideal choice for businesses looking to integrate analytics seamlessly into their products or services.
         </p>
         
-        <Link href="#" className="text-green-600 font-medium inline-block mt-4">
+        <Link href="#" className="text-[#ffd800] font-medium inline-block mt-4">
           Also read: Top Sisense Alternatives For Embedded Analytics
         </Link>
       </div>
@@ -813,7 +813,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
         )}
          <Link 
               href="#" 
-              className="inline-block mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors text-sm font-medium"
+              className="inline-block mt-4 px-4 py-2 bg-[#ffd800] text-black rounded hover:bg-green-700 transition-colors text-sm font-medium"
             >
               Read our full review
             </Link>
@@ -831,7 +831,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
         href="#"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-4 md:mt-0 inline-block bg-green-600 text-white text-sm font-medium px-4 py-2 rounded hover:bg-green-700 transition"
+        className="mt-4 md:mt-0 inline-block bg-[#ffd800] text-black text-sm font-medium px-4 py-2 rounded hover:bg-green-700 transition"
       >
         Visit Website
       </a>
@@ -844,7 +844,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
         <span className="font-semibold text-lg text-gray-800">4.0/5</span>
       </div>
       <div className="w-full bg-gray-200 rounded-full h-2">
-        <div className="bg-green-600 h-2 rounded-full" style={{ width: "80%" }}></div>
+        <div className="bg-[#ffd800] h-2 rounded-full" style={{ width: "80%" }}></div>
       </div>
     </div>
 
@@ -911,7 +911,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
           When considering Qlik Sense's comprehensive updates and its standing against Power BI and Tableau, it's evident that Qlik Sense offers a well-rounded and increasingly user-friendly experience for mobile users.
         </p>
         
-        <Link href="#" className="text-green-600 font-medium inline-block mt-4">
+        <Link href="#" className="text-[#ffd800] font-medium inline-block mt-4">
           Also read: Top Qlik Sense Alternatives For Mobile BI
         </Link>
       </div>
@@ -1033,7 +1033,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
             
             <Link 
               href="#" 
-              className="inline-block mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors text-sm font-medium"
+              className="inline-block mt-4 px-4 py-2 bg-[#ffd800] text-black rounded hover:bg-green-700 transition-colors text-sm font-medium"
             >
               Read our full review
             </Link>
@@ -1054,7 +1054,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
         href="#"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-4 md:mt-0 inline-block bg-green-600 text-white text-sm font-medium px-4 py-2 rounded hover:bg-green-700 transition"
+        className="mt-4 md:mt-0 inline-block bg-[#FFD800] text-black text-sm font-medium px-4 py-2 rounded hover:bg-green-700 transition"
       >
         Visit Website
       </a>
@@ -1067,7 +1067,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
         <span className="font-semibold text-lg text-gray-800">4.0/5</span>
       </div>
       <div className="w-full bg-gray-200 rounded-full h-2">
-        <div className="bg-green-600 h-2 rounded-full" style={{ width: "80%" }}></div>
+        <div className="bg-[#ffd800] h-2 rounded-full" style={{ width: "80%" }}></div>
       </div>
     </div>
 
@@ -1138,7 +1138,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
           Zoho Analytics has recently enhanced its capabilities with Advanced Analytics for Jotform, allowing deeper insights into audience preferences and engagement. The integration of the "Notes" modules from multiple CRM modules in the Advanced Analytics Connector for Zoho CRM is a significant upgrade, offering users richer customer interaction insights.
         </p>
         
-        <Link href="#" className="text-green-600 font-medium inline-block mt-4">
+        <Link href="#" className="text-[#ffd800] font-medium inline-block mt-4">
           Also read: Top Zoho Analytics Alternatives For Self-Service BI
         </Link>
       </div>
@@ -1261,7 +1261,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
             
             <Link 
               href="#" 
-              className="inline-block mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors text-sm font-medium"
+              className="inline-block mt-4 px-4 py-2 bg-[#ffd800] text-black rounded hover:bg-green-700 transition-colors text-sm font-medium"
             >
               Read our full review
             </Link>
@@ -1282,7 +1282,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
         href="#"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-4 md:mt-0 inline-block bg-green-600 text-white text-sm font-medium px-4 py-2 rounded hover:bg-green-700 transition"
+        className="mt-4 md:mt-0 inline-block bg-[#ffd800] text-black text-sm font-medium px-4 py-2 rounded hover:bg-green-700 transition"
       >
         Visit Website
       </a>
@@ -1295,7 +1295,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
         <span className="font-semibold text-lg text-gray-800">4.0/5</span>
       </div>
       <div className="w-full bg-gray-200 rounded-full h-2">
-        <div className="bg-green-600 h-2 rounded-full" style={{ width: "80%" }}></div>
+        <div className="bg-[#ffd800] h-2 rounded-full" style={{ width: "80%" }}></div>
       </div>
     </div>
 
@@ -1362,7 +1362,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
           Compared to alternatives like Sisense and Zoho Analytics, which focus on ease of use through natural language querying and conversational interfaces, I find that IBM Cognos offers more depth for complex data modeling and advanced visual customization. This makes Cognos a better fit for organizations with skilled data teams or those, like us, who need high customization and control over data processes. The recent enhancements to data module editing and faster loading are especially valuable to me when managing large datasets, as I rely on both reliability and performance—something that some lighter, more user-friendly BI tools may not fully provide.
         </p>
         
-        <Link href="#" className="text-green-600 font-medium inline-block mt-4">
+        <Link href="#" className="text-[#ffd800] font-medium inline-block mt-4">
           Also read: What Is Data Governance?
         </Link>
       </div>
@@ -1484,7 +1484,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
             
             <Link 
               href="#" 
-              className="inline-block mt-4 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors text-sm font-medium"
+              className="inline-block mt-4 px-4 py-2 bg-[#ffd800] text-black rounded hover:bg-green-700 transition-colors text-sm font-medium"
             >
               Read our full review
             </Link>
@@ -1497,7 +1497,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
           <div className="mt-8 pt-6 ">
             <div className="text-sm text-gray-700 leading-relaxed space-y-4">
               <p>
-                <a href="#" className="text-green-600 font-medium underline">Reporting tools</a> let businesses generate reports and run queries on data. Users can access data from multiple sources, including databases and spreadsheets, to analyze and summarize data through these tools. Reporting tools give users pre-designed report templates for quicker report generation. These templates are often customizable. Users can add or remove fields, change the layout, or modify the formatting to suit their needs.
+                <a href="#" className="text-[#ffd800] font-medium underline">Reporting tools</a> let businesses generate reports and run queries on data. Users can access data from multiple sources, including databases and spreadsheets, to analyze and summarize data through these tools. Reporting tools give users pre-designed report templates for quicker report generation. These templates are often customizable. Users can add or remove fields, change the layout, or modify the formatting to suit their needs.
               </p>
               
               <p>
@@ -1607,13 +1607,13 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
   <div className="bg-white p-6 rounded-xl border shadow-sm">
     <div className="flex items-center justify-between">
       <img src="/images/angles-logo.jpg" alt="Angles logo" className="h-6" />
-      <a href="#" className="text-blue-600 text-sm font-medium hover:underline">Compare</a>
+      <a href="#" className="text-[#ffd800] text-sm font-medium hover:underline">Compare</a>
     </div>
-    <h3 className="text-lg font-semibold text-gray-800 mt-2">Angles Enterprise for SAP <span className="text-sm text-blue-500 ml-2">Leave a Review</span></h3>
+    <h3 className="text-lg font-semibold text-gray-800 mt-2">Angles Enterprise for SAP <span className="text-sm text-[#ffd800] ml-2">Leave a Review</span></h3>
     <p className="text-sm text-gray-600 mt-1"><strong>Good for:</strong> Medium (250–999 Employees), Enterprise (5,000+ Employees), Large (1,000–4,999 Employees)</p>
     <p className="text-gray-700 text-sm mt-3">
       Angles for SAP works “plug-and-play” on any SAP ERP, including both ECC and S/4HANA, to collect and prepare data so it is suitable to analyze. It understands context, connections, and integrations, and it simplifies data for business users. It then creates insights into what is happening at an operational level now and in the foreseeable future by enriching the data with pre-built supply chain and finance calculations, on a transaction level and in the form of operational KPIs. 
-      <a href="#" className="text-blue-600 font-medium ml-1">Learn More About Angles Enterprise for SAP</a>
+      <a href="#" className="text-[#ffd800] font-medium ml-1">Learn More About Angles Enterprise for SAP</a>
     </p>
     <button className="mt-4 inline-block px-5 py-2 bg-gray-100 text-sm font-medium text-gray-800 rounded-full border hover:bg-gray-200 transition">Visit Product Profile</button>
   </div>
@@ -1622,13 +1622,13 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
   <div className="bg-white p-6 rounded-xl border shadow-sm">
     <div className="flex items-center justify-between">
       <img src="/images/angles-logo.jpg" alt="Angles logo" className="h-6" />
-      <a href="#" className="text-blue-600 text-sm font-medium hover:underline">Compare</a>
+      <a href="#" className="text-[#ffd800] text-sm font-medium hover:underline">Compare</a>
     </div>
-    <h3 className="text-lg font-semibold text-gray-800 mt-2">Angles Professional <span className="text-sm text-blue-500 ml-2">Leave a Review</span></h3>
+    <h3 className="text-lg font-semibold text-gray-800 mt-2">Angles Professional <span className="text-sm text-[#ffd800] ml-2">Leave a Review</span></h3>
     <p className="text-sm text-gray-600 mt-1"><strong>Good for:</strong> Micro (0–49 Employees), Small (50–249 Employees), Medium (250–999 Employees), Large (1,000–4,999 Employees), Enterprise (5,000+ Employees)</p>
     <p className="text-gray-700 text-sm mt-3">
       Angles Professional helps businesses generate operational reports using pre-built content and templates. The platform includes direct, multi-source connectivity and a drag-and-drop editor that allows teams to create self-serve interactive reports to support the decision-making process across departments. Give your team a head start with pre-built content packs. Solve common financial and operational reporting needs with interactive reports, visualizations, and dashboards built for your ERP. 
-      <a href="#" className="text-blue-600 font-medium ml-1">Learn More About Angles Professional</a>
+      <a href="#" className="text-[#ffd800] font-medium ml-1">Learn More About Angles Professional</a>
     </p>
     <button className="mt-4 inline-block px-5 py-2 bg-gray-100 text-sm font-medium text-gray-800 rounded-full border hover:bg-gray-200 transition">Visit Product Profile</button>
   </div>
@@ -1639,17 +1639,17 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
   <div className="bg-white p-6 rounded-xl border shadow-sm">
     <div className="flex items-center justify-between">
       <img src="/images/apiscrapy-logo.png" alt="APISCRAPY logo" className="h-6" />
-      <a href="#" className="text-blue-600 text-sm font-medium hover:underline">Compare</a>
+      <a href="#" className="text-[#ffd800] text-sm font-medium hover:underline">Compare</a>
     </div>
     <h3 className="text-lg font-semibold text-gray-800 mt-2">
       APISCRAPY 
-      <span className="text-green-600 text-sm font-medium ml-2">★★★★★</span>
+      <span className="text-[#ffd800] text-sm font-medium ml-2">★★★★★</span>
       <span className="text-sm text-gray-500 ml-1">(1 review)</span>
     </h3>
     <p className="text-sm text-gray-600 mt-1"><strong>Good for:</strong> Small (50–249 Employees)</p>
     <p className="text-gray-700 text-sm mt-3">
       APISCRAPY is an AI-driven web scraping and automation platform that converts any web data into ready-to-use data. The platform is capable to extract data from websites, process data, automate workflows, classify data and integrate ready to consume data into databases or deliver data in any desired format.
-      <a href="#" className="text-blue-600 font-medium ml-1">Learn More About APISCRAPY</a>
+      <a href="#" className="text-[#ffd800] font-medium ml-1">Learn More About APISCRAPY</a>
     </p>
     <button className="mt-4 inline-block px-5 py-2 bg-gray-100 text-sm font-medium text-gray-800 rounded-full border hover:bg-gray-200 transition">Visit Product Profile</button>
   </div>
@@ -1658,15 +1658,15 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
   <div className="bg-white p-6 rounded-xl border shadow-sm">
     <div className="flex items-center justify-between">
       <img src="/images/ayata-logo.png" alt="Ayata logo" className="h-6" />
-      <a href="#" className="text-blue-600 text-sm font-medium hover:underline">Compare</a>
+      <a href="#" className="text-[#ffd800] text-sm font-medium hover:underline">Compare</a>
     </div>
     <h3 className="text-lg font-semibold text-gray-800 mt-2">
-      Ayata <span className="text-sm text-blue-500 ml-2">Leave a Review</span>
+      Ayata <span className="text-sm text-[#ffd800] ml-2">Leave a Review</span>
     </h3>
     <p className="text-sm text-gray-600 mt-1"><strong>Good for:</strong> Enterprise (5,000+ Employees)</p>
     <p className="text-gray-700 text-sm mt-3">
       Ayata is software company on a global scale that offers fully functional software for prescriptive analytics. With their software, they help corporations in making better business decisions by predicting future outcomes. Ayata primarily serves the oil and gas, healthcare, high tech, and telecom and cable industries. They boast a deep client list that includes companies such as Dell, Cisco, Microsoft, and Apache Corp.
-      <a href="#" className="text-blue-600 font-medium ml-1">Learn More About Ayata</a>
+      <a href="#" className="text-[#ffd800] font-medium ml-1">Learn More About Ayata</a>
     </p>
     <button className="mt-4 inline-block px-5 py-2 bg-gray-100 text-sm font-medium text-gray-800 rounded-full border hover:bg-gray-200 transition">Visit Product Profile</button>
   </div>
@@ -1675,15 +1675,15 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
   <div className="bg-white p-6 rounded-xl border shadow-sm">
     <div className="flex items-center justify-between">
       <img src="/images/bigbi-logo.png" alt="BigBI Software logo" className="h-6" />
-      <a href="#" className="text-blue-600 text-sm font-medium hover:underline">Compare</a>
+      <a href="#" className="text-[#ffd800] text-sm font-medium hover:underline">Compare</a>
     </div>
     <h3 className="text-lg font-semibold text-gray-800 mt-2">
-      BigBI Software <span className="text-sm text-blue-500 ml-2">Leave a Review</span>
+      BigBI Software <span className="text-sm text-[#ffd800] ml-2">Leave a Review</span>
     </h3>
     <p className="text-sm text-gray-600 mt-1"><strong>Good for:</strong> All Company Sizes</p>
     <p className="text-gray-700 text-sm mt-3">
       BigBI enables data specialists to build their own powerful big data pipelines interactively & efficiently, with their no-code drag-and-drop editor powered by Apache Spark. Scalable processing of real big data (up to 10x TB+) across multiple sources and formats (CSV, SQL, JSON, NoSQL, DBs, files, video, audio, etc.). Includes ML & Graphs.
-      <a href="#" className="text-blue-600 font-medium ml-1">Learn More About BigBI Software</a>
+      <a href="#" className="text-[#ffd800] font-medium ml-1">Learn More About BigBI Software</a>
     </p>
     <button className="mt-4 inline-block px-5 py-2 bg-gray-100 text-sm font-medium text-gray-800 rounded-full border hover:bg-gray-200 transition">Visit Product Profile</button>
   </div>
@@ -1702,14 +1702,14 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
     <div className="flex justify-between items-start">
       <img src="/images/bilbeo-logo.png" alt="Bilbeo Logo" className="h-8" />
       <div className="flex items-center gap-4">
-        <a href="#" className="text-green-600 text-sm">Leave a Review</a>
-        <a href="#" className="text-blue-700 font-semibold text-sm">Compare</a>
+        <a href="#" className="text-[#ffd800] text-sm">Leave a Review</a>
+        <a href="#" className="text-[#ffd800] font-semibold text-sm">Compare</a>
       </div>
     </div>
     <div>
       <h3 className="text-lg font-semibold text-gray-900">Bilbeo Analytics</h3>
       <p className="text-sm text-gray-700"><strong>Good for:</strong> Any Company Size</p>
-      <a href="#" className="text-green-700 font-semibold text-sm mt-2 inline-block">Learn More About Bilbeo Analytics</a>
+      <a href="#" className="text-[#ffd800] font-semibold text-sm mt-2 inline-block">Learn More About Bilbeo Analytics</a>
     </div>
     <div>
       <button className="mt-2 px-6 py-2 bg-gray-100 rounded-full text-sm font-medium flex items-center gap-2">
@@ -1726,14 +1726,14 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
     <div className="flex justify-between items-start">
       <img src="/images/bime-logo.png" alt="BIME Logo" className="h-6" />
       <div className="flex items-center gap-4">
-        <a href="#" className="text-green-600 text-sm">Leave a Review</a>
-        <a href="#" className="text-blue-700 font-semibold text-sm">Compare</a>
+        <a href="#" className="text-[#ffd800] text-sm">Leave a Review</a>
+        <a href="#" className="text-[#ffd800] font-semibold text-sm">Compare</a>
       </div>
     </div>
     <div>
       <h3 className="text-lg font-semibold text-gray-900">BIME</h3>
       <p className="text-sm text-gray-700"><strong>Good for:</strong> Medium (250–999 Employees), Enterprise (5,000+ Employees), Large (1,000–4,999 Employees)</p>
-      <a href="#" className="text-green-700 font-semibold text-sm mt-2 inline-block">Learn More About BIME</a>
+      <a href="#" className="text-[#ffd800] font-semibold text-sm mt-2 inline-block">Learn More About BIME</a>
     </div>
     <div>
       <button className="mt-2 px-6 py-2 bg-gray-100 rounded-full text-sm font-medium flex items-center gap-2">
@@ -1750,14 +1750,14 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
     <div className="flex justify-between items-start">
       <img src="/images/bipp-logo.jpg" alt="bipp Logo" className="h-6" />
       <div className="flex items-center gap-4">
-        <a href="#" className="text-green-600 text-sm">Leave a Review</a>
-        <a href="#" className="text-blue-700 font-semibold text-sm">Compare</a>
+        <a href="#" className="text-[#ffd800] text-sm">Leave a Review</a>
+        <a href="#" className="text-[#ffd800] font-semibold text-sm">Compare</a>
       </div>
     </div>
     <div>
       <h3 className="text-lg font-semibold text-gray-900">bipp Analytics</h3>
       <p className="text-sm text-gray-700"><strong>Good for:</strong> Medium (250–999 Employees), Large (1,000–4,999 Employees)</p>
-      <a href="#" className="text-green-700 font-semibold text-sm mt-2 inline-block">Learn More About bipp Analytics</a>
+      <a href="#" className="text-[#ffd800] font-semibold text-sm mt-2 inline-block">Learn More About bipp Analytics</a>
     </div>
     <div>
       <button className="mt-2 px-6 py-2 bg-gray-100 rounded-full text-sm font-medium flex items-center gap-2">
@@ -1773,15 +1773,15 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
   <div className="flex justify-between items-start">
     <img src="/images/birst-logo.png" alt="Birst Logo" className="h-6" />
     <div className="flex items-center gap-4">
-      <span className="text-green-700 text-sm font-semibold">4.5 (1 review)</span>
-      <a href="#" className="text-blue-700 font-semibold text-sm">Compare</a>
+      <span className="text-[#ffd800] text-sm font-semibold">4.5 (1 review)</span>
+      <a href="#" className="text-[#ffd800] font-semibold text-sm">Compare</a>
     </div>
   </div>
   <div>
     <h3 className="text-lg font-semibold text-gray-900">Birst</h3>
     <p className="text-sm text-gray-700"><strong>Good for:</strong> Enterprise (5,000+ Employees)</p>
     <p className="text-sm text-gray-700 mt-2">Birst takes what they call a "networked approach" to BI and Analytics, enabling a single view of data, and eliminating data silos.</p>
-    <a href="#" className="text-green-700 font-semibold text-sm mt-2 inline-block">Learn More About Birst</a>
+    <a href="#" className="text-[#ffd800] font-semibold text-sm mt-2 inline-block">Learn More About Birst</a>
   </div>
   <div>
     <button className="mt-2 px-6 py-2 bg-gray-100 rounded-full text-sm font-medium flex items-center gap-2">
@@ -1798,14 +1798,14 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
   <div className="flex justify-between items-start">
     <img src="/images/birt-logo.jpg" alt="Birt Analytics Logo" className="h-6" />
     <div className="flex items-center gap-4">
-      <a href="#" className="text-green-600 text-sm">Leave a Review</a>
-      <a href="#" className="text-blue-700 font-semibold text-sm">Compare</a>
+      <a href="#" className="text-[#ffd800] text-sm">Leave a Review</a>
+      <a href="#" className="text-[#ffd800] font-semibold text-sm">Compare</a>
     </div>
   </div>
   <div>
     <h3 className="text-lg font-semibold text-gray-900">Birt Analytics - Actuate</h3>
     <p className="text-sm text-gray-700"><strong>Good for:</strong> Medium (250–999 Employees), Enterprise (5,000+ Employees), Large (1,000–4,999 Employees)</p>
-    <a href="#" className="text-green-700 font-semibold text-sm mt-2 inline-block">Learn More About Birt Analytics - Actuate</a>
+    <a href="#" className="text-[#ffd800] font-semibold text-sm mt-2 inline-block">Learn More About Birt Analytics - Actuate</a>
   </div>
   <div>
     <button className="mt-2 px-6 py-2 bg-gray-100 rounded-full text-sm font-medium flex items-center gap-2">
@@ -1901,15 +1901,15 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
       <h3 className="text-xl font-semibold text-gray-800 mb-2">Integration</h3>
       <p className="text-gray-700">
         It’s important to note many BI software solutions integrate with other software systems, including{" "}
-        <a href="#" className="text-green-600 font-medium underline">
+        <a href="#" className="text-[#ffd800] font-medium underline">
           customer relationship management (CRM)
         </a>
         ,{" "}
-        <a href="#" className="text-green-600 font-medium underline">
+        <a href="#" className="text-[#ffd800] font-medium underline">
           enterprise resource planning (ERP)
         </a>
         , and{" "}
-        <a href="#" className="text-green-600 font-medium underline">
+        <a href="#" className="text-[#ffd800] font-medium underline">
           accounting software
         </a>
         . By doing so, companies obtain a more comprehensive view of their operations and performance by combining data
@@ -1929,7 +1929,7 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
     </h2>
 
     <p className="mb-4 text-gray-700">
-      <a href="#" className="text-green-600 font-medium underline">
+      <a href="#" className="text-[#ffd800] font-medium underline">
         Business intelligence software
       </a>{" "}
       has a significant impact on businesses by providing valuable insights into customer behavior, market trends,
@@ -1994,9 +1994,9 @@ const [openIBMCognosPricing, setOpenIBMCognosPricing] = useState(false);
               >
                 <span>{faq.question}</span>
                 {activeIndex === index ? (
-                  <FaMinus className="text-green-600" />
+                  <FaMinus className="text-[#ffd800]" />
                 ) : (
-                  <FaPlus className="text-green-600" />
+                  <FaPlus className="text-[#ffd800]" />
                 )}
               </button>
               {activeIndex === index && (
