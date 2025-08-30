@@ -1157,7 +1157,7 @@ return (
                       href={`#${item.id}`}
                       className={`block py-2 px-3 rounded-md text-sm transition-colors duration-200 ${
                         item.active
-                          ? "bg-[#0E1F1C] text-green-700 border-l-4 border-[#0E1F1C] font-medium"
+                          ? "bg-[#386861] text-white border-l-4 border-[#386861] font-medium"
                           : "text-gray-600 hover:text-black hover:bg-gray-100"
                       }`}
                     >
