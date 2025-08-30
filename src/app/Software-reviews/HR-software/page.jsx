@@ -1157,7 +1157,7 @@ return (
                       href={`#${item.id}`}
                       className={`block py-2 px-3 rounded-md text-sm transition-colors duration-200 ${
                         item.active
-                          ? "bg-green-50 text-green-700 border-l-4 border-green-500 font-medium"
+                          ? "bg-[#0E1F1C] text-green-700 border-l-4 border-[#0E1F1C] font-medium"
                           : "text-gray-600 hover:text-black hover:bg-gray-100"
                       }`}
                     >
@@ -1272,7 +1272,7 @@ return (
                         <p className="text-gray-700">
                           <a
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#0E1F1C] hover:text-green-700 font-medium underline"
                           >
                             ADP Workforce Now
                           </a>{" "}
@@ -1296,7 +1296,7 @@ return (
                         <p className="text-gray-700">
                           <a
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#0E1F1C] hover:text-green-700 font-medium underline"
                           >
                             Deel
                           </a>{" "}
@@ -1320,7 +1320,7 @@ return (
                         <p className="text-gray-700">
                           <a
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#0E1F1C] hover:text-green-700 font-medium underline"
                           >
                             BambooHR
                           </a>{" "}
@@ -1344,7 +1344,7 @@ return (
                         <p className="text-gray-700">
                           <a
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#0E1F1C] hover:text-green-700 font-medium underline"
                           >
                             Rippling
                           </a>{" "}
@@ -1368,7 +1368,7 @@ return (
                         <p className="text-gray-700">
                           <a
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#0E1F1C] hover:text-green-700 font-medium underline"
                           >
                             SAP SuccessFactors HCM
                           </a>{" "}
@@ -1394,7 +1394,7 @@ return (
                         <p className="text-gray-700">
                           <a
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#0E1F1C] hover:text-green-700 font-medium underline"
                           >
                             Paycor
                           </a>{" "}
@@ -1419,7 +1419,7 @@ return (
                         <p className="text-gray-700">
                           <a
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#0E1F1C]hover:text-green-700 font-medium underline"
                           >
                             Paylocity
                           </a>{" "}
@@ -1443,7 +1443,7 @@ return (
                         <p className="text-gray-700">
                           <a
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#0E1F1C] hover:text-green-700 font-medium underline"
                           >
                             Gusto
                           </a>{" "}
@@ -1474,7 +1474,7 @@ return (
           <div className="flex justify-center mb-4">
             <a
               href="#"
-              className="bg-green-600 hover:bg-green-700 text-white text-sm font-medium px-6 py-2 rounded-full flex items-center gap-2"
+              className="bg-[#0E1F1C] hover:bg-green-700 text-white text-sm font-medium px-6 py-2 rounded-full flex items-center gap-2"
             >
               Visit Website <span>↗</span>
             </a>
@@ -1504,7 +1504,7 @@ return (
           <div className="flex justify-center mb-4">
             <a
               href="#"
-              className="bg-green-600 hover:bg-green-700 text-white text-sm font-medium px-6 py-2 rounded-full flex items-center gap-2"
+              className="bg-[#0E1F1C] hover:bg-green-700 text-white text-sm font-medium px-6 py-2 rounded-full flex items-center gap-2"
             >
               Visit Website <span>↗</span>
             </a>
@@ -1563,7 +1563,7 @@ return (
                     <p className="font-medium">{company.name}</p>
                     <a
                       href={company.link}
-                      className="mt-1 inline-block text-sm bg-green-600 hover:bg-green-700 text-white px-4 py-1 rounded-full"
+                      className="mt-1 inline-block text-sm bg-[#0E1F1C] hover:bg-green-700 text-white px-4 py-1 rounded-full"
                     >
                       Visit {company.name.split(" ")[0]} ↗
                     </a>
@@ -1611,7 +1611,7 @@ return (
               onClick={() => toggle(index)}
             >
               {sec.title}
-              <Plus className="text-green-700 w-5 h-5" />
+              <Plus className="text-[#0E1F1C]w-5 h-5" />
             </button>
             {open === index && (
               <div className="pb-4 text-gray-600 text-sm">
@@ -1641,7 +1641,7 @@ return (
         </div>
         <a
           href="#"
-          className="bg-green-600 text-white text-sm font-medium px-4 py-2 rounded-full"
+          className="bg-[#0E1F1C] text-white text-sm font-medium px-4 py-2 rounded-full"
         >
           Visit Website ↗
         </a>
@@ -1657,7 +1657,7 @@ return (
             </div>
             <div className="h-2 bg-gray-200 rounded-full">
               <div
-                className="h-2 bg-green-600 rounded-full"
+                className="h-2 bg-[#0E1F1C] rounded-full"
                 style={{ width: `${(item.value / 5) * 100}%` }}
               ></div>
             </div>
@@ -1736,10 +1736,10 @@ return (
             </div>
           ))}
         <div className="flex gap-4 pt-4">
-          <button className="px-4 py-2 rounded-full text-sm bg-white border border-green-600 text-green-600 hover:bg-green-50">
+          <button className="px-4 py-2 rounded-full text-sm bg-white border border-green-600 text-[#0E1F1C] hover:bg-green-50">
             Read our full review
           </button>
-          <button className="px-4 py-2 rounded-full text-sm bg-green-600 text-white hover:bg-green-700">
+          <button className="px-4 py-2 rounded-full text-sm bg-[#0E1F1C] text-white hover:bg-green-700">
             Submit your review
           </button>
         </div>
@@ -1757,7 +1757,7 @@ return (
             <h2 className="text-xl font-semibold text-gray-900">Deel: Best for startups</h2>
           </div>
         </div>
-        <a href="#" className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full text-sm">Visit Website ↗</a>
+        <a href="#" className="bg-[#0E1F1C] hover:bg-green-700 text-white px-4 py-2 rounded-full text-sm">Visit Website ↗</a>
       </div>
 
       {/* Scores */}
@@ -1780,7 +1780,7 @@ return (
             </div>
             <div className="w-full bg-gray-200 h-2 rounded">
               <div
-                className="bg-green-600 h-2 rounded"
+                className="bg-[#0E1F1C] h-2 rounded"
                 style={{ width: `${(score / 5) * 100}%` }}
               ></div>
             </div>
@@ -1839,7 +1839,7 @@ return (
               className="w-full flex justify-between items-center py-4 text-left font-medium text-gray-900"
             >
               {title}
-              <span className="text-green-600 text-2xl">{openSection === i ? '-' : '+'}</span>
+              <span className="text-[#0E1F1C] text-2xl">{openSection === i ? '-' : '+'}</span>
             </button>
             {openSection === i && (
               <div className="pb-4 text-sm text-gray-700 space-y-2">
@@ -1857,10 +1857,10 @@ return (
 
       {/* Footer Buttons */}
       <div className="flex gap-4 pt-4">
-          <button className="px-4 py-2 rounded-full text-sm bg-white border border-green-600 text-green-600 hover:bg-green-50">
+          <button className="px-4 py-2 rounded-full text-sm bg-white border border-green-600 text-[#0E1F1C] hover:bg-green-50">
             Read our full review
           </button>
-          <button className="px-4 py-2 rounded-full text-sm bg-green-600 text-white hover:bg-green-700">
+          <button className="px-4 py-2 rounded-full text-sm bg-[#0E1F1C] text-white hover:bg-green-700">
             Submit your review
           </button>
         </div>
@@ -1878,7 +1878,7 @@ return (
 
   <p className="text-gray-700 mb-4">
     I’ve participated in multiple demos of{' '}
-    <Link href="https://www.hibob.com" target="_blank" className="text-green-700 underline font-medium">
+    <Link href="https://www.hibob.com" target="_blank" className="text-[#0E1F1C]underline font-medium">
       Bob
     </Link>, and I’m always impressed with its focus on customization and employee experience. (Bob’s “clubs”
     for fostering employee engagement is one of my favorite features.) These qualities make it a great
@@ -1902,7 +1902,7 @@ return (
   <Link
     href="https://www.hibob.com"
     target="_blank"
-    className="inline-block mb-6 bg-green-600 hover:bg-green-700 text-white text-lg font-medium py-3 px-6 rounded-full transition"
+    className="inline-block mb-6 bg-[#0E1F1C] hover:bg-green-700 text-white text-lg font-medium py-3 px-6 rounded-full transition"
   >
     Visit Bob ↗
   </Link>
@@ -1926,7 +1926,7 @@ return (
         </div>
         <a
           href="#"
-          className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full text-sm"
+          className="bg-[#0E1F1C] hover:bg-green-700 text-white px-4 py-2 rounded-full text-sm"
         >
           Visit Website ↗
         </a>
@@ -1952,7 +1952,7 @@ return (
             </div>
             <div className="w-full bg-gray-200 h-2 rounded">
               <div
-                className="bg-green-600 h-2 rounded"
+                className="bg-[#0E1F1C] h-2 rounded"
                 style={{ width: `${(score / 5) * 100}%` }}
               ></div>
             </div>
@@ -2010,7 +2010,7 @@ return (
               className="w-full flex justify-between items-center py-4 text-left font-medium text-gray-900"
             >
               {title}
-              <span className="text-green-600 text-2xl">{openSection === i ? '-' : '+'}</span>
+              <span className="text-[#0E1F1C] text-2xl">{openSection === i ? '-' : '+'}</span>
             </button>
             {openSection === i && (
               <div className="pb-4 text-sm text-gray-700 space-y-2">
@@ -2029,10 +2029,10 @@ return (
       {/* Footer Buttons */}
         {/* Footer Buttons */}
       <div className="flex gap-4 pt-4">
-          <button className="px-4 py-2 rounded-full text-sm bg-white border border-green-600 text-green-600 hover:bg-green-50">
+          <button className="px-4 py-2 rounded-full text-sm bg-white border border-green-600 text-[#0E1F1C] hover:bg-green-50">
             Read our full review
           </button>
-          <button className="px-4 py-2 rounded-full text-sm bg-green-600 text-white hover:bg-green-700">
+          <button className="px-4 py-2 rounded-full text-sm bg-[#0E1F1C] text-white hover:bg-green-700">
             Submit your review
           </button>
         </div>
@@ -2050,7 +2050,7 @@ return (
       </p>
 
       {/* Bullet links */}
-      <ul className="list-disc list-inside space-y-2 text-green-700 font-medium">
+      <ul className="list-disc list-inside space-y-2 text-[#0E1F1C]font-medium">
         <li><a href="#" className="hover:underline">Best HRIS</a></li>
         <li><a href="#" className="hover:underline">Best HR software for small businesses</a></li>
         <li><a href="#" className="hover:underline">Best performance management software</a></li>
@@ -2072,7 +2072,7 @@ return (
         </div>
         <a
           href="#"
-          className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full text-sm"
+          className="bg-[#0E1F1C] hover:bg-green-700 text-white px-4 py-2 rounded-full text-sm"
         >
           Visit Website ↗
         </a>
@@ -2103,7 +2103,7 @@ return (
           </div>
           <div className="w-full bg-gray-200 h-2 rounded">
             <div
-              className="bg-green-600 h-2 rounded"
+              className="bg-[#0E1F1C] h-2 rounded"
               style={{ width: `${(score / 5) * 100}%` }}
             ></div>
           </div>
@@ -2158,7 +2158,7 @@ return (
               className="w-full flex justify-between items-center py-4 text-left font-medium text-gray-900"
             >
               {title}
-              <span className="text-green-600 text-2xl">{openSection === i ? '-' : '+'}</span>
+              <span className="text-[#0E1F1C] text-2xl">{openSection === i ? '-' : '+'}</span>
             </button>
             {openSection === i && (
               <div className="pb-4 text-sm text-gray-700 space-y-2">
@@ -2174,10 +2174,10 @@ return (
 
       {/* Footer Buttons */}
       <div className="flex gap-4 pt-4">
-          <button className="px-4 py-2 rounded-full text-sm bg-white border border-green-600 text-green-600 hover:bg-green-50">
+          <button className="px-4 py-2 rounded-full text-sm bg-white border border-green-600 text-[#0E1F1C] hover:bg-green-50">
             Read our full review
           </button>
-          <button className="px-4 py-2 rounded-full text-sm bg-green-600 text-white hover:bg-green-700">
+          <button className="px-4 py-2 rounded-full text-sm bg-[#0E1F1C] text-white hover:bg-green-700">
             Submit your review
           </button>
         </div>
@@ -2235,7 +2235,7 @@ return (
         </div>
         <a
           href="#"
-          className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-full text-sm"
+          className="bg-[#0E1F1C] hover:bg-green-700 text-white px-4 py-2 rounded-full text-sm"
         >
           Visit Website ↗
         </a>
@@ -2265,7 +2265,7 @@ return (
           </div>
           <div className="w-full bg-gray-200 h-2 rounded">
             <div
-              className="bg-green-600 h-2 rounded"
+              className="bg-[#0E1F1C] h-2 rounded"
               style={{ width: `${(score / 5) * 100}%` }}
             ></div>
           </div>
@@ -2300,8 +2300,8 @@ return (
         <h3 className="font-semibold text-gray-800 mb-2">Why I chose SAP SuccessFactors HCM</h3>
         <p className="mb-2">
           With a score of 3.81 out of 5, SAP SuccessFactors impressed me with its number of customizable features and enterprise options aimed at enterprises.
-          In fact, by combining its HCM suite with other SAP products, like <a href="#" className="text-green-600 underline">ERP</a>, <a href="#" className="text-green-600 underline">supply chain management</a>,
-          <a href="#" className="text-green-600 underline">financial management</a>, and <a href="#" className="text-green-600 underline">customer relationship management</a>, you can create an open flow of data
+          In fact, by combining its HCM suite with other SAP products, like <a href="#" className="text-[#0E1F1C] underline">ERP</a>, <a href="#" className="text-[#0E1F1C] underline">supply chain management</a>,
+          <a href="#" className="text-[#0E1F1C] underline">financial management</a>, and <a href="#" className="text-[#0E1F1C] underline">customer relationship management</a>, you can create an open flow of data
           across traditionally siloed business functions.
         </p>
         <p className="mb-2">
@@ -2324,7 +2324,7 @@ return (
               className="w-full flex justify-between items-center py-4 text-left font-medium text-gray-900"
             >
               {title}
-              <span className="text-green-600 text-2xl">{openSection === i ? '-' : '+'}</span>
+              <span className="text-[#0E1F1C] text-2xl">{openSection === i ? '-' : '+'}</span>
             </button>
             {openSection === i && (
               <div className="pb-4 text-sm text-gray-700 space-y-2">
@@ -2341,10 +2341,10 @@ return (
       {/* Footer Buttons */}
      {/* Footer Buttons */}
       <div className="flex gap-4 pt-4">
-          <button className="px-4 py-2 rounded-full text-sm bg-white border border-green-600 text-green-600 hover:bg-green-50">
+          <button className="px-4 py-2 rounded-full text-sm bg-white border border-green-600 text-[#0E1F1C] hover:bg-green-50">
             Read our full review
           </button>
-          <button className="px-4 py-2 rounded-full text-sm bg-green-600 text-white hover:bg-green-700">
+          <button className="px-4 py-2 rounded-full text-sm bg-[#0E1F1C] text-white hover:bg-green-700">
             Submit your review
           </button>
         </div>
@@ -2361,7 +2361,7 @@ return (
       <div className="text-gray-700 space-y-4 text-base">
         <p>
           SAP is hardly the only HR vendor that offers AI tools.{' '}
-          <a href="#" className="text-green-700 underline font-medium">
+          <a href="#" className="text-[#0E1F1C] underline font-medium">
             Recruitment platforms
           </a>, for example, have used AI for years to sort and identify highly qualified candidates from applicant pools.
           However, with the rise of generative AI, many vendors are announcing plans to integrate more AI capabilities into their products.
@@ -2369,11 +2369,11 @@ return (
 
         <p>
           Similar to SAP’s Joule, for example, Workday announced its{' '}
-          <a href="#" className="text-green-700 underline font-medium">
+          <a href="#" className="text-[#0E1F1C] underline font-medium">
             Illuminate AI model
           </a>{' '}
           to streamline business processes within the “flow of work.”{' '}
-          <a href="#" className="text-green-700 underline font-medium">
+          <a href="#" className="text-[#0E1F1C] underline font-medium">
             Gusto also recently announced
           </a>{' '}
           the upcoming release of its own small business AI tool, “Gus,” to help you get answers to compliance questions
@@ -2387,11 +2387,11 @@ return (
 
         <p>
           You can learn more by exploring{' '}
-          <a href="#" className="text-green-700 underline font-medium">
+          <a href="#" className="text-[#0E1F1C] underline font-medium">
             AI in HR: 6 Ways Artificial Intelligence Impacts the Workplace
           </a>{' '}
           and{' '}
-          <a href="#" className="text-green-700 underline font-medium">
+          <a href="#" className="text-[#0E1F1C]underline font-medium">
             AI Recruiting: Uses, Advantages, & Disadvantages
           </a>.
         </p>
@@ -2411,7 +2411,7 @@ return (
           </div>
           <a
             href="#"
-            className="mt-4 md:mt-0 bg-green-100 text-green-800 px-4 py-2 text-sm font-medium rounded-full"
+            className="mt-4 md:mt-0 bg-[#0E1F1C] text-white px-4 py-2 text-sm font-medium rounded-full"
           >
             Visit Website
           </a>
@@ -2444,11 +2444,11 @@ return (
       {/* In the News */}
       <div className="bg-gray-50 border-l-4 border-green-500 p-4 mb-6 text-sm rounded-md shadow-sm">
         <p>
-          In January 2025, <Link href="#" className="text-green-700 underline">Paychex acquired Paycor for $4.1 billion</Link>.
+          In January 2025, <Link href="#" className="text-[#0E1F1C] underline">Paychex acquired Paycor for $4.1 billion</Link>.
           My sources shared that Paychex and Paycor will continue to offer their products separately, but they remain
           on watch for any plan to merge their products — similar to Kronos and Ultimate Software of yore. While the
           Paycor Stadium name will remain unchanged, I’ll keep you updated as I learn more. If you’re curious,{' '}
-          <Link href="#" className="text-green-700 underline">Paychex Flex</Link> earned a 3.76 out of 5.00 in my evaluation.
+          <Link href="#" className="text-[#0E1F1C] underline">Paychex Flex</Link> earned a 3.76 out of 5.00 in my evaluation.
         </p>
       </div>
 
@@ -2462,7 +2462,7 @@ return (
           </div>
           <a
             href="#"
-            className="mt-4 md:mt-0 bg-green-100 text-green-800 px-4 py-2 text-sm font-medium rounded-full"
+            className="mt-4 md:mt-0 bg-[#0E1F1C] text-white px-4 py-2 text-sm font-medium rounded-full"
           >
             Visit Website
           </a>
@@ -2500,7 +2500,7 @@ return (
           </div>
           <a
             href="#"
-            className="mt-4 md:mt-0 bg-green-100 text-green-800 px-4 py-2 text-sm font-medium rounded-full"
+            className="mt-4 md:mt-0 bg-[#0E1F1C] text-white px-4 py-2 text-sm font-medium rounded-full"
           >
             Visit Website
           </a>
@@ -2607,12 +2607,12 @@ return (
             </div>
 
             {product.stars > 0 && (
-              <div className="flex items-center text-green-600 text-sm gap-1">
+              <div className="flex items-center text-[#0E1F1C] text-sm gap-1">
                 <span className="font-semibold">{product.stars}</span>
                 {Array.from({ length: 5 }, (_, i) => (
                   <FaStar
                     key={i}
-                    className={i < Math.floor(product.stars) ? 'text-green-500' : 'text-gray-300'}
+                    className={i < Math.floor(product.stars) ? 'text-[#0E1F1C]' : 'text-gray-300'}
                   />
                 ))}
               </div>
@@ -2625,7 +2625,7 @@ return (
               <button
                 className={`px-4 py-2 rounded font-semibold ${
                   product.button.type === 'primary'
-                    ? 'bg-green-600 text-white hover:bg-green-700'
+                    ? 'bg-[#0E1F1C] text-white hover:bg-green-700'
                     : 'border border-gray-400 text-gray-700 hover:bg-gray-100'
                 }`}
               >
@@ -2639,7 +2639,7 @@ return (
           {/* Banner */}
       <div className=" bg-[#0E1F1C] text-white rounded-xl py-8 px-6 text-center">
         <h2 className="text-lg font-semibold mb-4">Interested in seeing your product here?</h2>
-        <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded font-semibold text-sm">
+        <button className="bg-[#0E1F1C] hover:bg-green-600 text-white px-6 py-2 rounded font-semibold text-sm">
           List Your Product
         </button>
       </div>
@@ -2675,7 +2675,7 @@ return (
               <div className="flex items-center text-sm text-gray-500">
                 <span className="font-medium">Expert tip from Lead HR Writer</span>
                 <span className="mx-2">•</span>
-                <span className="text-green-600 font-medium">Jessica Dennis</span>
+                <span className="text-[#0E1F1C] font-medium">Jessica Dennis</span>
               </div>
             </div>
           </div>
@@ -2703,7 +2703,7 @@ return (
         {/* Considerations Section */}
         <div className="bg-white rounded-2xl shadow-xl p-8 mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center">
-            <CheckCircle className="w-8 h-8 text-green-600 mr-3" />
+            <CheckCircle className="w-8 h-8 text-[#0E1F1C] mr-3" />
             Key Considerations
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
@@ -2735,11 +2735,11 @@ return (
         </div>
 
         {/* Main Quote Card */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border-l-4 border-green-600">
+        <div className="bg-white rounded-2xl shadow-xl p-8 mb-8 border-l-4 border-#0E1F1C]">
           <div className="flex items-start space-x-4">
             <div className="flex-shrink-0">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-                <Users className="w-6 h-6 text-green-600" />
+              <div className="w-12 h-12 bg-#0E1F1C] rounded-full flex items-center justify-center">
+                <Users className="w-6 h-6 text-#0E1F1C]" />
               </div>
             </div>
             <div className="flex-1">
@@ -2752,7 +2752,7 @@ return (
               <div className="flex items-center text-sm text-gray-500">
                 <span className="font-medium">Expert tip from Lead HR Writer</span>
                 <span className="mx-2">•</span>
-                <span className="text-green-600 font-medium">Jessica Dennis</span>
+                <span className="text-[#0E1F1C] font-medium">Jessica Dennis</span>
               </div>
             </div>
           </div>
@@ -2765,7 +2765,7 @@ return (
             <p className="text-gray-700 mb-6">
               There are three main categories of HR software: HRIS, HRMS, and HCM. Although they are often used interchangeably, there are several technical differences between them. Some HR software also focuses on specific human resources functions, like recruiting, onboarding, payroll, benefits administration, performance management, employee engagement, and learning management systems.
             </p>
-            <div className="text-sm text-green-600 font-medium mb-4">
+            <div className="text-sm text-[#0E1F1C] font-medium mb-4">
               💡 Also read: 15 Must-Have HR System Features
             </div>
           </div>
@@ -2777,7 +2777,7 @@ return (
               {coreSoftware.map((item, index) => (
                 <div key={index} className="flex items-start space-x-4 p-4 border border-gray-200 rounded-lg">
                   <div className="flex-shrink-0">
-                    <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-green-600">
+                    <div className="w-10 h-10 bg-[#0E1F1C] rounded-lg flex items-center justify-center text-green-600">
                       {item.icon}
                     </div>
                   </div>
@@ -2786,7 +2786,7 @@ return (
                     <p className="text-gray-600 text-sm">{item.description}</p>
                   </div>
                   <div className="w-6 h-6 bg-green-100 rounded flex items-center justify-center">
-                    <Plus className="w-4 h-4 text-green-600" />
+                    <Plus className="w-4 h-4 text-[#0E1F1C]" />
                   </div>
                 </div>
               ))}
@@ -2800,7 +2800,7 @@ return (
               {functionSpecific.map((item, index) => (
                 <div key={index} className="flex items-start space-x-4 p-4 border border-gray-200 rounded-lg">
                   <div className="flex-shrink-0">
-                    <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-green-600">
+                    <div className="w-10 h-10 bg-[#0E1F1C] rounded-lg flex items-center justify-center text-green-600">
                       {item.icon}
                     </div>
                   </div>
@@ -2809,7 +2809,7 @@ return (
                     <p className="text-gray-600 text-sm">{item.description}</p>
                   </div>
                   <div className="w-6 h-6 bg-green-100 rounded flex items-center justify-center">
-                    <Plus className="w-4 h-4 text-green-600" />
+                    <Plus className="w-4 h-4 text-[#0E1F1C]" />
                   </div>
                 </div>
               ))}
@@ -2832,7 +2832,7 @@ return (
                   className="w-full flex items-center justify-between p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center text-green-600">
+                    <div className="w-10 h-10 bg-[#0E1F1C] rounded-lg flex items-center justify-center text-green-600">
                       {benefit.icon}
                     </div>
                     <h3 className="text-xl font-bold text-gray-900">{benefit.title}</h3>
@@ -2853,7 +2853,7 @@ return (
         </div>
 
         {/* Call to Action */}
-        <div className="bg-gradient-to-r from-green-600 to-green-700 rounded-2xl shadow-xl p-8 text-center text-white">
+        <div className="bg-[#0E1F1C] rounded-2xl shadow-xl p-8 text-center text-white">
           <h2 className="text-2xl font-bold mb-4">Ready to Find Your Perfect HR Software?</h2>
           <p className="text-green-100 mb-6 max-w-2xl mx-auto">
             Take the next step in streamlining your HR processes and improving your workforce management
@@ -2871,9 +2871,9 @@ return (
 
         {/* Additional Reading */}
         <div className="mt-8 text-center">
-          <div className="inline-flex items-center text-green-400 font-medium">
-            <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
-              <span className="text-green-600 text-sm">💡</span>
+          <div className="inline-flex items-center text-[#0E1F1C] font-medium">
+            <div className="w-6 h-6 bg-[#0E1F1C] rounded-full flex items-center justify-center mr-3">
+              <span className="text-[#0E1F1C] text-sm">💡</span>
             </div>
             Also read: How to Choose the Right HR Software for your Business
           </div>
@@ -2896,12 +2896,12 @@ return (
               {browseGuides.map((guide, index) => (
                 <div key={index} className="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer group">
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center text-green-600">
+                    <div className="w-8 h-8 bg-[#0E1F1C] rounded-lg flex items-center justify-center text-green-600">
                       {guide.icon}
                     </div>
-                    <span className="text-gray-700 group-hover:text-green-600 transition-colors">{guide.title}</span>
+                    <span className="text-black group-hover:text-[#0E1F1C] transition-colors">{guide.title}</span>
                   </div>
-                  <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-green-600 transition-colors" />
+                  <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-[#0E1F1C] transition-colors" />
                 </div>
               ))}
             </div>
@@ -2914,16 +2914,16 @@ return (
               {alternatives.map((alternative, index) => (
                 <div key={index} className="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer group">
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center text-green-600">
+                    <div className="w-8 h-8 bg-[#0E1F1C] rounded-lg flex items-center justify-center text-green-600">
                       {alternative.icon}
                     </div>
-                    <span className="text-gray-700 group-hover:text-green-600 transition-colors">{alternative.title}</span>
+                    <span className="text-black group-hover:text-[#0E1F1C] transition-colors">{alternative.title}</span>
                   </div>
-                  <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-green-600 transition-colors" />
+                  <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-[#0E1F1C] transition-colors" />
                 </div>
               ))}
             </div>
-            <button className="text-green-600 font-medium hover:text-green-700 transition-colors flex items-center">
+            <button className="text-[#0E1F1C] font-medium hover:text-[#0E1F1C] transition-colors flex items-center">
               See more...
               <ArrowRight className="w-4 h-4 ml-1" />
             </button>
@@ -2939,16 +2939,16 @@ return (
               {comparisons.map((comparison, index) => (
                 <div key={index} className="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer group">
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center text-green-600">
+                    <div className="w-8 h-8 bg-[#0E1F1C] rounded-lg flex items-center justify-center text-green-600">
                       {comparison.icon}
                     </div>
-                    <span className="text-gray-700 group-hover:text-green-600 transition-colors">{comparison.title}</span>
+                    <span className="text-black group-hover:text-[#0E1F1C] transition-colors">{comparison.title}</span>
                   </div>
-                  <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-green-600 transition-colors" />
+                  <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-[#0E1F1C] transition-colors" />
                 </div>
               ))}
             </div>
-            <button className="text-green-600 font-medium hover:text-green-700 transition-colors flex items-center">
+            <button className="text-[#0E1F1C] font-medium hover:text-green-700 transition-colors flex items-center">
               See more...
               <ArrowRight className="w-4 h-4 ml-1" />
             </button>
@@ -2961,12 +2961,12 @@ return (
               {recommendations.map((recommendation, index) => (
                 <div key={index} className="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg transition-colors cursor-pointer group">
                   <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center text-green-600">
+                    <div className="w-8 h-8 bg-[#0E1F1C] rounded-lg flex items-center justify-center text-green-600">
                       {recommendation.icon}
                     </div>
-                    <span className="text-gray-700 group-hover:text-green-600 transition-colors">{recommendation.title}</span>
+                    <span className="text-black group-hover:text-[#0E1F1C] transition-colors">{recommendation.title}</span>
                   </div>
-                  <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-green-600 transition-colors" />
+                  <ChevronRight className="w-4 h-4 text-gray-400 group-hover:text-[#0E1F1C] transition-colors" />
                 </div>
               ))}
             </div>
