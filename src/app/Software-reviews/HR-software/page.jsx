@@ -2548,11 +2548,11 @@ return (
             <input
               type="text"
               placeholder="Search product name"
-              className="w-full rounded-full py-3 px-5 pr-12 text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full rounded-full py-3 px-5 pr-12 text-[#386861] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#386861]"
               value={filters.search}
               onChange={(e) => setFilters({ ...filters, search: e.target.value })}
             />
-            <button className="absolute top-1/2 right-3 -translate-y-1/2 text-gray-600 hover:text-gray-900">
+            <button className="absolute top-1/2 right-3 -translate-y-1/2 text-[#386861] hover:text-[#386861]">
               <div className="bg-gray-200 rounded-full p-2">
                 <FiSearch className="w-5 h-5" />
               </div>
@@ -2603,7 +2603,7 @@ return (
                 </div>
               </div>
 
-              <button className="text-sm text-blue-600 font-semibold">Compare ▪</button>
+              <button className="text-sm text-[#386861] font-semibold">Compare ▪</button>
             </div>
 
             {product.stars > 0 && (
@@ -2859,11 +2859,11 @@ return (
             Take the next step in streamlining your HR processes and improving your workforce management
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
+            <button className="bg-white text-[#386861] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center">
               Explore Solutions
               <ArrowRight className="w-5 h-5 ml-2" />
             </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
+            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#386861] transition-colors">
               Get Expert Consultation
             </button>
           </div>

@@ -2951,7 +2951,7 @@ ClickUp: {
                     {/* Products Search */}
                     <div className="lg:col-span-3">
                       <div className="flex items-center gap-2 mb-3">
-                        <Search className="w-4 h-4 text-green-600" />
+                        <Search className="w-4 h-4 text-[#386861]" />
                         <h3 className="text-sm font-bold text-gray-700 uppercase tracking-wider">
                           Search Products
                         </h3>
@@ -2965,7 +2965,7 @@ ClickUp: {
                           className="w-full px-6 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-green-500 focus:ring-4 focus:ring-green-100 transition-all duration-300 bg-white/70 hover:bg-white group-hover:shadow-md text-lg"
                         />
                         <div className="absolute inset-y-0 right-0 pr-4 flex items-center">
-                          <div className="bg-gradient-to-r from-green-500 to-blue-500 p-2 rounded-lg cursor-pointer hover:shadow-lg transition-all duration-300 hover:scale-105">
+                          <div className="bg-[#386861] p-2 rounded-lg cursor-pointer hover:shadow-lg transition-all duration-300 hover:scale-105">
                             <Search className="h-5 w-5 text-white" />
                           </div>
                         </div>
