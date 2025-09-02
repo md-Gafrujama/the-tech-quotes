@@ -285,7 +285,7 @@ We recognize that diversity extends beyond the color of our skin to include ethn
   const coreValues = [
     {
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#ffd800]">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#386861]">
           <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM19.5 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM4.5 16.5a3 3 0 1 1 0-6 3 3 0 0 1 0 6ZM19.5 16.5a3 3 0 1 1 0-6 3 3 0 0 1 0 6ZM12 12a3 3 0 1 1 0-6 3 3 0 0 1 0 6ZM12 12a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z" />
         </svg>
       ),
@@ -294,7 +294,7 @@ We recognize that diversity extends beyond the color of our skin to include ethn
     },
     {
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#ffd800]">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#386861]">
           <path strokeLinecap="round" strokeLinejoin="round" d="M15.59 14.375c.068.038.129.093.182.158l2.992 3.007a.75.75 0 1 1-1.06 1.06L14.474 16.7c-.069-.06-.12-.129-.158-.2l-1.33-2.217a.75.75 0 0 0-.203-.277 1.5 1.5 0 0 1-.722-.977L9.236 9.873A8.75 8.75 0 0 0 7.5 7.5c0-4.004 3.003-7.25 6.702-7.25C18.2 0.25 21 3.5 21 7.5c0 1.626-.54 3.076-1.5 4.25a.75.75 0 0 0 .203.277l1.33 2.217c.069.06.12.129.158.2l2.992 3.007a.75.75 0 1 1-1.06 1.06L18.41 14.533c-.068-.038-.129-.093-.182-.158l-1.33-2.217a.75.75 0 0 0-.203-.277 1.5 1.5 0 0 1-.722-.977L9.236 9.873Z" />
         </svg>
       ),
@@ -303,7 +303,7 @@ We recognize that diversity extends beyond the color of our skin to include ethn
     },
     {
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#ffd800]">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#386861]">
           <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 0 0-.491 6.347A48.966 48.966 0 0 1 12 21.75c2.305 0 4.535-.295 6.735-.856m-1.72-1.033a48.96 48.96 0 0 0-10.618 0m10.618 0v.2c0 2.109-.969 3.993-2.564 5.25S12.378 24 12 24c-.378 0-2.07-.468-3.676-1.725S5.25 18.2 5.25 16.125v-.2M12 21.75c-2.305 0-4.535-.295-6.735-.856m0 0a48.805 48.805 0 0 1-1.378-3.695m1.378 3.695L7.5 21.493m-.491-11.347a60.436 60.436 0 0 1-.491-6.347m-1.996-.007a60.436 60.436 0 0 1-.491-6.347" />
         </svg>
       ),
@@ -312,7 +312,7 @@ We recognize that diversity extends beyond the color of our skin to include ethn
     },
     {
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#ffd800]">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 text-[#386861]">
           <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25H18.75A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5" />
         </svg>
       ),
@@ -427,12 +427,12 @@ We recognize that diversity extends beyond the color of our skin to include ethn
             </p>
 
             <div className="mb-8">
-              <a href="#" className="font-semibold hover:text-[#ffd800]">
+              <a href="#" className="font-semibold hover:text-[#386861]">
                 Subscribe to our Talent Community →
               </a>
             </div>
 <a href="/About-Us/Careers/opportunities" className="inline-block">
-  <button className="bg-[#ffd800] text-black px-8 py-3 rounded-full font-semibold hover:opacity-90 transition">
+  <button className="bg-[#386861] text-black px-8 py-3 rounded-full font-semibold hover:opacity-90 transition">
     Apply Now
   </button>
 </a>
@@ -451,7 +451,7 @@ We recognize that diversity extends beyond the color of our skin to include ethn
           </div>
         </div>
 
-       <div className="flex flex-wrap gap-8 mt-50 text-[#ffd800] font-semibold text-xl">
+       <div className="flex flex-wrap gap-8 mt-50 text-[#386861] font-semibold text-xl">
   <a href="/About-Us/Careers" className="hover:underline">Culture</a>
   <a href="/About-Us/Careers/opportunities" className="hover:underline">Opportunities</a>
   <a href="/About-Us/Careers/faqs" className="hover:underline">FAQs</a>
@@ -478,7 +478,7 @@ We recognize that diversity extends beyond the color of our skin to include ethn
               className="flex justify-between items-center cursor-pointer"
             >
               <h3 className="text-lg font-semibold">{section.title}</h3>
-              <span className="text-[#ffd800] text-2xl">
+              <span className="text-[#386861] text-2xl">
                 {openIndex === index ? "-" : "+"}
               </span>
             </div>
@@ -602,7 +602,7 @@ testimonials */}
                 key={index}
                 className="flex items-start bg-gray-50 p-6 rounded-lg shadow-sm"
               >
-                <div className="flex-shrink-0 bg-green-100 p-3 rounded-md mr-4">
+                <div className="flex-shrink-0 bg-white p-3 rounded-md mr-4">
                   {value.icon}
                 </div>
                 <div>

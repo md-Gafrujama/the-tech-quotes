@@ -289,7 +289,7 @@ const Navbar = () => {
                 onMouseEnter={() => handleDropdownEnter('software')}
                 onMouseLeave={handleDropdownLeave}
               >
-                <Link href="/software-reviews" className="flex items-center space-x-1 text-white hover:text-[#ffd800] transition-colors duration-200">
+                <Link href="/software-reviews" className="flex items-center space-x-1 text-white hover:text-[#386861] transition-colors duration-200">
                   <span>Software Reviews </span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'software' ? 'rotate-180' : ''}`} />
                 </Link>
@@ -301,7 +301,7 @@ const Navbar = () => {
                         <Link
                           key={index}
                           href={category.href}
-                          className="block text-gray-600 hover:text-[#ffd800] hover:bg-gray-50 px-2 py-1 rounded transition-all duration-200"
+                          className="block text-gray-600 hover:text-[#386861] hover:bg-gray-50 px-2 py-1 rounded transition-all duration-200"
                         >
                           {category.name}
                         </Link>
@@ -317,7 +317,7 @@ const Navbar = () => {
                 onMouseEnter={() => handleDropdownEnter('blog')}
                 onMouseLeave={handleDropdownLeave}
               >
-                <Link href="/blog" className="flex items-center space-x-1 text-white hover:text-[#ffd800] transition-colors duration-200">
+                <Link href="/blog" className="flex items-center space-x-1 text-white hover:text-[#386861] transition-colors duration-200">
                   <span>Blog & Research</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'blog' ? 'rotate-180' : ''}`} />
                 </Link>
@@ -330,7 +330,7 @@ const Navbar = () => {
                           <Link
                             href={item.href}
                             className={`flex items-center justify-between py-2 px-2 rounded transition-all duration-200 ${
-                              hoveredBlogItem === index ? 'bg-gray-50 text-[#ffd800]' : 'text-gray-600 hover:text-[#ffd800] hover:bg-gray-50'
+                              hoveredBlogItem === index ? 'bg-gray-50 text-[#386861]' : 'text-gray-600 hover:text-[#386861] hover:bg-gray-50'
                             }`}
                             onMouseEnter={() => handleBlogItemHover(index)}
                           >
@@ -350,7 +350,7 @@ const Navbar = () => {
                             <Link
                               key={contentIndex}
                               href={contentItem.href}
-                              className="block text-sm text-gray-600 hover:text-[#ffd800] hover:bg-gray-50 px-2 py-1 rounded transition-all duration-200"
+                              className="block text-sm text-gray-600 hover:text-[#386861] hover:bg-gray-50 px-2 py-1 rounded transition-all duration-200"
                             >
                               {contentItem.title}
                             </Link>
@@ -368,7 +368,7 @@ const Navbar = () => {
                 onMouseEnter={() => handleDropdownEnter('about')}
                 onMouseLeave={handleDropdownLeave}
               >
-                <Link href="/about" className="flex items-center space-x-1 text-white hover:text-[#ffd800] transition-colors duration-200">
+                <Link href="/about" className="flex items-center space-x-1 text-white hover:text-[#386861] transition-colors duration-200">
                   <span>About Us</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'about' ? 'rotate-180' : ''}`} />
                 </Link>
@@ -380,7 +380,7 @@ const Navbar = () => {
                         <Link
                           key={index}
                           href={item.href}
-                          className="block text-gray-600 hover:text-[#ffd800] hover:bg-gray-50 px-2 py-1 rounded transition-all duration-200"
+                          className="block text-gray-600 hover:text-[#386861] hover:bg-gray-50 px-2 py-1 rounded transition-all duration-200"
                         >
                           {item.name}
                         </Link>

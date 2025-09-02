@@ -1096,7 +1096,7 @@ Jessica Dennis
                   <div className="flex space-x-3">
                     <button
                       onClick={shareOnFacebook}
-                      className="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition-colors duration-200"
+                      className="w-12 h-12 rounded-full bg-[#386861] text-white flex items-center justify-center hover:bg-blue-700 transition-colors duration-200"
                       aria-label="Share on Facebook"
                     >
                       <svg
@@ -1109,7 +1109,7 @@ Jessica Dennis
                     </button>
                     <button
                       onClick={shareOnLinkedIn}
-                      className="w-12 h-12 rounded-full bg-blue-700 text-white flex items-center justify-center hover:bg-blue-800 transition-colors duration-200"
+                      className="w-12 h-12 rounded-full bg-[#386861] text-white flex items-center justify-center hover:bg-blue-800 transition-colors duration-200"
                       aria-label="Share on LinkedIn"
                     >
                       <svg
@@ -1122,7 +1122,7 @@ Jessica Dennis
                     </button>
                     <button
                       onClick={shareOnTwitter}
-                      className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-800 transition-colors duration-200"
+                      className="w-12 h-12 rounded-full bg-[#386861] text-white flex items-center justify-center hover:bg-blue-800 transition-colors duration-200"
                       aria-label="Share on X (Twitter)"
                     >
                       <svg
