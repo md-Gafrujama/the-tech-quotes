@@ -1136,7 +1136,7 @@ export default function ProjectManagementPage() {
           href={`#${item.id}`}
           className={`block py-2 px-3 rounded-md text-sm transition-colors duration-200 ${
             item.active
-              ? "bg-green-50 text-green-700 border-l-4 border-green-500 font-medium"
+              ? "bg-[#386861]  text-white border-l-4 border-[#386861] font-medium"
               : "text-gray-600 hover:text-black hover:bg-gray-100"
           }`}
         >
@@ -1235,7 +1235,7 @@ export default function ProjectManagementPage() {
                       <div className="flex items-start space-x-3">
                         <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
                           <svg
-                            className="w-3 h-3 text-green-600"
+                            className="w-3 h-3 text-[#386861]"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -1249,7 +1249,7 @@ export default function ProjectManagementPage() {
                         <p className="text-gray-700">
                           <Link
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#386861] hover:text-green-700 font-medium underline"
                           >
                             Helcim:
                           </Link>{" "}
@@ -1259,7 +1259,7 @@ export default function ProjectManagementPage() {
                       <div className="flex items-start space-x-3">
                         <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
                           <svg
-                            className="w-3 h-3 text-green-600"
+                            className="w-3 h-3 text-[#386861]"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -1273,7 +1273,7 @@ export default function ProjectManagementPage() {
                         <p className="text-gray-700">
                           <Link
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#386861] hover:text-green-700 font-medium underline"
                           >
                             Stax:
                           </Link>{" "}
@@ -1283,7 +1283,7 @@ export default function ProjectManagementPage() {
                       <div className="flex items-start space-x-3">
                         <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
                           <svg
-                            className="w-3 h-3 text-green-600"
+                            className="w-3 h-3 text-[#386861]"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -1297,7 +1297,7 @@ export default function ProjectManagementPage() {
                         <p className="text-gray-700">
                           <Link
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#386861] hover:text-green-700 font-medium underline"
                           >
                             Square:
                           </Link>{" "}
@@ -1307,7 +1307,7 @@ export default function ProjectManagementPage() {
                       <div className="flex items-start space-x-3">
                         <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
                           <svg
-                            className="w-3 h-3 text-green-600"
+                            className="w-3 h-3 text-[#386861]"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -1321,7 +1321,7 @@ export default function ProjectManagementPage() {
                         <p className="text-gray-700">
                           <Link
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#386861] hover:text-green-700 font-medium underline"
                           >
                             PaymentCloud:
                           </Link>{" "}
@@ -1331,7 +1331,7 @@ export default function ProjectManagementPage() {
                       <div className="flex items-start space-x-3">
                         <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
                           <svg
-                            className="w-3 h-3 text-green-600"
+                            className="w-3 h-3 text-[#386861]"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -1345,7 +1345,7 @@ export default function ProjectManagementPage() {
                         <p className="text-gray-700">
                           <Link
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#386861] hover:text-green-700 font-medium underline"
                           >
                             PayPal:
                           </Link>{" "}
@@ -1355,7 +1355,7 @@ export default function ProjectManagementPage() {
                       <div className="flex items-start space-x-3">
                         <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
                           <svg
-                            className="w-3 h-3 text-green-600"
+                            className="w-3 h-3 text-[#386861]"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -1369,7 +1369,7 @@ export default function ProjectManagementPage() {
                         <p className="text-gray-700">
                           <Link
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#386861] hover:text-green-700 font-medium underline"
                           >
                             Stripe:
                           </Link>{" "}
@@ -1379,7 +1379,7 @@ export default function ProjectManagementPage() {
                       <div className="flex items-start space-x-3">
                         <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
                           <svg
-                            className="w-3 h-3 text-green-600"
+                            className="w-3 h-3 text-[#386861]"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -1393,7 +1393,7 @@ export default function ProjectManagementPage() {
                         <p className="text-gray-700">
                           <Link
                             href="#"
-                            className="text-green-600 hover:text-green-700 font-medium underline"
+                            className="text-[#386861] hover:text-green-700 font-medium underline"
                           >
                             CardX:
                           </Link>{" "}
@@ -1413,7 +1413,7 @@ export default function ProjectManagementPage() {
                           <h3 className="text-lg font-semibold text-gray-900">
                             Update notes
                           </h3>
-                          <div className="text-green-600">
+                          <div className="text-[#386861]">
                             {expandedSections["update-notes"] ? (
                               <Minus className="w-5 h-5" />
                             ) : (
@@ -1447,7 +1447,7 @@ export default function ProjectManagementPage() {
                           <h3 className="text-lg font-semibold text-gray-900">
                             Our methodology
                           </h3>
-                          <div className="text-green-600">
+                          <div className="text-[#386861]">
                             {expandedSections["methodology"] ? (
                               <Minus className="w-5 h-5" />
                             ) : (
@@ -1636,7 +1636,7 @@ export default function ProjectManagementPage() {
                     <span className="font-semibold text-gray-800">{credit.score}</span>
                     <div className="flex">
                       {[...Array(5)].map((_, i) => (
-                        <span key={i} className="text-green-500 text-sm">
+                        <span key={i} className="text-[#386861] text-sm">
                           {i < Math.floor(parseFloat(credit.score)) ? '★' : '☆'}
                         </span>
                       ))}
@@ -1666,7 +1666,7 @@ export default function ProjectManagementPage() {
 
                 {/* Column 7 - Action */}
                 <td className="w-1/6 min-w-[120px] py-4 sm:py-6 px-2 sm:px-4 text-center">
-                  <button className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-medium py-2 px-3 sm:py-3 sm:px-6 rounded-lg transition-all duration-200 text-xs sm:text-sm">
+                  <button className="bg-[#386861] hover:green-700 text-white font-medium py-2 px-3 sm:py-3 sm:px-6 rounded-lg transition-all duration-200 text-xs sm:text-sm">
                     Visit {credit.visitUrl}
                   </button>
                 </td>
@@ -1709,7 +1709,7 @@ export default function ProjectManagementPage() {
                       </div>
                       <a
                         href={tool.button.link}
-                        className="bg-green-600 text-white px-4 py-2 rounded-full text-sm hover:bg-green-700"
+                        className="bg-[#386861] text-white px-4 py-2 rounded-full text-sm hover:bg-green-700"
                       >
                         {tool.button.text}
                       </a>
@@ -1725,7 +1725,7 @@ export default function ProjectManagementPage() {
                           </div>
                           <div className="w-full bg-gray-100 rounded-full h-2">
                             <div
-                              className="bg-green-600 h-2 rounded-full"
+                              className="bg-[#386861] h-2 rounded-full"
                               style={{
                                 width: `${
                                   (parseFloat(score.score) / 5) * 100
@@ -1790,7 +1790,7 @@ export default function ProjectManagementPage() {
                                 className="w-full flex justify-between items-center font-medium"
                               >
                                 <span>{label}</span>
-                                <span className="text-green-600">
+                                <span className="text-[#386861]">
                                   {openSections[sectionKey] ? (
                                     <Minus className="w-5 h-5" />
                                   ) : (
@@ -1975,8 +1975,8 @@ export default function ProjectManagementPage() {
                           <div
                             className={`flex-shrink-0 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 rounded-md flex items-center justify-center transition-all duration-200 ${
                               openItems[index]
-                                ? "bg-green-600 hover:bg-green-700"
-                                : "bg-green-600 hover:bg-green-700"
+                                ? "bg-[#386861] hover:bg-green-700"
+                                : "bg-[#386861] hover:bg-green-700"
                             }`}
                           >
                             {openItems[index] ? (

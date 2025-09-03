@@ -344,7 +344,7 @@ export default function ProjectManagementGuide() {
                       href={`#${item.id}`}
                       className={`block py-2 px-3 rounded-md text-sm transition-colors duration-200 ${
                         item.active
-                          ? "bg-green-50 text-green-700 border-l-4 border-green-500 font-medium"
+                          ? "bg-[#386861] text-white border-l-4 border-[#386861] font-medium"
                           : "text-gray-600 hover:text-black hover:bg-gray-100"
                       }`}
                     >
@@ -446,7 +446,7 @@ export default function ProjectManagementGuide() {
                       </div>
                     </div>
                     <div className="w-full sm:w-auto">
-                      <button className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
+                      <button className="w-full sm:w-auto bg-[#386861] hover:bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
                         <span>Visit Website</span>
                         <ExternalLink className="w-4 h-4" />
                       </button>
@@ -780,9 +780,9 @@ export default function ProjectManagementGuide() {
             <h3 className="text-lg font-semibold text-gray-800">{item.question}</h3>
             <div className="ml-4 flex-shrink-0">
               {openItems[index] ? (
-                <Minus className="w-5 h-5 text-green-600" />
+                <Minus className="w-5 h-5 text-[#386861]" />
               ) : (
-                <Plus className="w-5 h-5 text-green-600" />
+                <Plus className="w-5 h-5 text-[#386861]" />
               )}
             </div>
           </button>

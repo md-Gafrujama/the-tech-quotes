@@ -769,7 +769,7 @@ export default function Employeedisciplinary() {
                       href={`#${item.id}`}
                       className={`block py-2 px-3 rounded-md text-sm transition-colors duration-200 ${
                         item.active
-                          ? "bg-green-50 text-green-700 border-l-4 border-green-500 font-medium"
+                          ? "bg-[#386861] text-white border-l-4 border-[#386861] font-medium"
                           : "text-gray-600 hover:text-black hover:bg-gray-100"
                       }`}
                     >
@@ -786,7 +786,7 @@ export default function Employeedisciplinary() {
                   <div className="flex space-x-3">
                     <button
                       onClick={shareOnFacebook}
-                      className="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition-colors duration-200"
+                      className="w-12 h-12 rounded-full bg-[#386861] text-white flex items-center justify-center hover:bg-blue-700 transition-colors duration-200"
                       aria-label="Share on Facebook"
                     >
                       <svg
@@ -799,7 +799,7 @@ export default function Employeedisciplinary() {
                     </button>
                     <button
                       onClick={shareOnLinkedIn}
-                      className="w-12 h-12 rounded-full bg-blue-700 text-white flex items-center justify-center hover:bg-blue-800 transition-colors duration-200"
+                      className="w-12 h-12 rounded-full bg-[#386861] text-white flex items-center justify-center hover:bg-blue-800 transition-colors duration-200"
                       aria-label="Share on LinkedIn"
                     >
                       <svg
@@ -812,7 +812,7 @@ export default function Employeedisciplinary() {
                     </button>
                     <button
                       onClick={shareOnTwitter}
-                      className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-800 transition-colors duration-200"
+                      className="w-12 h-12 rounded-full bg-[#386861] text-white flex items-center justify-center hover:bg-blue-600 transition-colors duration-200"
                       aria-label="Share on X (Twitter)"
                     >
                       <svg
@@ -967,7 +967,7 @@ export default function Employeedisciplinary() {
 
                               {/* Column 5 - Action */}
                               <td className="w-1/5 min-w-[150px] py-4 sm:py-6 px-2 sm:px-4 text-center">
-                                <button className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-medium py-2 px-3 sm:py-3 sm:px-6 rounded-lg transition-all duration-200 text-xs sm:text-sm">
+                                <button className="bg-[#386861] hover:green-700 text-white font-medium py-2 px-3 sm:py-3 sm:px-6 rounded-lg transition-all duration-200 text-xs sm:text-sm">
                                   Visit Website
                                 </button>
                               </td>
@@ -1007,7 +1007,7 @@ export default function Employeedisciplinary() {
                       </div>
                       <a
                         href={tool.button.link}
-                        className="bg-green-600 text-white px-4 py-2 rounded-full text-sm hover:bg-green-700"
+                        className="bg-[#386861] text-white px-4 py-2 rounded-full text-sm hover:bg-green-700"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -1065,7 +1065,7 @@ export default function Employeedisciplinary() {
                           className="w-full flex justify-between items-center font-medium"
                         >
                           <span>Key features</span>
-                          <span className="text-green-600">
+                          <span className="text-[#386861]">
                             {openSections[`${tool.id}-key-features`] ? ( // Check openSections state
                               <Minus className="w-5 h-5" />
                             ) : (
@@ -1093,7 +1093,7 @@ export default function Employeedisciplinary() {
                           className="w-full flex justify-between items-center font-medium"
                         >
                           <span>Pricing</span>
-                          <span className="text-green-600">
+                          <span className="text-[#386861]">
                             {openSections[`${tool.id}-pricing`] ? ( // Check openSections state
                               <Minus className="w-5 h-5" />
                             ) : (
@@ -1167,7 +1167,7 @@ export default function Employeedisciplinary() {
                       </div>
                       <a
                         href={data.button.link}
-                        className="bg-green-600 text-white px-4 py-2 rounded-full text-sm hover:bg-green-700"
+                        className="bg-[#386861] text-white px-4 py-2 rounded-full text-sm hover:bg-green-700"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -1225,7 +1225,7 @@ export default function Employeedisciplinary() {
                           className="w-full flex justify-between items-center font-medium"
                         >
                           <span>Key features</span>
-                          <span className="text-green-600">
+                          <span className="text-[#386861]">
                             {openSections[`${data.id}-key-features`] ? ( // Check openSections state
                               <Minus className="w-5 h-5" />
                             ) : (
@@ -1253,7 +1253,7 @@ export default function Employeedisciplinary() {
                           className="w-full flex justify-between items-center font-medium"
                         >
                           <span>Pricing</span>
-                          <span className="text-green-600">
+                          <span className="text-[#386861]">
                             {openSections[`${data.id}-pricing`] ? ( // Check openSections state
                               <Minus className="w-5 h-5" />
                             ) : (
@@ -1360,8 +1360,8 @@ export default function Employeedisciplinary() {
                           <div
                             className={`flex-shrink-0 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 rounded-md flex items-center justify-center transition-all duration-200 ${
                               openItems[index]
-                                ? "bg-green-600 hover:bg-green-700"
-                                : "bg-green-600 hover:bg-green-700"
+                                ? "bg-[#386861] hover:bg-green-700"
+                                : "bg-[#386861]0 hover:bg-green-700"
                             }`}
                           >
                             {openItems[index] ? (

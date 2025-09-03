@@ -227,7 +227,7 @@ export default function Employeedisciplinary() {
         className="w-full flex justify-between items-center py-4 text-left focus:outline-none hover:bg-gray-50"
       >
         <span className="text-gray-800 font-medium">{title}</span>
-        <div className="w-7 h-7 bg-green-600 rounded flex items-center justify-center text-white font-bold">
+        <div className="w-7 h-7 bg-[#386861] rounded flex items-center justify-center text-white font-bold">
           {openSections[section] ? "−" : "+"}
         </div>
       </button>
@@ -273,7 +273,7 @@ export default function Employeedisciplinary() {
         className="w-full flex justify-between items-center py-3 text-left focus:outline-none hover:bg-gray-50"
       >
         <span className="text-gray-700 font-medium">{title}</span>
-        <div className="w-6 h-6 bg-green-500 rounded flex items-center justify-center text-white font-bold">
+        <div className="w-6 h-6 bg-[#386861] rounded flex items-center justify-center text-white font-bold">
           {openNested === name ? "−" : "+"}
         </div>
       </button>
@@ -454,7 +454,7 @@ export default function Employeedisciplinary() {
                       href={`#${item.id}`}
                       className={`block py-2 px-3 rounded-md text-sm transition-colors duration-200 ${
                         item.active
-                          ? "bg-green-50 text-green-700 border-l-4 border-green-500 font-medium"
+                          ? "bg-[#386861] text-white border-l-4 border-[#386861] font-medium"
                           : "text-gray-600 hover:text-black hover:bg-gray-100"
                       }`}
                     >
@@ -471,7 +471,7 @@ export default function Employeedisciplinary() {
                   <div className="flex space-x-3">
                     <button
                       onClick={shareOnFacebook}
-                      className="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition-colors duration-200"
+                      className="w-12 h-12 rounded-full bg-[#386861]  text-white flex items-center justify-center hover:bg-blue-700 transition-colors duration-200"
                       aria-label="Share on Facebook"
                     >
                       <svg
@@ -484,7 +484,7 @@ export default function Employeedisciplinary() {
                     </button>
                     <button
                       onClick={shareOnLinkedIn}
-                      className="w-12 h-12 rounded-full bg-blue-700 text-white flex items-center justify-center hover:bg-blue-800 transition-colors duration-200"
+                      className="w-12 h-12 rounded-full bg-[#386861]  text-white flex items-center justify-center hover:bg-[#386861]  transition-colors duration-200"
                       aria-label="Share on LinkedIn"
                     >
                       <svg
@@ -497,7 +497,7 @@ export default function Employeedisciplinary() {
                     </button>
                     <button
                       onClick={shareOnTwitter}
-                      className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-800 transition-colors duration-200"
+                      className="w-12 h-12 rounded-full bg-[#386861]  text-white flex items-center justify-center hover:bg-[#386861]  transition-colors duration-200"
                       aria-label="Share on X (Twitter)"
                     >
                       <svg
@@ -529,7 +529,7 @@ export default function Employeedisciplinary() {
                 </h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
-                    <div className="flex-shrink-0 w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5">
+                    <div className="flex-shrink-0 w-5 h-5 bg-[#386861] rounded-full flex items-center justify-center mt-0.5">
                       <svg
                         className="w-3 h-3 text-white"
                         fill="currentColor"
@@ -550,7 +550,7 @@ export default function Employeedisciplinary() {
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <div className="flex-shrink-0 w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5">
+                    <div className="flex-shrink-0 w-5 h-5 bg-[#386861] rounded-full flex items-center justify-center mt-0.5">
                       <svg
                         className="w-3 h-3 text-white"
                         fill="currentColor"
@@ -571,7 +571,7 @@ export default function Employeedisciplinary() {
                   </div>
 
                   <div className="flex items-start space-x-3">
-                    <div className="flex-shrink-0 w-5 h-5 bg-green-500 rounded-full flex items-center justify-center mt-0.5">
+                    <div className="flex-shrink-0 w-5 h-5 bg-[#386861] rounded-full flex items-center justify-center mt-0.5">
                       <svg
                         className="w-3 h-3 text-white"
                         fill="currentColor"
@@ -628,7 +628,7 @@ export default function Employeedisciplinary() {
                       </div>
                     </div>
                     <div className="w-full sm:w-auto">
-                      <button className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
+                      <button className="w-full sm:w-auto bg-[#386861] hover:bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
                         <span>Visit Website</span>
                         <ExternalLink className="w-4 h-4" />
                       </button>
@@ -677,7 +677,7 @@ export default function Employeedisciplinary() {
                       </div>
                     </div>
                     <div className="w-full sm:w-auto">
-                      <button className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
+                      <button className="w-full sm:w-auto bg-[#386861] hover:bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
                         <span>Visit Website</span>
                         <ExternalLink className="w-4 h-4" />
                       </button>
@@ -847,9 +847,9 @@ export default function Employeedisciplinary() {
                   </p>
                 </section>
                 {/* Example Box */}
-                <div className="border-2 border-green-300 rounded-3xl p-4 sm:p-6 bg-green-50 mb-8">
+                <div className="border-2 border-[#386861] rounded-3xl p-4 sm:p-6 bg-green-50 mb-8">
                   <div className="flex items-start mb-4">
-                    <div className="w-4 h-4 bg-green-500 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                    <div className="w-4 h-4 bg-[#386861] rounded-full mt-1 mr-3 flex-shrink-0"></div>
                     <h3 className="text-base sm:text-lg font-bold text-gray-900">
                       An example:
                     </h3>
@@ -906,14 +906,14 @@ export default function Employeedisciplinary() {
                     Similarly, performance issues, like failing to meet{" "}
                     <Link
                       href="#"
-                      className="text-green-600 hover:text-green-800 underline"
+                      className="text-[#386861] hover:text-green-800 underline"
                     >
                       key performance indicators (KPIs)
                     </Link>{" "}
                     or{" "}
                     <Link
                       href="#"
-                      className="text-green-600 hover:text-green-800 underline"
+                      className="text-[#386861] hover:text-green-800 underline"
                     >
                       objectives and key results (OKRs)
                     </Link>
@@ -923,7 +923,7 @@ export default function Employeedisciplinary() {
                     training, or{" "}
                     <Link
                       href="#"
-                      className="text-green-600 hover:text-green-800 underline"
+                      className="text-[#386861] hover:text-green-800 underline"
                     >
                       performance improvement plans (PIPs)
                     </Link>{" "}
@@ -931,14 +931,14 @@ export default function Employeedisciplinary() {
                     performance results from work practices that contribute to{" "}
                     <Link
                       href="#"
-                      className="text-green-600 hover:text-green-800 underline"
+                      className="text-[#386861] hover:text-green-800 underline"
                     >
                       employee burnout
                     </Link>{" "}
                     or{" "}
                     <Link
                       href="#"
-                      className="text-green-600 hover:text-green-800 underline"
+                      className="text-[#386861] hover:text-green-800 underline"
                     >
                       staff unhappiness
                     </Link>
@@ -946,9 +946,9 @@ export default function Employeedisciplinary() {
                   </p>
 
                   {/* Example Box */}
-                  <div className="border-2 border-green-300 rounded-3xl p-4 sm:p-6 bg-green-50 mb-8">
+                  <div className="border-2 border-[#386861] rounded-3xl p-4 sm:p-6 bg-green-50 mb-8">
                     <div className="flex items-start mb-4">
-                      <div className="w-4 h-4 bg-green-500 rounded-full mt-1 mr-3 flex-shrink-0"></div>
+                      <div className="w-4 h-4 bg-[#386861] rounded-full mt-1 mr-3 flex-shrink-0"></div>
                       <h3 className="text-base sm:text-lg font-bold text-gray-900">
                         An example:
                       </h3>
@@ -997,7 +997,7 @@ export default function Employeedisciplinary() {
                       reprimanding them. Managers balance this with{" "}
                       <Link
                         href="#"
-                        className="text-green-600 hover:text-green-800 underline"
+                        className="text-[#386861] hover:text-green-700 underline"
                       >
                         employee feedback
                       </Link>{" "}
@@ -1144,7 +1144,7 @@ export default function Employeedisciplinary() {
                     sure your foundation is solid. You need a process that
                     protects the employee's rights and the company's interests,
                     in addition to manager training and legal and{" "}
-                    <Link href="#" className="text-green-600 underline">
+                    <Link href="#" className="text-[#386861] underline">
                       HR compliance
                     </Link>{" "}
                     checks.
@@ -1174,8 +1174,8 @@ export default function Employeedisciplinary() {
                         duty obligations.
                       </p>
 
-                      <div className="p-4 border border-green-400 rounded-md bg-green-50">
-                        <h3 className="text-green-700 text-xl font-bold mb-2">
+                      <div className="p-4 border border-[#386861]rounded-md bg-green-50">
+                        <h3 className="text-[#386861] text-xl font-bold mb-2">
                           💡 Federal laws on disciplinary action
                         </h3>
                         <p className="text-lg text-gray-700 mb-3">
@@ -1204,7 +1204,7 @@ export default function Employeedisciplinary() {
                             <strong>Unionizing:</strong> The{" "}
                             <Link
                               href="https://www.nlrb.gov"
-                              className="text-green-600 underline"
+                              className="text-[#386861] underline"
                               target="_blank"
                             >
                               National Labor Relations Act (NLRA)
@@ -1232,7 +1232,7 @@ export default function Employeedisciplinary() {
                         executive teams must agree on the policy’s approach,
                         scope, and list of progressive discipline steps. Once
                         finalized, you should add this policy to your{" "}
-                        <Link href="#" className="text-green-600 underline">
+                        <Link href="#" className="text-[#386861] underline">
                           employee handbook
                         </Link>{" "}
                         for easy access.
@@ -1342,7 +1342,7 @@ export default function Employeedisciplinary() {
                             who approves the decision. You should also disclose
                             relevant offboarding processes, such as benefits
                             termination, last check procedures,
-                            <Link href="#" className="text-green-600 underline">
+                            <Link href="#" className="text-[#386861] underline">
                               {" "}
                               severance pay
                             </Link>
@@ -1390,7 +1390,7 @@ export default function Employeedisciplinary() {
                       href="https://sixfifty.com"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block bg-green-400 hover:bg-green-500 text-white font-medium py-3 px-8 rounded-full transition-colors duration-200"
+                      className="inline-block bg-[#386861] hover:bg-green-500 text-white font-medium py-3 px-8 rounded-full transition-colors duration-200"
                     >
                       Visit SixFifty ↗
                     </Link>
@@ -1425,7 +1425,7 @@ export default function Employeedisciplinary() {
                       <Link
                         href="https://www.coassemble.com"
                         target="_blank"
-                        className="text-green-600 underline"
+                        className="text-[#386861] underline"
                       >
                         Learning management systems (LMSs)
                       </Link>
@@ -1454,7 +1454,7 @@ export default function Employeedisciplinary() {
                       Coassemble offers a disciplinary action template to train
                       your people managers on effective disciplinary techniques
                       and policy processes.{" "}
-                      <span className="text-green-600">Source: Coassemble</span>
+                      <span className="text-[#386861]">Source: Coassemble</span>
                     </p>
 
                     <div className="mt-4 text-center">
@@ -1462,7 +1462,7 @@ export default function Employeedisciplinary() {
                         href="https://coassemble.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block bg-green-400 hover:bg-green-500 text-white font-medium py-3 px-8 rounded-full transition-colors duration-200"
+                        className="inline-block bg-[#386861] hover:bg-green-500 text-white font-medium py-3 px-8 rounded-full transition-colors duration-200"
                       >
                         Visit Coassemble ↗
                       </Link>
@@ -1479,11 +1479,11 @@ export default function Employeedisciplinary() {
 
                   <p className="text-gray-700 text-lg mb-4">
                     Documentation is key, so it's helpful to prepare an{" "}
-                    <Link href="#" className="text-green-600 underline">
+                    <Link href="#" className="text-[#386861] underline">
                       employee disciplinary action form
                     </Link>{" "}
                     and
-                    <Link href="#" className="text-green-600 underline">
+                    <Link href="#" className="text-[#386861] underline">
                       {" "}
                       disciplinary write ups examples
                     </Link>
@@ -1501,7 +1501,7 @@ export default function Employeedisciplinary() {
                     {/* Google Drive Card */}
                     <div className="bg-white border border-gray-200 rounded-lg p-6 mb-6 w-full max-w-2xl min-h-[520px]">
                       <div className="flex items-center mb-4">
-                        <div className="w-8 h-8 bg-green-500 rounded mr-3 flex items-center justify-center">
+                        <div className="w-8 h-8 bg-[#386861] rounded mr-3 flex items-center justify-center">
                           <svg
                             className="w-4 h-4 text-white"
                             fill="currentColor"
@@ -1533,7 +1533,7 @@ export default function Employeedisciplinary() {
                         />
                       </div>
 
-                      <button className="bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded text-sm font-medium">
+                      <button className="bg-[#386861] hover:bg-green-700 text-white py-2 px-4 rounded text-sm font-medium">
                         Request access
                       </button>
 
@@ -1542,7 +1542,7 @@ export default function Employeedisciplinary() {
                           You're signed in as
                         </p>
                         <div className="flex items-center justify-center mt-1">
-                          <div className="w-6 h-6 bg-green-500 rounded-full mr-2"></div>
+                          <div className="w-6 h-6 bg-[#386861] rounded-full mr-2"></div>
                           <span className="text-xs text-gray-700">
                             srivastavashreshtha1@gmail.com
                           </span>
@@ -1558,13 +1558,13 @@ export default function Employeedisciplinary() {
                       </p>
 
                       <div className="space-y-3 max-w-xs">
-                        <button className="w-full bg-green-400 hover:bg-green-500 text-white py-3 px-4 rounded-full font-medium transition-colors duration-200">
+                        <button className="w-full bg-[#386861] hover:bg-green-500 text-white py-3 px-4 rounded-full font-medium transition-colors duration-200">
                           Download as PDF ↓
                         </button>
-                        <button className="w-full bg-green-400 hover:bg-green-500 text-white py-3 px-4 rounded-full font-medium transition-colors duration-200">
+                        <button className="w-full bg-[#386861] hover:bg-green-500 text-white py-3 px-4 rounded-full font-medium transition-colors duration-200">
                           Download as Google Doc ↓
                         </button>
-                        <button className="w-full bg-green-400 hover:bg-green-500 text-white py-3 px-4 rounded-full font-medium transition-colors duration-200">
+                        <button className="w-full bg-[#386861] hover:bg-green-500 text-white py-3 px-4 rounded-full font-medium transition-colors duration-200">
                           Download Google Sheet ↓
                         </button>
                       </div>
@@ -1665,7 +1665,7 @@ export default function Employeedisciplinary() {
                       Use this time to ask the employee questions and understand
                       the reasoning for their actions— you might even realize
                       your{" "}
-                      <Link href="#" className="text-green-600 underline">
+                      <Link href="#" className="text-[#386861] underline">
                         implicit biases
                       </Link>{" "}
                       are clouding your judgment.
@@ -1713,7 +1713,7 @@ export default function Employeedisciplinary() {
                       one-on-one meeting management features to help you
                       structure and record disciplinary conversations with your
                       employees for more effective constructive feedback.{" "}
-                      <span className="text-green-600">Source: Bob</span>
+                      <span className="text-[#386861]">Source: Bob</span>
                     </p>
 
                     {/* Button */}
@@ -1722,7 +1722,7 @@ export default function Employeedisciplinary() {
                         href="https://bob.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block bg-green-500 hover:bg-green-600 text-white font-medium py-3 px-8 rounded-full transition-colors duration-200"
+                        className="inline-block bg-[#386861] hover:bg-green-600 text-white font-medium py-3 px-8 rounded-full transition-colors duration-200"
                       >
                         Visit Bob ↗
                       </Link>
@@ -1750,7 +1750,7 @@ export default function Employeedisciplinary() {
                       idea to include a{" "}
                       <Link
                         href="#"
-                        className="text-green-600 hover:text-green-800 underline"
+                        className="text-[#386861] hover:text-green-800 underline"
                       >
                         reliable witness
                       </Link>{" "}
@@ -1783,14 +1783,14 @@ export default function Employeedisciplinary() {
                         Resources to help the employee succeed, such as{" "}
                         <Link
                           href="#"
-                          className="text-green-600 hover:text-green-800 underline"
+                          className="text-[#386861] hover:text-green-800 underline"
                         >
                           additional training
                         </Link>{" "}
                         or{" "}
                         <Link
                           href="#"
-                          className="text-green-600 hover:text-green-800 underline"
+                          className="text-[#386861] hover:text-green-800 underline"
                         >
                           policy reviews
                         </Link>
@@ -1826,7 +1826,7 @@ export default function Employeedisciplinary() {
                       up conversations with HR or the{" "}
                       <Link
                         href="#"
-                        className="text-green-600 hover:text-green-800 underline"
+                        className="text-[#386861] hover:text-green-800 underline"
                       >
                         legal team
                       </Link>{" "}
@@ -1898,14 +1898,14 @@ export default function Employeedisciplinary() {
                       A{" "}
                       <Link
                         href="#"
-                        className="text-green-600 hover:text-green-800 underline"
+                        className="text-[#386861] hover:text-green-800 underline"
                       >
                         last-chance action
                       </Link>{" "}
                       is the step in your{" "}
                       <Link
                         href="#"
-                        className="text-green-600 hover:text-green-800 underline"
+                        className="text-[#386861] hover:text-green-800 underline"
                       >
                         disciplinary policy
                       </Link>{" "}
@@ -1918,7 +1918,7 @@ export default function Employeedisciplinary() {
                       Depending on your{" "}
                       <Link
                         href="#"
-                        className="text-green-600 hover:text-green-800 underline"
+                        className="text-[#386861] hover:text-green-800 underline"
                       >
                         disciplinary action policy
                       </Link>
@@ -1934,7 +1934,7 @@ export default function Employeedisciplinary() {
                         Pay decrease or demotion (in line with{" "}
                         <Link
                           href="#"
-                          className="text-green-600 hover:text-green-800 underline"
+                          className="text-[#386861] hover:text-green-800 underline"
                         >
                           state and federal laws
                         </Link>
@@ -1947,7 +1947,7 @@ export default function Employeedisciplinary() {
                       Like{" "}
                       <Link
                         href="#"
-                        className="text-green-600 hover:text-green-800 underline"
+                        className="text-[#386861]hover:text-green-800 underline"
                       >
                         formal warnings
                       </Link>
@@ -1956,7 +1956,7 @@ export default function Employeedisciplinary() {
                       employee along with a{" "}
                       <Link
                         href="#"
-                        className="text-green-600 hover:text-green-800 underline"
+                        className="text-[#386861] hover:text-green-800 underline"
                       >
                         reliable witness
                       </Link>
@@ -1978,7 +1978,7 @@ export default function Employeedisciplinary() {
                       Termination is the last step in your{" "}
                       <Link
                         href="#"
-                        className="text-green-600 hover:text-green-800 underline"
+                        className="text-[#386861] hover:text-green-800 underline"
                       >
                         disciplinary process
                       </Link>
@@ -1993,14 +1993,14 @@ export default function Employeedisciplinary() {
                       it's always wise to consult with your{" "}
                       <Link
                         href="#"
-                        className="text-green-600 hover:text-green-800 underline"
+                        className="text-[#386861] hover:text-green-800 underline"
                       >
                         HR department
                       </Link>{" "}
                       or{" "}
                       <Link
                         href="#"
-                        className="text-green-600 hover:text-green-800 underline"
+                        className="text-[#386861] hover:text-green-800 underline"
                       >
                         employment law attorney
                       </Link>{" "}
@@ -2008,14 +2008,14 @@ export default function Employeedisciplinary() {
                       employee. If you have{" "}
                       <Link
                         href="#"
-                        className="text-green-600 hover:text-green-800 underline"
+                        className="text-[#386861] hover:text-green-800 underline"
                       >
                         employment practices liability insurance (EPLI)
                       </Link>
                       , check if you have access to an{" "}
                       <Link
                         href="#"
-                        className="text-green-600 hover:text-green-800 underline"
+                        className="text-[#386861] hover:text-green-800 underline"
                       >
                         employee hotline
                       </Link>{" "}
@@ -2028,7 +2028,7 @@ export default function Employeedisciplinary() {
                       best option if you followed the steps in your{" "}
                       <Link
                         href="#"
-                        className="text-green-600 hover:text-green-800 underline"
+                        className="text-[#386861] hover:text-green-800 underline"
                       >
                         disciplinary action policy
                       </Link>{" "}
@@ -2038,11 +2038,11 @@ export default function Employeedisciplinary() {
                     </p>
                   </div>
 
-                  <div className="bg-green-50 border border-green-200 rounded-3xl p-4 mt-6">
+                  <div className="bg-[#386861] border border-[#386861] rounded-3xl p-4 mt-6">
                     <div className="flex items-start">
                       <div className="bg-green-100 rounded-full p-2 mr-3 mt-1">
                         <svg
-                          className="w-9 h-9 text-green-600"
+                          className="w-9 h-9 text-[#386861]"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >
@@ -2054,15 +2054,15 @@ export default function Employeedisciplinary() {
                         </svg>
                       </div>
                       <div>
-                        <p className="text-lg font-medium text-green-800">
+                        <p className="text-lg font-medium text-white">
                           Nervous about conducting the termination conversation?
                         </p>
-                        <p className="text-lg text-green-700">
+                        <p className="text-lg text-white">
                           Learn tips and strategies to prepare for the
                           conversation and hold an effective meeting in{" "}
                           <Link
                             href="#"
-                            className="text-green-600 hover:text-green-800 underline"
+                            className="text-white hover:text-green-800 underline"
                           >
                             How to Fire an Employee (and Stay out of Trouble)
                           </Link>
@@ -2084,14 +2084,14 @@ export default function Employeedisciplinary() {
                       Every{" "}
                       <Link
                         href="#"
-                        className="text-green-600 hover:text-green-800 underline"
+                        className="text-[#386861]  hover:text-green-800 underline"
                       >
                         disciplinary action
                       </Link>{" "}
                       or{" "}
                       <Link
                         href="#"
-                        className="text-green-600 hover:text-green-800 underline"
+                        className="text-[#386861]  hover:text-green-800 underline"
                       >
                         termination decision
                       </Link>{" "}
@@ -2105,14 +2105,14 @@ export default function Employeedisciplinary() {
                       Beyond that, a standardized{" "}
                       <Link
                         href="#"
-                        className="text-green-600 hover:text-green-800 underline"
+                        className="text-[#386861]  hover:text-green-800 underline"
                       >
                         disciplinary procedure
                       </Link>{" "}
                       you follow demonstrates your commitment to treating all{" "}
                       <Link
                         href="#"
-                        className="text-green-600 hover:text-green-800 underline"
+                        className="text-[#386861]  hover:text-green-800 underline"
                       >
                         employees fairly
                       </Link>{" "}
@@ -2183,7 +2183,7 @@ export default function Employeedisciplinary() {
                   management as you expand. Most platforms include
                   <a
                     href="#"
-                    className="text-green-600 underline hover:text-green-800"
+                    className="text-[#386861]  underline hover:text-green-800"
                   >
                     human resources information system (HRIS)
                   </a>{" "}
@@ -2220,8 +2220,8 @@ export default function Employeedisciplinary() {
                           <div
                             className={`flex-shrink-0 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 rounded-md flex items-center justify-center transition-all duration-200 ${
                               openItems[index]
-                                ? "bg-green-600 hover:bg-green-700"
-                                : "bg-green-600 hover:bg-green-700"
+                                ? "bg-[#386861]  hover:bg-green-700"
+                                : "bg-[#386861]  hover:bg-green-700"
                             }`}
                           >
                             {openItems[index] ? (
