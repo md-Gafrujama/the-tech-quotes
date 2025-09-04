@@ -432,7 +432,7 @@ We recognize that diversity extends beyond the color of our skin to include ethn
               </a>
             </div>
 <a href="/About-Us/Careers/opportunities" className="inline-block">
-  <button className="bg-[#386861] text-black px-8 py-3 rounded-full font-semibold hover:opacity-90 transition">
+  <button className="bg-[#386861] text-white px-8 py-3 rounded-full font-semibold hover:opacity-90 transition">
     Apply Now
   </button>
 </a>
@@ -451,7 +451,7 @@ We recognize that diversity extends beyond the color of our skin to include ethn
           </div>
         </div>
 
-       <div className="flex flex-wrap gap-8 mt-50 text-[#386861] font-semibold text-xl">
+       <div className="flex flex-wrap gap-8 mt-50 text-white font-semibold text-xl">
   <a href="/About-Us/Careers" className="hover:underline">Culture</a>
   <a href="/About-Us/Careers/opportunities" className="hover:underline">Opportunities</a>
   <a href="/About-Us/Careers/faqs" className="hover:underline">FAQs</a>
