@@ -289,7 +289,7 @@ const Navbar = () => {
                 onMouseEnter={() => handleDropdownEnter('software')}
                 onMouseLeave={handleDropdownLeave}
               >
-                <Link href="/software-reviews" className="flex items-center space-x-1 text-white hover:text-[#386861] transition-colors duration-200">
+                <Link href="/" className="flex items-center space-x-1 text-white hover:text-[#386861] transition-colors duration-200">
                   <span>Software Reviews </span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'software' ? 'rotate-180' : ''}`} />
                 </Link>
@@ -317,7 +317,7 @@ const Navbar = () => {
                 onMouseEnter={() => handleDropdownEnter('blog')}
                 onMouseLeave={handleDropdownLeave}
               >
-                <Link href="/blog" className="flex items-center space-x-1 text-white hover:text-[#386861] transition-colors duration-200">
+                <Link href="/" className="flex items-center space-x-1 text-white hover:text-[#386861] transition-colors duration-200">
                   <span>Blog & Research</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'blog' ? 'rotate-180' : ''}`} />
                 </Link>
@@ -368,7 +368,7 @@ const Navbar = () => {
                 onMouseEnter={() => handleDropdownEnter('about')}
                 onMouseLeave={handleDropdownLeave}
               >
-                <Link href="/about" className="flex items-center space-x-1 text-white hover:text-[#386861] transition-colors duration-200">
+                <Link href="/" className="flex items-center space-x-1 text-white hover:text-[#386861] transition-colors duration-200">
                   <span>About Us</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'about' ? 'rotate-180' : ''}`} />
                 </Link>
