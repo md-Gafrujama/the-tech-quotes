@@ -1,12 +1,5 @@
 {
-  "/Software-reviews/Business-Intelligence-Software/page": "app/Software-reviews/Business-Intelligence-Software/page.js",
-  "/Software-reviews/CRM-software/page": "app/Software-reviews/CRM-software/page.js",
-  "/Software-reviews/HR-software/page": "app/Software-reviews/HR-software/page.js",
-  "/Software-reviews/Payroll-software/page": "app/Software-reviews/Payroll-software/page.js",
-  "/Software-reviews/Project-management/page": "app/Software-reviews/Project-management/page.js",
-  "/Software-reviews/Sales-software/page": "app/Software-reviews/Sales-software/page.js",
   "/_not-found/page": "app/_not-found/page.js",
-  "/blog/human-resources/page": "app/blog/human-resources/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js"
 }
