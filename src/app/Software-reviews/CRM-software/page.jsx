@@ -2092,63 +2092,7 @@ ClickUp: {
             </h1>
           </div>
 
-          {/* Author and Reviewer Section */}
-          <div className="flex flex-col sm:flex-row sm:items-start sm:space-x-8 lg:space-x-12 space-y-6 sm:space-y-0 mb-8 sm:mb-12 lg:mb-16">
-            {/* Author */}
-            <div className="flex items-center space-x-3 sm:space-x-4">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full overflow-hidden flex-shrink-0 relative">
-                <Image
-                  src="/images/project1.png"
-                  alt="Kara Sherrer - Author"
-                  fill
-                  sizes="(max-width: 640px) 48px, (max-width: 1024px) 56px, 64px"
-                  className="object-cover"
-                  priority
-                  placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-                />
-              </div>
-              <div>
-                <p className="text-sm sm:text-base lg:text-lg text-white/80 mb-1">
-                  Written by
-                </p>
-                <p className="text-base sm:text-lg lg:text-xl font-semibold">
-                  Aron Vaughan
-                </p>
-                <p className="text-sm sm:text-base lg:text-lg text-white/80 mb-1">
-                  Staff Writer
-                </p>
-              </div>
-            </div>
-
-            {/* Reviewer */}
-            <div className="flex items-center space-x-3 sm:space-x-4">
-              <div className="text-sm sm:text-base lg:text-lg text-white/80 hidden sm:block">
-                Reviewed by
-              </div>
-              <div className="flex items-center space-x-3 sm:space-x-4">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full overflow-hidden flex-shrink-0 relative">
-                  <Image
-                    src="/images/project2.png"
-                    alt="Web Webster - Reviewer"
-                    fill
-                    sizes="(max-width: 640px) 32px, (max-width: 1024px) 40px, 48px"
-                    className="object-cover"
-                    placeholder="blur"
-                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-                  />
-                </div>
-                <div>
-                  <p className="text-sm sm:text-base lg:text-lg text-white/80 sm:hidden mb-1">
-                    Reviewed by
-                  </p>
-                  <p className="text-sm sm:text-base lg:text-lg font-medium">
-                    Corey Noles
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          
 
           {/* Disclaimer Section */}
           <div className="max-w-4xl xl:max-w-5xl">
@@ -2168,20 +2112,8 @@ ClickUp: {
               </div>
             </div>
           </div>
-          {/* lasted updated */}
-          <div className="mt-8 sm:mt-12 lg:mt-16 pb-8 sm:pb-12 lg:pb-16">
-            <div className="flex items-center space-x-2 sm:space-x-3 text-sm sm:text-base lg:text-lg text-white/70">
-              <Calendar className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
-              <span>Last Updated: October 15, 2024</span>
-            </div>
-          </div>
-          {/* Publication Date */}
-          <div className="mt-8 sm:mt-12 lg:mt-16 pb-8 sm:pb-12 lg:pb-16">
-            <div className="flex items-center space-x-2 sm:space-x-3 text-sm sm:text-base lg:text-lg text-white/70">
-              <Calendar className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
-              <span>Published Date: August 12, 2024</span>
-            </div>
-          </div>
+          
+          
         </div>
       </div>
 
@@ -2907,147 +2839,7 @@ ClickUp: {
                   </div>
                 ))}
              
-              {/* find your prodoct management software */}
-              <div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg mt-4 p-6 sm:p-8 transition-shadow duration-300 overflow-hidden">
-                {/* Header */}
-                <div className="text-center mb-10">
-                  <div className="inline-flex items-center justify-center w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl mb-6 shadow-lg">
-                    <Search className="w-8 h-8 text-white" />
-                  </div>
-                  <h2 className="text-4xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4">
-                    Find your new project management software
-                  </h2>
-                  <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Discover the perfect tool to streamline your workflow and
-                    boost productivity
-                  </p>
-                </div>
-
-                {/* Filter Products & Search Section */}
-                <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-6 mb-8 border border-gray-100">
-                  <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-                    {/* Filter Products */}
-                    <div className="lg:col-span-1">
-                      <div className="flex items-center gap-2 mb-3">
-                        <Filter className="w-4 h-4 text-blue-600" />
-                        <h3 className="text-sm font-bold text-gray-700 uppercase tracking-wider">
-                          Filter Products
-                        </h3>
-                      </div>
-                      <div className="relative group">
-                        <input
-                          type="text"
-                          placeholder="Search"
-                          value={searchTerm}
-                          onChange={(e) => setSearchTerm(e.target.value)}
-                          className="w-full pl-12 pr-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100 transition-all duration-300 bg-white/70 hover:bg-white group-hover:shadow-md"
-                        />
-                        <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                          <Search className="h-5 w-5 text-gray-400 group-hover:text-blue-500 transition-colors" />
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Products Search */}
-                    <div className="lg:col-span-3">
-                      <div className="flex items-center gap-2 mb-3">
-                        <Search className="w-4 h-4 text-[#386861]" />
-                        <h3 className="text-sm font-bold text-gray-700 uppercase tracking-wider">
-                          Search Products
-                        </h3>
-                      </div>
-                      <div className="relative group">
-                        <input
-                          type="text"
-                          placeholder="Search product name"
-                          value={productSearch}
-                          onChange={(e) => setProductSearch(e.target.value)}
-                          className="w-full px-6 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-green-500 focus:ring-4 focus:ring-green-100 transition-all duration-300 bg-white/70 hover:bg-white group-hover:shadow-md text-lg"
-                        />
-                        <div className="absolute inset-y-0 right-0 pr-4 flex items-center">
-                          <div className="bg-[#386861] p-2 rounded-lg cursor-pointer hover:shadow-lg transition-all duration-300 hover:scale-105">
-                            <Search className="h-5 w-5 text-white" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Filter Controls */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                  {/* Filter by */}
-                  <div className="group">
-                    <div className="flex items-center gap-2 mb-3">
-                      <Star className="w-4 h-4 text-yellow-500" />
-                      <h3 className="text-sm font-bold text-gray-700 uppercase tracking-wider">
-                        Filter by
-                      </h3>
-                    </div>
-                    <div className="relative">
-                      <select
-                        value={filterBy}
-                        onChange={(e) => setFilterBy(e.target.value)}
-                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-yellow-500 focus:ring-4 focus:ring-yellow-100 transition-all duration-300 bg-white/70 hover:bg-white appearance-none cursor-pointer group-hover:shadow-md"
-                      >
-                        <option>Reviews</option>
-                        <option>Pricing</option>
-                        <option>Company Size</option>
-                        <option>Features</option>
-                        <option>Industry</option>
-                      </select>
-                      <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 pointer-events-none" />
-                    </div>
-                  </div>
-
-                  {/* Sort by */}
-                  <div className="group">
-                    <div className="flex items-center gap-2 mb-3">
-                      <Clock className="w-4 h-4 text-purple-500" />
-                      <h3 className="text-sm font-bold text-gray-700 uppercase tracking-wider">
-                        Sort by
-                      </h3>
-                    </div>
-                    <div className="relative">
-                      <select
-                        value={sortBy}
-                        onChange={(e) => setSortBy(e.target.value)}
-                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-purple-500 focus:ring-4 focus:ring-purple-100 transition-all duration-300 bg-white/70 hover:bg-white appearance-none cursor-pointer group-hover:shadow-md"
-                      >
-                        <option>Featured</option>
-                        <option>Most Reviews</option>
-                        <option>Highest Rated</option>
-                        <option>Lowest Price</option>
-                        <option>Most Popular</option>
-                      </select>
-                      <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 pointer-events-none" />
-                    </div>
-                  </div>
-
-                  {/* Items per page */}
-                  <div className="group">
-                    <div className="flex items-center gap-2 mb-3">
-                      <Users className="w-4 h-4 text-indigo-500" />
-                      <h3 className="text-sm font-bold text-gray-700 uppercase tracking-wider">
-                        Items per page
-                      </h3>
-                    </div>
-                    <div className="relative">
-                      <select
-                        value={itemsPerPage}
-                        onChange={(e) => setItemsPerPage(e.target.value)}
-                        className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100 transition-all duration-300 bg-white/70 hover:bg-white appearance-none cursor-pointer group-hover:shadow-md"
-                      >
-                        <option>10 per page</option>
-                        <option>25 per page</option>
-                        <option>50 per page</option>
-                        <option>100 per page</option>
-                      </select>
-                      <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 pointer-events-none" />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              
               {/* 1CRM products details */}
               <section id="new-CRM-software" className="mt-8">
                 <div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg mt-4 sm:p-8 transition-shadow duration-300 overflow-hidden">
