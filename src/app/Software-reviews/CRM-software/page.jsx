@@ -2206,7 +2206,7 @@ ClickUp: {
                       href={`#${item.id}`}
                       className={`block py-2 px-3 rounded-md text-sm transition-colors duration-200 ${
                         item.active
-                          ? "bg-green-50 text-[#ffd800] border-l-4 border-green-500 font-medium"
+                          ? "bg-[#386861] text-white border-l-4 border-[#386861] font-medium"
                           : "text-gray-600 hover:text-black hover:bg-gray-100"
                       }`}
                     >
@@ -2223,7 +2223,7 @@ ClickUp: {
                   <div className="flex space-x-3">
                     <button
                       onClick={shareOnFacebook}
-                      className="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition-colors duration-200"
+                      className="w-12 h-12 rounded-full bg-[#386861] text-white flex items-center justify-center hover:bg-blue-700 transition-colors duration-200"
                       aria-label="Share on Facebook"
                     >
                       <svg
@@ -2236,7 +2236,7 @@ ClickUp: {
                     </button>
                     <button
                       onClick={shareOnLinkedIn}
-                      className="w-12 h-12 rounded-full bg-blue-700 text-white flex items-center justify-center hover:bg-blue-800 transition-colors duration-200"
+                      className="w-12 h-12 rounded-full bg-[#386861] text-white flex items-center justify-center hover:bg-blue-800 transition-colors duration-200"
                       aria-label="Share on LinkedIn"
                     >
                       <svg
@@ -2249,7 +2249,7 @@ ClickUp: {
                     </button>
                     <button
                       onClick={shareOnTwitter}
-                      className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-800 transition-colors duration-200"
+                      className="w-12 h-12 rounded-full bg-[#386861] text-white flex items-center justify-center hover:bg-blue-800 transition-colors duration-200"
                       aria-label="Share on X (Twitter)"
                     >
                       <svg
@@ -2304,7 +2304,7 @@ ClickUp: {
                       <div className="flex items-start space-x-3">
                         <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
                           <svg
-                            className="w-3 h-3 text-green-600"
+                            className="w-3 h-3 text-[#386861]"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -2318,7 +2318,7 @@ ClickUp: {
                         <p className="text-gray-700">
                           <a
                             href="#"
-                            className="text-[#ffd800] hover:text-green-700 font-medium underline"
+                            className="text-[#386861] hover:text-green-700 font-medium underline"
                           >
                             HubSpot Sales Hub:
                           </a>{" "}
@@ -2328,7 +2328,7 @@ ClickUp: {
                       <div className="flex items-start space-x-3">
                         <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
                           <svg
-                            className="w-3 h-3 text-green-600"
+                            className="w-3 h-3 text-[#386861]"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -2342,7 +2342,7 @@ ClickUp: {
                         <p className="text-gray-700">
                           <a
                             href="#"
-                            className="text-[#ffd800] hover:text-green-700 font-medium underline"
+                            className="text-[#386861] hover:text-green-700 font-medium underline"
                           >
                             Zoho CRM:
                           </a>{" "}
@@ -2352,7 +2352,7 @@ ClickUp: {
                       <div className="flex items-start space-x-3">
                         <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
                           <svg
-                            className="w-3 h-3 text-green-600"
+                            className="w-3 h-3 text-[#386861]"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -2366,7 +2366,7 @@ ClickUp: {
                         <p className="text-gray-700">
                           <a
                             href="#"
-                            className="text-[#ffd800] hover:text-green-700 font-medium underline"
+                            className="text-[#386861] hover:text-green-700 font-medium underline"
                           >
                             Shape CRM:
                           </a>{" "}
@@ -2376,7 +2376,7 @@ ClickUp: {
                       <div className="flex items-start space-x-3">
                         <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
                           <svg
-                            className="w-3 h-3 text-green-600"
+                            className="w-3 h-3 text-[#386861]"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -2390,7 +2390,7 @@ ClickUp: {
                         <p className="text-gray-700">
                           <a
                             href="#"
-                            className="text-[#ffd800] hover:text-green-700 font-medium underline"
+                            className="text-[#386861] hover:text-green-700 font-medium underline"
                           >
                             Pipedrive:
                           </a>{" "}
@@ -2400,7 +2400,7 @@ ClickUp: {
                       <div className="flex items-start space-x-3">
                         <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
                           <svg
-                            className="w-3 h-3 text-green-600"
+                            className="w-3 h-3 text-[#386861]"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -2414,7 +2414,7 @@ ClickUp: {
                         <p className="text-gray-700">
                           <a
                             href="#"
-                            className="text-[#ffd800] hover:text-green-700 font-medium underline"
+                            className="text-[#386861] hover:text-green-700 font-medium underline"
                           >
                             Salesforce Sales Cloud:
                           </a>{" "}
@@ -2424,7 +2424,7 @@ ClickUp: {
                       <div className="flex items-start space-x-3">
                         <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
                           <svg
-                            className="w-3 h-3 text-green-600"
+                            className="w-3 h-3 text-[#386861]"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -2438,7 +2438,7 @@ ClickUp: {
                         <p className="text-gray-700">
                           <a
                             href="#"
-                            className="text-[#ffd800] hover:text-green-700 font-medium underline"
+                            className="text-[#386861] hover:text-green-700 font-medium underline"
                           >
                             Oracle NetSuite CRM:
                           </a>{" "}
@@ -2448,7 +2448,7 @@ ClickUp: {
                       <div className="flex items-start space-x-3">
                         <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
                           <svg
-                            className="w-3 h-3 text-green-600"
+                            className="w-3 h-3 text-[#386861]"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -2462,7 +2462,7 @@ ClickUp: {
                         <p className="text-gray-700">
                           <a
                             href="#"
-                            className="text-[#ffd800] hover:text-green-700 font-medium underline"
+                            className="text-[#386861] hover:text-green-700 font-medium underline"
                           >
                             Insightly CRM:
                           </a>{" "}
@@ -2472,7 +2472,7 @@ ClickUp: {
                       <div className="flex items-start space-x-3">
                         <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
                           <svg
-                            className="w-3 h-3 text-green-600"
+                            className="w-3 h-3 text-[#386861]"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -2486,7 +2486,7 @@ ClickUp: {
                         <p className="text-gray-700">
                           <a
                             href="#"
-                            className="text-[#ffd800] hover:text-green-700 font-medium underline"
+                            className="text-[#386861] hover:text-green-700 font-medium underline"
                           >
                             Keap CRM:
                           </a>{" "}
@@ -2496,7 +2496,7 @@ ClickUp: {
                       <div className="flex items-start space-x-3">
                         <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
                           <svg
-                            className="w-3 h-3 text-green-600"
+                            className="w-3 h-3 text-[#386861]"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -2510,7 +2510,7 @@ ClickUp: {
                         <p className="text-gray-700">
                           <a
                             href="#"
-                            className="text-[#ffd800] hover:text-green-700 font-medium underline"
+                            className="text-[#386861] hover:text-green-700 font-medium underline"
                           >
                             Copper CRM
                           </a>{" "}
@@ -2520,7 +2520,7 @@ ClickUp: {
                       <div className="flex items-start space-x-3">
                         <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
                           <svg
-                            className="w-3 h-3 text-green-600"
+                            className="w-3 h-3 text-[#386861]"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -2534,7 +2534,7 @@ ClickUp: {
                         <p className="text-gray-700">
                           <a
                             href="#"
-                            className="text-[#ffd800] hover:text-green-700 font-medium underline"
+                            className="text-[#386861] hover:text-green-700 font-medium underline"
                           >
                             ClickUp:
                           </a>{" "}
@@ -2544,7 +2544,7 @@ ClickUp: {
                       <div className="flex items-start space-x-3">
                         <div className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-0.5">
                           <svg
-                            className="w-3 h-3 text-green-600"
+                            className="w-3 h-3 text-[#386861]"
                             fill="currentColor"
                             viewBox="0 0 20 20"
                           >
@@ -2558,7 +2558,7 @@ ClickUp: {
                         <p className="text-gray-700">
                           <a
                             href="#"
-                            className="text-[#ffd800] hover:text-green-700 font-medium underline"
+                            className="text-[#386861] hover:text-green-700 font-medium underline"
                           >
                             Less Annoying CRM:
                           </a>{" "}
@@ -2600,7 +2600,7 @@ ClickUp: {
                       </div>
                     </div>
                     <div className="w-full sm:w-auto">
-                      <button className="w-full sm:w-auto bg-[#ffd800] hover:bg-green-700 text-black font-medium py-3 px-8 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
+                      <button className="w-full sm:w-auto bg-[#386861] hover:bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
                         <span>Visit Website</span>
                         <ExternalLink className="w-4 h-4" />
                       </button>
@@ -2725,7 +2725,7 @@ ClickUp: {
                                 <div className="flex justify-center">
                                   {crm.freeTrial ? (
                                     <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-100 rounded-full flex items-center justify-center">
-                                      <Check className="w-3 h-3 sm:w-5 sm:h-5 text-green-600" />
+                                      <Check className="w-3 h-3 sm:w-5 sm:h-5 text-[#386861]" />
                                     </div>
                                   ) : (
                                     <div className="w-6 h-6 sm:w-8 sm:h-8 bg-red-100 rounded-full flex items-center justify-center">
@@ -2738,7 +2738,7 @@ ClickUp: {
                                 <div className="flex justify-center">
                                   {crm.freeVersion ? (
                                     <div className="w-6 h-6 sm:w-8 sm:h-8 bg-green-100 rounded-full flex items-center justify-center">
-                                      <Check className="w-3 h-3 sm:w-5 sm:h-5 text-green-600" />
+                                      <Check className="w-3 h-3 sm:w-5 sm:h-5 text-[#386861]" />
                                     </div>
                                   ) : (
                                     <div className="w-6 h-6 sm:w-8 sm:h-8 bg-red-100 rounded-full flex items-center justify-center">
@@ -2748,7 +2748,7 @@ ClickUp: {
                                 </div>
                               </td>
                               <td className="py-4 sm:py-8 px-2 sm:px-8">
-                                <button className="w-full sm:w-auto bg-[#ffd800] hover:bg-green-700 text-black font-medium py-3 px-8 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
+                                <button className="w-full sm:w-auto bg-[#386861] hover:bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
                                   <span>Visit Website</span>
                                   <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4" />
                                 </button>
@@ -2804,7 +2804,7 @@ ClickUp: {
                       </div>
                       <a
                         href={tool.button.link}
-                        className="bg-[#ffd800] text-white px-4 py-2 rounded-full text-sm hover:bg-green-700"
+                        className="bg-[#386861] text-white px-4 py-2 rounded-full text-sm hover:bg-green-700"
                       >
                         {tool.button.text}
                       </a>
@@ -2820,7 +2820,7 @@ ClickUp: {
                           </div>
                           <div className="w-full bg-gray-100 rounded-full h-2">
                             <div
-                              className="bg-[#ffd800] h-2 rounded-full"
+                              className="bg-[#386861] h-2 rounded-full"
                               style={{
                                 width: `${
                                   (parseFloat(score.score) / 5) * 100
@@ -2883,7 +2883,7 @@ ClickUp: {
                                 className="w-full flex justify-between items-center font-medium"
                               >
                                 <span>{label}</span>
-                                <span className="text-[#ffd800]">
+                                <span className="text-[#386861]">
                                   {openSections[sectionKey] ? (
                                     <Minus className="w-5 h-5" />
                                   ) : (
@@ -2951,7 +2951,7 @@ ClickUp: {
                     {/* Products Search */}
                     <div className="lg:col-span-3">
                       <div className="flex items-center gap-2 mb-3">
-                        <Search className="w-4 h-4 text-green-600" />
+                        <Search className="w-4 h-4 text-[#386861]" />
                         <h3 className="text-sm font-bold text-gray-700 uppercase tracking-wider">
                           Search Products
                         </h3>
@@ -2965,7 +2965,7 @@ ClickUp: {
                           className="w-full px-6 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-green-500 focus:ring-4 focus:ring-green-100 transition-all duration-300 bg-white/70 hover:bg-white group-hover:shadow-md text-lg"
                         />
                         <div className="absolute inset-y-0 right-0 pr-4 flex items-center">
-                          <div className="bg-gradient-to-r from-green-500 to-blue-500 p-2 rounded-lg cursor-pointer hover:shadow-lg transition-all duration-300 hover:scale-105">
+                          <div className="bg-[#386861] p-2 rounded-lg cursor-pointer hover:shadow-lg transition-all duration-300 hover:scale-105">
                             <Search className="h-5 w-5 text-white" />
                           </div>
                         </div>
@@ -3073,7 +3073,7 @@ ClickUp: {
                           </h1>
                           <Link
                             href="/reviews/zoho-projects"
-                            className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
+                            className="text-sm sm:text-base md:text-lg text-[#386861] hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
                           >
                             Leave a Review
                           </Link>
@@ -3082,7 +3082,7 @@ ClickUp: {
 
                       {/* Compare Button */}
                       <div className="flex-shrink-0">
-                        <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#ffd800] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
+                        <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#386861] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
                           <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
                           Compare
                         </button>
@@ -3123,7 +3123,7 @@ ClickUp: {
 
                       <Link
                         href="/learn-more/zoho-projects"
-                        className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                        className="text-sm sm:text-base md:text-lg text-[#386861] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
                       >
                         Learn More About 1CRM
                       </Link>
@@ -3135,7 +3135,7 @@ ClickUp: {
                         href="https://www.1crm.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#ffd800] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                        className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#386861] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
                       >
                         Visit Website
                         <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -3168,7 +3168,7 @@ ClickUp: {
                           </h1>
                           <Link
                             href="/reviews/zoho-projects"
-                            className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
+                            className="text-sm sm:text-base md:text-lg text-[#386861] hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
                           >
                             Leave a Review
                           </Link>
@@ -3177,7 +3177,7 @@ ClickUp: {
 
                       {/* Compare Button */}
                       <div className="flex-shrink-0">
-                        <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#ffd800] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
+                        <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#386861] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
                           <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
                           Compare
                         </button>
@@ -3213,7 +3213,7 @@ ClickUp: {
 
                       <Link
                         href="/learn-more/zoho-projects"
-                        className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                        className="text-sm sm:text-base md:text-lg text-[#386861] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
                       >
                         Learn More About 4Degrees
                       </Link>
@@ -3225,7 +3225,7 @@ ClickUp: {
                         href="https://www.4degrees.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#ffd800] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                        className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#386861] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
                       >
                         Visit Website
                         <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -3258,7 +3258,7 @@ ClickUp: {
                           </h1>
                           <Link
                             href="/reviews/zoho-projects"
-                            className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
+                            className="text-sm sm:text-base md:text-lg text-[#386861] hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
                           >
                             Leave a Review
                           </Link>
@@ -3267,7 +3267,7 @@ ClickUp: {
 
                       {/* Compare Button */}
                       <div className="flex-shrink-0">
-                        <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#ffd800] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
+                        <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#386861] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
                           <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
                           Compare
                         </button>
@@ -3304,7 +3304,7 @@ ClickUp: {
 
                       <Link
                         href="/learn-more/24SevenOffice"
-                        className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                        className="text-sm sm:text-base md:text-lg text-[#386861] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
                       >
                         Learn More About Aarialife Technologies
                       </Link>
@@ -3316,7 +3316,7 @@ ClickUp: {
                         href="https://www.aarialife.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#ffd800] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                        className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#386861] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
                       >
                         Visit Website
                         <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -3349,7 +3349,7 @@ ClickUp: {
                           </h1>
                           <Link
                             href="/reviews/zoho-projects"
-                            className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
+                            className="text-sm sm:text-base md:text-lg text-[#386861]hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
                           >
                             Leave a Review
                           </Link>
@@ -3358,7 +3358,7 @@ ClickUp: {
 
                       {/* Compare Button */}
                       <div className="flex-shrink-0">
-                        <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#ffd800] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
+                        <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#386861] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
                           <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
                           Compare
                         </button>
@@ -3403,7 +3403,7 @@ ClickUp: {
 
                       <Link
                         href="/learn-more/4castplus"
-                        className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                        className="text-sm sm:text-base md:text-lg text-[#386861] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
                       >
                         Learn More About Accelo
                       </Link>
@@ -3415,7 +3415,7 @@ ClickUp: {
                         href="https://www.accelo.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#ffd800] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                        className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#386861] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
                       >
                         Visit Website
                         <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -3448,7 +3448,7 @@ ClickUp: {
                           </h1>
                           <Link
                             href="/reviews/zoho-projects"
-                            className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
+                            className="text-sm sm:text-base md:text-lg text-[#386861] hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
                           >
                             Leave a Review
                           </Link>
@@ -3457,7 +3457,7 @@ ClickUp: {
 
                       {/* Compare Button */}
                       <div className="flex-shrink-0">
-                        <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#ffd800] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
+                        <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#386861] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
                           <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
                           Compare
                         </button>
@@ -3494,7 +3494,7 @@ ClickUp: {
 
                       <Link
                         href="/learn-more/5day-io"
-                        className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                        className="text-sm sm:text-base md:text-lg text-[#386861] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
                       >
                         Learn More About Affinaquest
                       </Link>
@@ -3506,7 +3506,7 @@ ClickUp: {
                         href="https://www.affinaquest.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#ffd800] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                        className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#386861] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
                       >
                         Visit Website
                         <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -3539,7 +3539,7 @@ ClickUp: {
                           </h1>
                           <Link
                             href="/reviews/zoho-projects"
-                            className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
+                            className="text-sm sm:text-base md:text-lg text-[#386861]hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
                           >
                             Leave a Review
                           </Link>
@@ -3548,7 +3548,7 @@ ClickUp: {
 
                       {/* Compare Button */}
                       <div className="flex-shrink-0">
-                        <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#ffd800] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
+                        <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#386861] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
                           <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
                           Compare
                         </button>
@@ -3581,7 +3581,7 @@ ClickUp: {
 
                       <Link
                         href="/learn-more/zoho-projects"
-                        className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                        className="text-sm sm:text-base md:text-lg text-[#386861] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
                       >
                         Learn More About Affinity
                       </Link>
@@ -3593,7 +3593,7 @@ ClickUp: {
                         href="https://www.affinity.co/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#ffd800] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                        className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#386861] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
                       >
                         Visit Website
                         <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -3626,7 +3626,7 @@ ClickUp: {
                           </h1>
                           <Link
                             href="/reviews/zoho-projects"
-                            className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
+                            className="text-sm sm:text-base md:text-lg text-[#386861] hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
                           >
                             Leave a Review
                           </Link>
@@ -3635,7 +3635,7 @@ ClickUp: {
 
                       {/* Compare Button */}
                       <div className="flex-shrink-0">
-                        <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#ffd800] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
+                        <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#386861] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
                           <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
                           Compare
                         </button>
@@ -3670,7 +3670,7 @@ ClickUp: {
 
                       <Link
                         href="/learn-more/zoho-projects"
-                        className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                        className="text-sm sm:text-base md:text-lg text-[#386861] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
                       >
                         Learn More About AgencyBloc
                       </Link>
@@ -3682,7 +3682,7 @@ ClickUp: {
                         href="https://www.agencybloc.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#ffd800]  hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                        className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#386861] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
                       >
                         Visit Website
                         <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -3715,7 +3715,7 @@ ClickUp: {
                           </h1>
                           <Link
                             href="/reviews/zoho-projects"
-                            className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
+                            className="text-sm sm:text-base md:text-lg text-[#386861]hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
                           >
                             Leave a Review
                           </Link>
@@ -3724,7 +3724,7 @@ ClickUp: {
 
                       {/* Compare Button */}
                       <div className="flex-shrink-0">
-                        <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#ffd800] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
+                        <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#386861] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
                           <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
                           Compare
                         </button>
@@ -3767,7 +3767,7 @@ ClickUp: {
 
                       <Link
                         href="/learn-more/zoho-projects"
-                        className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                        className="text-sm sm:text-base md:text-lg text-[#386861] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
                       >
                         Learn More About AgentCubed
                       </Link>
@@ -3779,7 +3779,7 @@ ClickUp: {
                         href="https://www.agentcubed.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#ffd800]  hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                        className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#386861]  hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
                       >
                         Visit Website
                         <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -3812,7 +3812,7 @@ ClickUp: {
                           </h1>
                           <Link
                             href="/reviews/zoho-projects"
-                            className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
+                            className="text-sm sm:text-base md:text-lg text-[#386861] hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
                           >
                             Leave a Review
                           </Link>
@@ -3821,7 +3821,7 @@ ClickUp: {
 
                       {/* Compare Button */}
                       <div className="flex-shrink-0">
-                        <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#ffd800] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
+                        <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#386861] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
                           <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
                           Compare
                         </button>
@@ -3858,7 +3858,7 @@ ClickUp: {
 
                       <Link
                         href="/learn-more/zoho-projects"
-                        className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                        className="text-sm sm:text-base md:text-lg text-[#386861] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
                       >
                         Learn More About Agile CRM
                       </Link>
@@ -3870,7 +3870,7 @@ ClickUp: {
                         href="https://www.agilecrm.com/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#ffd800]  hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                        className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#386861] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
                       >
                         Visit Website
                         <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -3903,7 +3903,7 @@ ClickUp: {
                           </h1>
                           <Link
                             href="/reviews/zoho-projects"
-                            className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
+                            className="text-sm sm:text-base md:text-lg text-[#386861] hover:text-blue-800 hover:underline transition-colors duration-200 font-medium"
                           >
                             Leave a Review
                           </Link>
@@ -3912,7 +3912,7 @@ ClickUp: {
 
                       {/* Compare Button */}
                       <div className="flex-shrink-0">
-                        <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#ffd800] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
+                        <button className="flex items-center gap-2 px-4 py-2 sm:px-5 sm:py-2.5 md:px-6 md:py-3 text-sm sm:text-base md:text-lg font-semibold text-[#386861] hover:text-blue-800 border border-blue-600 hover:border-blue-800 rounded-lg hover:bg-blue-50 transition-all duration-200 group">
                           <Plus className="w-4 h-4 sm:w-5 sm:h-5 group-hover:rotate-90 transition-transform duration-200" />
                           Compare
                         </button>
@@ -3923,7 +3923,7 @@ ClickUp: {
                     <div className="mb-6 sm:mb-8">
                       <Link
                         href="/learn-more/zoho-projects"
-                        className="text-sm sm:text-base md:text-lg text-[#ffd800] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                        className="text-sm sm:text-base md:text-lg text-[#386861] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
                       >
                         Learn More About Amity
                       </Link>
@@ -3935,7 +3935,7 @@ ClickUp: {
                         href="https://www.amity.co/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#ffd800]  hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                        className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#386861]  hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
                       >
                         Visit Website
                         <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -3974,7 +3974,7 @@ ClickUp: {
                       that aligns with their needs.{" "}
                       <Link
                         href="/enterprise-project-management"
-                        className="text-[#ffd800] hover:text-green-800 hover:underline transition-colors duration-200 font-medium"
+                        className="text-[#386861] hover:text-green-800 hover:underline transition-colors duration-200 font-medium"
                       >
                         The Different Types of Roles & Responsibilities in a CRM
                       </Link>{" "}
@@ -4196,8 +4196,8 @@ ClickUp: {
                           <div
                             className={`flex-shrink-0 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 rounded-md flex items-center justify-center transition-all duration-200 ${
                               openItems[index]
-                                ? "bg-[#ffd800] hover:bg-green-700"
-                                : "bg-[#ffd800] hover:bg-green-700"
+                                ? "bg-[#386861] hover:bg-green-700"
+                                : "bg-[#386861] hover:bg-green-700"
                             }`}
                           >
                             {openItems[index] ? (

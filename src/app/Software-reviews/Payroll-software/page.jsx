@@ -1079,7 +1079,7 @@ Jessica Dennis
                       href={`#${item.id}`}
                       className={`block py-2 px-3 rounded-md text-sm transition-colors duration-200 ${
                         item.active
-                          ? "bg-green-50 text-green-700 border-l-4 border-green-500 font-medium"
+                          ? "bg-[#386861] text-white border-l-4 border-[#386861] font-medium"
                           : "text-gray-600 hover:text-black hover:bg-gray-100"
                       }`}
                     >
@@ -1096,7 +1096,7 @@ Jessica Dennis
                   <div className="flex space-x-3">
                     <button
                       onClick={shareOnFacebook}
-                      className="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center hover:bg-blue-700 transition-colors duration-200"
+                      className="w-12 h-12 rounded-full bg-[#386861] text-white flex items-center justify-center hover:bg-blue-700 transition-colors duration-200"
                       aria-label="Share on Facebook"
                     >
                       <svg
@@ -1109,7 +1109,7 @@ Jessica Dennis
                     </button>
                     <button
                       onClick={shareOnLinkedIn}
-                      className="w-12 h-12 rounded-full bg-blue-700 text-white flex items-center justify-center hover:bg-blue-800 transition-colors duration-200"
+                      className="w-12 h-12 rounded-full bg-[#386861] text-white flex items-center justify-center hover:bg-blue-800 transition-colors duration-200"
                       aria-label="Share on LinkedIn"
                     >
                       <svg
@@ -1122,7 +1122,7 @@ Jessica Dennis
                     </button>
                     <button
                       onClick={shareOnTwitter}
-                      className="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-800 transition-colors duration-200"
+                      className="w-12 h-12 rounded-full bg-[#386861] text-white flex items-center justify-center hover:bg-blue-800 transition-colors duration-200"
                       aria-label="Share on X (Twitter)"
                     >
                       <svg
@@ -1159,42 +1159,42 @@ Jessica Dennis
                       For this guide, I reviewed seven market-leading payroll software solutions and narrowed the list to my top five recommendations. The best payroll software for small businesses are: {" "}
                       <a
     href="#"
-    className="text-green-600 hover:text-green-700 underline"
+    className="text-[#386861] hover:text-green-700 underline"
   >
     Gusto
   </a>{" "}
   is the best payroll software overall.{" "}
   <a
     href="#"
-    className="text-green-600 hover:text-green-700 underline"
+    className="text-[#386861] hover:text-green-700 underline"
   >
     OnPay
   </a>{" "}
   is best for ease of use.{" "}
   <a
     href="#"
-    className="text-green-600 hover:text-green-700 underline"
+    className="text-[#386861] hover:text-green-700 underline"
   >
     QuickBooks Payroll
   </a>{" "}
   is best for its accounting integration.{" "}
   <a
     href="#"
-    className="text-green-600 hover:text-green-700 underline"
+    className="text-[#386861] hover:text-green-700 underline"
   >
     Paycor
   </a>{" "}
   is best for growing businesses.{" "}
   <a
     href="#"
-    className="text-green-600 hover:text-green-700 underline"
+    className="text-[#386861] hover:text-green-700 underline"
   >
     Patriot Payroll
   </a>{" "}
   is the best budget-friendly payroll software. Honorable mention:{" "}
   <a
     href="#"
-    className="text-green-600 hover:text-green-700 underline"
+    className="text-[#386861] hover:text-green-700 underline"
   >
     Rippling
   </a>{" "}
@@ -1213,7 +1213,7 @@ Jessica Dennis
       className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors duration-200"
     >
       <h3 className="text-lg font-semibold text-gray-900">Update notes</h3>
-      <div className="text-green-600">
+      <div className="text-[#386861]">
         {expandedSections["update-notes"] ? (
           <Minus className="w-5 h-5" />
         ) : (
@@ -1247,7 +1247,7 @@ Jessica Dennis
     className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors duration-200"
   >
     <h3 className="text-lg font-semibold text-gray-900">Our methodology</h3>
-    <div className="text-green-600">
+    <div className="text-[#386861]">
       {expandedSections["methodology"] ? (
         <Minus className="w-5 h-5" />
       ) : (
@@ -1326,7 +1326,7 @@ Jessica Dennis
     className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-50 transition-colors duration-200"
   >
     <h3 className="text-lg font-semibold text-gray-900">Why you can trust my advice</h3>
-    <div className="text-green-600">
+    <div className="text-[#386861]">
       {expandedSections["why-you-can-trust-my-advice"] ? (
         <Minus className="w-5 h-5" />
       ) : (
@@ -1379,7 +1379,7 @@ Jessica Dennis
                       </div>
                     </div>
                     <div className="w-full sm:w-auto">
-                      <button className="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
+                      <button className="w-full sm:w-auto bg-[#386861] hover:bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition-colors duration-200 flex items-center justify-center space-x-2">
                         <span>Visit Website</span>
                         <ExternalLink className="w-4 h-4" />
                       </button>
@@ -1452,7 +1452,7 @@ Jessica Dennis
                         href={item.visitUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-white bg-green-600 hover:bg-green-700 px-4 py-2 rounded text-sm"
+                        className="text-white bg-[#386861] hover:bg-green-700 px-4 py-2 rounded text-sm"
                       >
                         Visit 
                       </a>
@@ -1500,7 +1500,7 @@ Jessica Dennis
             </div>
             <a
               href={tool.button.link}
-              className="bg-green-600 text-white px-4 py-2 rounded-full text-sm hover:bg-green-700"
+              className="bg-[#386861] text-white px-4 py-2 rounded-full text-sm hover:bg-green-700"
             >
               {tool.button.text}
             </a>
@@ -1516,7 +1516,7 @@ Jessica Dennis
                 </div>
                 <div className="w-full bg-gray-100 rounded-full h-2">
                   <div
-                    className="bg-green-600 h-2 rounded-full"
+                    className="bg-[#386861] h-2 rounded-full"
                     style={{
                       width: `${(parseFloat(score.score) / 5) * 100}%`,
                     }}
@@ -1572,7 +1572,7 @@ Jessica Dennis
                   className="w-full flex justify-between items-center font-medium"
                 >
                   <span>{label}</span>
-                  <span className="text-green-600">
+                  <span className="text-[#386861]">
                     {openSections[sectionKey] ? (
                       <Minus className="w-5 h-5" />
                     ) : (
@@ -1644,7 +1644,7 @@ Jessica Dennis
                       {/* Products Search */}
                       <div className="lg:col-span-3">
                         <div className="flex items-center gap-2 mb-3">
-                          <Search className="w-4 h-4 text-green-600" />
+                          <Search className="w-4 h-4 text-[#386861]" />
                           <h3 className="text-sm font-bold text-gray-700 uppercase tracking-wider">
                             Search Products
                           </h3>
@@ -1655,10 +1655,10 @@ Jessica Dennis
                             placeholder="Search product name"
                             value={productSearch}
                             onChange={(e) => setProductSearch(e.target.value)}
-                            className="w-full px-6 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-green-500 focus:ring-4 focus:ring-green-100 transition-all duration-300 bg-white/70 hover:bg-white group-hover:shadow-md text-lg"
+                            className="w-full px-6 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:border-[#386861] focus:ring-4 focus:ring-green-100 transition-all duration-300 bg-white/70 hover:bg-white group-hover:shadow-md text-lg"
                           />
                           <div className="absolute inset-y-0 right-0 pr-4 flex items-center">
-                            <div className="bg-gradient-to-r from-green-500 to-blue-500 p-2 rounded-lg cursor-pointer hover:shadow-lg transition-all duration-300 hover:scale-105">
+                            <div className="bg-[#386861] p-2 rounded-lg cursor-pointer hover:shadow-lg transition-all duration-300 hover:scale-105">
                               <Search className="h-5 w-5 text-white" />
                             </div>
                           </div>
@@ -1807,7 +1807,7 @@ Jessica Dennis
 
                     <Link
                       href="/learn-more/Keka-hr-projects"
-                      className="text-sm sm:text-base md:text-lg text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                      className="text-sm sm:text-base md:text-lg text-[#386861] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
                     >
                       Learn More About Keka HR
                     </Link>
@@ -1819,7 +1819,7 @@ Jessica Dennis
                       href="/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#386861] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
                     >
                       Visit Website
                       <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -1892,7 +1892,7 @@ Jessica Dennis
 
                     <Link
                       href=""
-                      className="text-sm sm:text-base md:text-lg text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                      className="text-sm sm:text-base md:text-lg text-[#386861] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
                     >
                       Learn More About Access SelectHR
                     </Link>
@@ -1904,7 +1904,7 @@ Jessica Dennis
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#386861] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
                     >
                       Visit Website
                       <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -1976,7 +1976,7 @@ Jessica Dennis
 
                     <Link
                       href="/learn-more/Keka-hr-projects"
-                      className="text-sm sm:text-base md:text-lg text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                      className="text-sm sm:text-base md:text-lg text-[#386861] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
                     >
                       Learn More About Accomplish EP
                     </Link>
@@ -1988,7 +1988,7 @@ Jessica Dennis
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#386861]hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
                     >
                       Visit Website
                       <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -2060,7 +2060,7 @@ Jessica Dennis
 
                     <Link
                       href="/learn-more/Keka-hr-projects"
-                      className="text-sm sm:text-base md:text-lg text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                      className="text-sm sm:text-base md:text-lg text-[#386861] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
                     >
                       Learn More About AcquireTM
                     </Link>
@@ -2072,7 +2072,7 @@ Jessica Dennis
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#386861] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
                     >
                       Visit Website
                       <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -2143,7 +2143,7 @@ Jessica Dennis
 
                     <Link
                       href="/learn-more/Keka-hr-projects"
-                      className="text-sm sm:text-base md:text-lg text-green-600 hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
+                      className="text-sm sm:text-base md:text-lg text-[#386861] hover:text-green-800 hover:underline transition-colors duration-200 font-semibold"
                     >
                        Learn More About Adaptive Suite - Adaptive Insights
                     </Link>
@@ -2155,7 +2155,7 @@ Jessica Dennis
                       href=""
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-green-600 hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
+                      className="inline-flex items-center gap-2 sm:gap-3 px-6 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 bg-[#386861] hover:bg-green-700 text-white font-semibold text-sm sm:text-base md:text-lg rounded-xl sm:rounded-2xl transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] group"
                     >
                       Visit Website
                       <ExternalLink className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
@@ -2299,8 +2299,8 @@ Jessica Dennis
                           <div
                             className={`flex-shrink-0 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 lg:w-11 lg:h-11 rounded-md flex items-center justify-center transition-all duration-200 ${
                               openItems[index]
-                                ? "bg-green-600 hover:bg-green-700"
-                                : "bg-green-600 hover:bg-green-700"
+                                ? "bg-[#386861] hover:bg-green-700"
+                                : "bg-[#386861] hover:bg-green-700"
                             }`}
                           >
                             {openItems[index] ? (
