@@ -1071,35 +1071,8 @@ return (
               </h1>
             </div>
 
-            {/* Author and Reviewer Section */}
-            <div className="flex flex-col sm:flex-row sm:items-start sm:space-x-8 lg:space-x-12 space-y-6 sm:space-y-0 mb-8 sm:mb-12 lg:mb-16">
-              {/* Author */}
-              <div className="flex items-center space-x-3 sm:space-x-4">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full overflow-hidden flex-shrink-0 relative">
-                  <Image
-                    src="/images/HR.jpeg"
-                    alt="Jessica Dennis- Writer"
-                    fill
-                    sizes="(max-width: 640px) 48px, (max-width: 1024px) 56px, 64px"
-                    className="object-cover"
-                    priority
-                    placeholder="blur"
-                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-                  />
-                </div>
-                <div>
-                  <p className="text-sm sm:text-base lg:text-lg text-white/80 mb-1">
-                    Written by
-                  </p>
-                  <p className="text-base sm:text-lg lg:text-xl font-semibold">
-                    Jessica Dennis
-                  </p>
-                  <p className="text-sm sm:text-base lg:text-lg text-white/80 mb-1">
-                    Lead Writer
-                  </p>
-                </div>
-              </div>
-            </div>
+            
+            
 
             {/* Disclaimer Section */}
             <div className="max-w-4xl xl:max-w-5xl">
@@ -1119,20 +1092,8 @@ return (
                 </div>
               </div>
             </div>
-            {/* lasted updated */}
-            <div className="mt-4 sm:mt-8 lg:mt-10 pb-8 sm:pb-12 lg:pb-12">
-              <div className="flex items-center space-x-2 sm:space-x-3 text-sm sm:text-base lg:text-lg text-white/70">
-                <Calendar className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
-                <span>Last Updated: April 25, 2025</span>
-              </div>
-            </div>
-            {/* Publication Date */}
-            <div className="mt-4   lg:mt-8 pb-8 sm:pb-12 lg:pb-12">
-              <div className="flex items-center space-x-2 sm:space-x-3 text-sm sm:text-base lg:text-lg text-white/70">
-                <Calendar className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
-                <span>Published Date: January 31, 2025</span>
-              </div>
-            </div>
+            
+            
           </div>
         </div>
       </section>
@@ -2531,59 +2492,7 @@ return (
 </section>
      
                 
-        {/*new-HR-software*/}
-<section id="new-HR-software">
-  <div className="max-w-5xl mx-auto mt-8">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Find your new HR software
-        </h1>
-
-        <div className="bg-gray-100 rounded-3xl p-6 sm:p-8">
-          <h2 className="text-lg font-semibold text-gray-800 mb-4">
-            Filter Products
-          </h2>
-
-          {/* Search Bar */}
-          <div className="relative mb-6">
-            <input
-              type="text"
-              placeholder="Search product name"
-              className="w-full rounded-full py-3 px-5 pr-12 text-[#386861] placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#386861]"
-              value={filters.search}
-              onChange={(e) => setFilters({ ...filters, search: e.target.value })}
-            />
-            <button className="absolute top-1/2 right-3 -translate-y-1/2 text-[#386861] hover:text-[#386861]">
-              <div className="bg-gray-200 rounded-full p-2">
-                <FiSearch className="w-5 h-5" />
-              </div>
-            </button>
-          </div>
-
-          {/* Filters */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-            <select className="w-full rounded-full py-3 px-5 text-gray-700 focus:outline-none">
-              <option>Reviews</option>
-            </select>
-            <select className="w-full rounded-full py-3 px-5 text-gray-700 focus:outline-none">
-              <option>Pricing</option>
-            </select>
-            <select className="w-full rounded-full py-3 px-5 text-gray-700 focus:outline-none">
-              <option>Company Size</option>
-            </select>
-          </div>
-
-          {/* Sorting */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <select className="w-full rounded-full py-3 px-5 text-gray-700 focus:outline-none">
-              <option>Featured</option>
-            </select>
-            <select className="w-full rounded-full py-3 px-5 text-gray-700 focus:outline-none">
-              <option>10 per page</option>
-            </select>
-          </div>
-        </div>
-      </div>
-</section>
+        
       <div className="bg-white min-h-screen p-6 space-y-8">
      
 
@@ -2972,54 +2881,11 @@ return (
             </div>
           </div>
         </div>
-
-       <div className="bg-[#F5F7FA] p-6 rounded-2xl flex flex-col md:flex-row items-center md:items-start gap-6 max-w-5xl mx-auto shadow-sm">
-      {/* Profile Image */}
-      <div className="flex flex-col items-center md:items-start text-center md:text-left">
-        <div className="w-24 h-24 relative rounded-full overflow-hidden border-2 border-white shadow">
-          <Image
-            src="/images/HR.jpeg" // Replace with actual path
-            alt="Jessica Dennis"
-            fill
-            className="object-cover"
-          />
-        </div>
-        <h3 className="mt-4 text-lg font-semibold text-[#4B4BE8]">Jessica Dennis</h3>
-        <p className="text-sm text-gray-600">Lead Writer</p>
-
-        {/* LinkedIn Icon */}
-        <a
-          href="https://www.linkedin.com/in/jessicadennis" // Replace with actual profile
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-3 inline-flex items-center justify-center w-8 h-8 border border-green-600 rounded-full text-green-600 hover:bg-green-100 transition"
-        >
-          <FaLinkedinIn />
-        </a>
-      </div>
-
-      {/* Bio Text */}
-      <div className="text-gray-800 text-sm leading-relaxed">
-        <p>
-          Jessica Dennis has more than six years of experience in HR administration, having held roles as an HR representative, generalist, and office manager. Her specific areas of expertise include onboarding, payroll, benefits, compliance, workforce management, unemployment insurance, and workers’ compensation claims management.
-        </p>
-        <p className="mt-2">
-          Her hands-on HR background fuels her insightful writing on HR technology and best practices. Her work has been featured in <em>TechnologyAdvice, TechRepublic, Fit Small Business, CNBC</em>, and <em>HR Digest</em>, providing nuanced takes on HR topics.
-        </p>
-      </div>
-    </div>
-
         {/* Call to Action */}
         
       </div>
     </div>
-
-
-</div>
-            
- 
- 
-             
+</div>            
             </div>
           </div>
         </div>
