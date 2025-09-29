@@ -1,6 +1,12 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/blog/human-resources/Best-hr-software-smbs/page": "app/blog/human-resources/Best-hr-software-smbs/page.js",
+  "/blog/Business-intelligence/page": "app/blog/Business-intelligence/page.js",
+  "/blog/IT-management/Best-email-marketing-tools/page": "app/blog/IT-management/Best-email-marketing-tools/page.js",
+  "/blog/IT-management/page": "app/blog/IT-management/page.js",
+  "/blog/Sales-Crm/Credit-card/page": "app/blog/Sales-Crm/Credit-card/page.js",
+  "/blog/Sales-Crm/page": "app/blog/Sales-Crm/page.js",
+  "/blog/project-management/Project-Management-Methodologies/page": "app/blog/project-management/Project-Management-Methodologies/page.js",
+  "/blog/project-management/page": "app/blog/project-management/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js"
 }

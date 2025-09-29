@@ -1005,34 +1005,7 @@ why: {
           </div>
 
           {/* Author and Reviewer Section */}
-          <div className="flex flex-col sm:flex-row sm:items-start sm:space-x-8 lg:space-x-12 space-y-6 sm:space-y-0 mb-8 sm:mb-12 lg:mb-16">
-            {/* Author */}
-            <div className="flex items-center space-x-3 sm:space-x-4">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full overflow-hidden flex-shrink-0 relative">
-                <Image
-                  src="/images/it1.png"
-                  alt="Stephen Porritt-Writer"
-                  fill
-                  sizes="(max-width: 640px) 48px, (max-width: 1024px) 56px, 64px"
-                  className="object-cover"
-                  priority
-                  placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-                />
-              </div>
-              <div>
-                <p className="text-sm sm:text-base lg:text-lg text-white/80 mb-1">
-                  Written by
-                </p>
-                <p className="text-base sm:text-lg lg:text-xl font-semibold">
-                  Stephen Porritt
-                </p>
-                <p className="text-sm sm:text-base lg:text-lg text-white/80 mb-1">
-                  Writer
-                </p>
-              </div>
-            </div>
-          </div>
+         
 
           {/* Disclaimer Section */}
           <div className="max-w-4xl xl:max-w-5xl">
@@ -1054,12 +1027,7 @@ why: {
           </div>
 
           {/* Publication Date */}
-          <div className="mt-8 sm:mt-12 lg:mt-16 pb-8 sm:pb-12 lg:pb-16">
-            <div className="flex items-center space-x-2 sm:space-x-3 text-sm sm:text-base lg:text-lg text-white/70">
-              <Calendar className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
-              <span>Published Date: June 27, 2025</span>
-            </div>
-          </div>
+          
         </div>
       </div>
 

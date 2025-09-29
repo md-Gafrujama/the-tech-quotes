@@ -1025,62 +1025,7 @@ export default function ProjectManagementPage() {
           </div>
 
           {/* Author and Reviewer Section */}
-          <div className="flex flex-col sm:flex-row sm:items-start sm:space-x-8 lg:space-x-12 space-y-6 sm:space-y-0 mb-8 sm:mb-12 lg:mb-16">
-            {/* Author */}
-            <div className="flex items-center space-x-3 sm:space-x-4">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full overflow-hidden flex-shrink-0 relative">
-                <Image
-                  src="/images/bg-1.png"
-                  alt=" Andrea Herrera - Author"
-                  fill
-                  sizes="(max-width: 640px) 48px, (max-width: 1024px) 56px, 64px"
-                  className="object-cover"
-                  priority
-                  placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-                />
-              </div>
-              <div>
-                <p className="text-sm sm:text-base lg:text-lg text-white/80 mb-1">
-                  Written by
-                </p>
-                <p className="text-base sm:text-lg lg:text-xl font-semibold">
-                  Andrea Herrera
-                </p>
-                <p className="text-sm sm:text-base lg:text-lg text-white/80 mb-1">
-                  Staff Writer
-                </p>
-              </div>
-            </div>
-
-            {/* Reviewer */}
-            <div className="flex items-center space-x-3 sm:space-x-4">
-              <div className="text-sm sm:text-base lg:text-lg text-white/80 hidden sm:block">
-                Reviewed by
-              </div>
-              <div className="flex items-center space-x-3 sm:space-x-4">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full overflow-hidden flex-shrink-0 relative">
-                  <Image
-                    src="/images/bg-2.png"
-                    alt="Web Webster - Reviewer"
-                    fill
-                    sizes="(max-width: 640px) 32px, (max-width: 1024px) 40px, 48px"
-                    className="object-cover"
-                    placeholder="blur"
-                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-                  />
-                </div>
-                <div>
-                  <p className="text-sm sm:text-base lg:text-lg text-white/80 sm:hidden mb-1">
-                    Reviewed by
-                  </p>
-                  <p className="text-sm sm:text-base lg:text-lg font-medium">
-                    Meaghan Brophy
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          
 
           {/* Disclaimer Section */}
           <div className="max-w-4xl xl:max-w-5xl">
@@ -1102,12 +1047,7 @@ export default function ProjectManagementPage() {
           </div>
 
           {/* Publication Date */}
-          <div className="mt-8 sm:mt-12 lg:mt-16 pb-8 sm:pb-12 lg:pb-16">
-            <div className="flex items-center space-x-2 sm:space-x-3 text-sm sm:text-base lg:text-lg text-white/70">
-              <Calendar className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
-              <span>Published Date: June 30, 2025</span>
-            </div>
-          </div>
+          
         </div>
         
       </div>
@@ -2000,51 +1940,12 @@ export default function ProjectManagementPage() {
                   </div>
                 </div>
               </section>
-               <div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg mt-4 sm:p-8 transition-shadow duration-300 overflow-hidden">                               
-  <div className="flex items-start space-x-6">                                 
-    <div className="flex-shrink-0">                                   
-      <Image                                     
-        src="/images/bg-1.png"                                     
-        alt="Andrea Herrera"                                     
-        width={120}                                     
-        height={120}                                     
-        className="rounded-full"                                   
-      />                                 
-    </div>                                 
-    <div className="flex-1">                                   
-      <h3 className="text-blue-600 text-xl font-medium mb-4">                                     
-        <Link                                       
-          href="/author/Andrea Herrera"                                       
-          className="hover:underline"                                     
-        >                                      
-          Andrea Herrera                                     
-        </Link>                                   
-      </h3>                                                  
-      <p className="text-gray-700 leading-relaxed">                                    
-        Andrea has a strong background in payment processing, invoicing, and business operations, specializing in helping small and new businesses streamline financial workflows and boost efficiency. She's worked on multiple projects, including managing B2B payments for a Spanish pay-per-click (PPC) company, handling company payments for a UK-based audio production firm, and overseeing billing and invoicing for a coaching company.                                   
-      </p>                                   
-      <div className="flex space-x-2 mt-3">                       
-        <Link                         
-          href="#"                         
-          className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center hover:bg-blue-200 transition-colors"                       
-        >                         
-          <svg                           
-            className="w-4 h-4 text-blue-600"                           
-            fill="currentColor"                           
-            viewBox="0 0 24 24"                         
-          >                           
-            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>                         
-          </svg>                       
-        </Link>                     
-      </div>                                 
-    </div>                               
-  </div>                             
-</div>
+              
             </div>
           </div>
             {/* Related posts */}
                     <section className="w-full px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 2xl:px-32 py-12 bg-white">
-                      <h2 className="text-3xl sm:text-4xl font-bold text-[#111827] mb-8">
+                      <h2 className="text-3xl sm:text-4xl font-bold text-[#111827] mb-8 text-center">
                         Related posts
                       </h2>
           

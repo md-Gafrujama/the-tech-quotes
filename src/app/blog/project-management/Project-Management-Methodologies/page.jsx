@@ -240,58 +240,7 @@ export default function ProjectManagementGuide() {
     </div>
 
     {/* Author and Reviewer Section - adjusted spacing */}
-    <div className="flex flex-col sm:flex-row sm:items-start sm:space-x-6 lg:space-x-8 space-y-4 sm:space-y-0 mb-4 sm:mb-8 lg:mb-10">
-      {/* Author */}
-      <div className="flex items-center space-x-2 sm:space-x-3">
-        <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-full overflow-hidden flex-shrink-0 relative">
-          <Image
-            src="/images/bardon.png"
-            alt="Brandon Matthews - Author"
-            fill
-            sizes="(max-width: 640px) 40px, (max-width: 1024px) 48px, 56px"
-            className="object-cover"
-            priority
-            placeholder="blur"
-            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-          />
-        </div>
-        <div>
-          <p className="text-xs sm:text-sm lg:text-base text-white/80 mb-1">
-            Written by
-          </p>
-          <p className="text-sm sm:text-base lg:text-lg font-semibold">
-            Brandon Matthews
-          </p>
-          <p className="text-xs text-white/70">
-            PM, Content Strategist
-          </p>
-        </div>
-      </div>
-
-      {/* Reviewer */}
-      <div className="flex items-center space-x-2 sm:space-x-3">
-        <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-full overflow-hidden flex-shrink-0 relative">
-          <Image
-            src="/images/Web-Webster.png"
-            alt="Tech Reviewer"
-            fill
-            sizes="(max-width: 640px) 40px, (max-width: 1024px) 48px, 56px"
-            className="object-cover"
-            priority
-            placeholder="blur"
-            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-          />
-        </div>
-        <div>
-          <p className="text-xs sm:text-sm lg:text-base text-white/80 mb-1">
-            Reviewed by
-          </p>
-          <p className="text-sm sm:text-base lg:text-lg font-semibold">
-            Tech Reviewer
-          </p>
-        </div>
-      </div>
-    </div>
+   
 
     
     
@@ -317,12 +266,7 @@ export default function ProjectManagementGuide() {
     </div>
 
     {/* Publication Date - adjusted spacing */}
-    <div className="mt-6 sm:mt-8 lg:mt-10 pb-6 sm:pb-8 lg:pb-10">
-      <div className="flex items-center space-x-2 text-xs sm:text-sm lg:text-base text-white/70">
-        <Calendar className="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5" />
-        <span>Published Date: January 18, 2025</span>
-      </div>
-    </div>
+   
   </div>
 </div>
 </div>
