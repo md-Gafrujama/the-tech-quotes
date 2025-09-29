@@ -14,16 +14,16 @@ export default function Footer() {
         <div>
           <h3 className="font-bold mb-3">Company</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:text-[#ffd800]">About Us</a></li>
+            <li><a href="/About-Us/about-us" className="hover:text-[#ffd800]">About Us</a></li>
             <li>
-              <a href="#" className="hover:text-[#ffd800] flex items-center gap-2">
+              <a href="/About-Us/Careers" className="hover:text-[#ffd800] flex items-center gap-2">
                 Careers
                 <span className="bg-[#ffd800] text-black px-3 py-1 rounded-full text-xs font-bold">
                   We're Hiring
                 </span>
               </a>
             </li>
-            <li><a href="#" className="hover:text-[#ffd800]">Contact Us</a></li>
+            <li><a href="/About-Us/Contact-us" className="hover:text-[#ffd800]">Contact Us</a></li>
           </ul>
         </div>
 
