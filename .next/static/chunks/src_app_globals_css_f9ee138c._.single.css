@@ -1632,12 +1632,20 @@
     background-color: #0d1424;
   }
 
+  .bg-\[\#00d9a6\] {
+    background-color: #00d9a6;
+  }
+
   .bg-\[\#1E2E2B\] {
     background-color: #1e2e2b;
   }
 
   .bg-\[\#1F2E2B\] {
     background-color: #1f2e2b;
+  }
+
+  .bg-\[\#8BC34A\] {
+    background-color: #8bc34a;
   }
 
   .bg-\[\#153430\] {
@@ -2549,6 +2557,18 @@
   @media (hover: hover) {
     .hover\:border-green-600:hover {
       border-color: var(--color-green-600);
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:bg-\[\#00d9a6\]\/90:hover {
+      background-color: oklab(78.6325% -.155553 .0326269 / .9);
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:bg-\[\#8BC34A\]\/90:hover {
+      background-color: oklab(75.3596% -.105593 .123624 / .9);
     }
   }
 
