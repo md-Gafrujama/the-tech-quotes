@@ -1086,7 +1086,7 @@ const Navbar = ()=>{
         ]
     }, void 0, true);
 };
-_s(Navbar, "JK/J+wMU1h9/7iXyhqNK/2Ohl68=");
+_s(Navbar, "payhvAO0wz0Xbl8/m8uhH9lNSl0=");
 _c = Navbar;
 const __TURBOPACK__default__export__ = Navbar;
 var _c;

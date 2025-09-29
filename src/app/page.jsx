@@ -318,7 +318,7 @@ export default function Page() {
   return (
     <>
       <Head>
-        <title>B2B Technology Advice From Industry Experts</title>
+        <title>B2C Technology Advice From Industry Experts</title>
         <meta 
           name="description" 
           content="Get the latest B2B technology and software advice, trends, and guidance from experts who work with it every day." 
