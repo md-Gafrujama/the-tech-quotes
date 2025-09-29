@@ -377,32 +377,7 @@ export default function Employeedisciplinary() {
             </h1>
           </div>
 
-          {/* Author and Reviewer Section */}
-          <div className="flex flex-col sm:flex-row sm:items-start sm:space-x-8 lg:space-x-12 space-y-6 sm:space-y-0 mb-8 sm:mb-12 lg:mb-16">
-            {/* Author */}
-            <div className="flex items-center space-x-3 sm:space-x-4">
-              <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-full overflow-hidden flex-shrink-0 relative">
-                <Image
-                  src="/images/h1.png"
-                  alt="Kara Sherrer- Author"
-                  fill
-                  sizes="(max-width: 640px) 48px, (max-width: 1024px) 56px, 64px"
-                  className="object-cover"
-                  priority
-                  placeholder="blur"
-                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-                />
-              </div>
-              <div>
-                <p className="text-sm sm:text-base lg:text-lg text-white/80 mb-1">
-                  Written by
-                </p>
-                <p className="text-base sm:text-lg lg:text-xl font-semibold">
-                  Robie Ann Ferrer
-                </p>
-              </div>
-            </div>
-          </div>
+          
 
           {/* Disclaimer Section */}
           <div className="max-w-4xl xl:max-w-5xl">
@@ -424,12 +399,7 @@ export default function Employeedisciplinary() {
           </div>
 
           {/* Publication Date */}
-          <div className="mt-8 sm:mt-12 lg:mt-16 pb-8 sm:pb-12 lg:pb-16">
-            <div className="flex items-center space-x-2 sm:space-x-3 text-sm sm:text-base lg:text-lg text-white/70">
-              <Calendar className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
-              <span>Published Date: May 26, 2025</span>
-            </div>
-          </div>
+          
         </div>
       </div>
 
@@ -1368,34 +1338,7 @@ export default function Employeedisciplinary() {
                 </div>
 
                 {/* Video Section */}
-                <div className="mb-12">
-                  {/* Responsive container with fixed aspect ratio */}
-                  <div
-                    className="relative w-full max-w-4xl mx-auto overflow-hidden rounded-lg shadow-md"
-                    style={{ paddingTop: "56.25%" }}
-                  >
-                    <iframe
-                      className="absolute top-0 left-0 w-full h-full"
-                      src="https://www.youtube.com/embed/uPKoyxAFCEQ"
-                      title="Legal Documents Made Easy | SixFifty"
-                      frameBorder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerPolicy="strict-origin-when-cross-origin"
-                      allowFullScreen
-                    ></iframe>
-                  </div>
-
-                  <div className="mt-6 text-center">
-                    <Link
-                      href="https://sixfifty.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block bg-[#386861] hover:bg-green-500 text-white font-medium py-3 px-8 rounded-full transition-colors duration-200"
-                    >
-                      Visit SixFifty ↗
-                    </Link>
-                  </div>
-                </div>
+                
 
                 {/* Additional Sections */}
                 <div className="space-y-0 text-lg">
@@ -1472,105 +1415,7 @@ export default function Employeedisciplinary() {
               </section>
               <section id="disciplinary-action-form-template">
                 {/* Form Template Section */}
-                <div className="mt-12 mb-12">
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                    Disciplinary action form template
-                  </h2>
-
-                  <p className="text-gray-700 text-lg mb-4">
-                    Documentation is key, so it's helpful to prepare an{" "}
-                    <Link href="#" className="text-[#386861] underline">
-                      employee disciplinary action form
-                    </Link>{" "}
-                    and
-                    <Link href="#" className="text-[#386861] underline">
-                      {" "}
-                      disciplinary write ups examples
-                    </Link>
-                    . Add these to your policy and employee handbook, including
-                    a guide on how to fill it out.
-                  </p>
-
-                  <p className="text-gray-700 text-lg mb-8">
-                    If you're looking for a form, our template contains the
-                    essential data items needed.
-                  </p>
-
-                  {/* 2-Column Layout for Google Drive + Downloads */}
-                  <div className="flex flex-col lg:flex-row lg:space-x-8">
-                    {/* Google Drive Card */}
-                    <div className="bg-white border border-gray-200 rounded-lg p-6 mb-6 w-full max-w-2xl min-h-[520px]">
-                      <div className="flex items-center mb-4">
-                        <div className="w-8 h-8 bg-[#386861] rounded mr-3 flex items-center justify-center">
-                          <svg
-                            className="w-4 h-4 text-white"
-                            fill="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z" />
-                          </svg>
-                        </div>
-                        <span className="text-gray-600 text-sm">
-                          Google Drive
-                        </span>
-                      </div>
-
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                        You need access
-                      </h3>
-                      <p className="text-sm text-gray-600 mb-4">
-                        Request access, or switch to an account with access.
-                      </p>
-
-                      <div className="mb-4">
-                        <label className="block text-sm text-gray-600 mb-2">
-                          Message (optional)
-                        </label>
-                        <textarea
-                          className="w-full p-2 border border-gray-300 rounded text-sm"
-                          rows="3"
-                          placeholder=""
-                        />
-                      </div>
-
-                      <button className="bg-[#386861] hover:bg-green-700 text-white py-2 px-4 rounded text-sm font-medium">
-                        Request access
-                      </button>
-
-                      <div className="mt-4 text-center">
-                        <p className="text-xs text-gray-500">
-                          You're signed in as
-                        </p>
-                        <div className="flex items-center justify-center mt-1">
-                          <div className="w-6 h-6 bg-[#386861] rounded-full mr-2"></div>
-                          <span className="text-xs text-gray-700">
-                            srivastavashreshtha1@gmail.com
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Download Buttons */}
-                    <div className="w-full lg:w-2/5">
-                      <p className="text-gray-700 mb-4 font-semibold">
-                        Download our employee disciplinary action template for
-                        free:
-                      </p>
-
-                      <div className="space-y-3 max-w-xs">
-                        <button className="w-full bg-[#386861] hover:bg-green-500 text-white py-3 px-4 rounded-full font-medium transition-colors duration-200">
-                          Download as PDF ↓
-                        </button>
-                        <button className="w-full bg-[#386861] hover:bg-green-500 text-white py-3 px-4 rounded-full font-medium transition-colors duration-200">
-                          Download as Google Doc ↓
-                        </button>
-                        <button className="w-full bg-[#386861] hover:bg-green-500 text-white py-3 px-4 rounded-full font-medium transition-colors duration-200">
-                          Download Google Sheet ↓
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                
               </section>
               <section id="employee-disciplinary-process-steps">
                 {/* Process Steps Section */}
@@ -1695,39 +1540,7 @@ export default function Employeedisciplinary() {
                   </div>
 
                   {/* Bob Software Screenshot */}
-                  <div className="mb-8">
-                    {/* Image Centered */}
-                    <div className="flex justify-center">
-                      <div className="relative w-[400px] h-[266px] bg-gray-100 rounded-lg overflow-hidden">
-                        <img
-                          src="/images/action-1.jpg"
-                          alt="Bob HR software interface showing one-on-one meeting management"
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    </div>
-
-                    {/* Description */}
-                    <p className="text-sm text-gray-600 mt-2 text-center">
-                      <span className="font-medium">Bob</span> includes
-                      one-on-one meeting management features to help you
-                      structure and record disciplinary conversations with your
-                      employees for more effective constructive feedback.{" "}
-                      <span className="text-[#386861]">Source: Bob</span>
-                    </p>
-
-                    {/* Button */}
-                    <div className="mt-4 text-center">
-                      <Link
-                        href="https://bob.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block bg-[#386861] hover:bg-green-600 text-white font-medium py-3 px-8 rounded-full transition-colors duration-200"
-                      >
-                        Visit Bob ↗
-                      </Link>
-                    </div>
-                  </div>
+                  
                 </div>
                 <div className="mb-8">
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -1851,40 +1664,7 @@ export default function Employeedisciplinary() {
                     expectations going forward.
                   </p>
 
-                  {/* Form Image Placeholder - Replace with actual form images */}
-                  <div className="mb-6">
-                    <Image
-                      src="/images/action-2.png"
-                      alt="Disciplinary Action Form"
-                      width={800}
-                      height={600}
-                      className="w-full h-auto border border-gray-300 rounded"
-                    />
-                  </div>
-                  <div className="text-sm text-gray-600 text-center">
-                    <p>
-                      Describe the issue, detail past corrective actions, and
-                      note the disciplinary action you will take now.
-                    </p>
-                    <p>Source: TechnologyAdvice</p>
-                  </div>
-
-                  <div className="mb-6">
-                    <Image
-                      src="/images/action-3.png"
-                      alt="Corrective Action Form"
-                      width={800}
-                      height={400}
-                      className="w-full h-auto border border-gray-300 rounded"
-                    />
-                  </div>
-                  <div className="text-sm text-gray-600 text-center mb-6">
-                    <p>
-                      Provide goals and resources for the employee and detail
-                      the next steps should the employee continue with their
-                      unsatisfactory conduct. Source: TechnologyAdvice
-                    </p>
-                  </div>
+                  
                 </div>
 
                 {/* Step 4: Take last-chance actions */}
@@ -2247,55 +2027,7 @@ export default function Employeedisciplinary() {
               </section>
               {/* Author Bio Section */}
 
-              <div className="bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-sm hover:shadow-lg mt-4 sm:p-8 transition-shadow duration-300 overflow-hidden">
-                <div className="flex items-start space-x-6">
-                  <div className="flex-shrink-0">
-                    <Image
-                      src="/images/h1.png"
-                      alt="Robie Ann Ferrer"
-                      width={120}
-                      height={120}
-                      className="rounded-full"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-blue-600 text-xl font-medium mb-4">
-                      <Link
-                        href="/author/Robie Ann Ferrer"
-                        className="hover:underline"
-                      >
-                        Robie Ann Ferrer
-                      </Link>
-                    </h3>
-
-                    <p className="text-gray-700 leading-relaxed">
-                      Robie Ann Ferrer is a human resources professional with a
-                      decade of experience helping companies manage their
-                      workforce and optimize HR processes. Her background
-                      includes roles as an HR Specialist and HR Business
-                      Partner, where she handled various facets of HR, such as
-                      payroll, benefits administration, employee services,
-                      compensation management, and HR systems.
-                    </p>
-                    <div className="flex space-x-2 mt-3">
-                      <div className="flex space-x-2 mt-3">                       
-        <Link                         
-          href="#"                         
-          className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center hover:bg-blue-200 transition-colors"                       
-        >                         
-          <svg                           
-            className="w-4 h-4 text-blue-600"                           
-            fill="currentColor"                           
-            viewBox="0 0 24 24"                         
-          >                           
-            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>                         
-          </svg>                       
-        </Link>                     
-      </div> 
-                    </div>
-                  </div>
-                </div>
-              </div>
+             
             </div>
           </div>
         </div>
@@ -2303,7 +2035,7 @@ export default function Employeedisciplinary() {
         {/* related postes */}
 
        <section className="w-full px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 2xl:px-32 py-12 bg-white">
-             <h2 className="text-3xl sm:text-4xl font-bold text-[#111827] mb-8">
+             <h2 className="text-3xl sm:text-4xl font-bold text-[#111827] mb-8 text-center">
                Related posts
              </h2>
        
