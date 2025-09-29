@@ -1,8 +1,5 @@
 {
-  "/About-Us/about-us/page": "app/About-Us/about-us/page.js",
-  "/Software-reviews/Business-Intelligence-Software/page": "app/Software-reviews/Business-Intelligence-Software/page.js",
   "/Software-reviews/HR-software/page": "app/Software-reviews/HR-software/page.js",
-  "/Software-reviews/Payroll-software/page": "app/Software-reviews/Payroll-software/page.js",
   "/_not-found/page": "app/_not-found/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js"

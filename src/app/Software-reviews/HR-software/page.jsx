@@ -2561,7 +2561,7 @@ return (
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             How do you choose the best HR software?
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-900 max-w-2xl mx-auto">
             A comprehensive guide to selecting the right HR solution for your business needs
           </p>
         </div>
