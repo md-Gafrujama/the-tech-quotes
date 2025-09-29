@@ -1,6 +1,4 @@
 {
-  "/About-Us/Careers/page": "app/About-Us/Careers/page.js",
-  "/About-Us/Contact-us/page": "app/About-Us/Contact-us/page.js",
   "/_not-found/page": "app/_not-found/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js"

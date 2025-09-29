@@ -97,7 +97,6 @@ const Navbar = () => {
     { name: 'About Us', href: '/About-Us/about-us' },
     { name: 'Contact Us', href: '/About-Us/Contact-us' },
     { name: 'Careers', href: '/About-Us/Careers' },
-     
   ];
 
   // Search functionality
@@ -519,7 +518,34 @@ const Navbar = () => {
 
             {/* Mobile Menu Items */}
             <div className="space-y-4">
-             
+              {/* Software Reviews */}
+              <div>
+                <button
+                  onClick={() => toggleMobileDropdown('software')}
+                  className="flex items-center justify-between w-full py-2 text-[#1E2E2B] border-b border-gray-200"
+                >
+                  <Link href="/" className="text-lg font-medium" onClick={() => setIsMenuOpen(false)}>
+                    Software Reviews
+                  </Link>
+                  <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${mobileDropdowns.software ? 'rotate-180' : ''}`} />
+                </button>
+                <div className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                  mobileDropdowns.software ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                }`}>
+                  <div className="mt-2 pl-4 space-y-2">
+                    {softwareReviews.categories.map((category, index) => (
+                      <Link
+                        key={index}
+                        href={category.href}
+                        className="block py-2 text-gray-600 hover:text-[#ffd800] transition-colors duration-200"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {category.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
 
               {/* Blog & Research */}
               <div>
