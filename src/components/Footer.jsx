@@ -6,14 +6,50 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="bg-[#0E1F1C] text-white py-12 px-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 text-sm border-b border-gray-700 pb-8">
-        {/* Column 1 */}
-
-
-        
-        <div>
-          <h3 className="font-bold mb-3">Company</h3>
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 text-sm border-b border-gray-700 pb-8">
+        {/* Column 1 - Technology Advice */}
+        <div className="flex flex-col">
+          <h3 className="font-bold mb-3 text-2xl">Technology Advice</h3>
           <ul className="space-y-2">
+            <li><a href="/" className="hover:text-[#ffd800]"></a></li>
+            <li>
+              <a href="/" className="hover:text-[#ffd800] flex items-center gap-2">
+                <span className="bg-[#ffd800] text-black px-3 py-1 rounded-full text-xs font-bold">
+                </span>
+              </a>
+            </li>
+            <li><a href="/" className="hover:text-[#ffd800]"></a></li>
+          </ul>
+          
+          {/* Dummy Paragraph */}
+          <div className="mt-6 flex-grow">
+            <p className="text-gray-300 leading-relaxed text-base">
+              We provide comprehensive technology solutions and expert advice to help businesses
+              make informed decisions. 
+            </p>
+          </div>
+          
+          {/* Email Section */}
+          <div className="mt-6">
+            <h4 className="font-semibold mb-2 text-lg">Email Us</h4>
+            <a href="mailto:info@technologyadvice.com" className="text-[#ffd800] hover:underline">
+              info@technologyadvice.com
+            </a>
+          </div>
+          
+          {/* Phone Number Section */}
+          <div className="mt-4">
+            <h4 className="font-semibold mb-2 text-lg">Call Us</h4>
+            <a href="tel:+1-555-123-4567" className="text-[#ffd800] hover:underline">
+              +1 (555) 123-4567
+            </a>
+          </div>
+        </div>
+
+        {/* Column 2 - Company */}
+        <div className="flex flex-col justify-start ml-2">
+          <h3 className="font-bold mb-3 text-2xl">Company</h3>
+          <ul className="space-y-2 text-lg">
             <li><a href="/About-Us/about-us" className="hover:text-[#ffd800]">About Us</a></li>
             <li>
               <a href="/About-Us/Careers" className="hover:text-[#ffd800] flex items-center gap-2">
@@ -27,27 +63,14 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Column 2 */}
-        <div>
-          <h3 className="font-bold mb-3">Partner With Us</h3>
-          <ul className="space-y-2">
-            <li><a href="#" className="hover:text-[#ffd800]">Marketing Solutions</a></li>
-            <li><a href="#" className="hover:text-[#ffd800]">Our Audience</a></li>
-            <li><a href="#" className="hover:text-[#ffd800]">Customer Stories</a></li>
-            <li><a href="#" className="hover:text-[#ffd800]">B2B Nation</a></li>
-            <li><a href="#" className="hover:text-[#ffd800]">List Your Product</a></li>
-          </ul>
-        </div>
-
-        {/* Column 3 */}
-        <div>
-          <h3 className="font-bold mb-3">Legal</h3>
-          <ul className="space-y-2">
+        {/* Column 3 - Legal */}
+        <div className="flex flex-col justify-start ml-2">
+          <h3 className="font-bold mb-3 text-2xl">Legal</h3>
+          <ul className="space-y-2 text-lg">
             <li><a href="#" className="hover:text-[#ffd800]">Terms of Use</a></li>
             <li><a href="#" className="hover:text-[#ffd800]">Privacy Policy</a></li>
             <li><a href="#" className="hover:text-[#ffd800]">California – Do Not Sell My Info</a></li>
           </ul>
-         
         </div>
       </div>
 
