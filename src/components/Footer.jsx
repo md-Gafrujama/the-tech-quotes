@@ -47,7 +47,7 @@ export default function Footer() {
         </div>
 
         {/* Column 2 - Company */}
-        <div className="flex flex-col justify-start ml-2">
+        <div className="flex flex-col justify-start ml-12">
           <h3 className="font-bold mb-3 text-2xl">Company</h3>
           <ul className="space-y-2 text-lg">
             <li><a href="/About-Us/about-us" className="hover:text-[#ffd800]">About Us</a></li>
@@ -64,7 +64,7 @@ export default function Footer() {
         </div>
 
         {/* Column 3 - Legal */}
-        <div className="flex flex-col justify-start ml-2">
+        <div className="flex flex-col justify-start ml-12">
           <h3 className="font-bold mb-3 text-2xl">Legal</h3>
           <ul className="space-y-2 text-lg">
             <li><a href="#" className="hover:text-[#ffd800]">Terms of Use</a></li>
@@ -106,7 +106,7 @@ export default function Footer() {
       <p className="max-w-5xl mx-auto text-center text-xs text-gray-300 mt-6 px-4">
         We use cookies and other data collection technologies to provide the best experience for our customers. 
         You may request that your data not be shared with third parties here: 
-        <a href="#" className="text-[#ffd800] font-bold ml-1 hover:underline">Do Not Sell My Data.</a>
+        <a href="#" className="text-[#ffd800] font-bold ml-2 hover:underline">Do Not Sell My Data.</a>
       </p>
 
       {/* Copyright */}
