@@ -668,21 +668,21 @@ function Page() {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "jsx-f3c7a648657633a2" + " " + "relative w-full",
+                            className: "jsx-a377a31fdcd8287f" + " " + "relative w-full",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     ref: guideRef,
-                                    className: "jsx-f3c7a648657633a2" + " " + "flex overflow-x-hidden gap-6 pb-6 hide-scrollbar",
+                                    className: "jsx-a377a31fdcd8287f" + " " + "flex overflow-x-hidden gap-6 pb-6 hide-scrollbar",
                                     children: categories.map((category, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "jsx-f3c7a648657633a2" + " " + "flex-shrink-0 w-[280px] sm:w-[300px] lg:w-[320px] h-[280px] bg-white hover:bg-green-50 border border-gray-200 hover:border-green-400 rounded-2xl p-6 shadow-md flex flex-col",
+                                            className: "jsx-a377a31fdcd8287f" + " " + "flex-shrink-0 w-[280px] sm:w-[300px] lg:w-[320px] h-[280px] bg-white hover:bg-green-50 border border-gray-200 hover:border-green-400 rounded-2xl p-6 shadow-md flex flex-col",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "jsx-f3c7a648657633a2" + " " + "flex items-center mb-6 -space-x-5",
+                                                    className: "jsx-a377a31fdcd8287f" + " " + "flex items-center mb-6 -space-x-5",
                                                     children: category.logos.map((logo, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                                             href: category.links[i],
                                                             passHref: true,
                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                className: "jsx-f3c7a648657633a2" + " " + "w-16 h-16 rounded-full bg-white shadow flex items-center justify-center z-[1] hover:scale-110 transition-transform cursor-pointer",
+                                                                className: "jsx-a377a31fdcd8287f" + " " + "w-16 h-16 rounded-full bg-white shadow flex items-center justify-center z-[1] hover:scale-110 transition-transform cursor-pointer",
                                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                                                     src: `/images/${logo}.gif`,
                                                                     alt: logo,
@@ -713,10 +713,10 @@ function Page() {
                                                     href: category.cardLink,
                                                     passHref: true,
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "jsx-f3c7a648657633a2" + " " + "flex-grow flex flex-col justify-center cursor-pointer",
+                                                        className: "jsx-a377a31fdcd8287f" + " " + "flex-grow flex flex-col justify-center cursor-pointer",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                                className: "jsx-f3c7a648657633a2" + " " + "text-xl font-semibold text-gray-900 mb-2 hover:text-green-600 transition-colors",
+                                                                className: "jsx-a377a31fdcd8287f" + " " + "text-xl font-semibold text-gray-900 mb-2 hover:text-green-600 transition-colors",
                                                                 children: category.title
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/page.jsx",
@@ -724,7 +724,7 @@ function Page() {
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                className: "jsx-f3c7a648657633a2" + " " + "text-sm text-gray-600",
+                                                                className: "jsx-a377a31fdcd8287f" + " " + "text-sm text-gray-600",
                                                                 children: category.description
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/page.jsx",
@@ -754,15 +754,15 @@ function Page() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                    id: "f3c7a648657633a2",
-                                    children: ".hide-scrollbar.jsx-f3c7a648657633a2{-ms-overflow-style:none;scrollbar-width:none}.hide-scrollbar.jsx-f3c7a648657633a2::-webkit-scrollbar{display:none}"
+                                    id: "a377a31fdcd8287f",
+                                    children: ".hide-scrollbar.jsx-a377a31fdcd8287f{-ms-overflow-style:none;scrollbar-width:none}.hide-scrollbar.jsx-a377a31fdcd8287f::-webkit-scrollbar{display:none}"
                                 }, void 0, false, void 0, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "jsx-f3c7a648657633a2" + " " + "flex justify-center mt-12 gap-4",
+                                    className: "jsx-a377a31fdcd8287f" + " " + "flex justify-center mt-12 gap-4",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                             onClick: ()=>scroll(guideRef, 'left'),
-                                            className: "jsx-f3c7a648657633a2" + " " + "w-14 h-14 rounded-full border border-gray-300 bg-white hover:border-gray-600 flex items-center justify-center transition",
+                                            className: "jsx-a377a31fdcd8287f" + " " + "w-14 h-14 rounded-full border border-gray-300 bg-white hover:border-gray-600 flex items-center justify-center transition",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$left$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronLeft$3e$__["ChevronLeft"], {
                                                 className: "w-6 h-6 text-gray-700"
                                             }, void 0, false, {
@@ -777,7 +777,7 @@ function Page() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                             onClick: ()=>scroll(guideRef, 'right'),
-                                            className: "jsx-f3c7a648657633a2" + " " + "w-14 h-14 rounded-full border border-gray-300 bg-white hover:border-gray-600 flex items-center justify-center transition",
+                                            className: "jsx-a377a31fdcd8287f" + " " + "w-14 h-14 rounded-full border border-gray-300 bg-white hover:border-gray-600 flex items-center justify-center transition",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__["ChevronRight"], {
                                                 className: "w-6 h-6 text-gray-700"
                                             }, void 0, false, {
@@ -844,19 +844,19 @@ function Page() {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "jsx-f3c7a648657633a2" + " " + "relative w-full",
+                            className: "jsx-a377a31fdcd8287f" + " " + "relative w-full",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     ref: techRef,
-                                    className: "jsx-f3c7a648657633a2" + " " + "flex overflow-x-hidden gap-6 pb-6 hide-scrollbar",
+                                    className: "jsx-a377a31fdcd8287f" + " " + "flex overflow-x-hidden gap-6 pb-6 hide-scrollbar",
                                     children: techItems.map((item, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                             href: item.link,
                                             passHref: true,
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "jsx-f3c7a648657633a2" + " " + "flex-shrink-0 w-[200px] sm:w-[220px] lg:w-[240px] h-[240px] bg-white hover:bg-green-50 border border-gray-200 hover:border-green-400 rounded-2xl p-4 shadow-md transition-all duration-300 flex flex-col justify-between items-center text-center cursor-pointer",
+                                                className: "jsx-a377a31fdcd8287f" + " " + "flex-shrink-0 w-[200px] sm:w-[220px] lg:w-[240px] h-[240px] bg-white hover:bg-green-50 border border-gray-200 hover:border-green-400 rounded-2xl p-4 shadow-md transition-all duration-300 flex flex-col justify-between items-center text-center cursor-pointer",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "jsx-f3c7a648657633a2" + " " + "w-full h-28 mb-3 flex items-center justify-center",
+                                                        className: "jsx-a377a31fdcd8287f" + " " + "w-full h-28 mb-3 flex items-center justify-center",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                                             src: item.img,
                                                             alt: item.name,
@@ -874,10 +874,10 @@ function Page() {
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "jsx-f3c7a648657633a2",
+                                                        className: "jsx-a377a31fdcd8287f",
                                                         children: [
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                                className: "jsx-f3c7a648657633a2" + " " + "text-base font-semibold text-gray-900 hover:text-green-600 transition-colors",
+                                                                className: "jsx-a377a31fdcd8287f" + " " + "text-base font-semibold text-gray-900 hover:text-green-600 transition-colors",
                                                                 children: item.name
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/page.jsx",
@@ -885,7 +885,7 @@ function Page() {
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                                className: "jsx-f3c7a648657633a2" + " " + "text-xs text-gray-600 mt-1",
+                                                                className: "jsx-a377a31fdcd8287f" + " " + "text-xs text-gray-600 mt-1",
                                                                 children: item.desc
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/page.jsx",
@@ -915,15 +915,15 @@ function Page() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                    id: "f3c7a648657633a2",
-                                    children: ".hide-scrollbar.jsx-f3c7a648657633a2{-ms-overflow-style:none;scrollbar-width:none}.hide-scrollbar.jsx-f3c7a648657633a2::-webkit-scrollbar{display:none}"
+                                    id: "a377a31fdcd8287f",
+                                    children: ".hide-scrollbar.jsx-a377a31fdcd8287f{-ms-overflow-style:none;scrollbar-width:none}.hide-scrollbar.jsx-a377a31fdcd8287f::-webkit-scrollbar{display:none}"
                                 }, void 0, false, void 0, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "jsx-f3c7a648657633a2" + " " + "flex justify-center mt-8 gap-4",
+                                    className: "jsx-a377a31fdcd8287f" + " " + "flex justify-center mt-8 gap-4",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                             onClick: ()=>scroll(techRef, 'left'),
-                                            className: "jsx-f3c7a648657633a2" + " " + "w-12 h-12 rounded-full border border-gray-300 bg-white hover:border-gray-600 flex items-center justify-center transition",
+                                            className: "jsx-a377a31fdcd8287f" + " " + "w-12 h-12 rounded-full border border-gray-300 bg-white hover:border-gray-600 flex items-center justify-center transition",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$left$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowLeft$3e$__["ArrowLeft"], {
                                                 className: "w-5 h-5 text-gray-700"
                                             }, void 0, false, {
@@ -938,7 +938,7 @@ function Page() {
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                             onClick: ()=>scroll(techRef, 'right'),
-                                            className: "jsx-f3c7a648657633a2" + " " + "w-12 h-12 rounded-full border border-gray-300 bg-white hover:border-gray-600 flex items-center justify-center transition",
+                                            className: "jsx-a377a31fdcd8287f" + " " + "w-12 h-12 rounded-full border border-gray-300 bg-white hover:border-gray-600 flex items-center justify-center transition",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$arrow$2d$right$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__ArrowRight$3e$__["ArrowRight"], {
                                                 className: "w-5 h-5 text-gray-700"
                                             }, void 0, false, {
@@ -1122,13 +1122,13 @@ function Page() {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 className: "py-20 bg-white",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "jsx-f3c7a648657633a2" + " " + "bg-[#0E1F1C] rounded-[2rem] w-full max-w-7xl mx-auto px-6 sm:px-8 text-white relative overflow-hidden",
+                    className: "jsx-a377a31fdcd8287f" + " " + "bg-[#0E1F1C] rounded-[2rem] w-full max-w-7xl mx-auto px-6 sm:px-8 text-white relative overflow-hidden",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "jsx-f3c7a648657633a2" + " " + "text-left max-w-6xl mx-auto z-10 relative pt-10 px-4 sm:px-6 lg:px-8",
+                            className: "jsx-a377a31fdcd8287f" + " " + "text-left max-w-6xl mx-auto z-10 relative pt-10 px-4 sm:px-6 lg:px-8",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                    className: "jsx-f3c7a648657633a2" + " " + "text-3xl md:text-5xl font-bold mb-6",
+                                    className: "jsx-a377a31fdcd8287f" + " " + "text-3xl md:text-5xl font-bold mb-6",
                                     children: "Marketers: Reach a highly engaged audience"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/page.jsx",
@@ -1136,7 +1136,7 @@ function Page() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "jsx-f3c7a648657633a2" + " " + "text-lg text-gray-200 mb-10",
+                                    className: "jsx-a377a31fdcd8287f" + " " + "text-lg text-gray-200 mb-10",
                                     children: "100 million business technology and software buyers worldwide trust us to reduce complexity and risk in the purchase process. Meet your buyers on their terms and put the power of buyer engagements to work, building your brand and driving demand for your products."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/page.jsx",
@@ -1144,10 +1144,10 @@ function Page() {
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "jsx-f3c7a648657633a2" + " " + "flex flex-col sm:flex-row sm:items-start gap-6 mb-12",
+                                    className: "jsx-a377a31fdcd8287f" + " " + "flex flex-col sm:flex-row sm:items-start gap-6 mb-12",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                            className: "jsx-f3c7a648657633a2" + " " + "bg-white text-gray-800 font-semibold text-lg py-3 px-8 rounded-full shadow hover:bg-gray-100 transition",
+                                            className: "jsx-a377a31fdcd8287f" + " " + "bg-white text-gray-800 font-semibold text-lg py-3 px-8 rounded-full shadow hover:bg-gray-100 transition",
                                             children: "Explore Solutions"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/page.jsx",
@@ -1155,7 +1155,7 @@ function Page() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                            className: "jsx-f3c7a648657633a2" + " " + "bg-white text-gray-800 font-semibold text-lg py-3 px-8 rounded-full shadow hover:bg-gray-100 transition",
+                                            className: "jsx-a377a31fdcd8287f" + " " + "bg-white text-gray-800 font-semibold text-lg py-3 px-8 rounded-full shadow hover:bg-gray-100 transition",
                                             children: "Chat with Sales"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/page.jsx",
@@ -1175,9 +1175,9 @@ function Page() {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "jsx-f3c7a648657633a2" + " " + "flex justify-start items-center gap-10 flex-nowrap overflow-x-auto pb-10 z-10 relative px-4 sm:px-6 lg:px-8 hide-scrollbar",
+                            className: "jsx-a377a31fdcd8287f" + " " + "flex justify-start items-center gap-10 flex-nowrap overflow-x-auto pb-10 z-10 relative px-4 sm:px-6 lg:px-8 hide-scrollbar",
                             children: logos.map((src, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "jsx-f3c7a648657633a2" + " " + "w-40 h-26 relative flex-shrink-0",
+                                    className: "jsx-a377a31fdcd8287f" + " " + "w-40 h-26 relative flex-shrink-0",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                         src: src,
                                         alt: `images ${index + 1}`,
@@ -1199,21 +1199,21 @@ function Page() {
                             columnNumber: 10
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                            id: "f3c7a648657633a2",
-                            children: ".hide-scrollbar.jsx-f3c7a648657633a2{-ms-overflow-style:none;scrollbar-width:none}.hide-scrollbar.jsx-f3c7a648657633a2::-webkit-scrollbar{display:none}"
+                            id: "a377a31fdcd8287f",
+                            children: ".hide-scrollbar.jsx-a377a31fdcd8287f{-ms-overflow-style:none;scrollbar-width:none}.hide-scrollbar.jsx-a377a31fdcd8287f::-webkit-scrollbar{display:none}"
                         }, void 0, false, void 0, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "jsx-f3c7a648657633a2" + " " + "absolute top-0 left-0 w-full h-full pointer-events-none z-0",
+                            className: "jsx-a377a31fdcd8287f" + " " + "absolute top-0 left-0 w-full h-full pointer-events-none z-0",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "jsx-f3c7a648657633a2" + " " + "absolute left-[-80px] top-[-80px] w-[300px] h-[300px] rounded-full border border-[#1A3440] opacity-30"
+                                    className: "jsx-a377a31fdcd8287f" + " " + "absolute left-[-80px] top-[-80px] w-[300px] h-[300px] rounded-full border border-[#1A3440] opacity-30"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/page.jsx",
                                     lineNumber: 681,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "jsx-f3c7a648657633a2" + " " + "absolute bottom-[-40px] right-[-40px] w-[150px] h-[150px] border border-[#1A3440] rounded-full opacity-30"
+                                    className: "jsx-a377a31fdcd8287f" + " " + "absolute bottom-[-40px] right-[-40px] w-[150px] h-[150px] border border-[#1A3440] rounded-full opacity-30"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/page.jsx",
                                     lineNumber: 682,
